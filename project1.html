@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - Regna Bootstrap Template</title>
+  <title>Joyce Chen Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -35,6 +35,13 @@
   ======================================================== -->
 </head>
 
+<style>
+  .nav-menu li:hover > a:before, .nav-menu .menu-active > a:before {
+  visibility: visible;
+  transform: scaleX(1);
+  }
+</style>
+
 <body>
 
   <!-- ======= Header ======= -->
@@ -49,29 +56,18 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li class="menu-active"><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="menu-has-children"><a href="">Drop Down</a>
+          <li clas="menu-inactive"><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#call-to-action">Resume</a></li>
+          <li class="menu-active"><a href="index.html#portfolio">Portfolio</a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="menu-has-children"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
+              <li class="menu-has-children"><a href="p-art.html">Art</a>
               </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
+              <li><a href="index.html#p-stem">STEM</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="index.html#contact">Contact</a>
+          </li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -84,11 +80,11 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfolio Details</h2>
+          <h2>Phone Stand</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li>Portfolio Details</li>
+            <li><a href="p-stem.html">Projects</a></li>
+            <li>Phone Stand</li>
           </ol>
         </div>
 
@@ -102,27 +98,17 @@
         <div class="portfolio-details-container">
 
           <div class="owl-carousel portfolio-details-carousel">
-            <img src="assets/img/portfolio/portfolio-details-1.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio/portfolio-details-2.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio/portfolio-details-3.jpg" class="img-fluid" alt="">
+            <img src="assets/img/stem details/PHONE STAND-1.jpg" class="img-fluid" alt="">
+            <img src="assets/img/stem details/PHONE STAND-2.jpg" class="img-fluid" alt="">
+            <img src="assets/img/stem details/PHONE STAND-3.jpg" class="img-fluid" alt="">
           </div>
-
-          <div class="portfolio-info">
-            <h3>Project information</h3>
-            <ul>
-              <li><strong>Category</strong>: Web design</li>
-              <li><strong>Client</strong>: ASU Company</li>
-              <li><strong>Project date</strong>: 01 March, 2020</li>
-              <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-            </ul>
-          </div>
-
         </div>
 
         <div class="portfolio-description">
-          <h2>This is an example of portfolio detail</h2>
+          <h2>The "ABC" Phone Stand</h2>
+          <h3>NOV 2020</h3>
           <p>
-            Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+            The creation of my cell phone stand allowed me to struggle through the process of transforming my sketches into a 3D model for print. I first designed the stand on paper, then used SolidWorks to actualize my sketch before printing. The issues encountered along the way, such as determining the dimensions for each part to fit into one another, adjusting characteristics while modelling, and determining the best way to showcase the final product to an audience, was able to bridge the gap between the skills I learnt about engineering design to its application in real projects. This process taught me how to problem-solve and think laterally on Solid Works in order to achieve my vision while staying within the constraints and optimizing the criteria. 
           </p>
         </div>
       </div>
@@ -139,17 +125,13 @@
     </div>
 
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Regna</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
         <!--
         All the links in the footer should remain intact.
         You can delete the links only if you purchased the pro version.
         Licensing information: https://bootstrapmade.com/license/
         Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
       -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
   </footer><!-- End Footer -->
