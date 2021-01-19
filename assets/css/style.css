@@ -653,10 +653,20 @@ section {
   font-size: 14px;
 }
 
-/* 2D Section
+/* 2D/3D/GRAPHIC Section
 --------------------------------*/
 
 #p-art-2d {
+  background: #fff;
+  padding: 80px 0;
+}
+
+#p-art-3d {
+  background: rgb(0, 0, 0);
+  padding: 80px 0;
+}
+
+#p-art-graphic {
   background: #fff;
   padding: 80px 0;
 }
@@ -671,26 +681,42 @@ section {
   background: #fff;
 }
 
+#p-art-3d .p-art-3d-container .content {
+  background: rgb(0, 0, 0);
+}
+
 #p-art-2d .about-container .title {
   color: rgba(255, 0, 255, 0.74);
   font-weight: 700;
-  font-size: 40px;
+  font-size: 60px;
 }
 
-#p-art-2d .about-container .title2 {
+#p-art-3d .about-container .title2 {
   color: rgba(255, 166, 0, 0.74);
   font-weight: 700;
-  font-size: 40px;
+  font-size: 60px;
 }
 
-#p-art-2d .about-container .title3 {
+#p-art-graphic .about-container .title3 {
   color: rgba(115, 182, 40, 0.74);
   font-weight: 700;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 @media (max-width: 768px) {
   #p-art-2d .about-container .title {
+    padding-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  #p-art-3d .about-container .title {
+    padding-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  #p-art-graphic .about-container .title {
     padding-top: 15px;
   }
 }
@@ -704,6 +730,18 @@ section {
 }
 
 #p-art-2d .about-container .icon-box {
+  background: #fff;
+  background-size: cover;
+  padding: 0 0 30px 0;
+}
+
+#p-art-3d .about-container .icon-box {
+  background: #fff;
+  background-size: cover;
+  padding: 0 0 30px 0;
+}
+
+#p-art-graphic .about-container .icon-box {
   background: #fff;
   background-size: cover;
   padding: 0 0 30px 0;
@@ -768,7 +806,7 @@ section {
   border-radius: 4px;
 }
 
-#p-art-2d #portfolio-flters2 li {
+#p-art-graphic #portfolio-flters2 li {
   cursor: pointer;
   display: inline-block;
   padding: 12px 18px 14px 18px;
@@ -793,13 +831,13 @@ section {
   background: fuchsia;
 }
 
-#p-art-2d #portfolio-flters2 li:hover {
+#p-art-graphic #portfolio-flters2 li:hover {
   color: rgb(255, 255, 255);
   background: rgba(116, 182, 30, 0.541)
 }
 
 
-#p-art-2d #portfolio-flters2 li.filter-active2 {
+#p-art-graphic #portfolio-flters2 li.filter-active2 {
   color: rgb(255, 255, 255);
   background: rgb(116, 182, 30)
 }
@@ -1196,11 +1234,6 @@ section {
 #contact {
   background: #f7f7f7;
   padding: 80px 0 40px 0;
-}
-
-#contact #google-map {
-  height: 300px;
-  margin-bottom: 20px;
 }
 
 #contact .info {
