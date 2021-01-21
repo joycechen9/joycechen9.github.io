@@ -48,7 +48,16 @@ h1, h2, h3, h4, h5, h6 {
   background: #fff url("../img/preloader.svg") no-repeat center center;
 }
 
-c
+.back-to-top {
+  position:fixed;
+  color: white;
+  background-color:rgba(255, 0, 255, 0.356);
+  font-size: 30px;
+  border-radius: 4px;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.5s;
+}
 /*--------------------------------------------------------------
 # Disable AOS delay on mobile
 --------------------------------------------------------------*/
@@ -401,15 +410,32 @@ c
   cursor: pointer;
 }
 
+#mobile-nav-img {
+  padding: 15px;
+  border: 0;
+  background: none;
+  display: none;
+  box-sizing: border-box;
+}
+
 #mobile-nav-toggle i {
   color: #fff;
 }
+
+#mobile-nav-img i {
+  color: #fff;
+}
+
 
 @media (max-width: 768px) {
   #mobile-nav-toggle {
     display: inline;
   }
+  #mobile-nav-img {
+    display: block;
+  }
 }
+
 
 /* Mobile Nav Styling */
 #mobile-nav {
@@ -442,6 +468,15 @@ c
   padding: 10px 22px 10px 15px;
   position: relative;
   text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+
+#mobile-side-nav-logo {
+  overflow: hidden;
+  padding: 10px 22px 10px 15px;
+  position: relative;
   width: 100%;
   display: block;
   outline: none;
@@ -495,6 +530,11 @@ body.mobile-nav-active #mobile-nav {
 body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
+
+body.mobile-nav-active #mobile-nav-img {
+  color: #fff;
+}
+
 
 /*--------------------------------------------------------------
 # Sections
@@ -1374,6 +1414,8 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+
+
 #footer {
   background: #343b40;
   padding: 30px 0;

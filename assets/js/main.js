@@ -70,7 +70,7 @@
       }
     });
   } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
-    $("#mobile-nav, #mobile-nav-toggle").hide();
+    $("#mobile-nav, #mobile-nav-toggle", "mobile-side-nav-logo").hide();
   }
   // Smooth scroll for the navigation menu and links with .scrollto classes
   var scrolltoOffset = $('#header').outerHeight() - 21;
