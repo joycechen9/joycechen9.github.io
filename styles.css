@@ -88,22 +88,17 @@ hr {
   text-decoration: underline;
 }
 
-/* ... existing styles ... */
-
-footer {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 0.9rem;
-  padding-bottom: 30px;
-}
 
 footer a {
-  color: black;
+  color: #333;
   text-decoration: none;
-  margin: 0 8px;
+  margin: 0 12px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
 }
 
 footer a:hover {
   color: #7a5fbd;
 }
+
 
