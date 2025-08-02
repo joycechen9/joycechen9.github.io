@@ -6,52 +6,53 @@
   <title>Joyce Chen | Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<header>
-  <nav>
-    <a href="#about">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.pdf" target="_blank">Resume</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
 <body>
+
   <!-- Header / Navigation -->
   <header>
     <nav>
-      <h1>Joyce Chen</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="#about">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.pdf" target="_blank">Resume</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section id="hero">
-    <h2>Hi, nice to meet you.</h2>
-    <p>I’m an engineer, industrial designer, and artist. This is a showcase of my work.</p>
+    <h1>Joyce Chen</h1>
   </section>
 
   <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
-    <p>I am currently pursuing my Master's of Industrial Design at RISD. I have my Bachelor's of Applied Science in Mechatronics Engineering from UWaterloo. I </p>
+    <p>
+      Hello! I'm Joyce, a passionate designer and researcher who thrives on crafting inclusive and human-centered digital experiences. I bring curiosity, empathy, and systems thinking to every project I take on.
+    </p>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:joyc.chn@gmail.com">joyc.chn@gmail.com</a></p>
-    <!-- Optional contact form can go here -->
+    <p>Email: <a href="mailto:joyce@example.com">joyce@example.com</a></p>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Joyce Chen. All rights reserved.</p>
   </footer>
+
+  <!-- Scroll Reveal Script -->
+  <script>
+    window.addEventListener('scroll', () => {
+      const about = document.getElementById('about');
+      const trigger = window.innerHeight * 0.8;
+
+      if (about.getBoundingClientRect().top < trigger) {
+        about.classList.add('reveal');
+      }
+    });
+  </script>
+  
 </body>
 </html>
-
-
-
