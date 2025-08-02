@@ -8,24 +8,21 @@
 </head>
 <body>
 
-  <!-- Header / Navigation -->
-  <header>
-    <nav>
+  <!-- Hero Name -->
+  <section id="hero">
+    <h1 id="name-heading">JOYCE CHEN</h1>
+
+    <!-- Hidden Menu (shows on click) -->
+    <div id="menu" class="hidden">
       <a href="#about">About</a>
       <a href="projects.html">Projects</a>
       <a href="resume.pdf" target="_blank">Resume</a>
       <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="hero">
-    <h1>JOYCE CHEN</h1>
+    </div>
   </section>
 
   <!-- About Section -->
   <section id="about">
-    <h2>About Me</h2>
     <p>
       Hi I'm Joyce! I want to become an industrial designer and mechanical engineer so I have the tools to create machines and systems that are not only practical, but beautiful.
     </p>
@@ -34,18 +31,25 @@
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:joyce@example.com">joyc.chn@gmail.com</a></p>
+    <p>Email: <a href="mailto:joyc.chn@gmail.com">joyc.chn@gmail.com</a></p>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Joyce Chen. All rights reserved.</p>
   </footer>
 
-  <!-- Scroll Reveal Script -->
+  <!-- JavaScript for Scroll and Interaction -->
   <script>
-    window.addEventListener('scroll', () => {
-      const about = document.getElementById('about');
+    const nameHeading = document.getElementById("name-heading");
+    const menu = document.getElementById("menu");
+
+    nameHeading.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+
+    // Reveal about section on scroll
+    window.addEventListener("scroll", () => {
+      const about = document.getElementById("about");
       const trigger = window.innerHeight * 0.8;
 
       if (about.getBoundingClientRect().top < trigger) {
@@ -53,7 +57,5 @@
       }
     });
   </script>
-  
 </body>
 </html>
-
