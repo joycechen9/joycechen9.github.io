@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SALICO | Joyce Chen</title>
+  <link rel="stylesheet" href="projects.css">
+  <style>
+    /* Additional styles for detail page */
+    .project-detail-container {
+      padding: 100px 40px 40px;
+    }
+    
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .project-title-container {
+      max-width: 60%;
+    }
+    
+    .project-main-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+    
+    .project-subtitle {
+      font-size: 1rem;
+      margin: 4px 0 0 0;
+    }
+    
+    .pdf-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .pdf-placeholder {
+      background-color: #e0e0e0;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+      .project-header {
+        flex-direction: column;
+      }
+      
+      .project-title-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+      
+      .pdf-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="project-detail-container">
+    <div class="project-header">
+      <div class="project-title-container">
+        <h1 class="project-main-title">SALICO</h1>
+        <p class="project-subtitle">An automatic harvester for sea asparagus.</p>
+      </div>
+      <a id="joyce-name" href="index.html">JOYCE <span class="last-name">CHEN</span></a>
+    </div>
+    
+    <div class="pdf-container">
+      <div class="pdf-placeholder">PDF 1</div>
+      <div class="pdf-placeholder">PDF 2</div>
+      <div class="pdf-placeholder">PDF 3</div>
+      <!-- Add more placeholders as needed -->
+    </div>
+  </div>
+
+</body>
+</html>
