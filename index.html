@@ -2,34 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joyce Chen | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joyce Chen Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <main id="main-wrapper">
-    <h1 id="joyce-name">JOYCE <span class="last-name">CHEN</span></h1>
-
-    <nav id="nav-bar">
-      <a href="#about">ABOUT</a>
+  <div id="header">
+    <h1 id="name" onclick="toggleMenu()">
+      <span class="highlight">JOYCE</span> CHEN
+    </h1>
+    <nav id="menu" class="hidden">
       <a href="projects.html">PROJECTS</a>
-      <a href="resume.pdf" target="_blank">RESUME</a>
-      <a href="#contact">CONTACT</a>
+      <a href="resume.pdf">RESUME</a>
     </nav>
+  </div>
 
-    <hr />
+  <hr class="divider" />
 
-    <section id="about">
-      <p>
-        Hi I'm Joyce! I want to become an industrial designer and mechanical engineer so I have the tools to create machines and systems that are not only practical, but beautiful.
-      </p>
-    </section>
+  <div class="about">
+    <p>
+      Hi I'm Joyce! I want to become an industrial designer and mechanical engineer so I have the tools to create machines and systems that are not only practical, but beautiful.
+    </p>
+  </div>
 
-    <section id="contact">
-      <p>Email: <a href="mailto:joyc.chn@gmail.com">joyc.chn@gmail.com</a></p>
-    </section>
-  </main>
+  <footer>
+    <a href="mailto:joyc.chn@gmail.com" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/joycechen9/" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </footer>
 
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
 </body>
 </html>
