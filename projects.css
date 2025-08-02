@@ -17,6 +17,12 @@ body {
   padding: 6px 10px;
   border-radius: 4px;
   z-index: 10;
+  color: black;
+  text-decoration: none;
+}
+
+#joyce-name:hover {
+  color: #7a5fbd;
 }
 
 /* Projects container */
