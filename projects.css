@@ -1,0 +1,69 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 60px 20px;
+  text-align: left;
+}
+
+/* Joyce Chen title */
+#joyce-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+#joyce-name::before {
+  content: '';
+  position: absolute;
+  bottom: 0.15em;
+  left: 0;
+  width: 100%;
+  height: 0.5em;
+  background: #e6dbff;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+/* Projects Layout */
+.project-list {
+  margin-top: 60px;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.project-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.project-item p {
+  margin: 0;
+}
+
+.project-number {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.project-title {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.project-subtitle {
+  font-size: 1rem;
+  margin-top: 4px;
+  margin-left: 2.5rem;
+}
+
+/* Hover effect */
+.project-item a:hover .project-title {
+  color: #7a5fbd;
+}
