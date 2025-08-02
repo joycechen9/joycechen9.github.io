@@ -1,7 +1,7 @@
 /* Import Aptos font (if available on your system) */
 @font-face {
-  font-family: 'Monaco';
-  src: local('Monaco'), local('Segoe UI'), sans-serif;
+  font-family: 'Montserrat';
+  src: local('Montserrat'), local('Segoe UI'), sans-serif;
 }
 
 * {
@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: 'Monaco', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #f9f9fb;
   color: #333;
   overflow-x: hidden;
