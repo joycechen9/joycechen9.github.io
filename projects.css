@@ -3,38 +3,35 @@ body {
   background-color: #fff;
   color: #000;
   margin: 0;
-  padding: 60px 20px;
-  text-align: left;
+  padding: 0;
 }
 
-/* Joyce Chen title */
+/* JOYCE CHEN in top-right corner */
 #joyce-name {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-left: 20px;
-  position: relative;
-  display: inline-block;
-}
-
-#joyce-name::before {
-  content: '';
-  position: absolute;
-  bottom: 0.15em;
-  left: 0;
-  width: 100%;
-  height: 0.5em;
+  position: fixed;
+  top: 20px;
+  right: 20px;
   background: #e6dbff;
-  z-index: -1;
+  padding: 6px 10px;
   border-radius: 4px;
+  z-index: 10;
 }
 
-/* Projects Layout */
-.project-list {
-  margin-top: 60px;
+/* Projects container */
+#projects-wrapper {
+  padding-top: 100px;
   padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* Projects layout */
+.project-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
+  margin-top: 40px;
 }
 
 .project-item a {
@@ -60,7 +57,7 @@ body {
 .project-subtitle {
   font-size: 1rem;
   margin-top: 4px;
-  margin-left: 2.5rem;
+  margin-left: 3rem; /* indent the subtitle */
 }
 
 /* Hover effect */
