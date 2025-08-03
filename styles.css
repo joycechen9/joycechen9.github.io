@@ -7,24 +7,26 @@ body {
   background-color: white;
 }
 
-/* Name */
+/* Updated Name styles */
 #name {
   font-size: 4rem;
   font-weight: 800;
   margin-top: 80px;
   position: relative;
   display: inline-block;
+  line-height: 1.1; /* Tighter line height for better highlight alignment */
 }
 
 #name::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 20%;
+  top: 0;
   width: 100%;
-  height: 1.2em;
-  background-color: rgba(200, 190, 255, 0.5); /* subtle light purple */
+  height: 50%; /* Covers exactly the top half */
+  background-color: #e6dbff; /* Your purple color */
   z-index: -1;
+  border-radius: 4px 4px 0 0; /* Soften top edges */
 }
 
 /* Navigation Menu */
