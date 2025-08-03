@@ -169,3 +169,46 @@ body {
   height: auto;
   display: block;
 }
+
+
+/* Add this to your existing CSS */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to top */
+  margin-bottom: 20px;
+}
+
+.project-title-container {
+  max-width: 70%; /* Increased from 60% */
+}
+
+.project-subtitle {
+  width: 100%;
+  padding: 0;
+  margin: 10px 0 30px 0; /* Better spacing */
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.project-subtitle a {
+  color: #3E01FF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-subtitle a:hover {
+  text-decoration: underline;
+}
+
+/* Fix for mobile */
+@media (max-width: 768px) {
+  .project-title-container {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .project-subtitle {
+    margin: 10px 0 20px 0;
+  }
+}
