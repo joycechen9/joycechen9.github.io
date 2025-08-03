@@ -63,6 +63,13 @@ nav a:hover {
   margin: 30px auto;
   font-size: 1.1rem;
   line-height: 1.5;
+  padding: 0 1rem; 
+  text-align: center; 
+}
+@media (max-width: 500px) {
+  .about {
+    font-size: 1rem;
+  }
 }
 
 /* Update footer styles */
