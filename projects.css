@@ -70,3 +70,14 @@ body {
 .project-item a:hover .project-title {
   color: #7a5fbd;
 }
+
+.project-page {
+  width: 100%;
+  margin-bottom: 40px; /* Space between pages */
+}
+
+.project-page img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
