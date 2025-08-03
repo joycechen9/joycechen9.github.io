@@ -48,13 +48,9 @@ nav a:hover {
   color: #3E01FF;
 }
 
-/* Divider */
+/* Remove the divider completely */
 .divider {
-  margin: 20px auto;
-  width: 90%;
-  border: 0;
-  height: 1px;
-  background-color: black;
+  display: none;
 }
 
 /* About */
