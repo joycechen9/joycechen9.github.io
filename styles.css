@@ -7,6 +7,7 @@ body {
   background-color: white;
 }
 
+
 /* Updated Name styles */
 #name {
   font-size: 4rem;
@@ -64,10 +65,13 @@ nav a:hover {
   line-height: 1.5;
 }
 
-/* Footer with Icons */
+/* Update footer styles */
 footer {
-  margin-top: 80px;
-  margin-bottom: 40px;
+  position: absolute;
+  bottom: 80px; /* Matches #name's margin-top */
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 footer a {
@@ -79,4 +83,17 @@ footer a {
 
 footer a:hover {
   color: #3E01FF;
+}
+
+/* Style for the site notice */
+.site-notice {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.site-notice .fa-cog {
+  margin-right: 5px;
 }
