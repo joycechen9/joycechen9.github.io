@@ -26,7 +26,6 @@ body {
   height: 50%; /* Covers exactly the top half */
   background-color: #e6dbff; /* Your purple color */
   z-index: -1;
-  border-radius: 4px 4px 0 0; /* Soften top edges */
 }
 
 /* Navigation Menu */
@@ -45,7 +44,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #947aff;
+  color: #3E01FF;
 }
 
 /* Divider */
@@ -79,5 +78,5 @@ footer a {
 }
 
 footer a:hover {
-  color: #947aff;
+  color: #3E01FF;
 }
