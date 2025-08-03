@@ -49,9 +49,12 @@ nav a:hover {
   font-weight: bold; /* Add bold on hover */
 }
 
-/* Remove the divider completely */
 .divider {
-  display: none;
+  margin: 20px auto;
+  width: 90%;
+  border: 0;
+  height: 1px;
+  background-color: black;
 }
 
 /* About */
