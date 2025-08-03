@@ -22,7 +22,7 @@ body {
 }
 
 #joyce-name:hover {
-  color: #7a5fbd;
+  color: #3E01FF;
 }
 
 /* Projects container */
@@ -68,7 +68,7 @@ body {
 
 /* Hover effect */
 .project-item a:hover .project-title {
-  color: #7a5fbd;
+  color: #3E01FF;
 }
 
 
@@ -142,7 +142,7 @@ body {
     }
     
     .back-button:hover {
-      color: #7a5fbd;
+      color: #3E01FF;
       background: #d9c9ff;
     }
     
