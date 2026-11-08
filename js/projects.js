@@ -40,9 +40,16 @@ const PROJECTS = [
     materials: "Steel, Walnut, Acrylic",
     summary: "New Windsor is a modern spin on the iconic and classic Windsor chair.",
     details: ["More details", "More details"],
-    cover: "",
-    featured: "",
-    photos: []
+    cover: "assets/img/work/new-windsor/new-windsor-01.jpg",
+    featured: "assets/img/work/new-windsor/new-windsor-01.jpg",
+    photos: [
+      "assets/img/work/new-windsor/new-windsor-02.jpg",
+      "assets/img/work/new-windsor/new-windsor-03.jpg",
+      "assets/img/work/new-windsor/new-windsor-04.jpg",
+      "assets/img/work/new-windsor/new-windsor-05.jpg",
+      "assets/img/work/new-windsor/new-windsor-06.jpg",
+      "assets/img/work/new-windsor/new-windsor-07.jpg"
+    ]
   },
 {
     id: "saturn-with-a-moon",
