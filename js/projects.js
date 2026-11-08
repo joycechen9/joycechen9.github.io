@@ -81,7 +81,7 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
+    cover: "assets/img/work/manchild/manchild-cover.jpg",
     featured: "",
     photos: []
   },
