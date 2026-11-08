@@ -252,6 +252,14 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .project-photos { --gap: 13px; }
 
+.project-section { margin-top: 72px; }
+.project-section h2 {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  margin: 0 0 18px;
+}
+
 /* ---------- Sketchbook ---------- */
 .sketchbook { padding: 66px var(--side) 120px; }
 .sketchbook-head { margin-bottom: 32px; }

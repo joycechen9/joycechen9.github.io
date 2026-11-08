@@ -45,4 +45,24 @@ if (!p) {
     return cell;
   });
   masonry(document.getElementById("p-photos"), photos, gridColumns);
+
+  // Extra labelled sections (e.g. "Iteration 1"), each with its own photo grid
+  const secBox = document.getElementById("p-sections");
+  (p.sections || []).forEach((sec) => {
+    const wrap = document.createElement("section");
+    wrap.className = "project-section";
+    const h = document.createElement("h2");
+    h.textContent = sec.label.toUpperCase();
+    const g = document.createElement("div");
+    g.className = "project-photos";
+    wrap.append(h, g);
+    secBox.appendChild(wrap);
+    const cells = sec.photos.map((src) => {
+      const cell = document.createElement("div");
+      cell.className = "photo";
+      cell.appendChild(media(src, p.title + " " + sec.label));
+      return cell;
+    });
+    masonry(g, cells, gridColumns);
+  });
 }

@@ -19,6 +19,8 @@
                which plays silently on loop
     poster     (videos only, optional) still image shown while the video loads
     photos     images in the grid below it
+    sections   (optional) extra labelled photo groups further down the page:
+               [{ label: "Iteration 1", photos: ["...jpg", "...jpg"] }]
 */
 
 const PROJECTS = [
@@ -82,8 +84,22 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "assets/img/work/manchild/manchild-cover.jpg",
-    featured: "",
-    photos: []
+    featured: "assets/img/work/manchild/manchild-featured.jpg",
+    photos: [
+      "assets/img/work/manchild/manchild-01.jpg",
+      "assets/img/work/manchild/manchild-02.jpg",
+      "assets/img/work/manchild/manchild-03.jpg"
+    ],
+    sections: [
+      {
+        label: "Iteration 1",
+        photos: [
+          "assets/img/work/manchild/manchild-iter1-01.jpg",
+          "assets/img/work/manchild/manchild-iter1-02.jpg",
+          "assets/img/work/manchild/manchild-iter1-03.jpg"
+        ]
+      }
+    ]
   },
 {
     id: "for-sale",
