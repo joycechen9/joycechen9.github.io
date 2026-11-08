@@ -61,7 +61,7 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-02.jpg",
+    cover: "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-cover.jpg",
     featured: "assets/img/work/saturn-with-a-moon/saturn-with-a-moon.mp4",
     poster: "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-poster.jpg",
     photos: [
