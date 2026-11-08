@@ -15,7 +15,9 @@
     cover      image shown in the grid, e.g. "assets/img/work/new-windsor/cover.jpg"
                leave "" to show a grey placeholder.
                Tiles keep the shape of their image and line up in 3 columns.
-    featured   the large image at the top of the project page
+    featured   the large image at the top of the project page, or a video (.mp4),
+               which plays silently on loop
+    poster     (videos only, optional) still image shown while the video loads
     photos     images in the grid below it
 */
 
@@ -59,9 +61,17 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
-    photos: []
+    cover: "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-02.jpg",
+    featured: "assets/img/work/saturn-with-a-moon/saturn-with-a-moon.mp4",
+    poster: "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-poster.jpg",
+    photos: [
+      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-01.jpg",
+      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-02.jpg",
+      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-03.jpg",
+      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-04.jpg",
+      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-05.jpg",
+      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-06.jpg"
+    ]
   },
 {
     id: "manchild",
