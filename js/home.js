@@ -1,42 +1,13 @@
 // Homepage: name-photo flipper, work grid, tag filters, work list.
 
-function media(src, label) {
-  if (src) {
-    const img = document.createElement("img");
-    img.src = src;
-    img.alt = label;
-    img.loading = "lazy";
-    return img;
-  }
-  const ph = document.createElement("div");
-  ph.className = "ph";
-  ph.textContent = label;
-  return ph;
-}
-
 /* ---------- 1. Name flipper ---------- */
-(function nameFlipper() {
-  const box = document.getElementById("name-flipper");
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  const frames = NAME_PHOTOS.length
+flipper(
+  document.getElementById("name-flipper"),
+  NAME_PHOTOS.length
     ? NAME_PHOTOS.map((src, i) => media(src, "Name photo " + (i + 1)))
-    : [1, 2, 3, 4].map((n) => media("", "name photo " + n));
-
-  frames.forEach((f, i) => {
-    f.classList.add("frame");
-    if (i === 0) f.classList.add("on");
-    box.appendChild(f);
-  });
-
-  if (frames.length < 2 || reduceMotion) return;
-  let i = 0;
-  setInterval(() => {
-    frames[i].classList.remove("on");
-    i = (i + 1) % frames.length;
-    frames[i].classList.add("on");
-  }, NAME_FLIP_MS);
-})();
+    : [1, 2, 3, 4].map((n) => media("", "name photo " + n)),
+  NAME_FLIP_MS
+);
 
 /* ---------- 2–3. Work grid + list ---------- */
 const grid = document.getElementById("grid");
@@ -48,18 +19,19 @@ const sorted = [...PROJECTS].sort((a, b) => b.year - a.year);
 const link = (p) => "project.html?id=" + encodeURIComponent(p.id);
 
 // Grid tiles
-sorted.forEach((p) => {
+const tiles = sorted.map((p) => {
   const a = document.createElement("a");
   a.href = link(p);
-  a.className = "tile size-" + (p.size || "small");
+  a.className = "tile";
   a.dataset.tags = p.tags.join(" ");
-  a.appendChild(media(p.cover, ""));
+  a.appendChild(media(p.cover, p.cover ? p.title : ""));
   const cap = document.createElement("span");
   cap.className = "tile-caption";
   cap.textContent = p.title.toUpperCase();
   a.appendChild(cap);
-  grid.appendChild(a);
+  return a;
 });
+const relayout = masonry(grid, tiles, gridColumns);
 
 // List
 const ul = document.createElement("ul");
@@ -72,13 +44,11 @@ sorted.forEach((p) => {
 });
 list.appendChild(ul);
 
-EXTRA_LINKS.forEach((x) => {
-  const a = document.createElement("a");
-  a.className = "extra-link";
-  a.href = x.href;
-  a.textContent = x.title.toUpperCase();
-  list.appendChild(a);
-});
+// Sketchbook link: points at the sketchbook for whichever tag is selected
+const sketchLink = document.createElement("a");
+sketchLink.className = "extra-link";
+sketchLink.textContent = "SKETCHBOOK";
+list.appendChild(sketchLink);
 
 // Filtering
 function applyFilter(tag) {
@@ -86,10 +56,12 @@ function applyFilter(tag) {
     b.classList.toggle("active", b.dataset.tag === tag)
   );
   const match = (el) => tag === "all" || el.dataset.tags.split(" ").includes(tag);
-  grid.querySelectorAll(".tile").forEach((t) => t.classList.toggle("hidden", !match(t)));
+  tiles.forEach((t) => t.classList.toggle("hidden", !match(t)));
   ul.querySelectorAll("li").forEach((li) => li.classList.toggle("hidden", !match(li)));
-  // The list only appears once a tag is chosen (wireframe 3); ALL shows the full-width grid.
+  // The list only appears once a tag is chosen; ALL shows the full-width grid.
   body.classList.toggle("with-list", tag !== "all");
+  sketchLink.href = "sketchbook.html?tag=" + tag;
+  relayout();
 }
 
 filters.addEventListener("click", (e) => {

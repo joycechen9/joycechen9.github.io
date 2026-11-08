@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sketchbook | Joyce Chen</title>
+  <link rel="icon" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html#about" class="nav-link">ABOUT</a>
+    <a href="index.html" class="site-name">JOYCE CHEN</a>
+    <a href="index.html#work" class="nav-link">WORK</a>
+  </header>
+
+  <main class="sketchbook" id="sketchbook">
+    <div class="sketchbook-head">
+      <h1 id="s-title"></h1>
+      <p id="s-intro"></p>
+    </div>
+    <div class="masonry" id="s-grid"></div>
+  </main>
+
+  <script src="js/projects.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    const tag = new URLSearchParams(location.search).get("tag");
+    const book = SKETCHBOOKS[tag];
+    if (!book) {
+      document.getElementById("sketchbook").innerHTML =
+        '<p class="not-found">Sketchbook not found. <a href="index.html#work">Back to work</a></p>';
+    } else {
+      const title = tag.toUpperCase() + " SKETCHBOOK";
+      document.title = title + " | Joyce Chen";
+      document.getElementById("s-title").textContent = title;
+      document.getElementById("s-intro").textContent = book.intro;
+      const pages = (book.images.length ? book.images : Array(7).fill("")).map((src, i) => {
+        const cell = document.createElement("div");
+        cell.className = "photo";
+        cell.appendChild(media(src, src ? title + " page " + (i + 1) : "sketchbook page"));
+        return cell;
+      });
+      masonry(document.getElementById("s-grid"), pages, gridColumns);
+    }
+  </script>
+</body>
+</html>

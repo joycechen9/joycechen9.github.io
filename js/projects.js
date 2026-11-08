@@ -13,8 +13,8 @@
     summary    first paragraph on the project page
     details    extra paragraphs (array of strings)
     cover      image shown in the grid, e.g. "assets/img/work/new-windsor/cover.jpg"
-               leave "" to show a grey placeholder
-    size       grid tile shape: "small" | "tall" | "wide" | "big"
+               leave "" to show a grey placeholder.
+               Tiles keep the shape of their image and line up in 3 columns.
     featured   images that flip in the large frame on the project page
     photos     images in the grid below it
 */
@@ -29,7 +29,6 @@ const PROJECTS = [
     summary: "One-line description.",
     details: ["More details"],
     cover: "",
-    size: "tall",
     featured: [],
     photos: []
   },
@@ -42,7 +41,6 @@ const PROJECTS = [
     summary: "New Windsor is a modern spin on the iconic and classic Windsor chair.",
     details: ["More details", "More details"],
     cover: "",
-    size: "big",
     featured: [],
     photos: []
   },
@@ -55,7 +53,6 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "",
-    size: "small",
     featured: [],
     photos: []
   },
@@ -68,7 +65,6 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "",
-    size: "tall",
     featured: [],
     photos: []
   },
@@ -81,7 +77,6 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "",
-    size: "small",
     featured: [],
     photos: []
   },
@@ -94,7 +89,6 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "",
-    size: "wide",
     featured: [],
     photos: []
   },
@@ -107,7 +101,6 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "",
-    size: "tall",
     featured: [],
     photos: []
   },
@@ -120,7 +113,6 @@ const PROJECTS = [
     summary: "An automatic harvester for sea asparagus.",
     details: [],
     cover: "",
-    size: "wide",
     featured: [],
     photos: []
   },
@@ -133,7 +125,6 @@ const PROJECTS = [
     summary: "A demo kit for security devices, designed during my internship at Verkada.",
     details: [],
     cover: "",
-    size: "small",
     featured: [],
     photos: []
   },
@@ -146,16 +137,18 @@ const PROJECTS = [
     summary: "Snap pea flying machine!",
     details: [],
     cover: "",
-    size: "tall",
     featured: [],
     photos: []
   }
 ];
 
-/* Extra links shown in italics under the work list (not in the grid). */
-const EXTRA_LINKS = [
-  { title: "Sketchbook", href: "sketch.html" }
-];
+/* One sketchbook per tag. The SKETCHBOOK link under the work list opens
+   the one for the selected filter: sketchbook.html?tag=design, etc. */
+const SKETCHBOOKS = {
+  design:      { intro: "", images: [] },
+  engineering: { intro: "", images: [] },
+  art:         { intro: "", images: [] }
+};
 
 /* Photos of your name that flip on the homepage, about 1 per second.
    e.g. "assets/img/name/name-01.jpg". Leave empty to show placeholders. */

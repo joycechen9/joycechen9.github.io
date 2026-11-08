@@ -167,21 +167,22 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
 .extra-link:hover { text-decoration: underline; }
 
-/* Mosaic grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 120px;
-  grid-auto-flow: dense;
+/* Masonry grid: 3 side-by-side columns; each tile keeps its image's shape.
+   Columns are built by js/common.js. */
+.grid, .project-photos, .masonry {
+  display: flex;
+  gap: var(--gap);
+  align-items: flex-start;
+}
+.m-col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
   gap: var(--gap);
 }
-.with-list .grid { grid-template-columns: repeat(3, 1fr); }
 
-.tile { position: relative; overflow: hidden; grid-row: span 2; }
-.tile.size-small { grid-row: span 2; }
-.tile.size-tall  { grid-row: span 3; }
-.tile.size-wide  { grid-column: span 2; grid-row: span 2; }
-.tile.size-big   { grid-column: span 2; grid-row: span 3; }
+.tile, .photo { position: relative; display: block; overflow: hidden; width: 100%; }
 
 .tile-caption {
   position: absolute;
@@ -219,14 +220,13 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   overflow: hidden;
 }
 
-.project-photos {
-  display: grid;
-  grid-template-columns: 1fr 1fr .58fr;
-  grid-auto-rows: 215px;
-  gap: 13px;
-}
-.project-photos .photo:first-child { grid-row: span 2; }
-.project-photos .photo:nth-child(n+6) { grid-row: span 1; }
+.project-photos { --gap: 13px; }
+
+/* ---------- Sketchbook ---------- */
+.sketchbook { padding: 66px var(--side) 120px; }
+.sketchbook-head { margin-bottom: 32px; }
+.sketchbook-head h1 { font-size: 34px; margin: 0 0 12px; letter-spacing: .5px; }
+.sketchbook-head p { font-size: 17px; font-style: italic; margin: 0; max-width: 560px; }
 
 .not-found { font-size: 18px; }
 .not-found a { text-decoration: underline; }
@@ -238,7 +238,6 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
   .hero-inner { grid-template-columns: 1fr; gap: 28px; max-width: 520px; margin: 0 auto; }
 
-  .grid, .with-list .grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 90px; }
   .filters { gap: 10px; flex-wrap: wrap; }
   .filters button { font-size: 18px; }
 
@@ -249,5 +248,5 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .project { padding: 32px 20px 80px; }
   .project-top { grid-template-columns: 1fr; }
   .project-featured { order: -1; }
-  .project-photos { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; }
+  .sketchbook { padding: 32px 20px 80px; }
 }

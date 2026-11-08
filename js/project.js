@@ -1,19 +1,5 @@
 // Project detail page: reads ?id= from the URL and fills the page from PROJECTS.
 
-function media(src, label) {
-  if (src) {
-    const img = document.createElement("img");
-    img.src = src;
-    img.alt = label;
-    img.loading = "lazy";
-    return img;
-  }
-  const ph = document.createElement("div");
-  ph.className = "ph";
-  ph.textContent = label;
-  return ph;
-}
-
 const id = new URLSearchParams(location.search).get("id");
 const p = PROJECTS.find((x) => x.id === id);
 
@@ -33,32 +19,21 @@ if (!p) {
     text.appendChild(para);
   });
 
-  // Featured photos flip like the homepage name photos
-  const feat = document.getElementById("p-featured");
-  const frames = (p.featured.length ? p.featured : ["", "", ""]).map((src, i) =>
-    media(src, src ? p.title + " photo " + (i + 1) : "featured photo " + (i + 1))
+  // Featured photos flip in the large frame
+  flipper(
+    document.getElementById("p-featured"),
+    (p.featured.length ? p.featured : ["", "", ""]).map((src, i) =>
+      media(src, src ? p.title + " photo " + (i + 1) : "featured photo " + (i + 1))
+    ),
+    2000
   );
-  frames.forEach((f, i) => {
-    f.classList.add("frame");
-    if (i === 0) f.classList.add("on");
-    feat.appendChild(f);
-  });
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (frames.length > 1 && !reduceMotion) {
-    let i = 0;
-    setInterval(() => {
-      frames[i].classList.remove("on");
-      i = (i + 1) % frames.length;
-      frames[i].classList.add("on");
-    }, 2000);
-  }
 
-  // Other photos
-  const grid = document.getElementById("p-photos");
-  const photos = p.photos.length ? p.photos : ["", "", "", "", ""];
-  photos.forEach((src, i) => {
-    const cell = media(src, src ? p.title + " photo" : "other photo");
-    cell.classList.add("photo");
-    grid.appendChild(cell);
+  // Other photos: 3-column masonry, each photo keeps its own shape
+  const photos = (p.photos.length ? p.photos : ["", "", "", "", ""]).map((src) => {
+    const cell = document.createElement("div");
+    cell.className = "photo";
+    cell.appendChild(media(src, src ? p.title + " photo" : "other photo"));
+    return cell;
   });
+  masonry(document.getElementById("p-photos"), photos, gridColumns);
 }
