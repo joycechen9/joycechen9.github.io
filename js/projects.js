@@ -1,0 +1,163 @@
+/*
+  SITE CONTENT
+  ------------
+  Everything on the homepage grid, the work list, and each project page
+  is generated from this file. To add or edit a project, edit an entry below.
+
+  Fields:
+    id         used in the URL: project.html?id=new-windsor  (lowercase, dashes, no spaces)
+    title      shown in the list, grid hover, and project page
+    year       number
+    tags       any of: "design", "engineering", "art"
+    materials  short line under the title on the project page
+    summary    first paragraph on the project page
+    details    extra paragraphs (array of strings)
+    cover      image shown in the grid, e.g. "assets/img/work/new-windsor/cover.jpg"
+               leave "" to show a grey placeholder
+    size       grid tile shape: "small" | "tall" | "wide" | "big"
+    featured   images that flip in the large frame on the project page
+    photos     images in the grid below it
+*/
+
+const PROJECTS = [
+  {
+    id: "for-our-shadow-selves",
+    title: "For Our Shadow Selves",
+    year: 2026,
+    tags: ["design"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: ["More details"],
+    cover: "",
+    size: "tall",
+    featured: [],
+    photos: []
+  },
+  {
+    id: "new-windsor",
+    title: "New Windsor",
+    year: 2026,
+    tags: ["design"],
+    materials: "Steel, Walnut, Acrylic",
+    summary: "New Windsor is a modern spin on the iconic and classic Windsor chair.",
+    details: ["More details", "More details"],
+    cover: "",
+    size: "big",
+    featured: [],
+    photos: []
+  },
+  {
+    id: "saturn-with-a-moon",
+    title: "Saturn with a Moon",
+    year: 2026,
+    tags: ["design"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    size: "small",
+    featured: [],
+    photos: []
+  },
+  {
+    id: "manchild",
+    title: "Manchild",
+    year: 2025,
+    tags: ["design"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    size: "tall",
+    featured: [],
+    photos: []
+  },
+  {
+    id: "for-sale",
+    title: "For Sale",
+    year: 2025,
+    tags: ["design"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    size: "small",
+    featured: [],
+    photos: []
+  },
+  {
+    id: "trinket-shelf",
+    title: "Trinket Shelf",
+    year: 2025,
+    tags: ["design"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    size: "wide",
+    featured: [],
+    photos: []
+  },
+  {
+    id: "fountain-for-bees",
+    title: "Fountain for Bees",
+    year: 2025,
+    tags: ["design"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    size: "tall",
+    featured: [],
+    photos: []
+  },
+  {
+    id: "salico",
+    title: "Salico",
+    year: 2025,
+    tags: ["engineering"],
+    materials: "Materials",
+    summary: "An automatic harvester for sea asparagus.",
+    details: [],
+    cover: "",
+    size: "wide",
+    featured: [],
+    photos: []
+  },
+  {
+    id: "kong",
+    title: "Kong",
+    year: 2024,
+    tags: ["design", "engineering"],
+    materials: "Materials",
+    summary: "A demo kit for security devices, designed during my internship at Verkada.",
+    details: [],
+    cover: "",
+    size: "small",
+    featured: [],
+    photos: []
+  },
+  {
+    id: "redbull-flugtag",
+    title: "Redbull Flugtag",
+    year: 2022,
+    tags: ["design", "engineering"],
+    materials: "Materials",
+    summary: "Snap pea flying machine!",
+    details: [],
+    cover: "",
+    size: "tall",
+    featured: [],
+    photos: []
+  }
+];
+
+/* Extra links shown in italics under the work list (not in the grid). */
+const EXTRA_LINKS = [
+  { title: "Sketchbook", href: "sketch.html" }
+];
+
+/* Photos of your name that flip on the homepage, about 1 per second.
+   e.g. "assets/img/name/name-01.jpg". Leave empty to show placeholders. */
+const NAME_PHOTOS = [];
+const NAME_FLIP_MS = 1000;
