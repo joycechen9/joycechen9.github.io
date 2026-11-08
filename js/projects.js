@@ -15,7 +15,7 @@
     cover      image shown in the grid, e.g. "assets/img/work/new-windsor/cover.jpg"
                leave "" to show a grey placeholder.
                Tiles keep the shape of their image and line up in 3 columns.
-    featured   images that flip in the large frame on the project page
+    featured   the large image at the top of the project page
     photos     images in the grid below it
 */
 
@@ -29,7 +29,7 @@ const PROJECTS = [
     summary: "One-line description.",
     details: ["More details"],
     cover: "",
-    featured: [],
+    featured: "",
     photos: []
   },
   {
@@ -41,7 +41,7 @@ const PROJECTS = [
     summary: "New Windsor is a modern spin on the iconic and classic Windsor chair.",
     details: ["More details", "More details"],
     cover: "",
-    featured: [],
+    featured: "",
     photos: []
   },
   {
@@ -53,7 +53,7 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "",
-    featured: [],
+    featured: "",
     photos: []
   },
   {
@@ -65,7 +65,7 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "",
-    featured: [],
+    featured: "",
     photos: []
   },
   {
@@ -77,7 +77,7 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "",
-    featured: [],
+    featured: "",
     photos: []
   },
   {
@@ -89,7 +89,7 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "",
-    featured: [],
+    featured: "",
     photos: []
   },
   {
@@ -101,7 +101,7 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "",
-    featured: [],
+    featured: "",
     photos: []
   },
   {
@@ -113,7 +113,7 @@ const PROJECTS = [
     summary: "An automatic harvester for sea asparagus.",
     details: [],
     cover: "",
-    featured: [],
+    featured: "",
     photos: []
   },
   {
@@ -125,7 +125,7 @@ const PROJECTS = [
     summary: "A demo kit for security devices, designed during my internship at Verkada.",
     details: [],
     cover: "",
-    featured: [],
+    featured: "",
     photos: []
   },
   {
@@ -137,7 +137,7 @@ const PROJECTS = [
     summary: "Snap pea flying machine!",
     details: [],
     cover: "",
-    featured: [],
+    featured: "",
     photos: []
   }
 ];

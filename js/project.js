@@ -19,13 +19,9 @@ if (!p) {
     text.appendChild(para);
   });
 
-  // Featured photos flip in the large frame
-  flipper(
-    document.getElementById("p-featured"),
-    (p.featured.length ? p.featured : ["", "", ""]).map((src, i) =>
-      media(src, src ? p.title + " photo " + (i + 1) : "featured photo " + (i + 1))
-    ),
-    2000
+  // Featured photo (static)
+  document.getElementById("p-featured").appendChild(
+    media(p.featured, p.featured ? p.title : "featured photo")
   );
 
   // Other photos: 3-column masonry, each photo keeps its own shape
