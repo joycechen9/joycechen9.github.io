@@ -19,8 +19,10 @@
                which plays silently on loop
     poster     (videos only, optional) still image shown while the video loads
     photos     images in the grid below it
+    photosLayout  (optional) "row" = photos side by side at the same height,
+               3 per row. Leave out for the 3-column masonry grid.
     sections   (optional) extra labelled photo groups further down the page:
-               [{ label: "Iteration 1", photos: ["...jpg", "...jpg"] }]
+               [{ label: "Iteration 1", layout: "row", photos: ["...jpg"] }]
 */
 
 const PROJECTS = [
@@ -85,6 +87,7 @@ const PROJECTS = [
     details: [],
     cover: "assets/img/work/manchild/manchild-cover.jpg",
     featured: "assets/img/work/manchild/manchild-featured.jpg",
+    photosLayout: "row",
     photos: [
       "assets/img/work/manchild/manchild-01.jpg",
       "assets/img/work/manchild/manchild-02.jpg",
@@ -93,6 +96,7 @@ const PROJECTS = [
     sections: [
       {
         label: "Iteration 1",
+        layout: "row",
         photos: [
           "assets/img/work/manchild/manchild-iter1-01.jpg",
           "assets/img/work/manchild/manchild-iter1-02.jpg",

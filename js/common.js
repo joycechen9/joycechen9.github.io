@@ -69,6 +69,45 @@ function masonry(container, items, columnsFor) {
   return layout;
 }
 
+/*
+  Rows: lays items out in rows of up to `perRow`, every item in a row at the
+  same height (widths follow each image's proportions, so the row is flush).
+*/
+function rows(container, items, perRowFor) {
+  function layout() {
+    const n = perRowFor();
+    container.innerHTML = "";
+    container.classList.add("rows");
+    for (let i = 0; i < items.length; i += n) {
+      const row = document.createElement("div");
+      row.className = "r-row";
+      items.slice(i, i + n).forEach((el, k) => {
+        const w = 1 / ratioOf(el, i + k);          // width / height
+        el.style.aspectRatio = w.toFixed(4);
+        el.style.flex = w.toFixed(4) + " 1 0";
+        row.appendChild(el);
+      });
+      container.appendChild(row);
+    }
+  }
+  items.forEach((el) => {
+    const img = el.querySelector("img");
+    if (img && !img.complete) img.addEventListener("load", layout, { once: true });
+  });
+  let lastN = perRowFor();
+  window.addEventListener("resize", () => {
+    const n = perRowFor();
+    if (n !== lastN) { lastN = n; layout(); }
+  });
+  layout();
+}
+
+// Pick masonry columns or equal-height rows for a photo group.
+function photoGrid(container, items, layout) {
+  if (layout === "row") rows(container, items, () => (isNarrow() ? 1 : 3));
+  else masonry(container, items, gridColumns);
+}
+
 const isNarrow = () => window.matchMedia("(max-width: 900px)").matches;
 const gridColumns = () => (isNarrow() ? 2 : 3);
 

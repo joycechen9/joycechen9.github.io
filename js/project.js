@@ -44,7 +44,7 @@ if (!p) {
     cell.appendChild(media(src, src ? p.title + " photo" : "other photo"));
     return cell;
   });
-  masonry(document.getElementById("p-photos"), photos, gridColumns);
+  photoGrid(document.getElementById("p-photos"), photos, p.photosLayout);
 
   // Extra labelled sections (e.g. "Iteration 1"), each with its own photo grid
   const secBox = document.getElementById("p-sections");
@@ -63,6 +63,6 @@ if (!p) {
       cell.appendChild(media(src, p.title + " " + sec.label));
       return cell;
     });
-    masonry(g, cells, gridColumns);
+    photoGrid(g, cells, sec.layout);
   });
 }
