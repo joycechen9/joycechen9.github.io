@@ -20,7 +20,7 @@
 */
 
 const PROJECTS = [
-  {
+{
     id: "for-our-shadow-selves",
     title: "For Our Shadow Selves",
     year: 2026,
@@ -32,7 +32,7 @@ const PROJECTS = [
     featured: "",
     photos: []
   },
-  {
+{
     id: "new-windsor",
     title: "New Windsor",
     year: 2026,
@@ -44,7 +44,7 @@ const PROJECTS = [
     featured: "",
     photos: []
   },
-  {
+{
     id: "saturn-with-a-moon",
     title: "Saturn with a Moon",
     year: 2026,
@@ -56,7 +56,7 @@ const PROJECTS = [
     featured: "",
     photos: []
   },
-  {
+{
     id: "manchild",
     title: "Manchild",
     year: 2025,
@@ -68,7 +68,7 @@ const PROJECTS = [
     featured: "",
     photos: []
   },
-  {
+{
     id: "for-sale",
     title: "For Sale",
     year: 2025,
@@ -80,7 +80,7 @@ const PROJECTS = [
     featured: "",
     photos: []
   },
-  {
+{
     id: "trinket-shelf",
     title: "Trinket Shelf",
     year: 2025,
@@ -92,7 +92,7 @@ const PROJECTS = [
     featured: "",
     photos: []
   },
-  {
+{
     id: "fountain-for-bees",
     title: "Fountain for Bees",
     year: 2025,
@@ -104,7 +104,43 @@ const PROJECTS = [
     featured: "",
     photos: []
   },
+{
+    id: "kong",
+    title: "Kong",
+    year: 2024,
+    tags: ["design", "engineering"],
+    materials: "Materials",
+    summary: "A demo kit for security devices, designed during my internship at Verkada.",
+    details: [],
+    cover: "",
+    featured: "",
+    photos: []
+  },
+{
+    id: "redbull-flugtag",
+    title: "Redbull Flugtag",
+    year: 2022,
+    tags: ["design", "engineering"],
+    materials: "Materials",
+    summary: "Snap pea flying machine!",
+    details: [],
+    cover: "",
+    featured: "",
+    photos: []
+  },
   {
+    id: "telescoping-pole",
+    title: "Telescoping Pole",
+    year: 2026,
+    tags: ["engineering"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    featured: "",
+    photos: []
+  },
+{
     id: "salico",
     title: "Salico",
     year: 2025,
@@ -117,24 +153,144 @@ const PROJECTS = [
     photos: []
   },
   {
-    id: "kong",
-    title: "Kong",
-    year: 2024,
-    tags: ["design", "engineering"],
+    id: "lego-rescue",
+    title: "Lego Rescue",
+    year: 2023,
+    tags: ["engineering"],
     materials: "Materials",
-    summary: "A demo kit for security devices, designed during my internship at Verkada.",
+    summary: "One-line description.",
     details: [],
     cover: "",
     featured: "",
     photos: []
   },
   {
-    id: "redbull-flugtag",
-    title: "Redbull Flugtag",
-    year: 2022,
-    tags: ["design", "engineering"],
+    id: "chinese-market",
+    title: "Chinese Market",
+    year: 2026,
+    tags: ["art"],
     materials: "Materials",
-    summary: "Snap pea flying machine!",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    featured: "",
+    photos: []
+  },
+  {
+    id: "working-on-the-car",
+    title: "Working on the Car",
+    year: 2026,
+    tags: ["art"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    featured: "",
+    photos: []
+  },
+  {
+    id: "sound",
+    title: "Sound",
+    year: 2023,
+    tags: ["art"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    featured: "",
+    photos: []
+  },
+  {
+    id: "campus",
+    title: "Campus",
+    year: 2021,
+    tags: ["art"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    featured: "",
+    photos: []
+  },
+  {
+    id: "perception",
+    title: "Perception",
+    year: 2021,
+    tags: ["art"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    featured: "",
+    photos: []
+  },
+  {
+    id: "everything-i-love",
+    title: "Everything I Love",
+    year: 2020,
+    tags: ["art"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    featured: "",
+    photos: []
+  },
+  {
+    id: "dishwasher",
+    title: "Dishwasher",
+    year: 2020,
+    tags: ["art"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    featured: "",
+    photos: []
+  },
+  {
+    id: "cardboard-party",
+    title: "Cardboard Party",
+    year: 2020,
+    tags: ["art"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    featured: "",
+    photos: []
+  },
+  {
+    id: "night",
+    title: "Night",
+    year: 2020,
+    tags: ["art"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    featured: "",
+    photos: []
+  },
+  {
+    id: "it-is-so-cute",
+    title: "It Is So Cute",
+    year: 2019,
+    tags: ["art"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    featured: "",
+    photos: []
+  },
+  {
+    id: "medusa",
+    title: "Medusa",
+    year: 2019,
+    tags: ["art"],
+    materials: "Materials",
+    summary: "One-line description.",
     details: [],
     cover: "",
     featured: "",
