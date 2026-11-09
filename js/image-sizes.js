@@ -524,7 +524,7 @@ const IMAGE_SIZES = {
 1280,
 932
 ],
-"assets/img/work/sound/sound-01.jpg": [
+"assets/img/work/mark-making-and-sound/mark-making-and-sound-01.jpg": [
 1800,
 1797
 ],

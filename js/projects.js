@@ -329,8 +329,8 @@ const PROJECTS = [
     photos: []
   },
   {
-    id: "sound",
-    title: "Sound",
+    id: "mark-making-and-sound",
+    title: "Mark Making and Sound",
     year: 2023,
     tags: ["art"],
     materials: "Acrylic on canvas",
@@ -338,8 +338,8 @@ const PROJECTS = [
     size: "24 \u00d7 24 in.",
     summary: "This painting was made while listening to this album on loop:",
     details: [],
-    cover: "assets/img/work/sound/sound-01.jpg",
-    featured: "assets/img/work/sound/sound-01.jpg",
+    cover: "assets/img/work/mark-making-and-sound/mark-making-and-sound-01.jpg",
+    featured: "assets/img/work/mark-making-and-sound/mark-making-and-sound-01.jpg",
     photos: []
   },
   {
