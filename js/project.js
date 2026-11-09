@@ -122,17 +122,30 @@ if (!p) {
     }
   }
 
-  // YouTube video, embedded (privacy-enhanced domain, no cookies until played)
+  // YouTube video. YouTube needs to know which site is embedding it (the Referer),
+  // and a page opened straight from a file has none, which shows "Error 153".
+  // So when previewing locally, show a still that links to YouTube instead.
   if (p.video) {
     const m = p.video.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/);
     if (m) {
-      const f = document.createElement("iframe");
-      f.src = `https://www.youtube-nocookie.com/embed/${m[1]}?rel=0`;
-      f.title = p.title + " video";
-      f.loading = "lazy";
-      f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen";
-      f.allowFullscreen = true;
-      document.getElementById("p-video").appendChild(f);
+      const box = document.getElementById("p-video");
+      if (location.protocol === "file:") {
+        const a = document.createElement("a");
+        a.href = `https://www.youtube.com/watch?v=${m[1]}`;
+        a.target = "_blank"; a.rel = "noopener";
+        a.className = "p-video-link";
+        a.innerHTML = `<img src="https://i.ytimg.com/vi/${m[1]}/hqdefault.jpg" alt=""><span>▶ Watch on YouTube</span>`;
+        box.appendChild(a);
+      } else {
+        const f = document.createElement("iframe");
+        f.src = `https://www.youtube-nocookie.com/embed/${m[1]}?rel=0`;
+        f.title = p.title + " video";
+        f.loading = "lazy";
+        f.referrerPolicy = "strict-origin-when-cross-origin";
+        f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen";
+        f.allowFullscreen = true;
+        box.appendChild(f);
+      }
     }
   }
 

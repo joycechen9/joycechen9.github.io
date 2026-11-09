@@ -387,10 +387,8 @@ const PROJECTS = [
     tags: ["art"],
     materials: "Digital, made in Photoshop and Premiere Pro",
     video: "https://www.youtube.com/watch?v=Gv1pcA5L7Bk",
-    summary: "Inspired by the phenomenon of thunderstorms and how my memories interlace throughout my dreams.",
-    details: [
-      "The imagery is made from distorted photos from my camera, standing for my experiences during the day and how they live on through the night as impressions in my dreams."
-    ],
+    summary: "This piece is inspired by the phenomenon of thunderstorms and how my memories interlace throughout my dreams. The imagery is made from distorted photos from my camera, representing my experiences during the day and how they live on through the night as impressions in my dreams.",
+    details: [],
     cover: "assets/img/work/my-dream-about-thunderstorms/my-dream-about-thunderstorms-01.jpg",
     featured: "assets/img/work/my-dream-about-thunderstorms/my-dream-about-thunderstorms-01.jpg",
     photos: []
