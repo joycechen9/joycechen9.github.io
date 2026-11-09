@@ -256,6 +256,11 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .project-top.wide .project-featured img,
 .project-top.wide .project-featured video { width: 100%; max-height: none; height: auto; }
 
+/* Embedded video */
+.p-video:empty { display: none; }
+.p-video { margin: 0 0 18px; }
+.p-video iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; background: #000; }
+
 /* Longer text under the big image on wide-layout pages */
 .p-more { max-width: 720px; margin: 36px 0 48px; }
 .p-more:empty { display: none; }

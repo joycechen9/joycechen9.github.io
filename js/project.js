@@ -9,9 +9,12 @@ if (!p) {
 } else {
   document.title = p.title + " | Joyce Chen";
   document.getElementById("p-title").textContent = p.title.toUpperCase();
-  document.getElementById("p-materials").textContent = p.materials;
-  if (!p.materials) document.getElementById("p-materials").nextElementSibling?.remove(); // drop the line break
-  document.getElementById("p-year").textContent = p.year;
+  // Materials, size and year, one per line
+  const meta = document.getElementById("p-meta");
+  [p.materials, p.size, String(p.year)].filter(Boolean).forEach((line, i) => {
+    if (i) meta.appendChild(document.createElement("br"));
+    meta.appendChild(document.createTextNode(line));
+  });
 
   // Text: on wide-layout pages only the one-line summary sits above the big image;
   // the longer paragraphs and links go underneath it.
@@ -46,7 +49,8 @@ if (!p) {
     return fig;
   };
   // Gallery-style label: each piece's position, materials and size, under the title
-  const labelled = Array.isArray(p.featured) ? p.featured.filter((f) => typeof f === "object" && (f.materials || f.size)) : [];
+  const labelled = p.pieces ||
+    (Array.isArray(p.featured) ? p.featured.filter((f) => typeof f === "object" && (f.materials || f.size)) : []);
   if (labelled.length) {
     const dl = document.createElement("dl");
     dl.className = "piece-list";
@@ -102,6 +106,20 @@ if (!p) {
   } else {
     featBox.appendChild(media(p.featured, p.featured ? p.title : "featured photo",
       p.featuredWide ? "100vw" : "(max-width: 900px) 100vw, 65vw"));
+  }
+
+  // YouTube video, embedded (privacy-enhanced domain, no cookies until played)
+  if (p.video) {
+    const m = p.video.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/);
+    if (m) {
+      const f = document.createElement("iframe");
+      f.src = `https://www.youtube-nocookie.com/embed/${m[1]}?rel=0`;
+      f.title = p.title + " video";
+      f.loading = "lazy";
+      f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen";
+      f.allowFullscreen = true;
+      document.getElementById("p-video").appendChild(f);
+    }
   }
 
   // Other photos: 3-column masonry, each photo keeps its own shape

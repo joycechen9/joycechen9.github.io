@@ -284,6 +284,22 @@ const IMAGE_SIZES = {
 1240,
 622
 ],
+"assets/img/work/campus/campus-detail-01.jpg": [
+2400,
+1451
+],
+"assets/img/work/campus/campus-detail-02.jpg": [
+2400,
+1801
+],
+"assets/img/work/campus/campus-detail-03.jpg": [
+2083,
+2196
+],
+"assets/img/work/campus/campus-installed.jpg": [
+2400,
+1182
+],
 "assets/img/work/campus/campus-triptych.jpg": [
 3784,
 622
@@ -332,10 +348,6 @@ const IMAGE_SIZES = {
 1344,
 1800
 ],
-"assets/img/work/everything-i-love/everything-i-love-01.jpg": [
-1800,
-900
-],
 "assets/img/work/it-is-so-cute/it-is-so-cute-01.jpg": [
 1340,
 1800
@@ -383,6 +395,10 @@ const IMAGE_SIZES = {
 "assets/img/work/medusa/medusa-01.jpg": [
 1309,
 1800
+],
+"assets/img/work/my-dream-about-thunderstorms/my-dream-about-thunderstorms-01.jpg": [
+1800,
+900
 ],
 "assets/img/work/new-windsor/new-windsor-01.jpg": [
 801,

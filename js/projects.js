@@ -12,6 +12,10 @@
     materials  short line under the title on the project page
     summary    first paragraph on the project page
     details    extra paragraphs (array of strings)
+    size       (optional) e.g. "24 × 36 in." (height × width), shown under materials
+    pieces     (optional) list of { label, materials, size } for multi-piece works,
+               shown under the title like a gallery wall label
+    video      (optional) a YouTube link, embedded under the images
     links      (optional) links shown under the text: [{ label: "...", href: "https://..." }]
     covers     (optional) several grid images for one project, each its own tile,
                all linking to the same project page. Use instead of cover.
@@ -281,7 +285,8 @@ const PROJECTS = [
     title: "Dad and Crab",
     year: 2026,
     tags: ["art"],
-    materials: "Materials",
+    materials: "Acrylic on paper",
+    size: "12 \u00d7 9 in.",
     summary: "One-line description.",
     details: [],
     cover: "assets/img/work/dad-and-crab/dad-and-crab-01.jpg",
@@ -314,8 +319,9 @@ const PROJECTS = [
     title: "Working on the Car",
     year: 2026,
     tags: ["art"],
-    materials: "Materials",
-    summary: "One-line description.",
+    materials: "Acrylic on canvas",
+    size: "24 \u00d7 36 in.",
+    summary: "",
     details: [],
     cover: "assets/img/work/working-on-the-car/working-on-the-car-01.jpg",
     featured: "assets/img/work/working-on-the-car/working-on-the-car-01.jpg",
@@ -326,7 +332,8 @@ const PROJECTS = [
     title: "Sound",
     year: 2023,
     tags: ["art"],
-    materials: "Materials",
+    materials: "Acrylic on canvas",
+    size: "24 \u00d7 24 in.",
     summary: "One-line description.",
     details: [],
     cover: "assets/img/work/sound/sound-01.jpg",
@@ -338,37 +345,51 @@ const PROJECTS = [
     title: "Campus",
     year: 2021,
     tags: ["art"],
-    materials: "Materials",
-    summary: "One-line description.",
-    details: [],
+    materials: "Triptych, acrylic on canvas",
+    links: [{ label: "Artist spotlight in Imprint", href: "https://archive.uwimprint.ca/article/artists-spotlight-slc-pac-expansion/" }, { label: "On Instagram", href: "https://www.instagram.com/p/CSuo2dYlPM9/?img_index=1" }],
+    size: "Three panels, each approx. 30 \u00d7 60 in.",
+    summary: "A triptych for the University of Waterloo, now on display in the Student Life Centre meditation room.",
+    details: [
+      "It is inspired by the buzz of student life around campus, and the scenes of its buildings and parks."
+    ],
     cover: "assets/img/work/campus/campus-02.jpg",
     featured: "assets/img/work/campus/campus-triptych.jpg",
     featuredWide: true,
-    photos: []
+    photos: [],
+    sections: [
+      { label: "In the Student Life Centre", layout: "row", photos: ["assets/img/work/campus/campus-installed.jpg"] },
+      { label: "Details", layout: "row", photos: ["assets/img/work/campus/campus-detail-01.jpg", "assets/img/work/campus/campus-detail-02.jpg", "assets/img/work/campus/campus-detail-03.jpg"] }
+    ]
   },
   {
     id: "perception",
     title: "Perception",
     year: 2021,
     tags: ["art"],
-    materials: "Materials",
-    summary: "One-line description.",
-    details: [],
+    materials: "Chalk pastel, grapeseed oil, oil pastel, pen, and ink on paper",
+    pieces: [{ label: "Left", size: "7 × 14 in." }, { label: "Right", size: "24 × 50 in." }],
+    summary: "My visual perception of myself is a compilation of reflections, images, objects, and lines that crowd my life.",
+    details: [
+      "This piece was made from photos of the reflections of myself I see every day, in car windows or the bathroom mirror. By layering these images, I created a rough depiction of the confusion surrounding identity and appearance."
+    ],
     cover: "assets/img/work/perception/perception-01.jpg",
     featured: "assets/img/work/perception/perception-pair.jpg",
     featuredWide: true,
     photos: []
   },
   {
-    id: "everything-i-love",
-    title: "Everything I Love",
+    id: "my-dream-about-thunderstorms",
+    title: "My Dream About Thunderstorms",
     year: 2020,
     tags: ["art"],
-    materials: "Materials",
-    summary: "One-line description.",
-    details: [],
-    cover: "assets/img/work/everything-i-love/everything-i-love-01.jpg",
-    featured: "assets/img/work/everything-i-love/everything-i-love-01.jpg",
+    materials: "Digital, made in Photoshop",
+    video: "https://www.youtube.com/watch?v=Gv1pcA5L7Bk",
+    summary: "Inspired by the phenomenon of thunderstorms and how my memories interlace throughout my dreams.",
+    details: [
+      "The imagery is made from distorted photos from my camera, standing for my experiences during the day and how they live on through the night as impressions in my dreams."
+    ],
+    cover: "assets/img/work/my-dream-about-thunderstorms/my-dream-about-thunderstorms-01.jpg",
+    featured: "assets/img/work/my-dream-about-thunderstorms/my-dream-about-thunderstorms-01.jpg",
     photos: []
   },
   {
@@ -376,9 +397,12 @@ const PROJECTS = [
     title: "Dishwasher",
     year: 2020,
     tags: ["art"],
-    materials: "Materials",
-    summary: "One-line description.",
-    details: [],
+    materials: "Acrylic and ceramic on canvas",
+    size: "30 \u00d7 40 in.",
+    summary: "A painting of my grandmother washing dishes. Pieces of a chipped plate from my kitchen are glued onto the canvas.",
+    details: [
+      "In my house, my family has only ever washed dishes by hand. The friction and effort of this task is a mundane but intrinsic piece of the cultural identity of my childhood."
+    ],
     cover: "assets/img/work/dishwasher/dishwasher-01.jpg",
     featured: "assets/img/work/dishwasher/dishwasher-01.jpg",
     photos: [
@@ -392,9 +416,12 @@ const PROJECTS = [
     title: "Cardboard Party",
     year: 2020,
     tags: ["art"],
-    materials: "Materials",
-    summary: "One-line description.",
-    details: [],
+    materials: "Acrylic on cardboard",
+    size: "30 \u00d7 30 in.",
+    summary: "I found a huge Bose cardboard box about to be thrown out, and I was drawn to it.",
+    details: [
+      "The speakers it once held brought music to a room, so it made me think of my friends dancing."
+    ],
     cover: "assets/img/work/cardboard-party/cardboard-party-01.jpg",
     featured: "assets/img/work/cardboard-party/cardboard-party-01.jpg",
     photos: [
@@ -432,9 +459,11 @@ const PROJECTS = [
     title: "Medusa",
     year: 2019,
     tags: ["art"],
-    materials: "Materials",
-    summary: "One-line description.",
-    details: [],
+    materials: "",
+    summary: "A depiction of Athena's rage toward Medusa in the Greek myth, inspired by the emotionally saturated, jarring works of German Expressionism.",
+    details: [
+      "Explosions of controlled chaos swirl in the intensity of tight, dark strokes."
+    ],
     cover: "assets/img/work/medusa/medusa-01.jpg",
     featured: "assets/img/work/medusa/medusa-01.jpg",
     photos: [
