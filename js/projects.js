@@ -186,7 +186,8 @@ const PROJECTS = [
     summary: "An automatic harvester for sea asparagus.",
     details: [],
     cover: "",
-    featured: "",
+    featured: "assets/img/work/salico/salico.mp4",
+    poster: "assets/img/work/salico/salico-poster.jpg",
     photos: []
   },
   {
