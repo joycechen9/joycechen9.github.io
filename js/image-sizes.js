@@ -468,6 +468,10 @@ const IMAGE_SIZES = {
 1800,
 1382
 ],
+"assets/img/work/salico/salico-cover.jpg": [
+1800,
+1350
+],
 "assets/img/work/salico/salico-poster.jpg": [
 1600,
 900

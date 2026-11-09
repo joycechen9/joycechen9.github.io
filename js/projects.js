@@ -210,8 +210,8 @@ const PROJECTS = [
     ]
   },
   {
-    id: "telescoping-pole",
-    title: "Telescoping Pole",
+    id: "camera-pole-mounts",
+    title: "Camera Pole Mounts",
     year: 2026,
     tags: ["engineering"],
     materials: "Materials",
@@ -236,7 +236,7 @@ const PROJECTS = [
     links: [
       { label: "Development blog", href: "https://salico-uw.github.io/" }
     ],
-    cover: "",
+    cover: "assets/img/work/salico/salico-cover.jpg",
     featured: "assets/img/work/salico/salico.mp4",
     featuredWide: true,
     poster: "assets/img/work/salico/salico-poster.jpg",
