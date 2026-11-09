@@ -344,7 +344,22 @@ const SKETCHBOOKS = {
   art:         { intro: "", images: [] }
 };
 
-/* Photos of your name that flip on the homepage, about 1 per second.
-   e.g. "assets/img/name/name-01.jpg". Leave empty to show placeholders. */
-const NAME_PHOTOS = [];
+/* Photos that cycle in the homepage about section, about 1 per second. */
+const NAME_PHOTOS = [
+  "assets/img/about/about-01.jpg",
+  "assets/img/about/about-02.jpg",
+  "assets/img/about/about-03.jpg",
+  "assets/img/about/about-04.jpg",
+  "assets/img/about/about-05.jpg",
+  "assets/img/about/about-06.jpg",
+  "assets/img/about/about-07.jpg",
+  "assets/img/about/about-08.jpg",
+  "assets/img/about/about-09.jpg",
+  "assets/img/about/about-10.jpg",
+  "assets/img/about/about-11.jpg",
+  "assets/img/about/about-12.jpg",
+  "assets/img/about/about-13.jpg",
+  "assets/img/about/about-14.jpg",
+  "assets/img/about/about-15.jpg"
+];
 const NAME_FLIP_MS = 1000;

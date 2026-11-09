@@ -4,7 +4,11 @@
 flipper(
   document.getElementById("name-flipper"),
   NAME_PHOTOS.length
-    ? NAME_PHOTOS.map((src, i) => media(src, "Name photo " + (i + 1)))
+    ? NAME_PHOTOS.map((src, i) => {
+        const img = media(src, i === 0 ? "Joyce Chen" : "");
+        img.loading = "eager"; // all frames ready before they're shown
+        return img;
+      })
     : [1, 2, 3, 4].map((n) => media("", "name photo " + n)),
   NAME_FLIP_MS
 );
