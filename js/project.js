@@ -42,14 +42,23 @@ if (!p) {
   const piece = (f, sizes) => {
     const fig = document.createElement("figure");
     fig.className = "piece";
-    fig.appendChild(media(srcOf(f), p.title, sizes));
-    if (f.caption) {
-      const cap = document.createElement("figcaption");
-      cap.textContent = f.caption;
-      fig.appendChild(cap);
-    }
+    fig.appendChild(media(srcOf(f), f.materials ? `${p.title}, ${f.label || ""}: ${f.materials}` : p.title, sizes));
     return fig;
   };
+  // Gallery-style label: each piece's position, materials and size, under the title
+  const labelled = Array.isArray(p.featured) ? p.featured.filter((f) => typeof f === "object" && (f.materials || f.size)) : [];
+  if (labelled.length) {
+    const dl = document.createElement("dl");
+    dl.className = "piece-list";
+    labelled.forEach((f) => {
+      const dt = document.createElement("dt");
+      dt.textContent = f.label || "";
+      const dd = document.createElement("dd");
+      dd.innerHTML = [f.materials, f.size].filter(Boolean).map((x) => x.replace(/</g, "&lt;")).join("<br>");
+      dl.append(dt, dd);
+    });
+    text.appendChild(dl);
+  }
   if (p.featuredLayout === "trio" && Array.isArray(p.featured) && p.featured.length === 3) {
     // Two stacked on the left, one tall on the right, sized so both columns end level
     featBox.classList.add("trio");

@@ -25,7 +25,8 @@
                under the title (for very wide pieces like a triptych)
     featuredLayout (optional) "trio" = three pieces next to the title: the first
                two stacked on the left, the third (a tall one) on the right.
-               Items can be { src, caption } to label each piece's materials.
+               Items can be { src, label, materials, size }; these are listed
+               under the title, like a gallery wall label.
     poster     (videos only, optional) still image shown while the video loads
     photos     images in the grid below it
     photosLayout  (optional) "row" = photos side by side at the same height,
@@ -269,9 +270,9 @@ const PROJECTS = [
     covers: ["assets/img/work/around-the-counter/around-the-counter-01.jpg", "assets/img/work/around-the-counter/around-the-counter-02.jpg", "assets/img/work/around-the-counter/around-the-counter-03.jpg"],
     featuredLayout: "trio",
     featured: [
-      { src: "assets/img/work/around-the-counter/around-the-counter-03.jpg", caption: "Acrylic, collage, and pencil crayon on plywood" },
-      { src: "assets/img/work/around-the-counter/around-the-counter-02.jpg", caption: "Acrylic on paper" },
-      { src: "assets/img/work/around-the-counter/around-the-counter-01.jpg", caption: "Acrylic, pen, and marker on paper" }
+      { src: "assets/img/work/around-the-counter/around-the-counter-03.jpg", label: "Top left", materials: "Acrylic, collage, and pencil crayon on plywood", size: "6 × 18 in." },
+      { src: "assets/img/work/around-the-counter/around-the-counter-02.jpg", label: "Bottom left", materials: "Acrylic on paper", size: "9 × 12 in." },
+      { src: "assets/img/work/around-the-counter/around-the-counter-01.jpg", label: "Right", materials: "Acrylic, pen, and marker on paper", size: "12 × 9 in." }
     ],
     photos: []
   },

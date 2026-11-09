@@ -269,7 +269,10 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .trio-col { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
 .piece { margin: 0; }
 .piece img { width: 100%; height: auto; max-height: none; }
-.piece figcaption { font-size: 13px; font-style: italic; margin-top: 6px; color: #333; }
+.piece-list { margin: 8px 0 0; font-size: 15px; line-height: 1.35; }
+.piece-list dt { font-size: 12px; letter-spacing: .6px; text-transform: uppercase; color: #666; margin-top: 18px; }
+.piece-list dt:first-child { margin-top: 0; }
+.piece-list dd { margin: 3px 0 0; font-style: italic; }
 @media (max-width: 900px) { .project-featured.trio { flex-direction: column; } .trio-col { width: 100%; } }
 
 /* Several featured images stacked at equal width */
