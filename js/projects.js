@@ -228,8 +228,8 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
+    cover: "assets/img/work/lego-rescue/lego-rescue-01.jpg",
+    featured: "assets/img/work/lego-rescue/lego-rescue-01.jpg",
     photos: []
   },
   {
@@ -494,6 +494,8 @@ const NAME_PHOTOS = [
   "assets/img/about/about-38.jpg",
   "assets/img/about/about-39.jpg",
   "assets/img/about/about-40.jpg",
-  "assets/img/about/about-41.jpg"
+  "assets/img/about/about-41.jpg",
+  "assets/img/about/about-42.jpg",
+  "assets/img/about/about-43.jpg"
 ];
 const NAME_FLIP_MS = 1000;
