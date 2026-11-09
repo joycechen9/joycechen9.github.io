@@ -12,11 +12,13 @@
   }
   const AHEAD = 3;
   // New random order on every visit (Fisher–Yates shuffle)
-  const order = [...NAME_PHOTOS];
+  // (FIRST_PHOTO always opens the cycle; the rest are shuffled)
+  const order = NAME_PHOTOS.filter((x) => x !== FIRST_PHOTO);
   for (let k = order.length - 1; k > 0; k--) {
     const r = Math.floor(Math.random() * (k + 1));
     [order[k], order[r]] = [order[r], order[k]];
   }
+  if (NAME_PHOTOS.includes(FIRST_PHOTO)) order.unshift(FIRST_PHOTO);
   const imgs = order.map((src, i) => {
     const img = document.createElement("img");
     img.alt = i === 0 ? "Joyce Chen" : "";

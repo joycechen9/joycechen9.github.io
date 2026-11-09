@@ -524,4 +524,6 @@ const NAME_PHOTOS = [
   "assets/img/about/about-46.jpg",
   "assets/img/about/about-47.jpg"
 ];
+/* Always shown first (Golden Gate photo); the rest play in random order. */
+const FIRST_PHOTO = "assets/img/about/about-03.jpg";
 const NAME_FLIP_MS = 1000;
