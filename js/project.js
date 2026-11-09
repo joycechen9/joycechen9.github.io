@@ -21,6 +21,7 @@ if (!p) {
 
   // Featured block: a photo, or a video (.mp4) that plays silently on loop
   const featBox = document.getElementById("p-featured");
+  if (p.featuredWide) document.querySelector(".project-top").classList.add("wide");
   if (Array.isArray(p.featured)) {
     featBox.classList.add("stacked");
     p.featured.forEach((src) => featBox.appendChild(media(src, p.title)));

@@ -20,6 +20,8 @@
     featured   the large image at the top of the project page, a list of images
                (stacked on top of each other at equal width), or a video (.mp4),
                which plays silently on loop
+    featuredWide (optional) true = featured image spans the full page width,
+               under the title (for very wide pieces like a triptych)
     poster     (videos only, optional) still image shown while the video loads
     photos     images in the grid below it
     photosLayout  (optional) "row" = photos side by side at the same height,
@@ -311,8 +313,9 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
+    cover: "assets/img/work/campus/campus-02.jpg",
+    featured: "assets/img/work/campus/campus-triptych.jpg",
+    featuredWide: true,
     photos: []
   },
   {
