@@ -327,10 +327,8 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "assets/img/work/perception/perception-01.jpg",
-    featured: [
-      "assets/img/work/perception/perception-01.jpg",
-      "assets/img/work/perception/perception-02.jpg"
-    ],
+    featured: "assets/img/work/perception/perception-pair.jpg",
+    featuredWide: true,
     photos: []
   },
   {
