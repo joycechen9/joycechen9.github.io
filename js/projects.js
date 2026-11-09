@@ -23,6 +23,9 @@
                which plays silently on loop
     featuredWide (optional) true = featured image spans the full page width,
                under the title (for very wide pieces like a triptych)
+    featuredLayout (optional) "trio" = three pieces next to the title: the first
+               two stacked on the left, the third (a tall one) on the right.
+               Items can be { src, caption } to label each piece's materials.
     poster     (videos only, optional) still image shown while the video loads
     photos     images in the grid below it
     photosLayout  (optional) "row" = photos side by side at the same height,
@@ -259,16 +262,18 @@ const PROJECTS = [
     title: "Around the Counter",
     year: 2026,
     tags: ["art"],
-    materials: "Materials",
-    summary: "One-line description.",
+    materials: "",
+    summary: "",
     details: [],
     cover: "",
     covers: ["assets/img/work/around-the-counter/around-the-counter-01.jpg", "assets/img/work/around-the-counter/around-the-counter-02.jpg", "assets/img/work/around-the-counter/around-the-counter-03.jpg"],
-    featured: "assets/img/work/around-the-counter/around-the-counter-01.jpg",
-    photos: [
-      "assets/img/work/around-the-counter/around-the-counter-02.jpg",
-      "assets/img/work/around-the-counter/around-the-counter-03.jpg"
-    ]
+    featuredLayout: "trio",
+    featured: [
+      { src: "assets/img/work/around-the-counter/around-the-counter-03.jpg", caption: "Acrylic, collage, and pencil crayon on plywood" },
+      { src: "assets/img/work/around-the-counter/around-the-counter-02.jpg", caption: "Acrylic on paper" },
+      { src: "assets/img/work/around-the-counter/around-the-counter-01.jpg", caption: "Acrylic, pen, and marker on paper" }
+    ],
+    photos: []
   },
   {
     id: "dad-and-crab",

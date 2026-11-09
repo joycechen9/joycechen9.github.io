@@ -10,6 +10,7 @@ if (!p) {
   document.title = p.title + " | Joyce Chen";
   document.getElementById("p-title").textContent = p.title.toUpperCase();
   document.getElementById("p-materials").textContent = p.materials;
+  if (!p.materials) document.getElementById("p-materials").nextElementSibling?.remove(); // drop the line break
   document.getElementById("p-year").textContent = p.year;
 
   // Text: on wide-layout pages only the one-line summary sits above the big image;
@@ -21,7 +22,7 @@ if (!p) {
     para.textContent = t;
     box.appendChild(para);
   };
-  addPara(text, p.summary);
+  if (p.summary) addPara(text, p.summary);
   (p.details || []).forEach((t) => addPara(more, t));
 
   (p.links || []).forEach((l) => {
@@ -37,9 +38,46 @@ if (!p) {
   // Featured block: a photo, or a video (.mp4) that plays silently on loop
   const featBox = document.getElementById("p-featured");
   if (p.featuredWide) document.querySelector(".project-top").classList.add("wide");
-  if (Array.isArray(p.featured)) {
+  const srcOf = (f) => (typeof f === "string" ? f : f.src);
+  const piece = (f, sizes) => {
+    const fig = document.createElement("figure");
+    fig.className = "piece";
+    fig.appendChild(media(srcOf(f), p.title, sizes));
+    if (f.caption) {
+      const cap = document.createElement("figcaption");
+      cap.textContent = f.caption;
+      fig.appendChild(cap);
+    }
+    return fig;
+  };
+  if (p.featuredLayout === "trio" && Array.isArray(p.featured) && p.featured.length === 3) {
+    // Two stacked on the left, one tall on the right, sized so both columns end level
+    featBox.classList.add("trio");
+    const r = p.featured.map((f) => { const d = SIZES[srcOf(f)]; return d ? d[1] / d[0] : 1; });
+    const left = document.createElement("div"), right = document.createElement("div");
+    left.className = "trio-col"; right.className = "trio-col";
+    left.append(piece(p.featured[0], "35vw"), piece(p.featured[1], "35vw"));
+    right.append(piece(p.featured[2], "30vw"));
+    featBox.append(left, right);
+    // Pick column widths so the left stack (2 images + 2 captions + gap) and the
+    // right piece (1 image + 1 caption) end at exactly the same height.
+    const fit = () => {
+      if (getComputedStyle(featBox).flexDirection === "column") {
+        left.style.flex = right.style.flex = ""; return;
+      }
+      const g = parseFloat(getComputedStyle(featBox).columnGap) || 0;
+      const cap = featBox.querySelector("figcaption");
+      const c = cap ? cap.offsetHeight + parseFloat(getComputedStyle(cap).marginTop) : 0;
+      const W = featBox.clientWidth;
+      const wL = ((W - g) * r[2] - c - g) / (r[0] + r[1] + r[2]);
+      left.style.flex = `0 0 ${wL}px`;
+      right.style.flex = `0 0 ${W - g - wL}px`;
+    };
+    fit();
+    window.addEventListener("resize", fit);
+  } else if (Array.isArray(p.featured)) {
     featBox.classList.add("stacked");
-    p.featured.forEach((src) => featBox.appendChild(media(src, p.title, "(max-width: 900px) 100vw, 65vw")));
+    p.featured.forEach((f) => featBox.appendChild(media(srcOf(f), p.title, "(max-width: 900px) 100vw, 65vw")));
   } else if (/\.(mp4|webm|mov)$/i.test(p.featured)) {
     const v = document.createElement("video");
     v.src = p.featured;
