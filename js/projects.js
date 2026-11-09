@@ -15,8 +15,14 @@
     cover      image shown in the grid, e.g. "assets/img/work/new-windsor/cover.jpg"
                leave "" to show a grey placeholder.
                Tiles keep the shape of their image and line up in 3 columns.
-    featured   the large image at the top of the project page
+    featured   the large image at the top of the project page, or a video (.mp4),
+               which plays silently on loop
+    poster     (videos only, optional) still image shown while the video loads
     photos     images in the grid below it
+    photosLayout  (optional) "row" = photos side by side at the same height,
+               3 per row. Leave out for the 3-column masonry grid.
+    sections   (optional) extra labelled photo groups further down the page:
+               [{ label: "Iteration 1", layout: "row", photos: ["...jpg"] }]
 */
 
 const PROJECTS = [
@@ -59,9 +65,17 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
-    photos: []
+    cover: "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-cover.jpg",
+    featured: "assets/img/work/saturn-with-a-moon/saturn-with-a-moon.mp4",
+    poster: "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-poster.jpg",
+    photos: [
+      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-01.jpg",
+      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-02.jpg",
+      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-03.jpg",
+      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-04.jpg",
+      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-05.jpg",
+      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-06.jpg"
+    ]
   },
 {
     id: "manchild",
@@ -71,9 +85,25 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
-    photos: []
+    cover: "assets/img/work/manchild/manchild-cover.jpg",
+    featured: "assets/img/work/manchild/manchild-featured.jpg",
+    photosLayout: "row",
+    photos: [
+      "assets/img/work/manchild/manchild-01.jpg",
+      "assets/img/work/manchild/manchild-02.jpg",
+      "assets/img/work/manchild/manchild-03.jpg"
+    ],
+    sections: [
+      {
+        label: "Iteration 1",
+        layout: "row",
+        photos: [
+          "assets/img/work/manchild/manchild-iter1-01.jpg",
+          "assets/img/work/manchild/manchild-iter1-02.jpg",
+          "assets/img/work/manchild/manchild-iter1-03.jpg"
+        ]
+      }
+    ]
   },
 {
     id: "for-sale",
@@ -156,7 +186,8 @@ const PROJECTS = [
     summary: "An automatic harvester for sea asparagus.",
     details: [],
     cover: "",
-    featured: "",
+    featured: "assets/img/work/salico/salico.mp4",
+    poster: "assets/img/work/salico/salico-poster.jpg",
     photos: []
   },
   {
@@ -313,7 +344,40 @@ const SKETCHBOOKS = {
   art:         { intro: "", images: [] }
 };
 
-/* Photos of your name that flip on the homepage, about 1 per second.
-   e.g. "assets/img/name/name-01.jpg". Leave empty to show placeholders. */
-const NAME_PHOTOS = [];
+/* Photos that cycle in the homepage about section, about 1 per second. */
+const NAME_PHOTOS = [
+  "assets/img/about/about-01.jpg",
+  "assets/img/about/about-02.jpg",
+  "assets/img/about/about-03.jpg",
+  "assets/img/about/about-04.jpg",
+  "assets/img/about/about-05.jpg",
+  "assets/img/about/about-06.jpg",
+  "assets/img/about/about-07.jpg",
+  "assets/img/about/about-08.jpg",
+  "assets/img/about/about-09.jpg",
+  "assets/img/about/about-10.jpg",
+  "assets/img/about/about-11.jpg",
+  "assets/img/about/about-12.jpg",
+  "assets/img/about/about-13.jpg",
+  "assets/img/about/about-14.jpg",
+  "assets/img/about/about-15.jpg",
+  "assets/img/about/about-16.jpg",
+  "assets/img/about/about-17.jpg",
+  "assets/img/about/about-18.jpg",
+  "assets/img/about/about-19.jpg",
+  "assets/img/about/about-20.jpg",
+  "assets/img/about/about-21.jpg",
+  "assets/img/about/about-22.jpg",
+  "assets/img/about/about-23.jpg",
+  "assets/img/about/about-24.jpg",
+  "assets/img/about/about-25.jpg",
+  "assets/img/about/about-26.jpg",
+  "assets/img/about/about-27.jpg",
+  "assets/img/about/about-28.jpg",
+  "assets/img/about/about-29.jpg",
+  "assets/img/about/about-30.jpg",
+  "assets/img/about/about-31.jpg",
+  "assets/img/about/about-32.jpg",
+  "assets/img/about/about-33.jpg"
+];
 const NAME_FLIP_MS = 1000;
