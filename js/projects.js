@@ -151,8 +151,8 @@ const PROJECTS = [
     materials: "Materials",
     summary: "A demo kit for security devices, designed during my internship at Verkada.",
     details: [],
-    cover: "",
-    featured: "",
+    cover: "assets/img/work/kong/kong-01.jpg",
+    featured: "assets/img/work/kong/kong-01.jpg",
     photos: []
   },
 {
@@ -221,6 +221,18 @@ const PROJECTS = [
     ]
   },
   {
+    id: "dad-and-crab",
+    title: "Dad and Crab",
+    year: 2026,
+    tags: ["art"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "assets/img/work/dad-and-crab/dad-and-crab-01.jpg",
+    featured: "assets/img/work/dad-and-crab/dad-and-crab-01.jpg",
+    photos: []
+  },
+  {
     id: "chinese-market",
     title: "Chinese Market",
     year: 2026,
@@ -229,7 +241,7 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "",
-    covers: ["assets/img/work/chinese-market/chinese-market-01.jpg", "assets/img/work/chinese-market/chinese-market-02.jpg", "assets/img/work/chinese-market/chinese-market-03.jpg", "assets/img/work/chinese-market/chinese-market-04.jpg", "assets/img/work/chinese-market/chinese-market-05.jpg", "assets/img/work/chinese-market/chinese-market-06.jpg", "assets/img/work/chinese-market/chinese-market-07.jpg"],
+    covers: ["assets/img/work/chinese-market/chinese-market-01.jpg", "assets/img/work/chinese-market/chinese-market-02.jpg", "assets/img/work/chinese-market/chinese-market-03.jpg", "assets/img/work/chinese-market/chinese-market-04.jpg", "assets/img/work/chinese-market/chinese-market-05.jpg", "assets/img/work/chinese-market/chinese-market-06.jpg", "assets/img/work/chinese-market/chinese-market-07.jpg", "assets/img/work/chinese-market/chinese-market-08.jpg"],
     featured: "assets/img/work/chinese-market/chinese-market-01.jpg",
     photos: [
       "assets/img/work/chinese-market/chinese-market-02.jpg",
@@ -237,7 +249,8 @@ const PROJECTS = [
       "assets/img/work/chinese-market/chinese-market-04.jpg",
       "assets/img/work/chinese-market/chinese-market-05.jpg",
       "assets/img/work/chinese-market/chinese-market-06.jpg",
-      "assets/img/work/chinese-market/chinese-market-07.jpg"
+      "assets/img/work/chinese-market/chinese-market-07.jpg",
+      "assets/img/work/chinese-market/chinese-market-08.jpg"
     ]
   },
   {
@@ -284,9 +297,11 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
-    photos: []
+    cover: "assets/img/work/perception/perception-01.jpg",
+    featured: "assets/img/work/perception/perception-01.jpg",
+    photos: [
+      "assets/img/work/perception/perception-02.jpg"
+    ]
   },
   {
     id: "everything-i-love",
@@ -296,8 +311,8 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
+    cover: "assets/img/work/everything-i-love/everything-i-love-01.jpg",
+    featured: "assets/img/work/everything-i-love/everything-i-love-01.jpg",
     photos: []
   },
   {
@@ -312,7 +327,8 @@ const PROJECTS = [
     featured: "assets/img/work/dishwasher/dishwasher-01.jpg",
     photos: [
       "assets/img/sketchbook/art/art-sketch-12.jpg",
-      "assets/img/sketchbook/art/art-sketch-13.jpg"
+      "assets/img/sketchbook/art/art-sketch-13.jpg",
+      "assets/img/sketchbook/art/art-sketch-26.jpg"
     ]
   },
   {
@@ -327,7 +343,8 @@ const PROJECTS = [
     featured: "assets/img/work/cardboard-party/cardboard-party-01.jpg",
     photos: [
       "assets/img/sketchbook/art/art-sketch-19.jpg",
-      "assets/img/sketchbook/art/art-sketch-20.jpg"
+      "assets/img/sketchbook/art/art-sketch-20.jpg",
+      "assets/img/sketchbook/art/art-sketch-21.jpg"
     ]
   },
   {
@@ -338,8 +355,8 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
+    cover: "assets/img/work/night/night-01.jpg",
+    featured: "assets/img/work/night/night-01.jpg",
     photos: []
   },
   {
@@ -394,7 +411,14 @@ const SKETCHBOOKS = {
       "assets/img/sketchbook/art/art-sketch-17.jpg",
       "assets/img/sketchbook/art/art-sketch-18.jpg",
       "assets/img/sketchbook/art/art-sketch-19.jpg",
-      "assets/img/sketchbook/art/art-sketch-20.jpg"
+      "assets/img/sketchbook/art/art-sketch-20.jpg",
+      "assets/img/sketchbook/art/art-sketch-21.jpg",
+      "assets/img/sketchbook/art/art-sketch-22.jpg",
+      "assets/img/sketchbook/art/art-sketch-23.jpg",
+      "assets/img/sketchbook/art/art-sketch-24.jpg",
+      "assets/img/sketchbook/art/art-sketch-25.jpg",
+      "assets/img/sketchbook/art/art-sketch-26.jpg",
+      "assets/img/sketchbook/art/art-sketch-27.jpg"
     ]
   }
 };
