@@ -19,6 +19,16 @@ if (!p) {
     text.appendChild(para);
   });
 
+  (p.links || []).forEach((l) => {
+    const para = document.createElement("p");
+    para.className = "p-link";
+    const a = document.createElement("a");
+    a.href = l.href; a.target = "_blank"; a.rel = "noopener";
+    a.textContent = l.label + " ↗";
+    para.appendChild(a);
+    text.appendChild(para);
+  });
+
   // Featured block: a photo, or a video (.mp4) that plays silently on loop
   const featBox = document.getElementById("p-featured");
   if (p.featuredWide) document.querySelector(".project-top").classList.add("wide");

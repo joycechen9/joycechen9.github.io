@@ -12,6 +12,7 @@
     materials  short line under the title on the project page
     summary    first paragraph on the project page
     details    extra paragraphs (array of strings)
+    links      (optional) links shown under the text: [{ label: "...", href: "https://..." }]
     covers     (optional) several grid images for one project, each its own tile,
                all linking to the same project page. Use instead of cover.
     cover      image shown in the grid, e.g. "assets/img/work/new-windsor/cover.jpg"
@@ -151,9 +152,16 @@ const PROJECTS = [
     title: "Kong",
     year: 2024,
     tags: ["design", "engineering"],
-    materials: "Materials",
-    summary: "A demo kit for security devices, designed during my internship at Verkada.",
-    details: [],
+    materials: "Powder-coated steel sheet metal, injection-moulded back panel",
+    summary: "A plug-and-play demo kit for security devices, designed during my internship at Verkada.",
+    details: [
+      "Kong (DK22) is the third generation of Verkada's Access Control demo kit. Sales reps take it to conventions, meetings, and site visits so customers can see the products working with almost no setup.",
+      "I helped finish the industrial design and did the engineering design through to production. Studying the older kits, the goal was a demo kit that was beautiful, light, and portable, with as few screws showing as possible and built to survive a lifetime of travel.",
+      "I visited the sheet metal vendor in Taiwan and assembled the first prototypes by hand, then worked with the injection moulder on the magnetic back panel. At the assembly house in Texas, I taught and supervised the line workers to build and test each unit. Kong launched at Verkada One with 650 units built."
+    ],
+    links: [
+      { label: "Kong on Verkada's site", href: "https://www.verkada.com/ca/access-control/dk22/" }
+    ],
     cover: "assets/img/work/kong/kong-01.jpg",
     featured: "assets/img/work/kong/kong-01.jpg",
     photos: []
@@ -163,9 +171,15 @@ const PROJECTS = [
     title: "Redbull Flugtag",
     year: 2022,
     tags: ["design", "engineering"],
-    materials: "Materials",
-    summary: "Snap pea flying machine!",
-    details: [],
+    materials: "Wood, bicycle wheels, balloons",
+    summary: "The Snap Pea Flying Machine, which won first place at Red Bull Flugtag Toronto 2022.",
+    details: [
+      "I did the complete creative and mechanical design of the glider. Once we were accepted to the competition, I had limited time to turn my concept sketch into parts we could actually build. The project caught on at work, and soon the whole Product Design team was helping bring it to life.",
+      "We went into competition day cautiously optimistic and came away with first place. The prize was a ride in a stunt plane with a trained pilot."
+    ],
+    links: [
+      { label: "More about the project", href: "https://snappeadesign.com/we-can-design-anything/" }
+    ],
     cover: "assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg",
     featured: "assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg",
     photosLayout: "row",
@@ -212,9 +226,16 @@ const PROJECTS = [
     title: "Salico",
     year: 2025,
     tags: ["engineering"],
-    materials: "Materials",
-    summary: "An automatic harvester for sea asparagus.",
-    details: [],
+    materials: "Aluminum extrusion, sheet metal, cast urethane, pneumatics",
+    summary: "An automatic harvester for sea asparagus, built with farmer and scientist Dr. Wenhao Sun for Olakai, his farm in Hawaii.",
+    details: [
+      "Sea asparagus is a salt-tolerant crop that cleans water and helps with carbon capture. As fresh water and farmland run short, it's a crop for the future, but the best harvest is still done by hand, which limits how far it can scale. Existing machines cut and bruise the plant, hurting its quality and shelf life.",
+      "Salico mimics hand harvesting. Two cast urethane rollers grip the plant and pull, so the ripe tips separate naturally at the nodes. A ramp and conveyor carry the tips to a floating cargo bin.",
+      "This was my Mechatronics Engineering capstone, on a team of five. I was the mechanical engineer, project manager, and visual designer. We prototyped the picker in Toronto without any sea asparagus to test on, then took two trips to the farm to test the roller design and the full-size robot."
+    ],
+    links: [
+      { label: "Development blog", href: "https://salico-uw.github.io/" }
+    ],
     cover: "",
     featured: "assets/img/work/salico/salico.mp4",
     poster: "assets/img/work/salico/salico-poster.jpg",

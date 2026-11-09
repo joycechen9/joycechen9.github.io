@@ -279,6 +279,9 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .sketchbook-head h1 { font-size: 34px; margin: 0 0 12px; letter-spacing: .5px; }
 .sketchbook-head p { font-size: 17px; font-style: italic; margin: 0; max-width: 560px; }
 
+.p-link a { text-decoration: underline; text-underline-offset: 3px; }
+.p-link a:hover { color: var(--accent); }
+
 .not-found { font-size: 18px; }
 .not-found a { text-decoration: underline; }
 .not-found a:hover { color: var(--accent); }
