@@ -21,7 +21,10 @@ if (!p) {
 
   // Featured block: a photo, or a video (.mp4) that plays silently on loop
   const featBox = document.getElementById("p-featured");
-  if (/\.(mp4|webm|mov)$/i.test(p.featured)) {
+  if (Array.isArray(p.featured)) {
+    featBox.classList.add("stacked");
+    p.featured.forEach((src) => featBox.appendChild(media(src, p.title)));
+  } else if (/\.(mp4|webm|mov)$/i.test(p.featured)) {
     const v = document.createElement("video");
     v.src = p.featured;
     if (p.poster) v.poster = p.poster;
@@ -38,7 +41,7 @@ if (!p) {
   }
 
   // Other photos: 3-column masonry, each photo keeps its own shape
-  const photos = (p.photos.length ? p.photos : ["", "", "", "", ""]).map((src) => {
+  const photos = (p.photos.length ? p.photos : p.featured ? [] : ["", "", "", "", ""]).map((src) => {
     const cell = document.createElement("div");
     cell.className = "photo";
     cell.appendChild(media(src, src ? p.title + " photo" : "other photo"));

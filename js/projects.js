@@ -17,7 +17,8 @@
     cover      image shown in the grid, e.g. "assets/img/work/new-windsor/cover.jpg"
                leave "" to show a grey placeholder.
                Tiles keep the shape of their image and line up in 3 columns.
-    featured   the large image at the top of the project page, or a video (.mp4),
+    featured   the large image at the top of the project page, a list of images
+               (stacked on top of each other at equal width), or a video (.mp4),
                which plays silently on loop
     poster     (videos only, optional) still image shown while the video loads
     photos     images in the grid below it
@@ -163,9 +164,34 @@ const PROJECTS = [
     materials: "Materials",
     summary: "Snap pea flying machine!",
     details: [],
-    cover: "",
-    featured: "",
-    photos: []
+    cover: "assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg",
+    featured: "assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg",
+    photosLayout: "row",
+    photos: [
+      "assets/img/work/redbull-flugtag/redbull-flugtag-08.jpg",
+      "assets/img/work/redbull-flugtag/redbull-flugtag-podium.jpg"
+    ],
+    sections: [
+      {
+        label: "Stunt Plane Ride",
+        layout: "row",
+        photos: [
+          "assets/img/work/redbull-flugtag/redbull-flugtag-09.jpg",
+          "assets/img/work/redbull-flugtag/redbull-flugtag-10.jpg"
+        ]
+      },
+      {
+        label: "Construction",
+        photos: [
+          "assets/img/work/redbull-flugtag/redbull-flugtag-02.jpg",
+          "assets/img/work/redbull-flugtag/redbull-flugtag-03.jpg",
+          "assets/img/work/redbull-flugtag/redbull-flugtag-04.jpg",
+          "assets/img/work/redbull-flugtag/redbull-flugtag-05.jpg",
+          "assets/img/work/redbull-flugtag/redbull-flugtag-06.jpg",
+          "assets/img/work/redbull-flugtag/redbull-flugtag-07.jpg"
+        ]
+      }
+    ]
   },
   {
     id: "telescoping-pole",
@@ -298,10 +324,11 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "assets/img/work/perception/perception-01.jpg",
-    featured: "assets/img/work/perception/perception-01.jpg",
-    photos: [
+    featured: [
+      "assets/img/work/perception/perception-01.jpg",
       "assets/img/work/perception/perception-02.jpg"
-    ]
+    ],
+    photos: []
   },
   {
     id: "everything-i-love",
