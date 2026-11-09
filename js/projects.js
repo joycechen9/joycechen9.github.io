@@ -421,16 +421,13 @@ const PROJECTS = [
     tags: ["art"],
     materials: "Acrylic on cardboard",
     size: "30 \u00d7 30 in.",
-    summary: "I found a huge Bose cardboard box about to be thrown out, and I was drawn to it.",
-    details: [
-      "The speakers it once held brought music to a room, so it made me think of my friends dancing."
-    ],
+    summary: "When I found a huge Bose cardboard box about to be thrown out, I was drawn to its materiality. The speakers it once held brought music to the room, so it made me think of my friends dancing.",
+    details: [],
     cover: "assets/img/work/cardboard-party/cardboard-party-01.jpg",
     featured: "assets/img/work/cardboard-party/cardboard-party-01.jpg",
-    photos: [
-      "assets/img/sketchbook/art/art-sketch-19.jpg",
-      "assets/img/sketchbook/art/art-sketch-20.jpg",
-      "assets/img/sketchbook/art/art-sketch-21.jpg"
+    photos: [],
+    sections: [
+      { label: "Sketchbook Process", photos: ["assets/img/sketchbook/art/art-sketch-19.jpg", "assets/img/sketchbook/art/art-sketch-20.jpg", "assets/img/sketchbook/art/art-sketch-21.jpg"] }
     ]
   },
   {

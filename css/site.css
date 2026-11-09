@@ -295,6 +295,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .r-row > .photo { min-width: 0; }
 
 .project-section { margin-top: 72px; }
+.project-top + .p-more:empty + .p-video:empty + .project-photos:empty + #p-sections .project-section:first-child { margin-top: 120px; }
 .project-section h2 {
   font-size: 22px;
   font-weight: 400;
