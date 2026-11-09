@@ -121,19 +121,19 @@ function applyFilter(tag, animate = true) {
       t.animate(
         [{ transformOrigin: "top left", transform: `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})` },
          { transformOrigin: "top left", transform: "none" }],
-        { duration: 650, easing: "cubic-bezier(.2,.8,.2,1)" }
+        { duration: 950, easing: "cubic-bezier(.2,.8,.2,1)" }
       );
     } else {
       t.animate(
         [{ opacity: 0, transform: "translateY(24px) scale(.94)" }, { opacity: 1, transform: "none" }],
-        { duration: 550, delay: 40 * Math.min(k++, 12), easing: "cubic-bezier(.2,.8,.2,1)", fill: "backwards" }
+        { duration: 850, delay: 60 * Math.min(k++, 12), easing: "cubic-bezier(.2,.8,.2,1)", fill: "backwards" }
       );
     }
   });
   // List items fade in too
   ul.querySelectorAll("li:not(.hidden)").forEach((li, i) =>
     li.animate([{ opacity: 0, transform: "translateX(-8px)" }, { opacity: 1, transform: "none" }],
-      { duration: 400, delay: 25 * i, easing: "ease-out", fill: "backwards" })
+      { duration: 600, delay: 35 * i, easing: "ease-out", fill: "backwards" })
   );
 }
 
@@ -161,23 +161,25 @@ applyFilter("all", false);
   fade();
 
   if (REDUCE) return;
-  let busy = false;
-  const ease = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+  let busy = false, cooldown = 0;
+  // Ease-out: picks up the scroll's momentum immediately, then settles gently
+  const ease = (x) => 1 - Math.pow(1 - x, 4);
   function glide(to) {
     busy = true;
-    const from = window.scrollY, d = to - from, dur = 900, t0 = performance.now();
+    const from = window.scrollY, d = to - from, dur = 850, t0 = performance.now();
     document.documentElement.style.scrollBehavior = "auto";
     (function step(now) {
       const p = Math.min(1, (now - t0) / dur);
       window.scrollTo(0, from + d * ease(p));
       if (p < 1) requestAnimationFrame(step);
-      else setTimeout(() => { busy = false; document.documentElement.style.scrollBehavior = ""; }, 350);
+      else { busy = false; cooldown = performance.now() + 700; document.documentElement.style.scrollBehavior = ""; }
     })(t0);
   }
   // Decide whether a scroll gesture should snap between the two sections
   function intent(dy, e) {
     const y = window.scrollY, top = workTop();
-    if (busy) { if (y < top + 2) e.preventDefault(); return; }
+    if (busy) { e.preventDefault(); return; }            // don't fight the glide
+    if (performance.now() < cooldown) return;             // let leftover momentum scroll naturally
     if (dy > 0 && y < top - 2) { e.preventDefault(); glide(top); }
     else if (dy < 0 && y > 2 && y <= top + 2) { e.preventDefault(); glide(0); }
   }
