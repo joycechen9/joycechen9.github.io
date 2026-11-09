@@ -378,6 +378,14 @@ const NAME_PHOTOS = [
   "assets/img/about/about-30.jpg",
   "assets/img/about/about-31.jpg",
   "assets/img/about/about-32.jpg",
-  "assets/img/about/about-33.jpg"
+  "assets/img/about/about-33.jpg",
+  "assets/img/about/about-34.jpg",
+  "assets/img/about/about-35.jpg",
+  "assets/img/about/about-36.jpg",
+  "assets/img/about/about-37.jpg",
+  "assets/img/about/about-38.jpg",
+  "assets/img/about/about-39.jpg",
+  "assets/img/about/about-40.jpg",
+  "assets/img/about/about-41.jpg"
 ];
 const NAME_FLIP_MS = 1000;

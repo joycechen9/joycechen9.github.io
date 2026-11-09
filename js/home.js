@@ -1,17 +1,41 @@
 // Homepage: name-photo flipper, work grid, tag filters, work list.
 
-/* ---------- 1. Name flipper ---------- */
-flipper(
-  document.getElementById("name-flipper"),
-  NAME_PHOTOS.length
-    ? NAME_PHOTOS.map((src, i) => {
-        const img = media(src, i === 0 ? "Joyce Chen" : "");
-        img.loading = "eager"; // all frames ready before they're shown
-        return img;
-      })
-    : [1, 2, 3, 4].map((n) => media("", "name photo " + n)),
-  NAME_FLIP_MS
-);
+/* ---------- 1. Photo cycle ----------
+   Photos load a few frames ahead of when they're shown, so the page
+   doesn't download all of them at once. If the next photo isn't ready
+   yet, the current one simply stays up a little longer. */
+(function photoCycle() {
+  const box = document.getElementById("name-flipper");
+  if (!NAME_PHOTOS.length) {
+    flipper(box, [1, 2, 3, 4].map((n) => media("", "photo " + n)), NAME_FLIP_MS);
+    return;
+  }
+  const AHEAD = 3;
+  const imgs = NAME_PHOTOS.map((src, i) => {
+    const img = document.createElement("img");
+    img.alt = i === 0 ? "Joyce Chen" : "";
+    img.className = "frame" + (i === 0 ? " on" : "");
+    img.dataset.src = src;
+    box.appendChild(img);
+    return img;
+  });
+  const load = (i) => {
+    const img = imgs[i % imgs.length];
+    if (!img.src) img.src = img.dataset.src;
+  };
+  for (let k = 0; k <= AHEAD; k++) load(k);
+
+  if (imgs.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  let i = 0;
+  setInterval(() => {
+    const next = imgs[(i + 1) % imgs.length];
+    if (!(next.complete && next.naturalWidth)) return; // wait for it
+    imgs[i].classList.remove("on");
+    i = (i + 1) % imgs.length;
+    next.classList.add("on");
+    load(i + AHEAD);
+  }, NAME_FLIP_MS);
+})();
 
 /* ---------- 2–3. Work grid + list ---------- */
 const grid = document.getElementById("grid");
