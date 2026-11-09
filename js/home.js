@@ -11,7 +11,13 @@
     return;
   }
   const AHEAD = 3;
-  const imgs = NAME_PHOTOS.map((src, i) => {
+  // New random order on every visit (Fisher–Yates shuffle)
+  const order = [...NAME_PHOTOS];
+  for (let k = order.length - 1; k > 0; k--) {
+    const r = Math.floor(Math.random() * (k + 1));
+    [order[k], order[r]] = [order[r], order[k]];
+  }
+  const imgs = order.map((src, i) => {
     const img = document.createElement("img");
     img.alt = i === 0 ? "Joyce Chen" : "";
     img.className = "frame" + (i === 0 ? " on" : "");
@@ -46,19 +52,21 @@ const filters = document.getElementById("filters");
 const sorted = [...PROJECTS].sort((a, b) => b.year - a.year);
 const link = (p) => "project.html?id=" + encodeURIComponent(p.id);
 
-// Grid tiles
-const tiles = sorted.map((p) => {
-  const a = document.createElement("a");
-  a.href = link(p);
-  a.className = "tile";
-  a.dataset.tags = p.tags.join(" ");
-  a.appendChild(media(p.cover, p.cover ? p.title : ""));
-  const cap = document.createElement("span");
-  cap.className = "tile-caption";
-  cap.textContent = p.title.toUpperCase();
-  a.appendChild(cap);
-  return a;
-});
+// Grid tiles: one per cover image (a project can have several, all linking to its page)
+const tiles = sorted.flatMap((p) =>
+  (p.covers && p.covers.length ? p.covers : [p.cover]).map((src) => {
+    const a = document.createElement("a");
+    a.href = link(p);
+    a.className = "tile";
+    a.dataset.tags = p.tags.join(" ");
+    a.appendChild(media(src, src ? p.title : ""));
+    const cap = document.createElement("span");
+    cap.className = "tile-caption";
+    cap.textContent = p.title.toUpperCase();
+    a.appendChild(cap);
+    return a;
+  })
+);
 const relayout = masonry(grid, tiles, gridColumns);
 
 // List

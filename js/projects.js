@@ -12,6 +12,8 @@
     materials  short line under the title on the project page
     summary    first paragraph on the project page
     details    extra paragraphs (array of strings)
+    covers     (optional) several grid images for one project, each its own tile,
+               all linking to the same project page. Use instead of cover.
     cover      image shown in the grid, e.g. "assets/img/work/new-windsor/cover.jpg"
                leave "" to show a grey placeholder.
                Tiles keep the shape of their image and line up in 3 columns.
@@ -211,8 +213,16 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "",
-    featured: "",
-    photos: []
+    covers: ["assets/img/work/chinese-market/chinese-market-01.jpg", "assets/img/work/chinese-market/chinese-market-02.jpg", "assets/img/work/chinese-market/chinese-market-03.jpg", "assets/img/work/chinese-market/chinese-market-04.jpg", "assets/img/work/chinese-market/chinese-market-05.jpg", "assets/img/work/chinese-market/chinese-market-06.jpg", "assets/img/work/chinese-market/chinese-market-07.jpg"],
+    featured: "assets/img/work/chinese-market/chinese-market-01.jpg",
+    photos: [
+      "assets/img/work/chinese-market/chinese-market-02.jpg",
+      "assets/img/work/chinese-market/chinese-market-03.jpg",
+      "assets/img/work/chinese-market/chinese-market-04.jpg",
+      "assets/img/work/chinese-market/chinese-market-05.jpg",
+      "assets/img/work/chinese-market/chinese-market-06.jpg",
+      "assets/img/work/chinese-market/chinese-market-07.jpg"
+    ]
   },
   {
     id: "working-on-the-car",
@@ -222,8 +232,8 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
+    cover: "assets/img/work/working-on-the-car/working-on-the-car-01.jpg",
+    featured: "assets/img/work/working-on-the-car/working-on-the-car-01.jpg",
     photos: []
   },
   {
@@ -234,8 +244,8 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
+    cover: "assets/img/work/sound/sound-01.jpg",
+    featured: "assets/img/work/sound/sound-01.jpg",
     photos: []
   },
   {
@@ -344,7 +354,8 @@ const SKETCHBOOKS = {
   art:         { intro: "", images: [] }
 };
 
-/* Photos that cycle in the homepage about section, about 1 per second. */
+/* Photos that cycle in the homepage about section, about 1 per second.
+   They play in a new random order on every visit. */
 const NAME_PHOTOS = [
   "assets/img/about/about-01.jpg",
   "assets/img/about/about-02.jpg",
