@@ -238,6 +238,7 @@ const PROJECTS = [
     ],
     cover: "",
     featured: "assets/img/work/salico/salico.mp4",
+    featuredWide: true,
     poster: "assets/img/work/salico/salico-poster.jpg",
     photos: []
   },

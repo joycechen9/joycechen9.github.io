@@ -12,12 +12,17 @@ if (!p) {
   document.getElementById("p-materials").textContent = p.materials;
   document.getElementById("p-year").textContent = p.year;
 
+  // Text: on wide-layout pages only the one-line summary sits above the big image;
+  // the longer paragraphs and links go underneath it.
   const text = document.getElementById("p-text");
-  [p.summary, ...(p.details || [])].forEach((t) => {
+  const more = p.featuredWide ? document.getElementById("p-more") : text;
+  const addPara = (box, t) => {
     const para = document.createElement("p");
     para.textContent = t;
-    text.appendChild(para);
-  });
+    box.appendChild(para);
+  };
+  addPara(text, p.summary);
+  (p.details || []).forEach((t) => addPara(more, t));
 
   (p.links || []).forEach((l) => {
     const para = document.createElement("p");
@@ -26,7 +31,7 @@ if (!p) {
     a.href = l.href; a.target = "_blank"; a.rel = "noopener";
     a.textContent = l.label + " ↗";
     para.appendChild(a);
-    text.appendChild(para);
+    more.appendChild(para);
   });
 
   // Featured block: a photo, or a video (.mp4) that plays silently on loop
