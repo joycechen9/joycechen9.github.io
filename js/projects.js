@@ -352,8 +352,7 @@ const PROJECTS = [
     size: "Three panels, each 30 \u00d7 60 in.",
     summary: "",
     details: [
-      "A triptych for the University of Waterloo, now on display in the Student Life Centre meditation room.",
-      "These paintings are inspired by the buzz of student life around campus, and the scenes of its buildings and parks."
+      "A triptych for the University of Waterloo, now on display in the Student Life Centre meditation room. These paintings are inspired by the buzz of student life around campus, and the scenes of its buildings and parks."
     ],
     cover: "assets/img/work/campus/campus-02.jpg",
     featured: "assets/img/work/campus/campus-triptych.jpg",
