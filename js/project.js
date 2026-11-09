@@ -54,12 +54,16 @@ if (!p) {
   if (labelled.length) {
     const dl = document.createElement("dl");
     dl.className = "piece-list";
+    // On full-width pages the pieces sit side by side; beside images they stack
+    if (p.featuredWide) dl.classList.add("inline");
     labelled.forEach((f) => {
+      const item = document.createElement("div");
       const dt = document.createElement("dt");
       dt.textContent = f.label || "";
       const dd = document.createElement("dd");
       dd.innerHTML = [f.materials, f.size].filter(Boolean).map((x) => x.replace(/</g, "&lt;")).join("<br>");
-      dl.append(dt, dd);
+      item.append(dt, dd);
+      dl.appendChild(item);
     });
     text.appendChild(dl);
   }
