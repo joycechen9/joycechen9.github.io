@@ -297,8 +297,8 @@ const IMAGE_SIZES = {
 2196
 ],
 "assets/img/work/campus/campus-installed.jpg": [
-2400,
-1182
+2533,
+1247
 ],
 "assets/img/work/campus/campus-triptych.jpg": [
 3784,
