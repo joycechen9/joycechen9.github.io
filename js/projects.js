@@ -16,6 +16,7 @@
     pieces     (optional) list of { label, materials, size } for multi-piece works,
                shown under the title like a gallery wall label
     video      (optional) a YouTube link, embedded under the images
+    spotify    (optional) a Spotify album/playlist/track link, embedded under the text
     links      (optional) links shown under the text: [{ label: "...", href: "https://..." }]
     covers     (optional) several grid images for one project, each its own tile,
                all linking to the same project page. Use instead of cover.
@@ -287,7 +288,7 @@ const PROJECTS = [
     tags: ["art"],
     materials: "Acrylic on paper",
     size: "12 \u00d7 9 in.",
-    summary: "One-line description.",
+    summary: "",
     details: [],
     cover: "assets/img/work/dad-and-crab/dad-and-crab-01.jpg",
     featured: "assets/img/work/dad-and-crab/dad-and-crab-01.jpg",
@@ -320,7 +321,7 @@ const PROJECTS = [
     year: 2026,
     tags: ["art"],
     materials: "Acrylic on canvas",
-    size: "24 \u00d7 36 in.",
+    size: "20 \u00d7 30 in.",
     summary: "",
     details: [],
     cover: "assets/img/work/working-on-the-car/working-on-the-car-01.jpg",
@@ -333,8 +334,9 @@ const PROJECTS = [
     year: 2023,
     tags: ["art"],
     materials: "Acrylic on canvas",
+    spotify: "https://open.spotify.com/playlist/7IIyPc29BMdxA3C6ZaujdE",
     size: "24 \u00d7 24 in.",
-    summary: "One-line description.",
+    summary: "This painting was made while listening to this album on loop:",
     details: [],
     cover: "assets/img/work/sound/sound-01.jpg",
     featured: "assets/img/work/sound/sound-01.jpg",
@@ -347,18 +349,19 @@ const PROJECTS = [
     tags: ["art"],
     materials: "Triptych, acrylic on canvas",
     links: [{ label: "Artist spotlight in Imprint", href: "https://archive.uwimprint.ca/article/artists-spotlight-slc-pac-expansion/" }, { label: "On Instagram", href: "https://www.instagram.com/p/CSuo2dYlPM9/?img_index=1" }],
-    size: "Three panels, each approx. 30 \u00d7 60 in.",
-    summary: "A triptych for the University of Waterloo, now on display in the Student Life Centre meditation room.",
+    size: "Three panels, each 30 \u00d7 60 in.",
+    summary: "",
     details: [
-      "It is inspired by the buzz of student life around campus, and the scenes of its buildings and parks."
+      "A triptych for the University of Waterloo, now on display in the Student Life Centre meditation room.",
+      "These paintings are inspired by the buzz of student life around campus, and the scenes of its buildings and parks."
     ],
     cover: "assets/img/work/campus/campus-02.jpg",
     featured: "assets/img/work/campus/campus-triptych.jpg",
     featuredWide: true,
     photos: [],
     sections: [
-      { label: "In the Student Life Centre", layout: "row", photos: ["assets/img/work/campus/campus-installed.jpg"] },
-      { label: "Details", layout: "row", photos: ["assets/img/work/campus/campus-detail-01.jpg", "assets/img/work/campus/campus-detail-02.jpg", "assets/img/work/campus/campus-detail-03.jpg"] }
+      { label: "Detailed Shots", layout: "row", photos: ["assets/img/work/campus/campus-detail-01.jpg", "assets/img/work/campus/campus-detail-02.jpg", "assets/img/work/campus/campus-detail-03.jpg"] },
+      { label: "In the Student Life Centre", layout: "row", photos: ["assets/img/work/campus/campus-installed.jpg"] }
     ]
   },
   {
@@ -368,8 +371,9 @@ const PROJECTS = [
     tags: ["art"],
     materials: "Chalk pastel, grapeseed oil, oil pastel, pen, and ink on paper",
     pieces: [{ label: "Left", size: "7 × 14 in." }, { label: "Right", size: "24 × 50 in." }],
-    summary: "My visual perception of myself is a compilation of reflections, images, objects, and lines that crowd my life.",
+    summary: "",
     details: [
+      "My visual perception of myself is a compilation of reflections, images, objects, and lines that crowd my life.",
       "This piece was made from photos of the reflections of myself I see every day, in car windows or the bathroom mirror. By layering these images, I created a rough depiction of the confusion surrounding identity and appearance."
     ],
     cover: "assets/img/work/perception/perception-01.jpg",
@@ -382,7 +386,7 @@ const PROJECTS = [
     title: "My Dream About Thunderstorms",
     year: 2020,
     tags: ["art"],
-    materials: "Digital, made in Photoshop",
+    materials: "Digital, made in Photoshop and Premiere Pro",
     video: "https://www.youtube.com/watch?v=Gv1pcA5L7Bk",
     summary: "Inspired by the phenomenon of thunderstorms and how my memories interlace throughout my dreams.",
     details: [
@@ -435,8 +439,8 @@ const PROJECTS = [
     title: "Night",
     year: 2020,
     tags: ["art"],
-    materials: "Materials",
-    summary: "One-line description.",
+    materials: "Acrylic on canvas",
+    summary: "The last part of the day includes entering a brightly lit portal in your hand.",
     details: [],
     cover: "assets/img/work/night/night-01.jpg",
     featured: "assets/img/work/night/night-01.jpg",
@@ -447,8 +451,9 @@ const PROJECTS = [
     title: "It Is So Cute",
     year: 2019,
     tags: ["art"],
-    materials: "Materials",
-    summary: "One-line description.",
+    materials: "Acrylic and mixed media on canvas",
+    size: "48 \u00d7 30 in.",
+    summary: "Experimenting with neo-expressionism, with a Sphynx cat.",
     details: [],
     cover: "assets/img/work/it-is-so-cute/it-is-so-cute-01.jpg",
     featured: "assets/img/work/it-is-so-cute/it-is-so-cute-01.jpg",
@@ -459,7 +464,8 @@ const PROJECTS = [
     title: "Medusa",
     year: 2019,
     tags: ["art"],
-    materials: "",
+    materials: "Graphite on paper",
+    size: "24 \u00d7 30 in.",
     summary: "A depiction of Athena's rage toward Medusa in the Greek myth, inspired by the emotionally saturated, jarring works of German Expressionism.",
     details: [
       "Explosions of controlled chaos swirl in the intensity of tight, dark strokes."
@@ -484,7 +490,6 @@ const SKETCHBOOKS = {
   art: {
     intro: "",
     images: [
-      "assets/img/sketchbook/art/art-sketch-08.jpg",
       "assets/img/sketchbook/art/art-sketch-09.jpg",
       "assets/img/sketchbook/art/art-sketch-10.jpg",
       "assets/img/sketchbook/art/art-sketch-11.jpg",

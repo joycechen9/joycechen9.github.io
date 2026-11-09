@@ -108,6 +108,20 @@ if (!p) {
       p.featuredWide ? "100vw" : "(max-width: 900px) 100vw, 65vw"));
   }
 
+  // Spotify player, under the text
+  if (p.spotify) {
+    const m = p.spotify.match(/open\.spotify\.com\/(playlist|album|track)\/(\w+)/);
+    if (m) {
+      const f = document.createElement("iframe");
+      f.src = `https://open.spotify.com/embed/${m[1]}/${m[2]}?utm_source=generator`;
+      f.className = "p-spotify";
+      f.title = p.title + " playlist";
+      f.loading = "lazy";
+      f.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+      more.appendChild(f);
+    }
+  }
+
   // YouTube video, embedded (privacy-enhanced domain, no cookies until played)
   if (p.video) {
     const m = p.video.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/);
