@@ -34,7 +34,7 @@ if (!p) {
   if (p.featuredWide) document.querySelector(".project-top").classList.add("wide");
   if (Array.isArray(p.featured)) {
     featBox.classList.add("stacked");
-    p.featured.forEach((src) => featBox.appendChild(media(src, p.title)));
+    p.featured.forEach((src) => featBox.appendChild(media(src, p.title, "(max-width: 900px) 100vw, 65vw")));
   } else if (/\.(mp4|webm|mov)$/i.test(p.featured)) {
     const v = document.createElement("video");
     v.src = p.featured;
@@ -48,7 +48,8 @@ if (!p) {
     else v.controls = true;
     featBox.appendChild(v);
   } else {
-    featBox.appendChild(media(p.featured, p.featured ? p.title : "featured photo"));
+    featBox.appendChild(media(p.featured, p.featured ? p.title : "featured photo",
+      p.featuredWide ? "100vw" : "(max-width: 900px) 100vw, 65vw"));
   }
 
   // Other photos: 3-column masonry, each photo keeps its own shape

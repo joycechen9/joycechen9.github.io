@@ -27,7 +27,11 @@
   });
   const load = (i) => {
     const img = imgs[i % imgs.length];
-    if (!img.src) img.src = img.dataset.src;
+    if (!img.src) {
+      const src = img.dataset.src;
+      if (SIZES[src]) img.src = src.replace(/\.[^.]+$/, "") + ".w800.webp";
+      else img.src = src;
+    }
   };
   for (let k = 0; k <= AHEAD; k++) load(k);
 

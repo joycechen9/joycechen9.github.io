@@ -1,12 +1,24 @@
 // Shared helpers used by every page.
 
 // Image, or a grey placeholder box when there's no image yet.
-function media(src, label) {
+// When tools/optimize_images.py has made web-sized copies, the browser picks
+// the smallest one that looks sharp at the size it's shown (`sizes`).
+const SIZES = typeof IMAGE_SIZES !== "undefined" ? IMAGE_SIZES : {};
+function media(src, label, sizes) {
   if (src) {
     const img = document.createElement("img");
-    img.src = src;
+    const dims = SIZES[src];
+    if (dims) {
+      const base = src.replace(/\.[^.]+$/, "");
+      img.srcset = `${base}.w800.webp 800w, ${base}.w1200.webp 1200w, ${base}.w1600.webp 1600w`;
+      img.sizes = sizes || "(max-width: 900px) 50vw, 33vw";
+      img.width = dims[0];
+      img.height = dims[1];
+    }
+    img.src = src; // fallback for very old browsers
     img.alt = label || "";
     img.loading = "lazy";
+    img.decoding = "async";
     return img;
   }
   const ph = document.createElement("div");
@@ -21,6 +33,8 @@ const PH_RATIOS = [1.3, 0.75, 1.0, 1.45, 0.8, 1.15, 0.68];
 // Find each item's height/width ratio: from its image once loaded, or a placeholder shape.
 function ratioOf(el, i) {
   const img = el.querySelector("img") || (el.tagName === "IMG" ? el : null);
+  const known = img && SIZES[img.getAttribute("src")];
+  if (known) return known[1] / known[0];          // known up front: no reshuffle while loading
   if (img && img.naturalWidth) return img.naturalHeight / img.naturalWidth;
   return PH_RATIOS[i % PH_RATIOS.length];
 }
@@ -56,7 +70,7 @@ function masonry(container, items, columnsFor) {
   // Re-layout when images finish loading (their real shapes become known).
   items.forEach((el) => {
     const img = el.querySelector("img") || (el.tagName === "IMG" ? el : null);
-    if (img && !img.complete) img.addEventListener("load", layout, { once: true });
+    if (img && !img.complete && !SIZES[img.getAttribute("src")]) img.addEventListener("load", layout, { once: true });
   });
 
   let lastN = columnsFor();
@@ -92,7 +106,7 @@ function rows(container, items, perRowFor) {
   }
   items.forEach((el) => {
     const img = el.querySelector("img");
-    if (img && !img.complete) img.addEventListener("load", layout, { once: true });
+    if (img && !img.complete && !SIZES[img.getAttribute("src")]) img.addEventListener("load", layout, { once: true });
   });
   let lastN = perRowFor();
   window.addEventListener("resize", () => {

@@ -8,3 +8,11 @@ Joyce Chen's portfolio — joycechen9.github.io
 - **Styles**: `css/site.css`.
 
 Project pages live at `project.html?id=<project id>`.
+
+## Images
+After adding or replacing images, run:
+
+    python3 tools/optimize_images.py
+
+It makes small web copies (`.w800/.w1200/.w1600.webp`) next to each image and records
+image sizes in `js/image-sizes.js`, so pages load fast and the grid doesn't jump around.
