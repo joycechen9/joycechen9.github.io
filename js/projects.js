@@ -408,10 +408,9 @@ const PROJECTS = [
     ],
     cover: "assets/img/work/dishwasher/dishwasher-01.jpg",
     featured: "assets/img/work/dishwasher/dishwasher-01.jpg",
-    photos: [
-      "assets/img/sketchbook/art/art-sketch-12.jpg",
-      "assets/img/sketchbook/art/art-sketch-13.jpg",
-      "assets/img/sketchbook/art/art-sketch-26.jpg"
+    photos: [],
+    sections: [
+      { label: "Sketchbook Process", photos: ["assets/img/sketchbook/art/art-sketch-12.jpg", "assets/img/sketchbook/art/art-sketch-13.jpg", "assets/img/sketchbook/art/art-sketch-26.jpg"] }
     ]
   },
   {
