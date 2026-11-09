@@ -87,17 +87,54 @@ sketchLink.textContent = "SKETCHBOOK";
 list.appendChild(sketchLink);
 
 // Filtering
-function applyFilter(tag) {
+const REDUCE = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function applyFilter(tag, animate = true) {
   filters.querySelectorAll("button").forEach((b) =>
     b.classList.toggle("active", b.dataset.tag === tag)
   );
   const match = (el) => tag === "all" || el.dataset.tags.split(" ").includes(tag);
+
+  // FLIP: remember where each visible tile is before the change
+  const before = new Map();
+  if (animate && !REDUCE)
+    tiles.forEach((t) => { if (!t.classList.contains("hidden")) before.set(t, t.getBoundingClientRect()); });
+
   tiles.forEach((t) => t.classList.toggle("hidden", !match(t)));
   ul.querySelectorAll("li").forEach((li) => li.classList.toggle("hidden", !match(li)));
   // The list only appears once a tag is chosen; ALL shows the full-width grid.
   body.classList.toggle("with-list", tag !== "all");
   sketchLink.href = "sketchbook.html?tag=" + tag;
   relayout();
+
+  if (!animate || REDUCE) return;
+  // ...then glide each tile from its old spot to its new one, and pop new tiles in
+  let k = 0;
+  tiles.forEach((t) => {
+    if (t.classList.contains("hidden")) return;
+    const now = t.getBoundingClientRect();
+    const was = before.get(t);
+    if (was) {
+      const dx = was.left - now.left, dy = was.top - now.top;
+      const sx = was.width / now.width, sy = was.height / now.height;
+      if (Math.abs(dx) + Math.abs(dy) + Math.abs(sx - 1) + Math.abs(sy - 1) < 1) return;
+      t.animate(
+        [{ transformOrigin: "top left", transform: `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})` },
+         { transformOrigin: "top left", transform: "none" }],
+        { duration: 650, easing: "cubic-bezier(.2,.8,.2,1)" }
+      );
+    } else {
+      t.animate(
+        [{ opacity: 0, transform: "translateY(24px) scale(.94)" }, { opacity: 1, transform: "none" }],
+        { duration: 550, delay: 40 * Math.min(k++, 12), easing: "cubic-bezier(.2,.8,.2,1)", fill: "backwards" }
+      );
+    }
+  });
+  // List items fade in too
+  ul.querySelectorAll("li:not(.hidden)").forEach((li, i) =>
+    li.animate([{ opacity: 0, transform: "translateX(-8px)" }, { opacity: 1, transform: "none" }],
+      { duration: 400, delay: 25 * i, easing: "ease-out", fill: "backwards" })
+  );
 }
 
 filters.addEventListener("click", (e) => {
@@ -105,4 +142,63 @@ filters.addEventListener("click", (e) => {
   if (b) applyFilter(b.dataset.tag);
 });
 
-applyFilter("all");
+applyFilter("all", false);
+
+/* ---------- About → Work: snap with easing, About fades out ---------- */
+(function snapScroll() {
+  const hero = document.getElementById("about");
+  const work = document.getElementById("work");
+  const header = document.querySelector(".site-header");
+  const workTop = () => work.offsetTop - header.offsetHeight;
+
+  // Fade (and slightly lift) the About section as you leave it
+  function fade() {
+    const t = Math.min(1, Math.max(0, window.scrollY / workTop()));
+    hero.style.opacity = (1 - t * 1.15).toFixed(3);
+    hero.style.transform = REDUCE ? "" : `translateY(${(t * -40).toFixed(1)}px)`;
+  }
+  window.addEventListener("scroll", () => requestAnimationFrame(fade), { passive: true });
+  fade();
+
+  if (REDUCE) return;
+  let busy = false;
+  const ease = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+  function glide(to) {
+    busy = true;
+    const from = window.scrollY, d = to - from, dur = 900, t0 = performance.now();
+    document.documentElement.style.scrollBehavior = "auto";
+    (function step(now) {
+      const p = Math.min(1, (now - t0) / dur);
+      window.scrollTo(0, from + d * ease(p));
+      if (p < 1) requestAnimationFrame(step);
+      else setTimeout(() => { busy = false; document.documentElement.style.scrollBehavior = ""; }, 350);
+    })(t0);
+  }
+  // Decide whether a scroll gesture should snap between the two sections
+  function intent(dy, e) {
+    const y = window.scrollY, top = workTop();
+    if (busy) { if (y < top + 2) e.preventDefault(); return; }
+    if (dy > 0 && y < top - 2) { e.preventDefault(); glide(top); }
+    else if (dy < 0 && y > 2 && y <= top + 2) { e.preventDefault(); glide(0); }
+  }
+  window.addEventListener("wheel", (e) => { if (Math.abs(e.deltaY) > 2) intent(e.deltaY, e); }, { passive: false });
+  let ty = null;
+  window.addEventListener("touchstart", (e) => { ty = e.touches[0].clientY; }, { passive: true });
+  window.addEventListener("touchmove", (e) => {
+    if (ty === null) return;
+    const dy = ty - e.touches[0].clientY;
+    if (Math.abs(dy) > 12) { intent(dy, e); ty = null; }
+  }, { passive: false });
+  window.addEventListener("keydown", (e) => {
+    const down = ["ArrowDown", "PageDown", " "].includes(e.key), up = ["ArrowUp", "PageUp"].includes(e.key);
+    if ((down || up) && !e.target.closest("input, textarea, button")) intent(down ? 1 : -1, e);
+  });
+  // Header / nav links to #work and #about use the same glide
+  document.querySelectorAll('a[href$="#work"], a[href$="#about"]').forEach((a) =>
+    a.addEventListener("click", (e) => {
+      if (!a.pathname.endsWith("index.html") && a.pathname !== location.pathname) return;
+      e.preventDefault();
+      glide(a.hash === "#work" ? workTop() : 0);
+    })
+  );
+})();
