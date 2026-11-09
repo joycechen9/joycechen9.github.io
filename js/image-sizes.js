@@ -188,9 +188,9 @@ const IMAGE_SIZES = {
 1000,
 1000
 ],
-"assets/img/sketchbook/art/art-sketch-08.jpg": [
-1800,
-1094
+"assets/img/about/about-48.jpg": [
+1000,
+1000
 ],
 "assets/img/sketchbook/art/art-sketch-09.jpg": [
 1800,
@@ -392,6 +392,10 @@ const IMAGE_SIZES = {
 1044,
 1507
 ],
+"assets/img/work/mark-making-and-sound/mark-making-and-sound-01.jpg": [
+1800,
+1797
+],
 "assets/img/work/medusa/medusa-01.jpg": [
 1309,
 1800
@@ -523,10 +527,6 @@ const IMAGE_SIZES = {
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-poster.jpg": [
 1280,
 932
-],
-"assets/img/work/mark-making-and-sound/mark-making-and-sound-01.jpg": [
-1800,
-1797
 ],
 "assets/img/work/working-on-the-car/working-on-the-car-01.jpg": [
 1400,

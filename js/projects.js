@@ -561,7 +561,8 @@ const NAME_PHOTOS = [
   "assets/img/about/about-44.jpg",
   "assets/img/about/about-45.jpg",
   "assets/img/about/about-46.jpg",
-  "assets/img/about/about-47.jpg"
+  "assets/img/about/about-47.jpg",
+  "assets/img/about/about-48.jpg"
 ];
 /* Always shown first (Golden Gate photo); the rest play in random order. */
 const FIRST_PHOTO = "assets/img/about/about-03.jpg";
