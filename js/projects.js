@@ -205,6 +205,22 @@ const PROJECTS = [
     photos: []
   },
   {
+    id: "around-the-counter",
+    title: "Around the Counter",
+    year: 2026,
+    tags: ["art"],
+    materials: "Materials",
+    summary: "One-line description.",
+    details: [],
+    cover: "",
+    covers: ["assets/img/work/around-the-counter/around-the-counter-01.jpg", "assets/img/work/around-the-counter/around-the-counter-02.jpg", "assets/img/work/around-the-counter/around-the-counter-03.jpg"],
+    featured: "assets/img/work/around-the-counter/around-the-counter-01.jpg",
+    photos: [
+      "assets/img/work/around-the-counter/around-the-counter-02.jpg",
+      "assets/img/work/around-the-counter/around-the-counter-03.jpg"
+    ]
+  },
+  {
     id: "chinese-market",
     title: "Chinese Market",
     year: 2026,
@@ -292,9 +308,12 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
-    photos: []
+    cover: "assets/img/work/dishwasher/dishwasher-01.jpg",
+    featured: "assets/img/work/dishwasher/dishwasher-01.jpg",
+    photos: [
+      "assets/img/sketchbook/art/art-sketch-12.jpg",
+      "assets/img/sketchbook/art/art-sketch-13.jpg"
+    ]
   },
   {
     id: "cardboard-party",
@@ -304,9 +323,12 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
-    photos: []
+    cover: "assets/img/work/cardboard-party/cardboard-party-01.jpg",
+    featured: "assets/img/work/cardboard-party/cardboard-party-01.jpg",
+    photos: [
+      "assets/img/sketchbook/art/art-sketch-19.jpg",
+      "assets/img/sketchbook/art/art-sketch-20.jpg"
+    ]
   },
   {
     id: "night",
@@ -328,8 +350,8 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
+    cover: "assets/img/work/it-is-so-cute/it-is-so-cute-01.jpg",
+    featured: "assets/img/work/it-is-so-cute/it-is-so-cute-01.jpg",
     photos: []
   },
   {
@@ -340,9 +362,15 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
-    photos: []
+    cover: "assets/img/work/medusa/medusa-01.jpg",
+    featured: "assets/img/work/medusa/medusa-01.jpg",
+    photos: [
+      "assets/img/sketchbook/art/art-sketch-14.jpg",
+      "assets/img/sketchbook/art/art-sketch-15.jpg",
+      "assets/img/sketchbook/art/art-sketch-16.jpg",
+      "assets/img/sketchbook/art/art-sketch-17.jpg",
+      "assets/img/sketchbook/art/art-sketch-18.jpg"
+    ]
   }
 ];
 
@@ -351,7 +379,24 @@ const PROJECTS = [
 const SKETCHBOOKS = {
   design:      { intro: "", images: [] },
   engineering: { intro: "", images: [] },
-  art:         { intro: "", images: [] }
+  art: {
+    intro: "",
+    images: [
+      "assets/img/sketchbook/art/art-sketch-08.jpg",
+      "assets/img/sketchbook/art/art-sketch-09.jpg",
+      "assets/img/sketchbook/art/art-sketch-10.jpg",
+      "assets/img/sketchbook/art/art-sketch-11.jpg",
+      "assets/img/sketchbook/art/art-sketch-12.jpg",
+      "assets/img/sketchbook/art/art-sketch-13.jpg",
+      "assets/img/sketchbook/art/art-sketch-14.jpg",
+      "assets/img/sketchbook/art/art-sketch-15.jpg",
+      "assets/img/sketchbook/art/art-sketch-16.jpg",
+      "assets/img/sketchbook/art/art-sketch-17.jpg",
+      "assets/img/sketchbook/art/art-sketch-18.jpg",
+      "assets/img/sketchbook/art/art-sketch-19.jpg",
+      "assets/img/sketchbook/art/art-sketch-20.jpg"
+    ]
+  }
 };
 
 /* Photos that cycle in the homepage about section, about 1 per second.
