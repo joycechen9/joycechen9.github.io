@@ -398,7 +398,7 @@ const IMAGE_SIZES = {
 ],
 "assets/img/work/manchild/manchild-cover.jpg": [
 1024,
-1336
+1338
 ],
 "assets/img/work/manchild/manchild-featured.jpg": [
 1800,
