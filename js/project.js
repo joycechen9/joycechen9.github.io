@@ -123,6 +123,8 @@ if (!p) {
       f.loading = "lazy";
       f.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
       more.appendChild(f);
+      // line the bottom of the player up with the bottom of the artwork
+      if (!p.featuredWide) document.querySelector(".project-top").classList.add("align-bottom");
     }
   }
 
