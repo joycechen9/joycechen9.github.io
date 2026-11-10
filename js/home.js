@@ -23,6 +23,7 @@
     const img = document.createElement("img");
     img.alt = i === 0 ? "Joyce Chen" : "";
     img.className = "frame" + (i === 0 ? " on" : "");
+    if (i === 0) { blurUp(img, src); img.fetchPriority = "high"; }
     img.dataset.src = src;
     box.appendChild(img);
     return img;
@@ -249,6 +250,11 @@ filters.addEventListener("click", (e) => {
 const startTag = location.hash.slice(1);
 const fromHash = [...filters.querySelectorAll("button")].some((b) => b.dataset.tag === startTag && startTag !== "all");
 applyFilter(fromHash ? startTag : "all", false);
+// The first row or two of the grid load straight away, ahead of everything below
+tiles.filter((t) => !t.classList.contains("hidden")).slice(0, 6).forEach((t) => {
+  const img = t.querySelector("img");
+  if (img) { img.loading = "eager"; img.fetchPriority = "high"; }
+});
 window.addEventListener("hashchange", () => {
   const t = location.hash.slice(1);
   if (filters.querySelector(`button[data-tag="${CSS.escape(t)}"]`)) applyFilter(t);

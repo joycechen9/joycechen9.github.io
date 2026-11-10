@@ -172,7 +172,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .extra-link:hover { color: var(--accent); }
 
 /* SELECTED WORKS (no list beside it): narrower, centred, white space on each side */
-.work-body:not(.with-list) .grid { max-width: 1080px; margin: 0 auto; }
+.work-body:not(.with-list) .grid { width: 100%; max-width: 1080px; margin: 0 auto; }
 
 /* Masonry grid: 3 side-by-side columns; each tile keeps its image's shape.
    Columns are built by js/common.js. */

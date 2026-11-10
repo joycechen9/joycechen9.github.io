@@ -4,6 +4,23 @@
 // When tools/optimize_images.py has made web-sized copies, the browser picks
 // the smallest one that looks sharp at the size it's shown (`sizes`).
 const SIZES = typeof IMAGE_SIZES !== "undefined" ? IMAGE_SIZES : {};
+const PREVIEWS = typeof IMAGE_PREVIEWS !== "undefined" ? IMAGE_PREVIEWS : {};
+const REDUCE_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// Blur-up: show a tiny blurred preview straight away, then sharpen into the real image.
+function blurUp(img, src) {
+  const pv = PREVIEWS[src];
+  if (!pv) return;
+  img.style.backgroundImage = `url("${pv}")`;
+  img.style.backgroundSize = "cover";
+  img.style.backgroundPosition = "center";
+  img.addEventListener("load", () => {
+    img.style.backgroundImage = "";
+    if (!REDUCE_MOTION && performance.now() - img._t0 > 60)   // skip the effect if it was already cached
+      img.animate([{ filter: "blur(10px)" }, { filter: "blur(0)" }], { duration: 350, easing: "ease-out" });
+  }, { once: true });
+  img._t0 = performance.now();
+}
 function media(src, label, sizes) {
   if (src) {
     const img = document.createElement("img");
@@ -15,6 +32,7 @@ function media(src, label, sizes) {
       img.width = dims[0];
       img.height = dims[1];
     }
+    blurUp(img, src);
     img.src = src; // fallback for very old browsers
     img.alt = label || "";
     img.loading = "lazy";

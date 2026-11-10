@@ -183,4 +183,8 @@ if (!p) {
     });
     photoGrid(g, cells, sec.layout);
   });
+
+  // The big image at the top loads first
+  const top = document.querySelector("#p-featured img");
+  if (top) { top.loading = "eager"; top.fetchPriority = "high"; }
 }
