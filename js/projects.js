@@ -563,10 +563,13 @@ const NAME_FLIP_MS = 1000;
 
 /* Hand-arranged grid for a filter (desktop only). Each inner list is a column,
    top to bottom, by project id; `widths` sets the columns' relative widths.
-   Tiles are cropped so every column ends at the same height. */
+   Tiles are cropped so every column ends at the same height, except those
+   listed in `contain`, which are shown whole on a white background. */
 const GRID_LAYOUTS = {
   engineering: {
     columns: [["salico", "redbull-flugtag"], ["kong", "lego-rescue"], ["telescoping-drop-pole"]],
-    widths: [750, 550, 390]
+    widths: [750, 550, 390],
+    // shown whole (never cropped); any leftover space is filled with white
+    contain: ["kong"]
   }
 };

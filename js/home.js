@@ -88,7 +88,7 @@ const LAYOUTS = typeof GRID_LAYOUTS !== "undefined" ? GRID_LAYOUTS : {};
 // Hand-arranged layout for a filter (see GRID_LAYOUTS in projects.js)
 function customLayout() {
   const cfg = LAYOUTS[currentTag];
-  if (!cfg || isNarrow()) return false;
+  if (!cfg || isNarrow()) { tiles.forEach((t) => t.classList.remove("contain")); return false; }
   grid.innerHTML = "";
   const visible = tiles.filter((t) => !t.classList.contains("hidden"));
   const placed = new Set();
@@ -113,6 +113,7 @@ function customLayout() {
     const sum = nat[c].reduce((x, y) => x + y, 0);
     const room = target - gap * (nat[c].length - 1);
     [...col.children].forEach((t, i) => {
+      t.classList.toggle("contain", (cfg.contain || []).includes(t.dataset.pid));
       t.style.aspectRatio = "auto";
       t.style.height = (nat[c][i] * room / sum).toFixed(1) + "px";
     });
