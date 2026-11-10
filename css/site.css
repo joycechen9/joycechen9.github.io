@@ -100,7 +100,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 /* ---------- 2. Work ---------- */
 .work {
   min-height: calc(100vh - var(--header-h));
-  padding: 24px var(--side) 80px;
+  padding: 24px var(--side) 24px;
 }
 
 .filters {
@@ -219,7 +219,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .hidden { display: none !important; }
 
 /* ---------- 4. Project detail ---------- */
-.project { padding: 66px 38px 120px 54px; }
+.project { padding: 66px 38px 40px 54px; }
 
 .project-top {
   display: grid;
@@ -317,7 +317,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
 
 /* ---------- Sketchbook ---------- */
-.sketchbook { padding: 66px var(--side) 120px; }
+.sketchbook { padding: 66px var(--side) 40px; }
 .sketchbook-head { margin-bottom: 32px; }
 .sketchbook-head h1 { font-size: 34px; margin: 0 0 12px; letter-spacing: .5px; }
 .sketchbook-head p { font-size: 17px; font-style: italic; margin: 0; max-width: 560px; }
@@ -328,6 +328,15 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .not-found { font-size: 18px; }
 .not-found a { text-decoration: underline; }
 .not-found a:hover { color: var(--accent); }
+
+/* ---------- Footer (every page) ---------- */
+.site-footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 48px 20px 40px;
+}
+.site-footer span { margin: 0 4px; }
+.site-footer a:hover { color: var(--accent); }
 
 /* ---------- Smaller screens ---------- */
 @media (max-width: 900px) {
