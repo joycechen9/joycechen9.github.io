@@ -525,7 +525,6 @@ const NAME_PHOTOS = [
   "assets/img/about/about-14.jpg",
   "assets/img/about/about-15.jpg",
   "assets/img/about/about-16.jpg",
-  "assets/img/about/about-17.jpg",
   "assets/img/about/about-18.jpg",
   "assets/img/about/about-19.jpg",
   "assets/img/about/about-20.jpg",
