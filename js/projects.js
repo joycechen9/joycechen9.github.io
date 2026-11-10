@@ -616,3 +616,16 @@ const SELECTED_WORKS = {
   }
 };
 
+
+/* Sections in a filter's work list, top to bottom. The first section is the
+   strongest work and is shown in bold; works not listed go in a last section. */
+const LIST_GROUPS = {
+  design: [
+    ["new-windsor", "saturn-with-a-moon", "manchild", "kong", "redbull-flugtag"],
+    ["for-sale", "trinket-shelf", "fountain-for-bees"]
+  ],
+  engineering: [
+    ["salico", "kong", "redbull-flugtag"],
+    ["telescoping-drop-pole", "lego-rescue"]
+  ]
+};

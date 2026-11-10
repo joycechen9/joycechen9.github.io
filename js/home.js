@@ -151,16 +151,32 @@ grid._custom = customLayout;
 const relayout = masonry(grid, tiles, gridColumns);
 window.addEventListener("resize", () => { if (LAYOUTS[currentTag]) relayout(); });
 
-// List
-const ul = document.createElement("ul");
-sorted.forEach((p) => {
+// List. A filter can split its list into sections (LIST_GROUPS in projects.js):
+// the first section is the strongest work and is set in bold.
+const items = sorted.map((p) => {
   const li = document.createElement("li");
+  li.dataset.pid = p.id;
   li.dataset.tags = p.tags.join(" ");
   li.innerHTML = `<a href="${link(p)}"><span class="li-title"></span><span class="li-year">${p.year}</span></a>`;
   li.querySelector(".li-title").textContent = p.title.toUpperCase();
-  ul.appendChild(li);
+  return li;
 });
-list.appendChild(ul);
+const GROUPS = typeof LIST_GROUPS !== "undefined" ? LIST_GROUPS : {};
+const listBox = document.createElement("div");
+list.appendChild(listBox);
+function buildList(tag, match) {
+  listBox.innerHTML = "";
+  const shown = items.filter(match);
+  const groups = (GROUPS[tag] || []).map((ids) => ids.map((id) => shown.find((li) => li.dataset.pid === id)).filter(Boolean));
+  const rest = shown.filter((li) => !groups.some((g) => g.includes(li)));
+  if (rest.length || !groups.length) groups.push(rest);
+  groups.filter((g) => g.length).forEach((g, i, all) => {
+    const ul = document.createElement("ul");
+    if (i === 0 && all.length > 1) ul.className = "strong";
+    g.forEach((li) => ul.appendChild(li));
+    listBox.appendChild(ul);
+  });
+}
 
 // Sketchbook link: points at the sketchbook for whichever tag is selected
 const sketchLink = document.createElement("a");
@@ -186,7 +202,7 @@ function applyFilter(tag, animate = true) {
     tiles.forEach((t) => { if (!t.classList.contains("hidden")) before.set(t, t.getBoundingClientRect()); });
 
   tiles.forEach((t) => t.classList.toggle("hidden", !match(t)));
-  ul.querySelectorAll("li").forEach((li) => li.classList.toggle("hidden", !match(li)));
+  buildList(tag, match);
   // The list only appears once a tag is chosen; ALL shows the full-width grid.
   body.classList.toggle("with-list", tag !== "all");
   sketchLink.href = "sketchbook.html?tag=" + tag;
@@ -218,7 +234,7 @@ function applyFilter(tag, animate = true) {
     }
   });
   // List items fade in too
-  ul.querySelectorAll("li:not(.hidden)").forEach((li, i) =>
+  listBox.querySelectorAll("li").forEach((li, i) =>
     li.animate([{ opacity: 0, transform: "translateX(-8px)" }, { opacity: 1, transform: "none" }],
       { duration: 600, delay: 35 * i, easing: "ease-out", fill: "backwards" })
   );
@@ -233,6 +249,10 @@ filters.addEventListener("click", (e) => {
 const startTag = location.hash.slice(1);
 const fromHash = [...filters.querySelectorAll("button")].some((b) => b.dataset.tag === startTag && startTag !== "all");
 applyFilter(fromHash ? startTag : "all", false);
+window.addEventListener("hashchange", () => {
+  const t = location.hash.slice(1);
+  if (filters.querySelector(`button[data-tag="${CSS.escape(t)}"]`)) applyFilter(t);
+});
 
 // Coming back from a project page: return to where you were in the work section
 try { history.scrollRestoration = "manual"; } catch (e) {}
