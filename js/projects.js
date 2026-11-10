@@ -573,3 +573,14 @@ const GRID_LAYOUTS = {
     contain: ["kong"]
   }
 };
+
+/* What SELECTED WORKS shows. Works listed in `hide` appear only under their
+   own filters. For works with several grid images, `covers` picks which ones
+   (1 = first image in its covers list). */
+const SELECTED_WORKS = {
+  hide: ["campus", "my-dream-about-thunderstorms", "it-is-so-cute", "medusa"],
+  covers: {
+    "around-the-counter": [3],
+    "chinese-market": [1, 2, 6]
+  }
+};

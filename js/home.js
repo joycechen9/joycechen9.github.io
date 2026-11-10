@@ -61,13 +61,16 @@ const link = (p) => "project.html?id=" + encodeURIComponent(p.id);
 // Grid tiles: one per cover image (a project can have several, all linking to its page).
 // tagCovers gives a filter its own image: that tile shows only in that filter, and the
 // main cover shows everywhere else.
-function makeTile(p, src, tags, onlyThere) {
+const SEL = typeof SELECTED_WORKS !== "undefined" ? SELECTED_WORKS : { hide: [], covers: {} };
+function makeTile(p, src, tags, onlyThere, n) {
   const a = document.createElement("a");
+  const picks = (SEL.covers || {})[p.id];
+  const inSelected = !onlyThere && !(SEL.hide || []).includes(p.id) && (!picks || picks.includes(n));
+  if (!inSelected) a.dataset.noall = "1";
   a.href = link(p);
   a.className = "tile";
   a.dataset.pid = p.id;
   a.dataset.tags = tags.join(" ");
-  if (onlyThere) a.dataset.noall = "1";
   a.appendChild(media(src, src ? p.title : ""));
   const cap = document.createElement("span");
   cap.className = "tile-caption";
@@ -78,7 +81,7 @@ function makeTile(p, src, tags, onlyThere) {
 const tiles = sorted.flatMap((p) => {
   const own = Object.keys(p.tagCovers || {});
   const mainTags = p.tags.filter((t) => !own.includes(t));
-  const main = (p.covers && p.covers.length ? p.covers : [p.cover]).map((src) => makeTile(p, src, mainTags, false));
+  const main = (p.covers && p.covers.length ? p.covers : [p.cover]).map((src, i) => makeTile(p, src, mainTags, false, i + 1));
   const extra = own.map((t) => makeTile(p, p.tagCovers[t], [t], true));
   return [...main, ...extra];
 });
