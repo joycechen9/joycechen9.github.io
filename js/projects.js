@@ -20,6 +20,8 @@
     links      (optional) links shown under the text: [{ label: "...", href: "https://..." }]
     covers     (optional) several grid images for one project, each its own tile,
                all linking to the same project page. Use instead of cover.
+    tagCovers  (optional) a different grid image for one filter, e.g. { art: "...jpg" }.
+               The main cover shows in ALL and the other filters.
     cover      image shown in the grid, e.g. "assets/img/work/new-windsor/cover.jpg"
                leave "" to show a grey placeholder.
                Tiles keep the shape of their image and line up in 3 columns.
@@ -41,18 +43,6 @@
 */
 
 const PROJECTS = [
-{
-    id: "for-our-shadow-selves",
-    title: "For Our Shadow Selves",
-    year: 2026,
-    tags: ["design"],
-    materials: "Materials",
-    summary: "One-line description.",
-    details: ["More details"],
-    cover: "",
-    featured: "",
-    photos: []
-  },
 {
     id: "new-windsor",
     title: "New Windsor",
@@ -124,13 +114,16 @@ const PROJECTS = [
     id: "for-sale",
     title: "For Sale",
     year: 2025,
-    tags: ["design"],
+    tags: ["design", "art"],
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
-    photos: []
+    cover: "assets/img/work/for-sale/for-sale-01.jpg",
+    tagCovers: { art: "assets/img/work/for-sale/for-sale-02.jpg" },
+    featured: "assets/img/work/for-sale/for-sale-01.jpg",
+    photos: [
+      "assets/img/work/for-sale/for-sale-02.jpg"
+    ]
   },
 {
     id: "trinket-shelf",
@@ -140,21 +133,24 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
+    cover: "assets/img/work/trinket-shelf/trinket-shelf-01.jpg",
+    featured: "assets/img/work/trinket-shelf/trinket-shelf-01.jpg",
     photos: []
   },
 {
     id: "fountain-for-bees",
     title: "Fountain for Bees",
     year: 2025,
-    tags: ["design"],
+    tags: ["design", "art"],
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
-    photos: []
+    cover: "assets/img/work/fountain-for-bees/fountain-for-bees-01.jpg",
+    tagCovers: { art: "assets/img/work/fountain-for-bees/fountain-for-bees-02.jpg" },
+    featured: "assets/img/work/fountain-for-bees/fountain-for-bees-01.jpg",
+    photos: [
+      "assets/img/work/fountain-for-bees/fountain-for-bees-02.jpg"
+    ]
   },
 {
     id: "kong",
@@ -219,15 +215,15 @@ const PROJECTS = [
     ]
   },
   {
-    id: "camera-pole-mounts",
-    title: "Camera Pole Mounts",
+    id: "telescoping-drop-pole",
+    title: "Telescoping Drop Pole",
     year: 2026,
     tags: ["engineering"],
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "",
-    featured: "",
+    cover: "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-01.jpg",
+    featured: "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-01.jpg",
     photos: []
   },
 {
@@ -502,7 +498,10 @@ const SKETCHBOOKS = {
       "assets/img/sketchbook/art/art-sketch-24.jpg",
       "assets/img/sketchbook/art/art-sketch-25.jpg",
       "assets/img/sketchbook/art/art-sketch-26.jpg",
-      "assets/img/sketchbook/art/art-sketch-27.jpg"
+      "assets/img/sketchbook/art/art-sketch-27.jpg",
+      "assets/img/sketchbook/art/art-sketch-28.jpg",
+      "assets/img/sketchbook/art/art-sketch-29.jpg",
+      "assets/img/sketchbook/art/art-sketch-30.jpg"
     ]
   }
 };
@@ -561,3 +560,13 @@ const NAME_PHOTOS = [
 /* Always shown first (Golden Gate photo); the rest play in random order. */
 const FIRST_PHOTO = "assets/img/about/about-03.jpg";
 const NAME_FLIP_MS = 1000;
+
+/* Hand-arranged grid for a filter (desktop only). Each inner list is a column,
+   top to bottom, by project id; `widths` sets the columns' relative widths.
+   Tiles are cropped so every column ends at the same height. */
+const GRID_LAYOUTS = {
+  engineering: {
+    columns: [["salico", "redbull-flugtag"], ["kong", "lego-rescue"], ["telescoping-drop-pole"]],
+    widths: [750, 550, 390]
+  }
+};

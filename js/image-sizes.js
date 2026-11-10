@@ -64,10 +64,6 @@ const IMAGE_SIZES = {
 1000,
 1000
 ],
-"assets/img/about/about-17.jpg": [
-1000,
-1000
-],
 "assets/img/about/about-18.jpg": [
 1000,
 1000
@@ -268,6 +264,18 @@ const IMAGE_SIZES = {
 2400,
 1589
 ],
+"assets/img/sketchbook/art/art-sketch-28.jpg": [
+1398,
+1800
+],
+"assets/img/sketchbook/art/art-sketch-29.jpg": [
+1337,
+1800
+],
+"assets/img/sketchbook/art/art-sketch-30.jpg": [
+1285,
+1800
+],
 "assets/img/work/around-the-counter/around-the-counter-01.jpg": [
 1296,
 1800
@@ -346,6 +354,22 @@ const IMAGE_SIZES = {
 ],
 "assets/img/work/dishwasher/dishwasher-01.jpg": [
 1344,
+1800
+],
+"assets/img/work/for-sale/for-sale-01.jpg": [
+1800,
+1200
+],
+"assets/img/work/for-sale/for-sale-02.jpg": [
+1800,
+1200
+],
+"assets/img/work/fountain-for-bees/fountain-for-bees-01.jpg": [
+1350,
+1800
+],
+"assets/img/work/fountain-for-bees/fountain-for-bees-02.jpg": [
+1800,
 1800
 ],
 "assets/img/work/it-is-so-cute/it-is-so-cute-01.jpg": [
@@ -527,6 +551,14 @@ const IMAGE_SIZES = {
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-poster.jpg": [
 1280,
 932
+],
+"assets/img/work/telescoping-drop-pole/telescoping-drop-pole-01.jpg": [
+848,
+1800
+],
+"assets/img/work/trinket-shelf/trinket-shelf-01.jpg": [
+1086,
+1448
 ],
 "assets/img/work/working-on-the-car/working-on-the-car-01.jpg": [
 1400,

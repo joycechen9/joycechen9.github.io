@@ -58,22 +58,71 @@ const filters = document.getElementById("filters");
 const sorted = [...PROJECTS].sort((a, b) => b.year - a.year);
 const link = (p) => "project.html?id=" + encodeURIComponent(p.id);
 
-// Grid tiles: one per cover image (a project can have several, all linking to its page)
-const tiles = sorted.flatMap((p) =>
-  (p.covers && p.covers.length ? p.covers : [p.cover]).map((src) => {
-    const a = document.createElement("a");
-    a.href = link(p);
-    a.className = "tile";
-    a.dataset.tags = p.tags.join(" ");
-    a.appendChild(media(src, src ? p.title : ""));
-    const cap = document.createElement("span");
-    cap.className = "tile-caption";
-    cap.textContent = p.title.toUpperCase();
-    a.appendChild(cap);
-    return a;
-  })
-);
+// Grid tiles: one per cover image (a project can have several, all linking to its page).
+// tagCovers gives a filter its own image: that tile shows only in that filter, and the
+// main cover shows everywhere else.
+function makeTile(p, src, tags, onlyThere) {
+  const a = document.createElement("a");
+  a.href = link(p);
+  a.className = "tile";
+  a.dataset.pid = p.id;
+  a.dataset.tags = tags.join(" ");
+  if (onlyThere) a.dataset.noall = "1";
+  a.appendChild(media(src, src ? p.title : ""));
+  const cap = document.createElement("span");
+  cap.className = "tile-caption";
+  cap.textContent = p.title.toUpperCase();
+  a.appendChild(cap);
+  return a;
+}
+const tiles = sorted.flatMap((p) => {
+  const own = Object.keys(p.tagCovers || {});
+  const mainTags = p.tags.filter((t) => !own.includes(t));
+  const main = (p.covers && p.covers.length ? p.covers : [p.cover]).map((src) => makeTile(p, src, mainTags, false));
+  const extra = own.map((t) => makeTile(p, p.tagCovers[t], [t], true));
+  return [...main, ...extra];
+});
+let currentTag = "all";
+const LAYOUTS = typeof GRID_LAYOUTS !== "undefined" ? GRID_LAYOUTS : {};
+
+// Hand-arranged layout for a filter (see GRID_LAYOUTS in projects.js)
+function customLayout() {
+  const cfg = LAYOUTS[currentTag];
+  if (!cfg || isNarrow()) return false;
+  grid.innerHTML = "";
+  const visible = tiles.filter((t) => !t.classList.contains("hidden"));
+  const placed = new Set();
+  const cols = cfg.columns.map((ids, c) => {
+    const col = document.createElement("div");
+    col.className = "m-col";
+    col.style.flex = `${cfg.widths[c] || 1} 1 0`;
+    grid.appendChild(col);
+    ids.forEach((id) => {
+      const t = visible.find((x) => x.dataset.pid === id && !placed.has(x));
+      if (t) { col.appendChild(t); placed.add(t); }
+    });
+    return col;
+  });
+  // Anything not listed goes at the bottom of the last column
+  visible.filter((t) => !placed.has(t)).forEach((t) => cols[cols.length - 1].appendChild(t));
+  // Size tiles so every column ends at the same height
+  const gap = parseFloat(getComputedStyle(grid).columnGap) || 10;
+  const nat = cols.map((col) => [...col.children].map((t, i) => col.clientWidth * ratioOf(t, i)));
+  const target = nat.reduce((a, n, c) => a + n.reduce((x, y) => x + y, 0) + gap * (n.length - 1), 0) / cols.length;
+  cols.forEach((col, c) => {
+    const sum = nat[c].reduce((x, y) => x + y, 0);
+    const room = target - gap * (nat[c].length - 1);
+    [...col.children].forEach((t, i) => {
+      t.style.aspectRatio = "auto";
+      t.style.height = (nat[c][i] * room / sum).toFixed(1) + "px";
+    });
+  });
+  fitSizes(grid);
+  return true;
+}
+grid._custom = customLayout;
 const relayout = masonry(grid, tiles, gridColumns);
+window.addEventListener("resize", () => { if (LAYOUTS[currentTag]) relayout(); });
 
 // List
 const ul = document.createElement("ul");
@@ -99,7 +148,10 @@ function applyFilter(tag, animate = true) {
   filters.querySelectorAll("button").forEach((b) =>
     b.classList.toggle("active", b.dataset.tag === tag)
   );
-  const match = (el) => tag === "all" || el.dataset.tags.split(" ").includes(tag);
+  currentTag = tag;
+  const match = (el) => (tag === "all" ? !el.dataset.noall : el.dataset.tags.split(" ").includes(tag));
+  // Remember the filter in the address (#engineering), so Back from a project returns to it
+  try { history.replaceState(null, "", tag === "all" ? location.pathname : "#" + tag); } catch (e) {}
 
   // FLIP: remember where each visible tile is before the change
   const before = new Map();
@@ -148,7 +200,23 @@ filters.addEventListener("click", (e) => {
   if (b) applyFilter(b.dataset.tag);
 });
 
-applyFilter("all", false);
+// Open on the filter in the address, if any (e.g. coming Back from a project page)
+const startTag = location.hash.slice(1);
+const fromHash = [...filters.querySelectorAll("button")].some((b) => b.dataset.tag === startTag && startTag !== "all");
+applyFilter(fromHash ? startTag : "all", false);
+
+// Coming back from a project page: return to where you were in the work section
+try { history.scrollRestoration = "manual"; } catch (e) {}
+document.getElementById("work").addEventListener("click", (e) => {
+  if (e.target.closest("a[href^='project.html']"))
+    try { sessionStorage.setItem("workScroll", String(window.scrollY)); } catch (err) {}
+});
+if (fromHash) {
+  let y = null;
+  try { y = sessionStorage.getItem("workScroll"); } catch (e) {}
+  const top = document.getElementById("work").offsetTop - document.querySelector(".site-header").offsetHeight;
+  window.scrollTo(0, y !== null ? Math.max(top, +y) : top);
+}
 
 /* ---------- About → Work: snap with easing, About fades out ---------- */
 (function snapScroll() {
@@ -167,29 +235,39 @@ applyFilter("all", false);
   fade();
 
   if (REDUCE) return;
-  let busy = false, cooldown = 0;
+  let busy = false, absorbing = false, lastWheel = 0;
   // Ease-out: picks up the scroll's momentum immediately, then settles gently
   const ease = (x) => 1 - Math.pow(1 - x, 4);
   function glide(to) {
     busy = true;
+    absorbing = true;   // swallow the rest of this scroll gesture so the page stops where it lands
     const from = window.scrollY, d = to - from, dur = 850, t0 = performance.now();
     document.documentElement.style.scrollBehavior = "auto";
     (function step(now) {
       const p = Math.min(1, (now - t0) / dur);
       window.scrollTo(0, from + d * ease(p));
       if (p < 1) requestAnimationFrame(step);
-      else { busy = false; cooldown = performance.now() + 700; document.documentElement.style.scrollBehavior = ""; }
+      else { busy = false; document.documentElement.style.scrollBehavior = ""; }
     })(t0);
   }
   // Decide whether a scroll gesture should snap between the two sections
   function intent(dy, e) {
     const y = window.scrollY, top = workTop();
-    if (busy) { e.preventDefault(); return; }            // don't fight the glide
-    if (performance.now() < cooldown) return;             // let leftover momentum scroll naturally
     if (dy > 0 && y < top - 2) { e.preventDefault(); glide(top); }
     else if (dy < 0 && y > 2 && y <= top + 2) { e.preventDefault(); glide(0); }
   }
-  window.addEventListener("wheel", (e) => { if (Math.abs(e.deltaY) > 2) intent(e.deltaY, e); }, { passive: false });
+  window.addEventListener("wheel", (e) => {
+    const now = performance.now(), gap = now - lastWheel;
+    lastWheel = now;
+    if (busy) { e.preventDefault(); return; }
+    // Trackpads keep sending "momentum" scroll after you lift your fingers. Until there's a
+    // short pause (a new gesture), ignore it, so the page rests at the top of the work section.
+    if (absorbing) {
+      if (gap < 250) { e.preventDefault(); return; }
+      absorbing = false;
+    }
+    if (Math.abs(e.deltaY) > 2) intent(e.deltaY, e);
+  }, { passive: false });
   let ty = null;
   window.addEventListener("touchstart", (e) => { ty = e.touches[0].clientY; }, { passive: true });
   window.addEventListener("touchmove", (e) => {

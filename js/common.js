@@ -27,6 +27,15 @@ function media(src, label, sizes) {
   return ph;
 }
 
+// Tell the browser how wide each image really shows, so it downloads a copy that
+// is sharp at that size (a full-width photo gets the big copy, a small tile the small one).
+function fitSizes(container) {
+  container.querySelectorAll("img[srcset]").forEach((img) => {
+    const w = Math.ceil(img.parentElement.getBoundingClientRect().width);
+    if (w) img.sizes = w + "px";
+  });
+}
+
 // Placeholder shapes (height / width) so the empty layout looks like a real masonry grid.
 const PH_RATIOS = [1.3, 0.75, 1.0, 1.45, 0.8, 1.15, 0.68];
 
@@ -46,6 +55,7 @@ function ratioOf(el, i) {
 */
 function masonry(container, items, columnsFor) {
   function layout() {
+    if (container._custom && container._custom()) return;   // a hand-arranged layout took over
     const n = columnsFor();
     container.innerHTML = "";
     const cols = [];
@@ -61,10 +71,12 @@ function masonry(container, items, columnsFor) {
       if (el.classList.contains("hidden")) return;
       const r = ratioOf(el, i);
       el.style.aspectRatio = (1 / r).toFixed(4);
+      el.style.height = "";
       const c = heights.indexOf(Math.min(...heights));
       cols[c].appendChild(el);
       heights[c] += r;
     });
+    fitSizes(container);
   }
 
   // Re-layout when images finish loading (their real shapes become known).
@@ -103,6 +115,7 @@ function rows(container, items, perRowFor) {
       });
       container.appendChild(row);
     }
+    fitSizes(container);
   }
   items.forEach((el) => {
     const img = el.querySelector("img");
