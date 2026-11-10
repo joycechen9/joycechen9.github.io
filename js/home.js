@@ -70,6 +70,7 @@ function makeTile(p, src, tags, onlyThere, n) {
   a.href = link(p);
   a.className = "tile";
   a.dataset.pid = p.id;
+  a.dataset.key = n && p.covers && p.covers.length > 1 ? `${p.id}:${n}` : p.id;
   a.dataset.tags = tags.join(" ");
   a.appendChild(media(src, src ? p.title : ""));
   const cap = document.createElement("span");
@@ -86,6 +87,17 @@ const tiles = sorted.flatMap((p) => {
   return [...main, ...extra];
 });
 let currentTag = "all";
+tiles.forEach((t, i) => (t.dataset.idx = i));
+// SELECTED WORKS can use a hand-picked order (SELECTED_WORKS.order); filters keep newest-first
+const ORDER = (SEL.order || []);
+const rank = (t) => {
+  let r = ORDER.indexOf(t.dataset.key);
+  if (r < 0) r = ORDER.indexOf(t.dataset.pid);
+  return r < 0 ? 1000 + +t.dataset.idx : r;
+};
+function sortTiles(tag) {
+  tiles.sort(tag === "all" ? (a, b) => rank(a) - rank(b) : (a, b) => a.dataset.idx - b.dataset.idx);
+}
 const LAYOUTS = typeof GRID_LAYOUTS !== "undefined" ? GRID_LAYOUTS : {};
 
 // Hand-arranged layout for a filter (see GRID_LAYOUTS in projects.js)
@@ -167,6 +179,7 @@ function applyFilter(tag, animate = true) {
   // The list only appears once a tag is chosen; ALL shows the full-width grid.
   body.classList.toggle("with-list", tag !== "all");
   sketchLink.href = "sketchbook.html?tag=" + tag;
+  sortTiles(tag);
   relayout();
 
   if (!animate || REDUCE) return;
