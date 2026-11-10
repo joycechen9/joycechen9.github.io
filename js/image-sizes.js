@@ -188,6 +188,18 @@ const IMAGE_SIZES = {
 1000,
 1000
 ],
+"assets/img/about/about-49.jpg": [
+1000,
+1000
+],
+"assets/img/about/about-50.jpg": [
+1000,
+1000
+],
+"assets/img/about/about-51.jpg": [
+1000,
+1000
+],
 "assets/img/sketchbook/art/art-sketch-09.jpg": [
 1800,
 1175
@@ -613,6 +625,9 @@ const IMAGE_PREVIEWS = {
 "assets/img/about/about-46.jpg": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADQBACdASoYABgAPu1irFAppSQisBgIATAdiWUAygAF+ZXteY0WCZTTJEJvSZZ4AADbHGjSeZEDGbgl3dUKwGQiMC7iylc1n3SCHONb4+Y0hyyIlyNH5HaN/hRB8TxBuaDcIFdlxKhr3ePDCZIS3g/36sDdgxW9WJP6pYAAAAA=",
 "assets/img/about/about-47.jpg": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAADwBQCdASoYABgAPu1wsFKppiSiqAgBMB2JZACo+bAxgAdNzbl64ZytMmmERF1azY829Wy9XRKaYAD9nFqq+2YoVcmbd5CGk8OnZfMzLg5Bj9Yf7LJ/UnbnSupQ5uaJFG5WGAcclad+g3NhPt7ps8WtJdo5m1iRbAGqsLvKGrwMw5ik5d918NRJjSyngoHZW1BJaWuvwXhdfp2OOHZ4hO0Iyp3v1z/z4SZhboqqcOIi6bYrht45XCpZO6jxwgAA",
 "assets/img/about/about-48.jpg": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAABQBQCdASoYABgAPuVgpU2pJaOiMAwBIByJaACdMtDBrBUTlyreKUhyYaXdSJel50d4guAA/UqlGhprFdvX2K2pDDmhPTt+fImsZgfWO3em07rNMoMewIrdZguYviR8UTN1l1h5jsgbYY/kKb+66An6ECd01yMEmiqXW+RcYl59mdDCU8R5AM+dgeA09pKgpGmI9HbevjsGaiZJWDLQDkeCn77qvVCHcE8nhUVgLd+TFRGs1aTxXtTITIvX53afjpJ485ibWq3+a1RSDLTz0h57/vzw2IHRiXwAAA==",
+"assets/img/about/about-49.jpg": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAAAwBQCdASoYABgAPu1qqVCppiOiqA1RMB2JQBb3AgswwFNXPMNZhcE7qUFFriGqdVvMAAD2glmT94TcrnhwmRqdNCIdw6EvyKcQsz/AoAJaDxVfkaG1aUd3oJWIzPcuA6QNyckvuDQcQNLHJaRpS34gULNDQwPl8qlky/SxPbygd+2er2UxAETVm4foiXk06R2DhpSrXFnjpu0URcG0QB+lZrrkR4b4R5zW+bST8I4SDhdJ4Ydm6ya9Dms+RqXbAAA=",
+"assets/img/about/about-50.jpg": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAABwBQCdASoYABgAPu1ur1IppiQiqAgBMB2JZACxHxgBOHizcoabPy8kSPcL/2ah6DtfaKfQAP58rvN7sVr9h0lxrpMfg3+jFQyCzpKJ5fcHgRnapcKAhdf1/EplP8ZCLZcDGJweq3xNv32bUuiLGil4Ovcw6wquvyRQHablZ/zLg89TylpsptBr79zP5eIO+B/HveVkxJ3+3ZHe+u4vYLiIP3DkZjLRnTNHHxr/2IjXuWuAHGXeb3PqDPHkzNAijY3pEd5dUEoAAA==",
+"assets/img/about/about-51.jpg": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAABwBQCdASoYABgAPu1usFIppiSiqAgBMB2JQBWGYjbrBOpS837FD0UTC/FrpXGJ2OmJAx+AAP4BLeNqcj+3xdJKGkQ+0WFnGEaYSNDq0fyCq/13SJtEWu8Kd1xsOJOzbJwKxRd+vPvP4G91BxLL+vwWqiNAAZ2BhrsWovqWc5//XgY0qifJf+qNyaG88w5Tcor3h0SW9KYgy3JML7yjk7B+FM8urcmSsSy3iLd/B/RV/GEr/7k8KSLWJtcNo7wAAAA=",
 "assets/img/sketchbook/art/art-sketch-09.jpg": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JbACdOUDcyQ/UrbpLcbCjkCAA+iSyNVhw/f9AG6y/YY1J2TYgQ+Cw7Af+/t4o11M2MWO7//+sn3LJiW0JxfWAxb4oKCZC+sJIvD3tgnY9vn14Td1RZdStS5EXMGuKAAA=",
 "assets/img/sketchbook/art/art-sketch-10.jpg": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAwCdASoYABAAPu1mq04ppaQiMAgBMB2JZQAAWlxi2H677ypWgLAA/uqFM481fMizAKyfi8nVpGRNGbliCAw7vRUNQWMLQf9Xb3rSDA/dgAAA",
 "assets/img/sketchbook/art/art-sketch-11.jpg": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADwBACdASoYABMAPulepk2pJSOiN/VYASAdCWkAAC099OR4QsjMto3e/NuJ/W1gJAAA/t7OyhDw43MvM5gwtEvWiSTIKLzI4kYdXWX0X0bh6IRYnPYlsk4sRIS1IwYTU3Cx4KxwAAA=",
