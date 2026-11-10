@@ -16,10 +16,12 @@
   </header>
 
   <main class="sketchbook" id="sketchbook">
-    <div class="sketchbook-head">
-      <h1 id="s-title"></h1>
-      <p id="s-intro"></p>
-    </div>
+    <nav class="filters" id="s-filters" aria-label="Choose a sketchbook">
+      <button data-tag="design">DESIGN SKETCHBOOK</button>
+      <button data-tag="engineering">ENGINEERING SKETCHBOOK</button>
+      <button data-tag="art">ART SKETCHBOOK</button>
+    </nav>
+    <p class="sketchbook-intro" id="s-intro"></p>
     <div class="masonry" id="s-grid"></div>
   </main>
 
@@ -34,25 +36,6 @@
   <script src="js/projects.js"></script>
   <script src="js/image-sizes.js"></script>
   <script src="js/common.js"></script>
-  <script>
-    const tag = new URLSearchParams(location.search).get("tag");
-    const book = SKETCHBOOKS[tag];
-    if (!book) {
-      document.getElementById("sketchbook").innerHTML =
-        '<p class="not-found">Sketchbook not found. <a href="index.html#work">Back to work</a></p>';
-    } else {
-      const title = tag.toUpperCase() + " SKETCHBOOK";
-      document.title = title + " | Joyce Chen";
-      document.getElementById("s-title").textContent = title;
-      document.getElementById("s-intro").textContent = book.intro;
-      const pages = (book.images.length ? book.images : Array(7).fill("")).map((src, i) => {
-        const cell = document.createElement("div");
-        cell.className = "photo";
-        cell.appendChild(media(src, src ? title + " page " + (i + 1) : "sketchbook page"));
-        return cell;
-      });
-      masonry(document.getElementById("s-grid"), pages, gridColumns);
-    }
-  </script>
+  <script src="js/sketchbook.js"></script>
 </body>
 </html>

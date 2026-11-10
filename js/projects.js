@@ -572,10 +572,10 @@ const GRID_LAYOUTS = {
     // shown whole (never cropped); any leftover space is filled with white
     contain: ["kong"]
   },
-  // Same three columns as the automatic grid, with For Sale and Kong swapped.
+  // Hand-arranged: For Sale/Kong and Trinket Shelf/Redbull swapped from the automatic grid.
   // fit: false = tiles keep their own shape (no cropping, columns end unevenly)
   design: {
-    columns: [["new-windsor", "for-sale"], ["saturn-with-a-moon", "kong", "fountain-for-bees"], ["manchild", "trinket-shelf", "redbull-flugtag"]],
+    columns: [["new-windsor", "for-sale"], ["saturn-with-a-moon", "kong", "fountain-for-bees"], ["manchild", "redbull-flugtag", "trinket-shelf"]],
     fit: false
   }
 };

@@ -190,6 +190,7 @@ function applyFilter(tag, animate = true) {
   // The list only appears once a tag is chosen; ALL shows the full-width grid.
   body.classList.toggle("with-list", tag !== "all");
   sketchLink.href = "sketchbook.html?tag=" + tag;
+  sketchLink.textContent = tag.toUpperCase() + " SKETCHBOOK";
   sortTiles(tag);
   relayout();
 

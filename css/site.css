@@ -320,7 +320,10 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
 
 /* ---------- Sketchbook ---------- */
-.sketchbook { padding: 66px var(--side) 40px; }
+.sketchbook { padding: 24px var(--side) 40px; }
+.sketchbook .filters { top: var(--header-h); padding-top: 0; margin-bottom: 24px; }
+.sketchbook-intro { font-size: 17px; font-style: italic; margin: 0 0 24px; text-align: center; }
+.sketchbook-intro:empty { display: none; }
 .sketchbook-head { margin-bottom: 32px; }
 .sketchbook-head h1 { font-size: 34px; margin: 0 0 12px; letter-spacing: .5px; }
 .sketchbook-head p { font-size: 17px; font-style: italic; margin: 0; max-width: 560px; }
