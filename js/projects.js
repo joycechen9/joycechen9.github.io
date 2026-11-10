@@ -571,6 +571,12 @@ const GRID_LAYOUTS = {
     widths: [750, 550, 390],
     // shown whole (never cropped); any leftover space is filled with white
     contain: ["kong"]
+  },
+  // Same three columns as the automatic grid, with For Sale and Kong swapped.
+  // fit: false = tiles keep their own shape (no cropping, columns end unevenly)
+  design: {
+    columns: [["new-windsor", "for-sale"], ["saturn-with-a-moon", "kong", "fountain-for-bees"], ["manchild", "trinket-shelf", "redbull-flugtag"]],
+    fit: false
   }
 };
 
@@ -609,3 +615,4 @@ const SELECTED_WORKS = {
     "chinese-market": [1, 2, 6]
   }
 };
+

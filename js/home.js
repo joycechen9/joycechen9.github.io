@@ -89,14 +89,16 @@ const tiles = sorted.flatMap((p) => {
 let currentTag = "all";
 tiles.forEach((t, i) => (t.dataset.idx = i));
 // SELECTED WORKS can use a hand-picked order (SELECTED_WORKS.order); filters keep newest-first
-const ORDER = (SEL.order || []);
-const rank = (t) => {
+const FORDERS = typeof FILTER_ORDERS !== "undefined" ? FILTER_ORDERS : {};
+const orderFor = (tag) => (tag === "all" ? SEL.order : FORDERS[tag]) || [];
+const rank = (t, ORDER) => {
   let r = ORDER.indexOf(t.dataset.key);
   if (r < 0) r = ORDER.indexOf(t.dataset.pid);
   return r < 0 ? 1000 + +t.dataset.idx : r;
 };
 function sortTiles(tag) {
-  tiles.sort(tag === "all" ? (a, b) => rank(a) - rank(b) : (a, b) => a.dataset.idx - b.dataset.idx);
+  const order = orderFor(tag);
+  tiles.sort((a, b) => rank(a, order) - rank(b, order));
 }
 const LAYOUTS = typeof GRID_LAYOUTS !== "undefined" ? GRID_LAYOUTS : {};
 
@@ -110,7 +112,7 @@ function customLayout() {
   const cols = cfg.columns.map((ids, c) => {
     const col = document.createElement("div");
     col.className = "m-col";
-    col.style.flex = `${cfg.widths[c] || 1} 1 0`;
+    col.style.flex = `${(cfg.widths || [])[c] || 1} 1 0`;
     grid.appendChild(col);
     ids.forEach((id) => {
       const t = visible.find((x) => x.dataset.pid === id && !placed.has(x));
@@ -120,6 +122,15 @@ function customLayout() {
   });
   // Anything not listed goes at the bottom of the last column
   visible.filter((t) => !placed.has(t)).forEach((t) => cols[cols.length - 1].appendChild(t));
+  if (cfg.fit === false) {
+    cols.forEach((col) => [...col.children].forEach((t, i) => {
+      t.classList.remove("contain");
+      t.style.height = "";
+      t.style.aspectRatio = (1 / ratioOf(t, i)).toFixed(4);
+    }));
+    fitSizes(grid);
+    return true;
+  }
   // Size tiles so every column ends at the same height
   const gap = parseFloat(getComputedStyle(grid).columnGap) || 10;
   const nat = cols.map((col) => [...col.children].map((t, i) => col.clientWidth * ratioOf(t, i)));
