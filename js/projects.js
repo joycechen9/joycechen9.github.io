@@ -578,6 +578,31 @@ const GRID_LAYOUTS = {
    own filters. For works with several grid images, `covers` picks which ones
    (1 = first image in its covers list). */
 const SELECTED_WORKS = {
+  // order of tiles (left to right, top to bottom); "id:n" = that work's n-th grid image
+  order: [
+    "new-windsor",
+    "salico",
+    "saturn-with-a-moon",
+    "kong",
+    "manchild",
+    "around-the-counter:3",
+    "redbull-flugtag",
+    "dad-and-crab",
+    "chinese-market:1",
+    "trinket-shelf",
+    "telescoping-drop-pole",
+    "perception",
+    "for-sale",
+    "working-on-the-car",
+    "lego-rescue",
+    "chinese-market:6",
+    "fountain-for-bees",
+    "dishwasher",
+    "mark-making-and-sound",
+    "chinese-market:2",
+    "cardboard-party",
+    "night"
+  ],
   hide: ["campus", "my-dream-about-thunderstorms", "it-is-so-cute", "medusa"],
   covers: {
     "around-the-counter": [3],
