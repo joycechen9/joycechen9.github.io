@@ -126,15 +126,15 @@ const PROJECTS = [
     ]
   },
 {
-    id: "trinket-shelf",
-    title: "Trinket Shelf",
+    id: "display-shelf",
+    title: "Display Shelf",
     year: 2025,
     tags: ["design"],
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "assets/img/work/trinket-shelf/trinket-shelf-01.jpg",
-    featured: "assets/img/work/trinket-shelf/trinket-shelf-01.jpg",
+    cover: "assets/img/work/display-shelf/display-shelf-01.jpg",
+    featured: "assets/img/work/display-shelf/display-shelf-01.jpg",
     photos: []
   },
 {
@@ -578,7 +578,7 @@ const GRID_LAYOUTS = {
   // Hand-arranged: For Sale/Kong and Trinket Shelf/Redbull swapped from the automatic grid.
   // fit: false = tiles keep their own shape (no cropping, columns end unevenly)
   design: {
-    columns: [["new-windsor", "for-sale"], ["saturn-with-a-moon", "kong", "fountain-for-bees"], ["manchild", "redbull-flugtag", "trinket-shelf"]],
+    columns: [["new-windsor", "for-sale"], ["saturn-with-a-moon", "kong", "fountain-for-bees"], ["manchild", "redbull-flugtag", "display-shelf"]],
     fit: false
   }
 };
@@ -598,7 +598,7 @@ const SELECTED_WORKS = {
     "redbull-flugtag",
     "dad-and-crab",
     "chinese-market:1",
-    "trinket-shelf",
+    "display-shelf",
     "telescoping-drop-pole",
     "perception",
     "for-sale",
@@ -625,7 +625,7 @@ const SELECTED_WORKS = {
 const LIST_GROUPS = {
   design: [
     ["new-windsor", "saturn-with-a-moon", "manchild", "kong", "redbull-flugtag"],
-    ["for-sale", "trinket-shelf", "fountain-for-bees"]
+    ["for-sale", "display-shelf", "fountain-for-bees"]
   ],
   engineering: [
     ["salico", "kong", "redbull-flugtag"],

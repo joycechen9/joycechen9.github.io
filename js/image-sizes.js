@@ -368,6 +368,10 @@ const IMAGE_SIZES = {
 1344,
 1800
 ],
+"assets/img/work/display-shelf/display-shelf-01.jpg": [
+1086,
+1448
+],
 "assets/img/work/for-sale/for-sale-01.jpg": [
 1800,
 1200
@@ -568,10 +572,6 @@ const IMAGE_SIZES = {
 848,
 1800
 ],
-"assets/img/work/trinket-shelf/trinket-shelf-01.jpg": [
-1086,
-1448
-],
 "assets/img/work/working-on-the-car/working-on-the-car-01.jpg": [
 1400,
 1123
@@ -670,6 +670,7 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/chinese-market/chinese-market-08.jpg": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAQBQCdASoSABgAPu1qrlCppaQiqAqpMB2JQBOmY2bzhKtMBlftoFbKiJS56JR15gkAAP6RSMlIG/R92mbZHTYspyzgRjcXMdvIGmQQbAaYT/z6e0p7UdmFWF2aGT1D3hPg8NMl10RntyZcbMXRaCKbr/iT/x2r0aX2nGDrTeUSUVvw+CW3LZTeM5D1Zo33pfmMp/uy9gjeOff7M3PX4mCWlAAAAA==",
 "assets/img/work/dad-and-crab/dad-and-crab-01.jpg": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADQBACdASoSABgAPu1mpk2ppaMiMBgMATAdiUATplvgEDJciBeo8XdwrbzJsXsJ0AD29bIUYqGUzZqdhEG6dkOUro+ZSiIvRojbhl8MFANfJRD0hsH2/gvk9sEPL4RYryMM6qCg/lGI+NGEM8pvwX0zfA0VVDKDfGoo2U6FPBQnVS0vvFjQKSimAAAAAA==",
 "assets/img/work/dishwasher/dishwasher-01.jpg": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABQBQCdASoSABgAPu1krVAppSQisBgIATAdiUATpnAQKJxSVs1Qw+rotv6AOvsCYlNtVoAA/WpN4XLGY6E+l+we/Zv00FH17g28j2JF2uogoXEaHcHWy5tM4bxboCODPU4I5AAcvxpOLixTfpc8G40SgM/j0q7KWGIJjcYZuSqGAVIPoJmghwy8Pkta/cS0ms9EOyWYgUdF4xjAAAA=",
+"assets/img/work/display-shelf/display-shelf-01.jpg": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBQCdASoSABgAPu1krFAppSQisBgIATAdiUAWI+q4Na72lpwSzal80peF8sCsw64AAP7nNv5034uDIi+qdOS9cxn6wV/qzzntwSQcXCd7VrINBjwgkLIGXkvErGMQg4qFBGvDBWRASjwfbPBNb0tTysafKqQ7NCYg0AAA",
 "assets/img/work/for-sale/for-sale-01.jpg": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JQBYdhDtPMt+pMJfOnDInAAD+rv7BCRmG7xvo6TLRJLSwFz7kCBMlv8krUuMNUjMltoMzjM3SL/MEhvje+Z6d29089IWdbcLjhMMT99csQZNrkdXortkUcYzdIVbYAAA=",
 "assets/img/work/for-sale/for-sale-02.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JYwCw7AMWN1cK+GAA/l/b1kmR4KA1swXNRv5/mOJBN/S/VqTFqnvwVcPRoCNUepi5/7kX2ltT21sIAM2gvj+AhTYYt3XYGPhLNLzwFLbuJLQpClfAAA==",
 "assets/img/work/fountain-for-bees/fountain-for-bees-01.jpg": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAADwBACdASoSABgAPu1qrlCppaQiqAqpMB2JaACxHoABHPSbIfRK23Tykzb0Q1c6a0AA/uXzRn74sjiWWCnzfxtngl7DH105edXoivA0FpXoYFaqaVtk2wMqYFLSvslKSmHiya2nXd72tTXaVQ8z9lduqi5dIRjNcfIODqwAZkjNwh9DhmEe0QDxaZ/fjCAxKlk5i8a+Rf19hLEiBg2d4AAA",
@@ -720,6 +721,5 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-cover.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACwBACdASoYABgAPu1uq1GppiOiqAqpMB2JZwDPZA9ma5C/bVuaf77DNJzlZXQAAP5xZcFy8S/ELr+HnWRGSoefBxcf82FDKasIcYxGYYKRyHGplQlkOBUXY1d+Ai9BQjhgxRvuiPWiqK3sTthp2jmwNjXW/AAA",
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-poster.jpg": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQBQCdASoYABEAPu1irVAppSQisBgIATAdiWcAsOwRT2LFX6QucE9ZiWcb2d167CMgAP7i5OU7Cf5WoOjLqZtXF1RyK6lOX7ARedC330LIz8PNzHXiuaGK2HEhwtZ7LFOotAAA",
 "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-01.jpg": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAwCdASoLABgAPu1iqk2ppaQiMAgBMB2JZwC7ABGiQy70AADfRwzsn6qJV431aobyBBpR6jf5wPPLcrSqgD18c+zhy09z7fcAAAAA",
-"assets/img/work/trinket-shelf/trinket-shelf-01.jpg": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBQCdASoSABgAPu1krFAppSQisBgIATAdiUAWI+q4Na72lpwSzal80peF8sCsw64AAP7nNv5034uDIi+qdOS9cxn6wV/qzzntwSQcXCd7VrINBjwgkLIGXkvErGMQg4qFBGvDBWRASjwfbPBNb0tTysafKqQ7NCYg0AAA",
 "assets/img/work/working-on-the-car/working-on-the-car-01.jpg": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAADQBACdASoYABMAPu1mq08ppaOiKA1RMB2JQBOgAkavGOIb6cEOS6DmC96nX2l/KAD9m2MNqeSH5NUxRhuM6SLQ/IJCzci6Cnv4a1Nr4+OUkscx2DG1tCdBLXuIJDMvXVrlC6nllOTxPCmn5b152hm+vV1upwmHrA1yhcRtY8WD/AdUA8QGgMIt3WQvtdSjPt3Sl7h1e/yEAA=="
 };
