@@ -266,7 +266,7 @@ function buildSlider(box, srcs, title) {
 function buildDiagram(parent, d, title) {
   const esc = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;");
   const marked = (t) => esc(t).replace(/==(.+?)==/g, "<mark>$1</mark>");
-  const IMG_TOP = 16, IMG_H = 60;             // where the image sits in the box (%)
+  const IMG_TOP = 6, IMG_H = 82;             // where the image sits in the box (%)
   const Y = (y) => IMG_TOP + (y * IMG_H) / 100;
 
   const wrap = document.createElement("section");

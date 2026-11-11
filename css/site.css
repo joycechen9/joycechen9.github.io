@@ -350,15 +350,15 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(260px, 1fr);
   gap: 40px; align-items: center; margin-top: 90px;
 }
-.diagram-fig { margin: 0; padding: 64px 0 96px; }   /* room for labels above and below the box */
-.diagram-stage { position: relative; aspect-ratio: 1.115; }   /* image is 1.859:1, filling 60% of the height */
+.diagram-fig { margin: 0; padding: 48px 0 40px; }   /* room for labels above and below the box */
+.diagram-stage { position: relative; aspect-ratio: 1.524; }   /* image is 1.859:1, filling 82% of the height */
 .diagram-img { position: absolute; left: 0; width: 100%; object-fit: contain; background: none !important; }
 .diagram-lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
 .diagram-lines polyline { fill: none; stroke: #333; stroke-width: 1; stroke-dasharray: 3 3; }
 .diagram-dot {
   position: absolute; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px;
   background: #333; border-radius: 50%; font-size: 0;
-  top: calc(16% + var(--y) * 0.6%);
+  top: calc(6% + var(--y) * 0.82%);
 }
 .diagram-label {
   position: absolute; font-size: clamp(11px, 0.95vw, 13px); line-height: 1.45;
@@ -366,6 +366,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
 .diagram-label.top { transform: translate(-50%, -100%); padding-bottom: 6px; }
 .diagram-label.bottom { padding-top: 6px; }
+.diagram-label.right { transform: translateY(-0.72em); text-align: left; padding-left: 8px; }
 .diagram-list { display: none; }
 .diagram-notes { list-style: none; counter-reset: n; margin: 0; padding: 0 0 0 46px; position: relative; }
 .diagram-notes::before { content: ""; position: absolute; left: 13px; top: 6px; bottom: 6px; border-left: 1px solid #333; }

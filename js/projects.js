@@ -257,16 +257,16 @@ const PROJECTS = [
     diagram: {
       image: "assets/img/work/salico/salico-render.png",
       labels: [
-        { text: "Aluminum extrusion frame for easy assembly and corrosion resistance", x: 18.8, y: 23.5, lx: 9, ly: 9, side: "top" },
-        { text: "Pneumatic pistons to lift and lower onto the plant", x: 34.5, y: 12.7, lx: 27, ly: 3.5, side: "top" },
-        { text: "Electrical and battery boxes", x: 43.8, y: 16.9, lx: 44, ly: 9, side: "top" },
-        { text: "Fans redirect the harvested plant coming from the picking mechanism", x: 51.2, y: 34.6, lx: 59, ly: 3.5, side: "top" },
-        { text: "Pneumatic box", x: 70, y: 6, lx: 80, ly: 9, side: "top" },
-        { text: "Direct drive motors run the rollers, one from each side", x: 31.5, y: 42.7, lx: 24, ly: 81, side: "bottom" },
-        { text: "The cast urethane rollers, along with the hinged sheet metal frame and spring, provide compliance to wrap and pinch around the plant, mimicking a human hand", x: 43.5, y: 43.5, lx: 41, ly: 92, side: "bottom", w: 30 },
-        { text: "The ramp acts like a cup when the machine is lowered and a slide when it is lifted", x: 49.8, y: 45, lx: 50, ly: 81, side: "bottom" },
-        { text: "Tray to collect the harvested plant", x: 58, y: 52, lx: 66, ly: 81, side: "bottom" },
-        { text: "Pontoons for floating in ponds", x: 93.8, y: 54.1, lx: 86, ly: 81, side: "bottom" }
+        { text: "Aluminum extrusion frame for easy assembly and corrosion resistance", x: 18.8, y: 23.5, lx: 11, ly: 17, side: "top", w: 14 },
+        { text: "Pneumatic pistons to lift and lower onto the plant", x: 34.5, y: 12.7, lx: 28, ly: 7, side: "top", w: 14 },
+        { text: "Electrical and battery boxes", x: 43.8, y: 16.9, lx: 44, ly: 12, side: "top", w: 12 },
+        { text: "Fans redirect the harvested plant coming from the picking mechanism", x: 51.2, y: 34.6, lx: 59, ly: 3, side: "top", w: 15 },
+        { text: "Pneumatic box", x: 70, y: 6, lx: 84, ly: 10, side: "top", w: 12 },
+        { text: "Direct drive motors run the rollers, one from each side", x: 31.5, y: 42.7, lx: 19, ly: 78, side: "bottom", w: 14 },
+        { text: "The cast urethane rollers, along with the hinged sheet metal frame and spring, provide compliance to wrap and pinch around the plant, mimicking a human hand", x: 43.5, y: 43.5, lx: 57, ly: 85, side: "right", w: 30 },
+        { text: "The ramp acts like a cup when the machine is lowered and a slide when it is lifted", x: 49.8, y: 45, lx: 63, ly: 63, side: "right", w: 15 },
+        { text: "Tray to collect the harvested plant", x: 58, y: 52, lx: 80, ly: 63, side: "right", w: 13 },
+        { text: "Pontoons for floating in ponds", x: 93.8, y: 54.1, lx: 93.8, ly: 72, side: "bottom", w: 11 }
       ],
       // ==text== is highlighted
       notes: [
