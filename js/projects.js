@@ -17,6 +17,7 @@
                shown under the title like a gallery wall label
     video      (optional) a YouTube link, embedded under the images
     spotify    (optional) a Spotify album/playlist/track link, embedded under the text
+    diagram    (optional) labelled image with numbered notes beside it (see Salico)
     links      (optional) links shown under the text: [{ label: "...", href: "https://..." }]
     covers     (optional) several grid images for one project, each its own tile,
                all linking to the same project page. Use instead of cover.
@@ -251,6 +252,29 @@ const PROJECTS = [
     links: [
       { label: "Development blog", href: "https://salico-uw.github.io/" }
     ],
+    // Labelled render. x/y = the point on the machine, lx/ly = where the label sits
+    // (all in % of the diagram box). side: which side of the line the text goes.
+    diagram: {
+      image: "assets/img/work/salico/salico-render.png",
+      labels: [
+        { text: "Aluminum extrusion frame for easy assembly and corrosion resistance", x: 18.8, y: 23.5, lx: 9, ly: 9, side: "top" },
+        { text: "Pneumatic pistons to lift and lower onto the plant", x: 34.5, y: 12.7, lx: 27, ly: 3.5, side: "top" },
+        { text: "Electrical and battery boxes", x: 43.8, y: 16.9, lx: 44, ly: 9, side: "top" },
+        { text: "Fans redirect the harvested plant coming from the picking mechanism", x: 51.2, y: 34.6, lx: 59, ly: 3.5, side: "top" },
+        { text: "Pneumatic box", x: 70, y: 6, lx: 80, ly: 9, side: "top" },
+        { text: "Direct drive motors run the rollers, one from each side", x: 31.5, y: 42.7, lx: 24, ly: 81, side: "bottom" },
+        { text: "The cast urethane rollers, along with the hinged sheet metal frame and spring, provide compliance to wrap and pinch around the plant, mimicking a human hand", x: 43.5, y: 43.5, lx: 41, ly: 92, side: "bottom", w: 30 },
+        { text: "The ramp acts like a cup when the machine is lowered and a slide when it is lifted", x: 49.8, y: 45, lx: 50, ly: 81, side: "bottom" },
+        { text: "Tray to collect the harvested plant", x: 58, y: 52, lx: 66, ly: 81, side: "bottom" },
+        { text: "Pontoons for floating in ponds", x: 93.8, y: 54.1, lx: 86, ly: 81, side: "bottom" }
+      ],
+      // ==text== is highlighted
+      notes: [
+        { title: "Background", text: "The world is limited on our supply of clean, fresh water. ==Sea asparagus (Salicornia)== is a salt-tolerant plant that is not only ==delicious and nutritious==, but also has a variety of environmental benefits. As a food, it's rich in vitamins, minerals, and iodine. As a plant, it ==cleans water and helps in carbon capture, mangrove restoration, and desalination.==" },
+        { title: "Problem and need", text: "The current harvesting process relies on ==manual labour==, which ==limits scalability.== Existing semi-automated harvesting machines cut and bruise the plant, resulting in worse quality and shelf life. The ideal harvest requires the tips of the plant to be ==pulled off at its nodes instead of cut.==" },
+        { title: "Resolution", text: "This automated harvester ==mimics hand harvesting== by using a ==double roller mechanism that grips and pulls the sea asparagus.== The ripe, tender parts naturally separate at the nodes of the plant. This machine improves ==harvesting efficiency, speed, and greatly reduces manual labour.==" }
+      ]
+    },
     cover: "assets/img/work/salico/salico-cover.jpg",
     featured: "assets/img/work/salico/salico.mp4",
     featuredWide: true,

@@ -27,7 +27,10 @@ for p in paths:
     im = im.convert("RGBA" if im.mode in ("RGBA", "LA", "P") else "RGB")
     sizes[p] = [im.width, im.height]
     # tiny blurred preview, shown instantly while the real image loads
-    t = im.convert("RGB")
+    t = im.convert("RGBA")
+    flat = Image.new("RGB", t.size, "white")
+    flat.paste(t, mask=t.split()[3])   # transparent areas preview as white, not black
+    t = flat
     t.thumbnail((24, 24))
     t = t.filter(ImageFilter.GaussianBlur(0.6))
     buf = io.BytesIO()

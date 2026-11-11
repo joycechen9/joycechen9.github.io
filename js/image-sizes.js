@@ -632,6 +632,10 @@ const IMAGE_SIZES = {
 1600,
 900
 ],
+"assets/img/work/salico/salico-render.png": [
+2800,
+1506
+],
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-01.jpg": [
 1800,
 1350
@@ -832,6 +836,7 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/redbull-flugtag/redbull-flugtag-podium.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBQCdASoYABIAPu1krE+ppSQiMBgIATAdiWIAqSeOwa0BvxovohgrVnpmKgRLauUAAAD+xeVPqiyBnk/rkBEbsNm2NI5ZzxqImQQeB8EH+ooo9WEo4LM0QR8KSC+1OhKTS5pYH3GryxrqzzTjbU1+rKjTzllxL505A8GDZ3M6Tud2RJAsYTwAAAA=",
 "assets/img/work/salico/salico-cover.jpg": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAABwBQCdASoYABIAPu1osFAppaUiqAqpMB2JQBdmZJfIBLxOdrvwF0SmcUU/Q2snTU3ApiWAAP7I38zx2BIJ05XmorB7Mx3gaCBDhcHRlopCZtw/X73IXIoUsjTR+DhyHVU7SsFXQmazHJEHDyH4Efc78tU1AsUF4BWdVUiCO8J7fDtCvmc54dXB1QKzkw9ncqwdE2SrY3B3wKNVV0SkAAAA",
 "assets/img/work/salico/salico-poster.jpg": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAwCdASoYAA4APu1orU2ppqSiMAgBMB2JQBOmUGYwCTQFtmwccqQA996WfY+K9A+5iTJzhcCB4GUMrHzTgRhg4DegOh2/dty3KQc17RqI8yjEwHlgAA==",
+"assets/img/work/salico/salico-render.png": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwAwCdASoYAA0APu1iqU2ppaQiMAgBMB2JQBfnA6cLI8OUyN26xo/AAP7zgnfoOasumFN0W2PCKQhYXk4FkbQdNPxdcM8fyh+occgq4R88ly77qzEM193CPzK9dhkVp8pEx/87s42o35eg7wVXUKda2hrRJLIyvVQIAAAA",
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-01.jpg": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABQAwCdASoYABIAPu1mqE2ppaOmMAgBMB2JZwAALgYGK3dsAAD9D6ZPRfPti2Px1Cx0I0F4hPafoO9X5BscWcedaI9Rr8eu4JXbfoDCLwcECAAA",
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-02.jpg": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwBQCdASoYABIAPu1crE2ppKSiMBgMATAdiWcAthQQ8AgMjXxgQ2numXXBk+Z6xmzd4AD+8L/Ne0zgRD6cdimV+YIRC6cPCJEnAWgzLht+B+XiD7g3dFrdQnTV11inHgK38fzAoDSAAA==",
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-03.jpg": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABwBACdASoSABgAPu1eq02ppKQiMBgMATAdiWcAABeFuHdzr0rfkteTNXl2MAD3BB5PFXG+/PejhXkNwJrm3xxqEe1PTpPxXHgGY0+RRdPaP91U6gAAAA==",

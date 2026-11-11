@@ -345,6 +345,56 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   margin: 0 0 18px;
 }
 
+/* ---------- Labelled diagram (Salico) ---------- */
+.diagram {
+  display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(260px, 1fr);
+  gap: 40px; align-items: center; margin-top: 90px;
+}
+.diagram-fig { margin: 0; padding: 64px 0 96px; }   /* room for labels above and below the box */
+.diagram-stage { position: relative; aspect-ratio: 1.115; }   /* image is 1.859:1, filling 60% of the height */
+.diagram-img { position: absolute; left: 0; width: 100%; object-fit: contain; background: none !important; }
+.diagram-lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.diagram-lines polyline { fill: none; stroke: #333; stroke-width: 1; stroke-dasharray: 3 3; }
+.diagram-dot {
+  position: absolute; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px;
+  background: #333; border-radius: 50%; font-size: 0;
+  top: calc(16% + var(--y) * 0.6%);
+}
+.diagram-label {
+  position: absolute; font-size: clamp(11px, 0.95vw, 13px); line-height: 1.45;
+  transform: translateX(-50%); text-align: center;
+}
+.diagram-label.top { transform: translate(-50%, -100%); padding-bottom: 6px; }
+.diagram-label.bottom { padding-top: 6px; }
+.diagram-list { display: none; }
+.diagram-notes { list-style: none; counter-reset: n; margin: 0; padding: 0 0 0 46px; position: relative; }
+.diagram-notes::before { content: ""; position: absolute; left: 13px; top: 6px; bottom: 6px; border-left: 1px solid #333; }
+.diagram-notes li { counter-increment: n; position: relative; font-size: 14px; line-height: 1.75; text-align: justify; margin-bottom: 26px; }
+.diagram-notes li::before {
+  content: counter(n); position: absolute; left: -46px; top: 0;
+  width: 26px; height: 30px; border: 1px solid #333; border-radius: 13px;
+  background: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center;
+}
+.diagram-notes mark { background: #e6f7c6; padding: 1px 3px; border-radius: 3px; }
+
+/* Narrow screens: numbered dots on the image, labels listed underneath */
+@media (max-width: 1000px) {
+  .diagram { grid-template-columns: 1fr; gap: 28px; margin-top: 56px; }
+  .diagram-fig { padding: 0; }
+  .diagram-stage { aspect-ratio: 1.859; }
+  .diagram-img { top: 0 !important; height: 100% !important; }
+  .diagram-lines, .diagram-label { display: none; }
+  .diagram-dot {
+    width: 18px; height: 18px; margin: -9px 0 0 -9px; font-size: 10px; color: #fff;
+    display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 2px #fff;
+    top: calc(var(--y) * 1%);
+  }
+  .diagram-notes li { text-align: left; font-size: 15px; line-height: 1.6; }
+  .diagram-list { display: block; margin: 16px 0 0; padding-left: 30px; columns: 2; column-gap: 28px; font-size: 13px; line-height: 1.45; }
+  .diagram-list li { margin-bottom: 8px; break-inside: avoid; }
+}
+@media (max-width: 560px) { .diagram-list { columns: 1; } }
+
 /* ---------- Sketchbook ---------- */
 .sketchbook { padding: 24px var(--side) 40px; }
 .sketchbook .filters { top: var(--header-h); padding-top: 0; margin-bottom: 24px; }

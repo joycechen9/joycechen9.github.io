@@ -166,6 +166,8 @@ if (!p) {
   });
   photoGrid(document.getElementById("p-photos"), photos, p.photosLayout);
 
+  if (p.diagram) buildDiagram(document.getElementById("p-sections"), p.diagram, p.title);
+
   // Extra labelled sections (e.g. "Iteration 1"), each with its own photo grid
   const secBox = document.getElementById("p-sections");
   (p.sections || []).forEach((sec) => {
@@ -257,4 +259,71 @@ function buildSlider(box, srcs, title) {
   });
   place(false);
   restart();
+}
+
+/* Labelled diagram: an image with labels and dotted leader lines on wide screens;
+   on narrow screens the labels become numbered dots with a list underneath. */
+function buildDiagram(parent, d, title) {
+  const esc = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const marked = (t) => esc(t).replace(/==(.+?)==/g, "<mark>$1</mark>");
+  const IMG_TOP = 16, IMG_H = 60;             // where the image sits in the box (%)
+  const Y = (y) => IMG_TOP + (y * IMG_H) / 100;
+
+  const wrap = document.createElement("section");
+  wrap.className = "diagram";
+  const fig = document.createElement("figure");
+  fig.className = "diagram-fig";
+  const stage = document.createElement("div");
+  stage.className = "diagram-stage";
+  const img = media(d.image, title + " render with labelled parts", "(max-width: 1000px) 100vw, 65vw");
+  img.className = "diagram-img";
+  img.style.top = IMG_TOP + "%"; img.style.height = IMG_H + "%";
+  stage.appendChild(img);
+
+  const NS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(NS, "svg");
+  svg.setAttribute("viewBox", "0 0 100 100");
+  svg.setAttribute("preserveAspectRatio", "none");
+  svg.classList.add("diagram-lines");
+  stage.appendChild(svg);
+
+  const list = document.createElement("ol");
+  list.className = "diagram-list";
+
+  d.labels.forEach((l, n) => {
+    const py = Y(l.y);
+    const path = document.createElementNS(NS, "polyline");
+    path.setAttribute("points", `${l.lx},${l.ly} ${l.lx},${py} ${l.x},${py}`);
+    path.setAttribute("vector-effect", "non-scaling-stroke");
+    svg.appendChild(path);
+
+    const dot = document.createElement("span");
+    dot.className = "diagram-dot";
+    dot.style.left = l.x + "%";
+    dot.style.setProperty("--y", l.y);   // CSS places it (the image sits differently on phones)
+    dot.textContent = n + 1;
+    stage.appendChild(dot);
+
+    const lab = document.createElement("span");
+    lab.className = "diagram-label " + l.side;
+    lab.style.left = l.lx + "%"; lab.style.top = l.ly + "%";
+    lab.style.width = (l.w || 15) + "%";
+    lab.textContent = l.text;
+    stage.appendChild(lab);
+
+    const li = document.createElement("li");
+    li.textContent = l.text;
+    list.appendChild(li);
+  });
+  fig.append(stage, list);
+
+  const notes = document.createElement("ol");
+  notes.className = "diagram-notes";
+  (d.notes || []).forEach((t) => {
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>${esc(t.title).toUpperCase()}:</strong> ${marked(t.text)}`;
+    notes.appendChild(li);
+  });
+  wrap.append(fig, notes);
+  parent.appendChild(wrap);
 }
