@@ -276,6 +276,73 @@ const PROJECTS = [
         { title: "Resolution", text: "This automated harvester ==mimics hand harvesting== by using a ==double roller mechanism that grips and pulls the sea asparagus.== The ripe, tender parts naturally separate at the nodes of the plant. This machine improves ==harvesting efficiency, speed, and greatly reduces manual labour.==" }
       ]
     },
+    // Process story under the diagram. Each section is a heading plus blocks, in order.
+    sections: [
+      {
+        label: "Brainstorming & Sketching",
+        blocks: [
+          { type: "text", text: ["There are two main challenges:"] },
+          { type: "list", items: [
+            "We cannot cut or bruise the sea asparagus.",
+            "We do not have any sea asparagus to test with where we live (Toronto, Canada). A large part of the initial design is guessing until we get to Hawaii for testing."
+          ] },
+          { type: "stack", maxWidth: 1000, images: ["assets/img/work/salico/salico-s01.jpg", "assets/img/work/salico/salico-s02.jpg", "assets/img/work/salico/salico-s03.jpg"] }
+        ]
+      },
+      {
+        label: "CAD of the Top Options",
+        blocks: [
+          { type: "annotated-grid", items: [
+            { image: "assets/img/work/salico/salico-s05.jpg", pad: { l: "34%" }, labels: [
+              { text: "Gears", x: 30, y: 18, side: "left" },
+              { text: "Motor", x: 55, y: 31, side: "left" },
+              { text: "Compliant grabber material", x: 58, y: 80, side: "left" }
+            ] },
+            { image: "assets/img/work/salico/salico-s06.jpg", pad: { l: "30%" }, labels: [
+              { text: "Pistons", x: 25, y: 40, side: "left" },
+              { text: "Double brushes", x: 66, y: 56, side: "left" },
+              { text: "Double rollers", x: 57, y: 72, side: "left" }
+            ] },
+            { image: "assets/img/work/salico/salico-s07.jpg", pad: { l: "22%", r: "22%" }, labels: [
+              { text: "Shield", x: 25, y: 30, side: "left" },
+              { text: "Pinching and lifting rollers", x: 38, y: 62, side: "left", at: 56 },
+              { text: "Conveyor", x: 22, y: 73, side: "left", at: 76 },
+              { text: "Cargo", x: 18, y: 88, side: "left" },
+              { text: "Temporary cargo", x: 80, y: 72, side: "right" }
+            ] },
+            { image: "assets/img/work/salico/salico-s08.jpg", highlight: "To build", labels: [] }
+          ] }
+        ]
+      },
+      {
+        label: "Prototyping Round 1",
+        blocks: [
+          { type: "text", text: ["There are 4 main subsystems to consider: picking, transporting harvested tips, cargo, and traversal. For our first prototype, we zoom in on just the picker mechanism and make a small scale version to validate the roller design for our first trip to Hawaii."] },
+          { type: "pair", items: [
+            { type: "image", src: "assets/img/work/salico/salico-s09.jpg", caption: "Making cast urethane and plastic rollers, assembling the frame, and calibrating the motors." },
+            { type: "annotated", image: "assets/img/work/salico/salico-s11.jpg", pad: { t: "64px", b: "70px" }, caption: "Assembled first prototype", labels: [
+              { text: "Motor", x: 18, y: 42, side: "top", at: 17 },
+              { text: "3D printed hub", x: 66, y: 27, side: "top", at: 62 },
+              { text: "Crossed polyurethane belting", x: 78, y: 20, side: "top", at: 84, row: 1 },
+              { text: "Aluminum frame", x: 47.3, y: 80, side: "bottom", row: 1 },
+              { text: "Cast urethane rollers (Vytaflex 10)", x: 76.2, y: 80, side: "bottom" }
+            ] }
+          ] }
+        ]
+      },
+      {
+        label: "Testing Round 1",
+        blocks: [
+          { type: "text", text: ["The first trip to the farm for testing prioritized characterization of the plant and its associated properties, and validating our roller design. The team made a list of [experiments](https://salico-uw.github.io/2024-10-06-does/) to complete."] },
+          { type: "row", images: ["assets/img/work/salico/salico-s12.jpg", "assets/img/work/salico/salico-s13.jpg"] },
+          { type: "text", text: ["Our first urethane roller prototype harvesting the plant, trying out the hand picking procedure, and learning from Dr. Wenhao Sun in the ponds."] },
+          { type: "videos", items: [
+            { src: "assets/img/work/salico/salico-roller-test.mp4", poster: "assets/img/work/salico/salico-roller-test-poster.jpg", w: 600, h: 924 },
+            { src: "assets/img/work/salico/salico-ponds.mp4", poster: "assets/img/work/salico/salico-ponds-poster.jpg", w: 1280, h: 618 }
+          ] }
+        ]
+      }
+    ],
     cover: "assets/img/work/salico/salico-cover.jpg",
     featured: "assets/img/work/salico/salico.mp4",
     featuredWide: true,

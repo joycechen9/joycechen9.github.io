@@ -628,6 +628,10 @@ const IMAGE_SIZES = {
 1800,
 1350
 ],
+"assets/img/work/salico/salico-ponds-poster.jpg": [
+1280,
+618
+],
 "assets/img/work/salico/salico-poster.jpg": [
 1600,
 900
@@ -635,6 +639,54 @@ const IMAGE_SIZES = {
 "assets/img/work/salico/salico-render.png": [
 2800,
 1506
+],
+"assets/img/work/salico/salico-roller-test-poster.jpg": [
+600,
+924
+],
+"assets/img/work/salico/salico-s01.jpg": [
+1608,
+578
+],
+"assets/img/work/salico/salico-s02.jpg": [
+1602,
+462
+],
+"assets/img/work/salico/salico-s03.jpg": [
+1720,
+1370
+],
+"assets/img/work/salico/salico-s05.jpg": [
+1194,
+1360
+],
+"assets/img/work/salico/salico-s06.jpg": [
+1610,
+1428
+],
+"assets/img/work/salico/salico-s07.jpg": [
+1740,
+1300
+],
+"assets/img/work/salico/salico-s08.jpg": [
+1306,
+1266
+],
+"assets/img/work/salico/salico-s09.jpg": [
+1362,
+1492
+],
+"assets/img/work/salico/salico-s11.jpg": [
+1780,
+1440
+],
+"assets/img/work/salico/salico-s12.jpg": [
+1736,
+1118
+],
+"assets/img/work/salico/salico-s13.jpg": [
+1812,
+1188
 ],
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-01.jpg": [
 1800,
@@ -835,8 +887,21 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JQBYdg1pCyoFhAOwnsADylxuOloLS4m8+Ty5J6WG3R2MwNcz7iChbCq1QAMgyVdCDZq12lrakpgM2Pz52B88h1E3IF/OTZCgERoiatFWfKeiEI/o/uogrAAA=",
 "assets/img/work/redbull-flugtag/redbull-flugtag-podium.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBQCdASoYABIAPu1krE+ppSQiMBgIATAdiWIAqSeOwa0BvxovohgrVnpmKgRLauUAAAD+xeVPqiyBnk/rkBEbsNm2NI5ZzxqImQQeB8EH+ooo9WEo4LM0QR8KSC+1OhKTS5pYH3GryxrqzzTjbU1+rKjTzllxL505A8GDZ3M6Tud2RJAsYTwAAAA=",
 "assets/img/work/salico/salico-cover.jpg": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAABwBQCdASoYABIAPu1osFAppaUiqAqpMB2JQBdmZJfIBLxOdrvwF0SmcUU/Q2snTU3ApiWAAP7I38zx2BIJ05XmorB7Mx3gaCBDhcHRlopCZtw/X73IXIoUsjTR+DhyHVU7SsFXQmazHJEHDyH4Efc78tU1AsUF4BWdVUiCO8J7fDtCvmc54dXB1QKzkw9ncqwdE2SrY3B3wKNVV0SkAAAA",
+"assets/img/work/salico/salico-ponds-poster.jpg": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoYAAwAPu1iqk2ppaQiMAgBMB2JYgCdIIjCdQjOCzKxT4AA/iZ0UAK55faEsqtnL0vGVaK7FMAad1yf6W/5wYYZTVxsT1qPgpCql9gnUjxyLjxSsSwzDjLuc3S8mcvAAAA=",
 "assets/img/work/salico/salico-poster.jpg": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAwCdASoYAA4APu1orU2ppqSiMAgBMB2JQBOmUGYwCTQFtmwccqQA996WfY+K9A+5iTJzhcCB4GUMrHzTgRhg4DegOh2/dty3KQc17RqI8yjEwHlgAA==",
 "assets/img/work/salico/salico-render.png": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwAwCdASoYAA0APu1iqU2ppaQiMAgBMB2JQBfnA6cLI8OUyN26xo/AAP7zgnfoOasumFN0W2PCKQhYXk4FkbQdNPxdcM8fyh+occgq4R88ly77qzEM193CPzK9dhkVp8pEx/87s42o35eg7wVXUKda2hrRJLIyvVQIAAAA",
+"assets/img/work/salico/salico-roller-test-poster.jpg": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAAAwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYwC7Ad0YhcuPsjYnxYqQ8cwA9oXB0mLtoBMdJdvihE7kPTCGyMKeaO+ji/JVIX3xEgPMi1JGT4xb+KnWLAY6G1GIs9cFlnBd9i7l5KWt0lQV10vR/ZFPYyyPwZ4Mzz0fck2xf5g6JYU28kEl/o34MopfFCWoCwJgi8pN9lN89ryMVSBbgAAA",
+"assets/img/work/salico/salico-s01.jpg": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAwCdASoYAAkAPu1kqU2ppaQiMAgBMB2JaQATgADedUt+uViqbIAA/vBAqpusDBd9zLmqj55QWy6nmp06tv6jB01gAAAA",
+"assets/img/work/salico/salico-s02.jpg": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAwCdASoYAAcAPu1krU2ppaSiMAgBMB2JZwAAeu90k6PAAP7wSiOSschxsYVlPikIfff8DZupglIw37vON1WlK9euhYUVXhAAAA==",
+"assets/img/work/salico/salico-s03.jpg": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQBACdASoYABMAPu1urVCppqQiqAqpMB2JZwAAMWYOB0n48TH9/Ninq1x2Q3ZcAAD+8AJsmhbIsaHV+qZQKySk5LNq31doHyNjO4SRO/T+HM6ozoo5K5tMAAA=",
+"assets/img/work/salico/salico-s05.jpg": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABQBQCdASoVABgAPu1sqlEppaOiqAqpMB2JYwDM0A69SpPvDGjDDSxUqiPmRqHCih5aqAAA/uurrd/62B746OO6V/V95/wbcSxwy8l3Xm4LDSh7bCAtnaDLano9nLQYRWUB6NtF1tsngCD+Iw+p85IDZvzStfi9tmx8GyGdWQ4l+UpdLUC5/gAA",
+"assets/img/work/salico/salico-s06.jpg": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAwBQCdASoYABUAPtlgpk2oJiOiN/qoAQAbCUAZ3YQ7+yQYrjZCLs/8jP4vlP4Js7VAAAD+9MttIyGyA16NQ5MYdX8qp9Vi1Zb3GkzQSXhPDfkTsxfU67npJnl7hYQdlYTtFp75V6Ci2P1DdIblviiHbK3XLx0P3g4mm9+A9y5qi3AynV2Dtg0Q5DQg7QAA",
+"assets/img/work/salico/salico-s07.jpg": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADQBACdASoYABIAPu1mq06ppaQiKA1RMB2JaQAAKdsiMUV0nrF0NNMxwpObs254AAD+84LQg/6AXxSSlFwzsbjV0Te0MGP6h1sZtWvFHM+esTcX8haHBsY257Z330bRMtrl+XjFfzB4sxDnwW461aIanOHsj+WmBGt8qKKYXs46d8FAAAA=",
+"assets/img/work/salico/salico-s08.jpg": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAABwBQCdASoYABcAPu1qrVEppaQiqAqpMB2JYwAIEAHykIblRWK5zAbPpHlH3910vRkaOPwAAP7zfwrgqc8r5uWlsG+cO/Xb4Fm8XVBopvpe27GcuQXJaL9nuWuNcutBIDUObLOoyvIxQdL8teVdx9VDbZEu7MdrmE8zeImlRnjgJMxhldb4zVkZR9+UOnZ5VDC/1shU6UvUVCScoPx96AAA",
+"assets/img/work/salico/salico-s09.jpg": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAABwBgCdASoWABgAPu1ur1IppiQiqAgBMB2JQBWGab3/y7ADVg/YYsmNeF69n/UD+rmW/TlOrHVLYdZM/4AAzEeK7D59prKssLlvOi/O5QspfEQm5jTvnoyMF82NdkCUJVu4jbfjbh9Cq+SI5oDPNFf1ABH8vmUuaZqYzAdGHkvsDF9NGoVqnoeTbOi7Bfs15iosPNizqiRUH2pWoKmjs0kczaKT+c4evB/9ecZ/DWDibeakRcLJBptDytlD/dblUP0FIPgfascT8IVtyJqpMoAAAAA=",
+"assets/img/work/salico/salico-s11.jpg": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwBACdASoYABMAPu1sqlEppaOiqAqpMB2JQBWGZDA0gb+dkIVB8UVlObHcSwis9oAA+D+cGN8XYGb5J26or3C4WrvxVOFqaxSqiF7F2kD6m8TibhPOQNs3+JADV59/hhtgthMkJtNVXH/YlD7hEobh7lZNJ8Gi0rYSHfbwGkCiNz8HVD5opJQfiG5YAAAA",
+"assets/img/work/salico/salico-s12.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBACdASoYAA8APu1kqk4ppaQiMAgBMB2JaACdMoCGABe9zhi01KGnQLcAAPhF4lEiULuYtVBQ+NAVdL53GdsYegDIWeZuteG3Ezw1JlHGsWx80LyaiDpfMdDknutPh/E3BI3fP+Gdl4oS+qt1RklRuU7qzxDSw/htkaJJBEM/zyLQg6HE05NlgAA=",
+"assets/img/work/salico/salico-s13.jpg": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBACdASoYABAAPu1iqk2ppaQiMAgBMB2JaAC/OBl3Ys/i8yuzglzLYAD4LECxIRzLyx/3x8Rkyy9yHCfFLX44x+5yASGgzymJogcxe+ILGC45rkIG7ZPx17K8UtVSj/Hn76/z6LYaAumj4GlxqqR9OP5cv5PYX63v9N39wcl/LIQTy37eA3F0jhLImdT6EZl2cYnAAAA=",
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-01.jpg": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABQAwCdASoYABIAPu1mqE2ppaOmMAgBMB2JZwAALgYGK3dsAAD9D6ZPRfPti2Px1Cx0I0F4hPafoO9X5BscWcedaI9Rr8eu4JXbfoDCLwcECAAA",
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-02.jpg": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwBQCdASoYABIAPu1crE2ppKSiMBgMATAdiWcAthQQ8AgMjXxgQ2numXXBk+Z6xmzd4AD+8L/Ne0zgRD6cdimV+YIRC6cPCJEnAWgzLht+B+XiD7g3dFrdQnTV11inHgK38fzAoDSAAA==",
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-03.jpg": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABwBACdASoSABgAPu1eq02ppKQiMBgMATAdiWcAABeFuHdzr0rfkteTNXl2MAD3BB5PFXG+/PejhXkNwJrm3xxqEe1PTpPxXHgGY0+RRdPaP91U6gAAAA==",

@@ -177,10 +177,12 @@ if (!p) {
     const h = document.createElement("h2");
     h.textContent = (sec.label || "").toUpperCase();
     if (!sec.label) { h.hidden = true; wrap.classList.add("no-label"); }
+    wrap.appendChild(h);
+    secBox.appendChild(wrap);
+    if (sec.blocks) { renderBlocks(wrap, sec.blocks, p.title); return; }
     const g = document.createElement("div");
     g.className = "project-photos";
-    wrap.append(h, g);
-    secBox.appendChild(wrap);
+    wrap.appendChild(g);
     const cells = sec.photos.map((src) => {
       const cell = document.createElement("div");
       cell.className = "photo";
@@ -327,4 +329,135 @@ function buildDiagram(parent, d, title) {
   });
   wrap.append(fig, notes);
   parent.appendChild(wrap);
+}
+
+/* ---------- Story blocks (sections with `blocks`) ---------- */
+function richText(t) {
+  return t.replace(/&/g, "&amp;").replace(/</g, "&lt;")
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/==(.+?)==/g, "<mark>$1</mark>")
+    .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+}
+
+function renderBlocks(box, blocks, title) {
+  blocks.forEach((b) => box.appendChild(renderBlock(b, title)));
+}
+
+function renderBlock(b, title) {
+  const el = document.createElement("div");
+  el.className = "blk blk-" + b.type;
+  if (b.maxWidth) el.style.maxWidth = b.maxWidth + "px";
+  if (b.type === "text") {
+    b.text.forEach((t) => { const p = document.createElement("p"); p.innerHTML = richText(t); el.appendChild(p); });
+  } else if (b.type === "list") {
+    const ol = document.createElement("ol");
+    b.items.forEach((t) => { const li = document.createElement("li"); li.innerHTML = richText(t); ol.appendChild(li); });
+    el.appendChild(ol);
+  } else if (b.type === "stack") {
+    b.images.forEach((src) => el.appendChild(media(src, title + " sketch", "(max-width: 900px) 100vw, 1000px")));
+  } else if (b.type === "image") {
+    const fig = document.createElement("figure");
+    fig.appendChild(media(b.src, b.caption || title, "(max-width: 900px) 100vw, 50vw"));
+    if (b.caption) { const c = document.createElement("figcaption"); c.textContent = b.caption; fig.appendChild(c); }
+    el.appendChild(fig);
+  } else if (b.type === "row") {
+    const cells = b.images.map((src) => { const c = document.createElement("div"); c.className = "photo"; c.appendChild(media(src, title)); return c; });
+    rows(el, cells, () => (isNarrow() ? 1 : b.images.length));
+  } else if (b.type === "pair") {
+    b.items.forEach((it) => el.appendChild(renderBlock(it, title)));
+  } else if (b.type === "annotated-grid") {
+    b.items.forEach((it) => el.appendChild(annotated(it, title)));
+  } else if (b.type === "annotated") {
+    el.appendChild(annotated(b, title));
+  } else if (b.type === "videos") {
+    b.items.forEach((v) => {
+      const vid = document.createElement("video");
+      vid.src = v.src; vid.poster = v.poster || "";
+      vid.muted = true; vid.loop = true; vid.playsInline = true; vid.preload = "metadata";
+      vid.style.flex = `${(v.w / v.h).toFixed(4)} 1 0`;
+      vid.style.aspectRatio = `${v.w} / ${v.h}`;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) vid.controls = true;
+      else {
+        vid.autoplay = true;
+        // only play while on screen
+        new IntersectionObserver(([e]) => (e.isIntersecting ? vid.play().catch(() => {}) : vid.pause())).observe(vid);
+      }
+      el.appendChild(vid);
+    });
+  }
+  return el;
+}
+
+/* Image with labels joined to points on it by dotted lines.
+   label: { text, x, y (% of image), side: left|right|top|bottom, at (% along that side), row } */
+function annotated(cfg, title) {
+  const wrap = document.createElement("figure");
+  wrap.className = "ann" + (cfg.highlight ? " ann-highlight" : "");
+  const fig = document.createElement("div");
+  fig.className = "ann-fig";
+  const pad = cfg.pad || {};
+  fig.style.padding = `${pad.t || 0} ${pad.r || 0} ${pad.b || 0} ${pad.l || 0}`;
+  const img = media(cfg.image, title, "(max-width: 900px) 90vw, 45vw");
+  fig.appendChild(img);
+  const NS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(NS, "svg");
+  svg.classList.add("ann-lines");
+  fig.appendChild(svg);
+  const labs = (cfg.labels || []).map((l) => {
+    const s = document.createElement("span");
+    s.className = "ann-label " + l.side;
+    s.textContent = l.text;
+    fig.appendChild(s);
+    return s;
+  });
+  wrap.appendChild(fig);
+  if (cfg.highlight || cfg.caption) {
+    const c = document.createElement("figcaption");
+    c.textContent = cfg.highlight || cfg.caption;
+    wrap.appendChild(c);
+  }
+
+  function layout() {
+    const F = fig.getBoundingClientRect(), R = img.getBoundingClientRect();
+    if (!R.width) return;
+    const ix = R.left - F.left, iy = R.top - F.top, iw = R.width, ih = R.height;
+    svg.setAttribute("viewBox", `0 0 ${F.width} ${F.height}`);
+    svg.innerHTML = "";
+    const gap = 8, rowH = 20;
+    cfg.labels.forEach((l, k) => {
+      const s = labs[k];
+      const px = ix + (l.x / 100) * iw, py = iy + (l.y / 100) * ih;
+      let ax, ay, pts;
+      if (l.side === "left" || l.side === "right") {
+        ay = l.at != null ? iy + (l.at / 100) * ih : py;
+        ax = l.side === "left" ? ix - gap : ix + iw + gap;
+        s.style.top = ay + "px";
+        if (l.side === "left") { s.style.right = (F.width - ax + 6) + "px"; s.style.left = ""; s.style.maxWidth = (ax - 6) + "px"; }
+        else { s.style.left = (ax + 6) + "px"; s.style.maxWidth = (F.width - ax - 6) + "px"; }
+        pts = [[ax, ay], [px, ay], [px, py]];
+      } else {
+        ax = l.at != null ? ix + (l.at / 100) * iw : px;
+        const off = (l.row || 0) * rowH;
+        ay = l.side === "top" ? iy - gap - off : iy + ih + gap + off;
+        s.style.top = ay + "px";
+        // centre the label on its line, but keep it inside the figure
+        s.style.maxWidth = Math.min(F.width * 0.45, 260) + "px";
+        const w = s.offsetWidth;
+        s.style.left = Math.max(0, Math.min(F.width - w, ax - w / 2)) + "px";
+        pts = [[ax, ay], [ax, py], [px, py]];
+      }
+      const line = document.createElementNS(NS, "polyline");
+      line.setAttribute("points", pts.map((p) => p.join(",")).join(" "));
+      svg.appendChild(line);
+      const dot = document.createElementNS(NS, "circle");
+      dot.setAttribute("cx", ax); dot.setAttribute("cy", ay); dot.setAttribute("r", 2.6);
+      svg.appendChild(dot);
+    });
+  }
+  if (cfg.labels && cfg.labels.length) {
+    img.addEventListener("load", layout);
+    new ResizeObserver(layout).observe(fig);
+    requestAnimationFrame(layout);
+  }
+  return wrap;
 }

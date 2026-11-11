@@ -396,6 +396,45 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
 @media (max-width: 560px) { .diagram-list { columns: 1; } }
 
+/* ---------- Story blocks ---------- */
+.blk { margin-top: 22px; }
+.blk:first-of-type { margin-top: 0; }
+.blk-text p, .blk-list li { font-size: 17px; line-height: 1.5; margin: 0 0 12px; max-width: 900px; }
+.blk-text a, .blk-list a { text-decoration: underline; text-underline-offset: 3px; }
+.blk-text a:hover { color: var(--accent); }
+.blk-text mark { background: #e6f7c6; padding: 1px 3px; border-radius: 3px; }
+.blk-list ol { margin: 0; padding-left: 24px; }
+.blk-stack img { width: 100%; height: auto; margin-bottom: 14px; }
+.blk-image figure, .ann { margin: 0; }
+.blk-image img { width: 100%; height: auto; }
+.blk-image figcaption, .ann figcaption { font-size: 14px; font-style: italic; margin-top: 10px; line-height: 1.4; }
+.blk-pair { display: grid; grid-template-columns: 1fr 1.25fr; gap: 48px; align-items: center; }
+.blk-pair > .blk { margin-top: 0; }
+.blk-annotated-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 56px; align-items: center; }
+.blk-videos { display: flex; gap: var(--gap); }
+.blk-videos video { min-width: 0; width: 100%; height: auto; display: block; background: #eee; }
+
+/* Annotated image */
+.ann-fig { position: relative; }
+.ann-fig img { display: block; width: 100%; height: auto; }
+.ann-lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.ann-lines polyline { fill: none; stroke: #4a6a3a; stroke-width: 1; stroke-dasharray: 4 4; }
+.ann-lines circle { fill: #2f4a22; }
+.ann-label { position: absolute; font-size: clamp(11px, 1vw, 15px); line-height: 1.35; color: #2f4a22; white-space: normal; width: max-content; }
+.ann-label.left { transform: translateY(-50%); text-align: right; }
+.ann-label.right { transform: translateY(-50%); text-align: left; }
+.ann-label.top { transform: translateY(calc(-100% - 4px)); text-align: center; }
+.ann-label.bottom { transform: translateY(4px); text-align: center; }
+.ann-highlight .ann-fig { border: 3px solid #7ab648; border-radius: 22px; padding: 6%; }
+.ann-highlight figcaption { color: #6aa63a; font-weight: 700; font-style: normal; text-align: center; letter-spacing: .5px; text-transform: uppercase; }
+
+@media (max-width: 900px) {
+  .blk-pair, .blk-annotated-grid { grid-template-columns: 1fr; gap: 32px; }
+  .blk-videos { flex-direction: column; }
+  .blk-videos video { flex: none !important; }
+  .blk-text p, .blk-list li { font-size: 15px; }
+}
+
 /* ---------- Sketchbook ---------- */
 .sketchbook { padding: 24px var(--side) 40px; }
 .sketchbook .filters { top: var(--header-h); padding-top: 0; margin-bottom: 24px; }
