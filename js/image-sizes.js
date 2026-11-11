@@ -368,8 +368,8 @@ const IMAGE_SIZES = {
 1344,
 1800
 ],
-"assets/img/work/display-shelf/display-shelf-04.jpg": [
-1350,
+"assets/img/work/display-shelf/display-shelf-cover.jpg": [
+1579,
 1800
 ],
 "assets/img/work/display-shelf/shelf-01.jpg": [
@@ -766,7 +766,7 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/chinese-market/chinese-market-08.jpg": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAQBQCdASoSABgAPu1qrlCppaQiqAqpMB2JQBOmY2bzhKtMBlftoFbKiJS56JR15gkAAP6RSMlIG/R92mbZHTYspyzgRjcXMdvIGmQQbAaYT/z6e0p7UdmFWF2aGT1D3hPg8NMl10RntyZcbMXRaCKbr/iT/x2r0aX2nGDrTeUSUVvw+CW3LZTeM5D1Zo33pfmMp/uy9gjeOff7M3PX4mCWlAAAAA==",
 "assets/img/work/dad-and-crab/dad-and-crab-01.jpg": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADQBACdASoSABgAPu1mpk2ppaMiMBgMATAdiUATplvgEDJciBeo8XdwrbzJsXsJ0AD29bIUYqGUzZqdhEG6dkOUro+ZSiIvRojbhl8MFANfJRD0hsH2/gvk9sEPL4RYryMM6qCg/lGI+NGEM8pvwX0zfA0VVDKDfGoo2U6FPBQnVS0vvFjQKSimAAAAAA==",
 "assets/img/work/dishwasher/dishwasher-01.jpg": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABQBQCdASoSABgAPu1krVAppSQisBgIATAdiUATpnAQKJxSVs1Qw+rotv6AOvsCYlNtVoAA/WpN4XLGY6E+l+we/Zv00FH17g28j2JF2uogoXEaHcHWy5tM4bxboCODPU4I5AAcvxpOLixTfpc8G40SgM/j0q7KWGIJjcYZuSqGAVIPoJmghwy8Pkta/cS0ms9EOyWYgUdF4xjAAAA=",
-"assets/img/work/display-shelf/display-shelf-04.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBQCdASoSABgAPu1oqU8ppiOiMBgIATAdiWMAsOwQ4BOeY0AODbWGfozXVEzFnRfAAPecIO+Gl4LcfLGCqsn7feYRsPN6CdhQfibhFvK2uLkweRptp5hewuJx4IN0YT710MGTEJ8GsyMHDAYAAA==",
+"assets/img/work/display-shelf/display-shelf-cover.jpg": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAACwBACdASoVABgAPu1kq1AppSOisBgIATAdiUAXYAHpEBZWqjN/gBKC5e0sKc8AAP5fGFCMckn+ImecwR/0BXKGHnvlEyMrP9C1cqTaXtrpwFF76Emumn/f6WMg/zJl3gzgXxk8Tn9ntk7XPbKdVeJfPiGlQIsm87gBzjFj9TJbmBZvxbAAAA==",
 "assets/img/work/display-shelf/shelf-01.jpg": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABwBACdASoUABgAPuVgqE2pJaQiMAwBIByJZwDE2CKT0Htzk8Cv/DWV+2zgAAD5Dpfe/KtskjOPwhQcVD6lBWDOTzgI0t9LcxnERvrik8Tqs5gAAAA=",
 "assets/img/work/display-shelf/shelf-02.jpg": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADQBACdASoWABgAPu1iq0+ppSOiMBgIATAdiUAXYAGM6aP/aIkj0ik3p6KIjDumAAD+Wd1GgS0lhjtyx2J8R9MTj7sZ3Qz4NW4ZpEOUyx9DriEMbuOMihvyCkd7EXvBg1I19UGoxeMuKofGq6gLD4/y2bawM1vZ1FNcHvMPDOdoIAAA",
 "assets/img/work/display-shelf/shelf-03.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACwBACdASoUABgAPu1mqk+ppaOiKA1RMB2JYgC90AyCDIq+7aFf0tioiu43vsQAAP3q/HJWTwoCMrK2CuggoHkTioKEbHUTb3PMXaVGwmZkIX60pCPkQ65K9306JS4pU8xQicJlAqxC1+716y8pma5QFyVtIAAA",
