@@ -30,7 +30,8 @@
                which plays silently on loop
     featuredWide (optional) true = featured image spans the full page width,
                under the title (for very wide pieces like a triptych)
-    featuredLayout (optional) "trio" = three pieces next to the title: the first
+    featuredLayout (optional) "slider" = the featured images slide past one at a time.
+               "trio" = three pieces next to the title: the first
                two stacked on the left, the third (a tall one) on the right.
                Items can be { src, label, materials, size }; these are listed
                under the title, like a gallery wall label.
@@ -39,7 +40,7 @@
     photosLayout  (optional) "row" = photos side by side at the same height,
                3 per row. Leave out for the 3-column masonry grid.
     sections   (optional) extra labelled photo groups further down the page:
-               [{ label: "Iteration 1", layout: "row", photos: ["...jpg"] }]
+               [{ label: "Iteration 1", layout: "row", perRow: 4, photos: ["...jpg"] }]
 */
 
 const PROJECTS = [
@@ -134,8 +135,14 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "assets/img/work/display-shelf/display-shelf-04.jpg",
-    featured: "assets/img/work/display-shelf/display-shelf-01.jpg",
-    photos: []
+    featuredLayout: "slider",
+    featured: ["assets/img/work/display-shelf/shelf-08.jpg", "assets/img/work/display-shelf/shelf-09.jpg", "assets/img/work/display-shelf/shelf-10.jpg", "assets/img/work/display-shelf/shelf-11.jpg"],
+    photos: [],
+    sections: [
+      { label: "Detailed Shots", layout: "row", photos: ["assets/img/work/display-shelf/shelf-12.jpg", "assets/img/work/display-shelf/shelf-13.jpg", "assets/img/work/display-shelf/shelf-14.jpg"] },
+      { label: "Installation", layout: "row", perRow: 4, photos: ["assets/img/work/display-shelf/shelf-01.jpg", "assets/img/work/display-shelf/shelf-02.jpg", "assets/img/work/display-shelf/shelf-03.jpg", "assets/img/work/display-shelf/shelf-04.jpg"] },
+      { label: "Construction Details", layout: "row", photos: ["assets/img/work/display-shelf/shelf-05.jpg", "assets/img/work/display-shelf/shelf-06.jpg", "assets/img/work/display-shelf/shelf-07.jpg"] }
+    ]
   },
 {
     id: "fountain-for-bees",

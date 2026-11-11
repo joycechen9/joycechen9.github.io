@@ -368,11 +368,63 @@ const IMAGE_SIZES = {
 1344,
 1800
 ],
-"assets/img/work/display-shelf/display-shelf-01.jpg": [
-1086,
-1448
-],
 "assets/img/work/display-shelf/display-shelf-04.jpg": [
+1350,
+1800
+],
+"assets/img/work/display-shelf/shelf-01.jpg": [
+1500,
+1800
+],
+"assets/img/work/display-shelf/shelf-02.jpg": [
+1618,
+1800
+],
+"assets/img/work/display-shelf/shelf-03.jpg": [
+1505,
+1800
+],
+"assets/img/work/display-shelf/shelf-04.jpg": [
+1350,
+1800
+],
+"assets/img/work/display-shelf/shelf-05.jpg": [
+1350,
+1800
+],
+"assets/img/work/display-shelf/shelf-06.jpg": [
+1350,
+1800
+],
+"assets/img/work/display-shelf/shelf-07.jpg": [
+1129,
+1800
+],
+"assets/img/work/display-shelf/shelf-08.jpg": [
+1445,
+1800
+],
+"assets/img/work/display-shelf/shelf-09.jpg": [
+1621,
+1800
+],
+"assets/img/work/display-shelf/shelf-10.jpg": [
+1624,
+1800
+],
+"assets/img/work/display-shelf/shelf-11.jpg": [
+1537,
+1800
+],
+"assets/img/work/display-shelf/shelf-12.jpg": [
+1109,
+1800
+],
+"assets/img/work/display-shelf/shelf-13.jpg": [
+1350,
+1800
+],
+"assets/img/work/display-shelf/shelf-14.jpg": [
 1350,
 1800
 ],
@@ -674,8 +726,21 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/chinese-market/chinese-market-08.jpg": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAQBQCdASoSABgAPu1qrlCppaQiqAqpMB2JQBOmY2bzhKtMBlftoFbKiJS56JR15gkAAP6RSMlIG/R92mbZHTYspyzgRjcXMdvIGmQQbAaYT/z6e0p7UdmFWF2aGT1D3hPg8NMl10RntyZcbMXRaCKbr/iT/x2r0aX2nGDrTeUSUVvw+CW3LZTeM5D1Zo33pfmMp/uy9gjeOff7M3PX4mCWlAAAAA==",
 "assets/img/work/dad-and-crab/dad-and-crab-01.jpg": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADQBACdASoSABgAPu1mpk2ppaMiMBgMATAdiUATplvgEDJciBeo8XdwrbzJsXsJ0AD29bIUYqGUzZqdhEG6dkOUro+ZSiIvRojbhl8MFANfJRD0hsH2/gvk9sEPL4RYryMM6qCg/lGI+NGEM8pvwX0zfA0VVDKDfGoo2U6FPBQnVS0vvFjQKSimAAAAAA==",
 "assets/img/work/dishwasher/dishwasher-01.jpg": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABQBQCdASoSABgAPu1krVAppSQisBgIATAdiUATpnAQKJxSVs1Qw+rotv6AOvsCYlNtVoAA/WpN4XLGY6E+l+we/Zv00FH17g28j2JF2uogoXEaHcHWy5tM4bxboCODPU4I5AAcvxpOLixTfpc8G40SgM/j0q7KWGIJjcYZuSqGAVIPoJmghwy8Pkta/cS0ms9EOyWYgUdF4xjAAAA=",
-"assets/img/work/display-shelf/display-shelf-01.jpg": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBQCdASoSABgAPu1krFAppSQisBgIATAdiUAWI+q4Na72lpwSzal80peF8sCsw64AAP7nNv5034uDIi+qdOS9cxn6wV/qzzntwSQcXCd7VrINBjwgkLIGXkvErGMQg4qFBGvDBWRASjwfbPBNb0tTysafKqQ7NCYg0AAA",
 "assets/img/work/display-shelf/display-shelf-04.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBQCdASoSABgAPu1oqU8ppiOiMBgIATAdiWMAsOwQ4BOeY0AODbWGfozXVEzFnRfAAPecIO+Gl4LcfLGCqsn7feYRsPN6CdhQfibhFvK2uLkweRptp5hewuJx4IN0YT710MGTEJ8GsyMHDAYAAA==",
+"assets/img/work/display-shelf/shelf-01.jpg": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACQBACdASoUABgAPuFgp02opaOiMAwBEBwJZwDMWCHhBh0zjU5rygQaeMgbw0AA4iwwC0iz8H+w2BtNyGI2RBVaweLzc70ZoxsMw9udAQAAAA==",
+"assets/img/work/display-shelf/shelf-02.jpg": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADQBACdASoWABgAPu1iq0+ppSOiMBgIATAdiUAXYAGM6aP/aIkj0ik3p6KIjDumAAD+Wd1GgS0lhjtyx2J8R9MTj7sZ3Qz4NW4ZpEOUyx9DriEMbuOMihvyCkd7EXvBg1I19UGoxeMuKofGq6gLD4/y2bawM1vZ1FNcHvMPDOdoIAAA",
+"assets/img/work/display-shelf/shelf-03.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADwBACdASoUABgAPu1oqVAppaOiqA1RMB2JQBj8gfcVfy9DAOgbgAlcb6u3AOh06AAA/KUE+p756ql603Pi6t4L2KPn+cMWxoNpbE7gQnwWIm0t57sOath94I+vLz/p4KU86qO8mpFsNCYc7if/gAAA",
+"assets/img/work/display-shelf/shelf-04.jpg": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABQBACdASoSABgAPu1kqk+ppSOiMBgIATAdiWUAABjoOjV9p73PRvKxjRgAAN9ussOCKcoUs5eYRZ6mT01Opq5j344jo5yW6WcvszfSEg6Tx/CDDC7wGFsMTtopkMNU3b7rol8rmPImitgGrcJMN7ZoAAAAAA==",
+"assets/img/work/display-shelf/shelf-05.jpg": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoSABgAPu1kqE2ppaOiMAgBMB2JZQDE2B07+b0WfpqSbRF7yAD94yzGyaZzRdU1viVVda68CNXqgCumPVgsLXc92neP3nV3yyYuj1Pv1x8G7QCFWRs0a0xPv4fcV8ohb6gAIwAA",
+"assets/img/work/display-shelf/shelf-06.jpg": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAACwBACdASoSABgAPu1qrFEppaQiqAqpMB2JQBWAAaZA995Q5aXXvfloK5ISKh4AAPadyHZXm6mh8mtbGqEb/ri/b8gevT9AqOAk8DF+qoFUh0Gp+ZuYmEW8nuG/LpNCt5jtF1R1D8GMg9wGqSBZIsjVZ74dXdVHzJuzp5O7lhIlhVkXWGktf2J33enxu/6Ivc+7Lum98AA=",
+"assets/img/work/display-shelf/shelf-07.jpg": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAACQBACdASoPABgAPu1iqk2ppaQiMAgBMB2JQBOkC5hitVeWj9NMKWeg7GJBTAAA+p4xM40rG9Q7UbUI02whxTfCiqknvl+BP52lLMytpaqgqx9oPA50GvdAiYRsT3zFsT35rUnx0Gz0yrrspG30WJZedZUoAA==",
+"assets/img/work/display-shelf/shelf-08.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwBACdASoTABgAPu1srFEppaQiqAqpMB2JQBibAe0rWWzJJjzu6oHwfv9Zr/n4AP3NYDJP9C9PtxZ6eX7gt3zU5RcJ+xdTNqcjYRcvGGsJrTQGujmPfAKyehkKAzUecv8xJb/3dX9mnNqigA0gAA==",
+"assets/img/work/display-shelf/shelf-09.jpg": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwBQCdASoWABgAPu1qqFAppiOiqA1RMB2JQBWAAfB60YP0Q7YUdrVmhRMsXxzsj89KAAD96wm+lDfgfRigx8DM6OSUsilN7DgCVMBN6A68OyyNs8sz7K+C6XsRN4Y1X1ClSK0rx9CTSh0JAKsANa1DzbReN0RDYhdsFs+EEJYkDAAA",
+"assets/img/work/display-shelf/shelf-10.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBQCdASoWABgAPu1or1CppaSiqAqpMB2JYgC26SABXUjeN34XXGNUJnfQ7T1M4NuiCAAA/llas5hZMaSPtwGQ2CWtDO6qVSeDtwzptVkuxA8z+hFwoczEr3jgd+4vDPGv0mteLc8PDS7bMYhGy2xAMgjyJZvN9gVMvCgmb/OUbwomoEkSiX4fAAA=",
+"assets/img/work/display-shelf/shelf-11.jpg": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQBACdASoUABgAPu1mq08ppaOiKA1RMB2JYwC90A44j25QybLKF6fOHCRCwoSfgAD8rgzNSqnyBekt1fb6BC7IYtbfXOHCc5aOXKvUcXZwu147KdWqomMkuekTbppn6ticz8Ur8T+R3mBpBZ6cfGcaz4rOMAssAAA=",
+"assets/img/work/display-shelf/shelf-12.jpg": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADwAwCdASoPABgAPu1orU6ppiSiMAgBMB2JQBOgBFNcN2JNQNdn2RKAAPKgZQbyauioaS3a9SXGMFbMQomWzGsbVNu3KLzBypzazluav2S8swdxqbM/Cl6lX+t5SBllXo4XEWWrYN1ncL8P3tQMu7IMCAA=",
+"assets/img/work/display-shelf/shelf-13.jpg": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAADwBACdASoSABgAPu1qrFEppaQiqAqpMB2JYwCdM47BlnlRMqwZSs9g+sEs85XFv6AA+U22G4px2PZ6WIgOSK1kLdFjwTHCbIw0wMQBIeRwXx1M8y7klR4M0X+PLvQ1j6t03//xhk8Yw6A8RplSCUZMPcSVOIPYp34Op2YfJ56EEE73zRiDzGIhQCZ73/xig1ZFE99eHQ2KIdxuAAA=",
+"assets/img/work/display-shelf/shelf-14.jpg": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAACQBQCdASoSABgAPu1krE+ppSQiMBgIATAdiUAXZBgpP8A3EPmpkpQp/3VhHod0WbvEaNXLWAD+5zmaDDK3sL7iKCKO5Nc+XQhD/zvfC3ZmI9biD18rFoD2+CJCdb0djBpQn1HcswvKhQK9IOgQI3AY51vwozA8pjKPhMjrtWEaaFaYI19nhvWbV5XR3/FxZ8/d+rgA",
 "assets/img/work/for-sale/for-sale-01.jpg": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JQBYdhDtPMt+pMJfOnDInAAD+rv7BCRmG7xvo6TLRJLSwFz7kCBMlv8krUuMNUjMltoMzjM3SL/MEhvje+Z6d29089IWdbcLjhMMT99csQZNrkdXortkUcYzdIVbYAAA=",
 "assets/img/work/for-sale/for-sale-02.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JYwCw7AMWN1cK+GAA/l/b1kmR4KA1swXNRv5/mOJBN/S/VqTFqnvwVcPRoCNUepi5/7kX2ltT21sIAM2gvj+AhTYYt3XYGPhLNLzwFLbuJLQpClfAAA==",
 "assets/img/work/fountain-for-bees/fountain-for-bees-01.jpg": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAADwBACdASoSABgAPu1qrlCppaQiqAqpMB2JaACxHoABHPSbIfRK23Tykzb0Q1c6a0AA/uXzRn74sjiWWCnzfxtngl7DH105edXoivA0FpXoYFaqaVtk2wMqYFLSvslKSmHiya2nXd72tTXaVQ8z9lduqi5dIRjNcfIODqwAZkjNwh9DhmEe0QDxaZ/fjCAxKlk5i8a+Rf19hLEiBg2d4AAA",

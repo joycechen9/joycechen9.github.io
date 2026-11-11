@@ -67,7 +67,9 @@ if (!p) {
     });
     text.appendChild(dl);
   }
-  if (p.featuredLayout === "trio" && Array.isArray(p.featured) && p.featured.length === 3) {
+  if (p.featuredLayout === "slider" && Array.isArray(p.featured)) {
+    buildSlider(featBox, p.featured.map(srcOf), p.title);
+  } else if (p.featuredLayout === "trio" && Array.isArray(p.featured) && p.featured.length === 3) {
     // Two stacked on the left, one tall on the right, sized so both columns end level
     featBox.classList.add("trio");
     const r = p.featured.map((f) => { const d = SIZES[srcOf(f)]; return d ? d[1] / d[0] : 1; });
@@ -181,10 +183,77 @@ if (!p) {
       cell.appendChild(media(src, p.title + " " + sec.label));
       return cell;
     });
-    photoGrid(g, cells, sec.layout);
+    photoGrid(g, cells, sec.layout, sec.perRow);
   });
 
   // The big image at the top loads first
   const top = document.querySelector("#p-featured img");
   if (top) { top.loading = "eager"; top.fetchPriority = "high"; }
+}
+
+/* Slider: one image at a time, sliding to the next every few seconds.
+   Arrows and dots to move by hand; swipe on touch screens; pauses on hover. */
+function buildSlider(box, srcs, title) {
+  box.classList.add("slider-box");
+  const view = document.createElement("div");
+  view.className = "slider";
+  const track = document.createElement("div");
+  track.className = "slider-track";
+  // a copy of the first slide at the end lets the loop keep sliding forward
+  [...srcs, srcs[0]].forEach((src, i) => {
+    const cell = document.createElement("div");
+    cell.className = "slide";
+    const img = media(src, i < srcs.length ? `${title}, photo ${i + 1} of ${srcs.length}` : "", "(max-width: 900px) 100vw, 60vw");
+    if (i === 0) { img.loading = "eager"; img.fetchPriority = "high"; }
+    cell.appendChild(img);
+    track.appendChild(cell);
+  });
+  view.appendChild(track);
+
+  const prev = document.createElement("button"), next = document.createElement("button");
+  prev.className = "slider-arrow prev"; prev.setAttribute("aria-label", "Previous photo"); prev.textContent = "←";
+  next.className = "slider-arrow next"; next.setAttribute("aria-label", "Next photo"); next.textContent = "→";
+  view.append(prev, next);
+
+  const dots = document.createElement("div");
+  dots.className = "slider-dots";
+  srcs.forEach((_, i) => {
+    const d = document.createElement("button");
+    d.setAttribute("aria-label", `Photo ${i + 1}`);
+    d.addEventListener("click", () => go(i));
+    dots.appendChild(d);
+  });
+  box.append(view, dots);
+
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let i = 0, timer = null;
+  const place = (animate) => {
+    track.style.transition = animate && !reduce ? "transform .7s cubic-bezier(.65,0,.35,1)" : "none";
+    track.style.transform = `translateX(${-100 * i}%)`;
+    [...dots.children].forEach((d, k) => d.classList.toggle("on", k === i % srcs.length));
+  };
+  const go = (k) => { i = k; place(true); restart(); };
+  track.addEventListener("transitionend", () => {
+    if (i === srcs.length) { i = 0; place(false); }   // landed on the copy: jump back to the real first slide
+  });
+  next.addEventListener("click", () => go(i + 1));
+  prev.addEventListener("click", () => {
+    if (i === 0) { i = srcs.length; place(false); void track.offsetWidth; }
+    go(i - 1);
+  });
+  const restart = () => {
+    clearInterval(timer);
+    if (!reduce && srcs.length > 1) timer = setInterval(() => { i += 1; place(true); }, 3500);
+  };
+  view.addEventListener("mouseenter", () => clearInterval(timer));
+  view.addEventListener("mouseleave", restart);
+  let x0 = null;
+  view.addEventListener("touchstart", (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+  view.addEventListener("touchend", (e) => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) (dx < 0 ? next : prev).click();
+  });
+  place(false);
+  restart();
 }

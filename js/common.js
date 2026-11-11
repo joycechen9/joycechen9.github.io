@@ -148,8 +148,8 @@ function rows(container, items, perRowFor) {
 }
 
 // Pick masonry columns or equal-height rows for a photo group.
-function photoGrid(container, items, layout) {
-  if (layout === "row") rows(container, items, () => (isNarrow() ? 1 : 3));
+function photoGrid(container, items, layout, perRow = 3) {
+  if (layout === "row") rows(container, items, () => (isNarrow() ? (perRow > 3 ? 2 : 1) : perRow));
   else masonry(container, items, gridColumns);
 }
 

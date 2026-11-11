@@ -285,6 +285,29 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .p-more:empty { display: none; }
 .p-more p { font-size: 17px; line-height: 1.4; margin: 0 0 16px; }
 
+/* Slider (featuredLayout: "slider") */
+.project-featured.slider-box { aspect-ratio: auto; background: none; display: flex; flex-direction: column; align-items: center; }
+.slider {
+  position: relative; overflow: hidden;
+  height: min(calc(100vh - var(--header-h) - 130px), 820px);
+  aspect-ratio: 1 / 1.15; max-width: 100%;
+}
+.slider-track { display: flex; height: 100%; }
+.slide { flex: 0 0 100%; height: 100%; }
+.slide img { width: 100%; height: 100%; max-height: none; object-fit: cover; }
+.slider-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,.75); border: 0; font: inherit; font-size: 20px;
+  width: 40px; height: 40px; cursor: pointer; opacity: 0; transition: opacity .2s;
+}
+.slider-arrow.prev { left: 10px; } .slider-arrow.next { right: 10px; }
+.slider:hover .slider-arrow, .slider-arrow:focus-visible { opacity: 1; }
+.slider-arrow:hover { color: var(--accent); }
+.slider-dots { display: flex; gap: 8px; margin-top: 12px; }
+.slider-dots button { width: 7px; height: 7px; border-radius: 50%; border: 0; padding: 0; background: #ccc; cursor: pointer; }
+.slider-dots button.on { background: #000; }
+@media (hover: none) { .slider-arrow { opacity: 1; } }
+
 /* Trio: two pieces stacked left, one tall piece right */
 .project-featured.trio {
   aspect-ratio: auto; background: none;
