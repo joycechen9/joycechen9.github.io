@@ -132,7 +132,7 @@ const PROJECTS = [
     year: 2025,
     tags: ["design"],
     materials: "Poplar with polyurethane finish",
-    summary: "This hanging wall shelf featuring a French cleat sits flush and seamless on your wall with no hardware visible. It was made on the table saw and sander and finished with a polyurethane coating. Its many surfaces offer a comfortable home for your small, loved objects.",
+    summary: "This hanging wall shelf features a French cleat and sits flush and seamless on your wall with no hardware visible. It was made on the table saw and sander and finished with a polyurethane coating. Its many surfaces offer a comfortable home for your small, loved objects.",
     details: [],
     cover: "assets/img/work/display-shelf/display-shelf-04.jpg",
     featuredLayout: "slider",
