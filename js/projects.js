@@ -133,7 +133,7 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "assets/img/work/display-shelf/display-shelf-01.jpg",
+    cover: "assets/img/work/display-shelf/display-shelf-04.jpg",
     featured: "assets/img/work/display-shelf/display-shelf-01.jpg",
     photos: []
   },

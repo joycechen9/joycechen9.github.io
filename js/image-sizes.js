@@ -372,6 +372,10 @@ const IMAGE_SIZES = {
 1086,
 1448
 ],
+"assets/img/work/display-shelf/display-shelf-04.jpg": [
+1350,
+1800
+],
 "assets/img/work/for-sale/for-sale-01.jpg": [
 1800,
 1200
@@ -671,6 +675,7 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/dad-and-crab/dad-and-crab-01.jpg": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADQBACdASoSABgAPu1mpk2ppaMiMBgMATAdiUATplvgEDJciBeo8XdwrbzJsXsJ0AD29bIUYqGUzZqdhEG6dkOUro+ZSiIvRojbhl8MFANfJRD0hsH2/gvk9sEPL4RYryMM6qCg/lGI+NGEM8pvwX0zfA0VVDKDfGoo2U6FPBQnVS0vvFjQKSimAAAAAA==",
 "assets/img/work/dishwasher/dishwasher-01.jpg": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABQBQCdASoSABgAPu1krVAppSQisBgIATAdiUATpnAQKJxSVs1Qw+rotv6AOvsCYlNtVoAA/WpN4XLGY6E+l+we/Zv00FH17g28j2JF2uogoXEaHcHWy5tM4bxboCODPU4I5AAcvxpOLixTfpc8G40SgM/j0q7KWGIJjcYZuSqGAVIPoJmghwy8Pkta/cS0ms9EOyWYgUdF4xjAAAA=",
 "assets/img/work/display-shelf/display-shelf-01.jpg": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBQCdASoSABgAPu1krFAppSQisBgIATAdiUAWI+q4Na72lpwSzal80peF8sCsw64AAP7nNv5034uDIi+qdOS9cxn6wV/qzzntwSQcXCd7VrINBjwgkLIGXkvErGMQg4qFBGvDBWRASjwfbPBNb0tTysafKqQ7NCYg0AAA",
+"assets/img/work/display-shelf/display-shelf-04.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBQCdASoSABgAPu1oqU8ppiOiMBgIATAdiWMAsOwQ4BOeY0AODbWGfozXVEzFnRfAAPecIO+Gl4LcfLGCqsn7feYRsPN6CdhQfibhFvK2uLkweRptp5hewuJx4IN0YT710MGTEJ8GsyMHDAYAAA==",
 "assets/img/work/for-sale/for-sale-01.jpg": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JQBYdhDtPMt+pMJfOnDInAAD+rv7BCRmG7xvo6TLRJLSwFz7kCBMlv8krUuMNUjMltoMzjM3SL/MEhvje+Z6d29089IWdbcLjhMMT99csQZNrkdXortkUcYzdIVbYAAA=",
 "assets/img/work/for-sale/for-sale-02.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JYwCw7AMWN1cK+GAA/l/b1kmR4KA1swXNRv5/mOJBN/S/VqTFqnvwVcPRoCNUepi5/7kX2ltT21sIAM2gvj+AhTYYt3XYGPhLNLzwFLbuJLQpClfAAA==",
 "assets/img/work/fountain-for-bees/fountain-for-bees-01.jpg": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAADwBACdASoSABgAPu1qrlCppaQiqAqpMB2JaACxHoABHPSbIfRK23Tykzb0Q1c6a0AA/uXzRn74sjiWWCnzfxtngl7DH105edXoivA0FpXoYFaqaVtk2wMqYFLSvslKSmHiya2nXd72tTXaVQ8z9lduqi5dIRjNcfIODqwAZkjNwh9DhmEe0QDxaZ/fjCAxKlk5i8a+Rf19hLEiBg2d4AAA",
