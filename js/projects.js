@@ -243,7 +243,7 @@ const PROJECTS = [
     title: "Salico",
     year: 2025,
     tags: ["engineering"],
-    materials: "Aluminum extrusion, sheet metal, cast urethane, pneumatics",
+    materials: "",
     summary: "An automatic harvester for sea asparagus, built with farmer and scientist Dr. Wenhao Sun for Olakai, his farm in Hawaii.",
     details: [
       "**TLDR:** Sea asparagus is a salt-tolerant crop that cleans water and helps with carbon capture. As fresh water and farmland run short, it's a crop for the future, but the best harvest is still done by hand, which limits how far it can scale. Existing machines cut and bruise the plant, hurting its quality and shelf life.",
