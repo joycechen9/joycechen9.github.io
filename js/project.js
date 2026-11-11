@@ -192,7 +192,7 @@ if (!p) {
   if (top) { top.loading = "eager"; top.fetchPriority = "high"; }
 }
 
-/* Slider: one image at a time, sliding to the next every few seconds.
+/* Slider: one image at a time, sliding to the next every 2.5 seconds.
    Arrows and dots to move by hand; swipe on touch screens; pauses on hover. */
 function buildSlider(box, srcs, title) {
   box.classList.add("slider-box");
@@ -244,7 +244,7 @@ function buildSlider(box, srcs, title) {
   });
   const restart = () => {
     clearInterval(timer);
-    if (!reduce && srcs.length > 1) timer = setInterval(() => { i += 1; place(true); }, 3500);
+    if (!reduce && srcs.length > 1) timer = setInterval(() => { i += 1; place(true); }, 2500);
   };
   view.addEventListener("mouseenter", () => clearInterval(timer));
   view.addEventListener("mouseleave", restart);
