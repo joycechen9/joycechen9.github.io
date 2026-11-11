@@ -22,7 +22,7 @@ if (!p) {
   const more = p.featuredWide ? document.getElementById("p-more") : text;
   const addPara = (box, t) => {
     const para = document.createElement("p");
-    para.textContent = t;
+    para.innerHTML = t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
     box.appendChild(para);
   };
   if (p.summary) addPara(text, p.summary);

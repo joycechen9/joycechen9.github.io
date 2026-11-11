@@ -11,7 +11,7 @@
     tags       any of: "design", "engineering", "art"
     materials  short line under the title on the project page
     summary    first paragraph on the project page
-    details    extra paragraphs (array of strings)
+    details    extra paragraphs (array of strings); **text** is bold
     size       (optional) e.g. "24 × 36 in." (height × width), shown under materials
     pieces     (optional) list of { label, materials, size } for multi-piece works,
                shown under the title like a gallery wall label
@@ -245,9 +245,9 @@ const PROJECTS = [
     materials: "Aluminum extrusion, sheet metal, cast urethane, pneumatics",
     summary: "An automatic harvester for sea asparagus, built with farmer and scientist Dr. Wenhao Sun for Olakai, his farm in Hawaii.",
     details: [
-      "Sea asparagus is a salt-tolerant crop that cleans water and helps with carbon capture. As fresh water and farmland run short, it's a crop for the future, but the best harvest is still done by hand, which limits how far it can scale. Existing machines cut and bruise the plant, hurting its quality and shelf life.",
+      "**TLDR:** Sea asparagus is a salt-tolerant crop that cleans water and helps with carbon capture. As fresh water and farmland run short, it's a crop for the future, but the best harvest is still done by hand, which limits how far it can scale. Existing machines cut and bruise the plant, hurting its quality and shelf life.",
       "Salico mimics hand harvesting. Two cast urethane rollers grip the plant and pull, so the ripe tips separate naturally at the nodes. A ramp and conveyor carry the tips to a floating cargo bin.",
-      "This was my Mechatronics Engineering capstone, on a team of five. I was the mechanical engineer, project manager, and visual designer. We prototyped the picker in Toronto without any sea asparagus to test on, then took two trips to the farm to test the roller design and the full-size robot."
+      "This was my Mechatronics Engineering capstone (over 8 months long, team of 5). I was a mechanical engineer, project manager, and visual designer. We prototyped the picker in Toronto without any sea asparagus to test on, then took three trips to the farm in Hawaii to test the roller design and the full-size robot."
     ],
     links: [
       { label: "Development blog", href: "https://salico-uw.github.io/" }
