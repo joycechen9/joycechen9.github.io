@@ -172,7 +172,8 @@ if (!p) {
     const wrap = document.createElement("section");
     wrap.className = "project-section";
     const h = document.createElement("h2");
-    h.textContent = sec.label.toUpperCase();
+    h.textContent = (sec.label || "").toUpperCase();
+    if (!sec.label) { h.hidden = true; wrap.classList.add("no-label"); }
     const g = document.createElement("div");
     g.className = "project-photos";
     wrap.append(h, g);

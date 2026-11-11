@@ -131,7 +131,7 @@ const PROJECTS = [
     title: "Display Shelf",
     year: 2025,
     tags: ["design"],
-    materials: "Materials",
+    materials: "Poplar with polyurethane finish",
     summary: "One-line description.",
     details: [],
     cover: "assets/img/work/display-shelf/display-shelf-04.jpg",
@@ -139,9 +139,12 @@ const PROJECTS = [
     featured: ["assets/img/work/display-shelf/shelf-08.jpg", "assets/img/work/display-shelf/shelf-09.jpg", "assets/img/work/display-shelf/shelf-10.jpg", "assets/img/work/display-shelf/shelf-11.jpg"],
     photos: [],
     sections: [
-      { label: "Detailed Shots", layout: "row", photos: ["assets/img/work/display-shelf/shelf-12.jpg", "assets/img/work/display-shelf/shelf-13.jpg", "assets/img/work/display-shelf/shelf-14.jpg"] },
+      { label: "", layout: "row", photos: ["assets/img/work/display-shelf/shelf-12.jpg", "assets/img/work/display-shelf/shelf-13.jpg", "assets/img/work/display-shelf/shelf-14.jpg"] },
       { label: "Installation", layout: "row", perRow: 4, photos: ["assets/img/work/display-shelf/shelf-01.jpg", "assets/img/work/display-shelf/shelf-02.jpg", "assets/img/work/display-shelf/shelf-03.jpg", "assets/img/work/display-shelf/shelf-04.jpg"] },
-      { label: "Construction Details", layout: "row", photos: ["assets/img/work/display-shelf/shelf-05.jpg", "assets/img/work/display-shelf/shelf-06.jpg", "assets/img/work/display-shelf/shelf-07.jpg"] }
+      { label: "Details", layout: "row", photos: ["assets/img/work/display-shelf/shelf-05.jpg", "assets/img/work/display-shelf/shelf-06.jpg", "assets/img/work/display-shelf/shelf-07.jpg"] },
+      { label: "Manual Fabrication", layout: "row", perRow: 4, photos: ["assets/img/work/display-shelf/shelf-21.jpg", "assets/img/work/display-shelf/shelf-22.jpg", "assets/img/work/display-shelf/shelf-23.jpg", "assets/img/work/display-shelf/shelf-24.jpg"] },
+      { label: "Roughly Planning Out on CAD", layout: "row", perRow: 4, photos: ["assets/img/work/display-shelf/shelf-15.jpg", "assets/img/work/display-shelf/shelf-16.jpg", "assets/img/work/display-shelf/shelf-17.jpg", "assets/img/work/display-shelf/shelf-18.jpg"] },
+      { label: "Sketching and Brainstorming", layout: "row", perRow: 2, photos: ["assets/img/work/display-shelf/shelf-19.jpg", "assets/img/work/display-shelf/shelf-20.jpg"] }
     ]
   },
 {
@@ -482,8 +485,8 @@ const PROJECTS = [
 /* One sketchbook per tag. The SKETCHBOOK link under the work list opens
    the one for the selected filter: sketchbook.html?tag=design, etc. */
 const SKETCHBOOKS = {
-  design:      { intro: "", images: [] },
-  engineering: { intro: "", images: [] },
+  design: { intro: "", images: ["assets/img/work/display-shelf/shelf-19.jpg", "assets/img/work/display-shelf/shelf-20.jpg"] },
+  engineering: { intro: "", images: ["assets/img/work/display-shelf/shelf-19.jpg", "assets/img/work/display-shelf/shelf-20.jpg"] },
   art: {
     intro: "",
     images: [
