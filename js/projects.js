@@ -19,6 +19,7 @@
     spotify    (optional) a Spotify album/playlist/track link, embedded under the text
     diagram    (optional) labelled image with numbered notes beside it (see Salico)
     links      (optional) links shown under the text: [{ label: "...", href: "https://..." }]
+               add top: true to show it right under the summary, highlighted in green
     covers     (optional) several grid images for one project, each its own tile,
                all linking to the same project page. Use instead of cover.
     tagCovers  (optional) a different grid image for one filter, e.g. { art: "...jpg" }.
@@ -250,7 +251,7 @@ const PROJECTS = [
       "This was my Mechatronics Engineering capstone (over 8 months long, team of 5). I was a mechanical engineer, project manager, and visual designer. We prototyped the picker in Toronto without any sea asparagus to test on, then took three trips to the farm in Hawaii to test the roller design and the full-size robot."
     ],
     links: [
-      { label: "Development blog", href: "https://salico-uw.github.io/" }
+      { label: "Development blog", href: "https://salico-uw.github.io/", top: true }
     ],
     // Labelled render. x/y = the point on the machine, lx/ly = where the label sits
     // (all in % of the diagram box). side: which side of the line the text goes.

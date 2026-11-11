@@ -35,7 +35,8 @@ if (!p) {
     a.href = l.href; a.target = "_blank"; a.rel = "noopener";
     a.textContent = l.label + " ↗";
     para.appendChild(a);
-    more.appendChild(para);
+    if (l.top) para.classList.add("p-link-top");
+    (l.top ? text : more).appendChild(para);
   });
 
   // Featured block: a photo, or a video (.mp4) that plays silently on loop
