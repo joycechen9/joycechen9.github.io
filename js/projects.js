@@ -70,19 +70,35 @@ const PROJECTS = [
     title: "Saturn with a Moon",
     year: 2026,
     tags: ["design"],
-    materials: "Materials",
-    summary: "One-line description.",
+    materials: "Stainless steel perforated disk, machined aluminum, electronics",
+    summary: "I found a cool steel disk at a vintage store and decided to make a lamp.",
     details: [],
     cover: "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-cover.jpg",
     featured: "assets/img/work/saturn-with-a-moon/saturn-with-a-moon.mp4",
     poster: "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-poster.jpg",
-    photos: [
-      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-01.jpg",
-      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-02.jpg",
-      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-03.jpg",
-      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-04.jpg",
-      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-05.jpg",
-      "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-06.jpg"
+    photos: [],
+    sections: [
+      { label: "Detail Shots", photos: [
+        "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-01.jpg",
+        "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-02.jpg",
+        "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-03.jpg",
+        "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-04.jpg",
+        "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-05.jpg",
+        "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-06.jpg"
+      ] },
+      { label: "Sketching and Brainstorming", blocks: [
+        { type: "media-rows", perRow: 3, items: ["assets/img/work/saturn-with-a-moon/saturn-p01.jpg", "assets/img/work/saturn-with-a-moon/saturn-p02.jpg", "assets/img/work/saturn-with-a-moon/saturn-p03.jpg"] }
+      ] },
+      { label: "CAD", blocks: [
+        { type: "media-rows", perRow: 3, items: ["assets/img/work/saturn-with-a-moon/saturn-p04.jpg", { video: "assets/img/work/saturn-with-a-moon/saturn-cad.mp4", poster: "assets/img/work/saturn-with-a-moon/saturn-cad-poster.jpg", w: 1000, h: 622 }, "assets/img/work/saturn-with-a-moon/saturn-p05.jpg"] }
+      ] },
+      { label: "Machining", blocks: [
+        { type: "media-rows", perRow: 3, items: [
+          "assets/img/work/saturn-with-a-moon/saturn-p06.jpg", { video: "assets/img/work/saturn-with-a-moon/saturn-machining.mp4", poster: "assets/img/work/saturn-with-a-moon/saturn-machining-poster.jpg", w: 562, h: 1000 }, "assets/img/work/saturn-with-a-moon/saturn-p07.jpg",
+          "assets/img/work/saturn-with-a-moon/saturn-p08.jpg", "assets/img/work/saturn-with-a-moon/saturn-p09.jpg", "assets/img/work/saturn-with-a-moon/saturn-p10.jpg",
+          "assets/img/work/saturn-with-a-moon/saturn-p11.jpg", "assets/img/work/saturn-with-a-moon/saturn-p12.jpg", "assets/img/work/saturn-with-a-moon/saturn-p13.jpg"
+        ] }
+      ] }
     ]
   },
 {

@@ -371,19 +371,42 @@ function renderBlock(b, title) {
     el.appendChild(annotated(b, title));
   } else if (b.type === "videos") {
     b.items.forEach((v) => {
-      const vid = document.createElement("video");
-      vid.src = v.src; vid.poster = v.poster || "";
-      vid.muted = true; vid.loop = true; vid.playsInline = true; vid.preload = "metadata";
+      const vid = loopVideo(v.src, v.poster, v.w, v.h);
       vid.style.flex = `${(v.w / v.h).toFixed(4)} 1 0`;
-      vid.style.aspectRatio = `${v.w} / ${v.h}`;
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) vid.controls = true;
-      else {
-        vid.autoplay = true;
-        // only play while on screen
-        new IntersectionObserver(([e]) => (e.isIntersecting ? vid.play().catch(() => {}) : vid.pause())).observe(vid);
-      }
       el.appendChild(vid);
     });
+  } else if (b.type === "media-rows") {
+    // Rows of images and looping videos; everything in a row shares one height
+    const cells = b.items.map((it) => {
+      const cell = document.createElement("div");
+      cell.className = "mr-cell";
+      let w, h;
+      if (typeof it === "string") {
+        const d = SIZES[it] || [4, 3]; w = d[0]; h = d[1];
+        cell.appendChild(media(it, title));
+      } else {
+        w = it.w; h = it.h;
+        cell.appendChild(loopVideo(it.video, it.poster, w, h));
+      }
+      cell.style.flex = `${(w / h).toFixed(4)} 1 0`;
+      cell.style.aspectRatio = `${w} / ${h}`;
+      return cell;
+    });
+    const per = () => (isNarrow() ? Math.min(2, b.perRow || 3) : b.perRow || 3);
+    let last = 0;
+    const build = () => {
+      const n = per(); if (n === last) return; last = n;
+      el.innerHTML = "";
+      for (let k = 0; k < cells.length; k += n) {
+        const row = document.createElement("div");
+        row.className = "mr-row";
+        cells.slice(k, k + n).forEach((c) => row.appendChild(c));
+        el.appendChild(row);
+      }
+      fitSizes(el);
+    };
+    build();
+    window.addEventListener("resize", build);
   }
   return el;
 }
@@ -460,4 +483,18 @@ function annotated(cfg, title) {
     requestAnimationFrame(layout);
   }
   return wrap;
+}
+
+// Silent looping video that plays only while it's on screen
+function loopVideo(src, poster, w, h) {
+  const vid = document.createElement("video");
+  vid.src = src; vid.poster = poster || "";
+  vid.muted = true; vid.loop = true; vid.playsInline = true; vid.preload = "metadata";
+  if (w && h) vid.style.aspectRatio = `${w} / ${h}`;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) vid.controls = true;
+  else {
+    vid.autoplay = true;
+    new IntersectionObserver(([e]) => (e.isIntersecting ? vid.play().catch(() => {}) : vid.pause())).observe(vid);
+  }
+  return vid;
 }

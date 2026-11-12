@@ -414,6 +414,11 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .blk-videos { display: flex; gap: var(--gap); }
 .blk-videos video { min-width: 0; width: 100%; height: auto; display: block; background: #eee; }
 
+.blk-media-rows { display: flex; flex-direction: column; gap: var(--gap); }
+.mr-row { display: flex; gap: var(--gap); }
+.mr-cell { min-width: 0; overflow: hidden; }
+.mr-cell img, .mr-cell video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
 /* Annotated image */
 .ann-fig { position: relative; }
 .ann-fig img { display: block; width: 100%; height: auto; }
