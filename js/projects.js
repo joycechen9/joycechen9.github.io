@@ -80,7 +80,7 @@ const PROJECTS = [
     title: "Saturn with a Moon",
     year: 2026,
     tags: ["design"],
-    materials: "Stainless steel perforated disk, machined aluminum, electronics",
+    materials: "Steel, aluminum, and electronics",
     summary: "I found a cool steel disk at a vintage store and decided to make a lamp.",
     details: [],
     cover: "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-cover.jpg",
@@ -272,9 +272,9 @@ const PROJECTS = [
     materials: "",
     summary: "An automatic harvester for sea asparagus, built with farmer and scientist Dr. Wenhao Sun for Olakai, his farm in Hawaii.",
     details: [
-      "**TLDR:** Sea asparagus is a salt-tolerant crop that cleans water and helps with carbon capture. As fresh water and farmland run short, it's a crop for the future, but the best harvest is still done by hand, which limits how far it can scale. Existing machines cut and bruise the plant, hurting its quality and shelf life.",
-      "Salico mimics hand harvesting. Two cast urethane rollers grip the plant and pull, so the ripe tips separate naturally at the nodes. A ramp and conveyor carry the tips to a floating cargo bin.",
-      "This was my Mechatronics Engineering capstone (over 8 months long, team of 5). I was a mechanical engineer, project manager, and visual designer. We prototyped the picker in Toronto without any sea asparagus to test on, then took three trips to the farm in Hawaii to test the roller design and the full-size robot."
+      "**TLDR: Sea asparagus is a salt-tolerant crop that cleans water and helps with carbon capture.** As fresh water and farmland run short, it's a crop for the future, but the best **harvest is still done by hand**, which limits how far it can scale. Existing machines cut and bruise the plant, hurting its quality and shelf life.",
+      "**Salico mimics hand harvesting.** Two cast urethane rollers grip the plant and pull, so the ripe tips separate naturally at the nodes. A ramp and conveyor carry the tips to a floating cargo bin.",
+      "This was my Mechatronics Engineering capstone (over 8 months long, team of 5). I was a mechanical engineer, project manager, and visual designer. We prototyped the picker in Toronto without any sea asparagus to test on, then took three trips to the farm in Hawaii to test the roller design and the full-size robot. This robot now lives at Olakai farm, serving as a proof of concept for future innovation."
     ],
     links: [
       { label: "Development blog", href: "https://salico-uw.github.io/", top: true }
