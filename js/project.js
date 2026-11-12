@@ -171,6 +171,10 @@ if (!p) {
 
   // Extra labelled sections (e.g. "Iteration 1"), each with its own photo grid
   const secBox = document.getElementById("p-sections");
+  if (p.numberSections) {
+    secBox.classList.add("numbered");
+    secBox.style.counterReset = `sec ${p.numberSections - 1}`;
+  }
   (p.sections || []).forEach((sec) => {
     const wrap = document.createElement("section");
     wrap.className = "project-section";
@@ -353,6 +357,16 @@ function renderBlock(b, title) {
     const ol = document.createElement("ol");
     b.items.forEach((t) => { const li = document.createElement("li"); li.innerHTML = richText(t); ol.appendChild(li); });
     el.appendChild(ol);
+  } else if (b.type === "split") {
+    // Columns of stacked images, widths chosen so every column ends at the same height
+    b.columns.forEach((col) => {
+      const c = document.createElement("div");
+      c.className = "split-col";
+      const r = col.reduce((a, src) => { const d = SIZES[src] || [4, 3]; return a + d[1] / d[0]; }, 0);
+      c.style.flex = `${(1 / r).toFixed(4)} 1 0`;
+      col.forEach((src) => c.appendChild(media(src, title + " sketch", "(max-width: 900px) 100vw, 50vw")));
+      el.appendChild(c);
+    });
   } else if (b.type === "stack") {
     b.images.forEach((src) => el.appendChild(media(src, title + " sketch", "(max-width: 900px) 100vw, 1000px")));
   } else if (b.type === "image") {

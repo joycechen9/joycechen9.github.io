@@ -303,6 +303,7 @@ const PROJECTS = [
       ]
     },
     // Process story under the diagram. Each section is a heading plus blocks, in order.
+    numberSections: 4,   // section headings continue the numbered bubbles from the diagram notes
     sections: [
       {
         label: "Brainstorming & Sketching",
@@ -312,29 +313,29 @@ const PROJECTS = [
             "We cannot cut or bruise the sea asparagus.",
             "We do not have any sea asparagus to test with where we live (Toronto, Canada). A large part of the initial design is guessing until we get to Hawaii for testing."
           ] },
-          { type: "stack", maxWidth: 1000, images: ["assets/img/work/salico/salico-s01.jpg", "assets/img/work/salico/salico-s02.jpg", "assets/img/work/salico/salico-s03.jpg"] }
+          { type: "split", columns: [["assets/img/work/salico/salico-s01.jpg", "assets/img/work/salico/salico-s02.jpg"], ["assets/img/work/salico/salico-s03.jpg"]] }
         ]
       },
       {
         label: "CAD of the Top Options",
         blocks: [
           { type: "annotated-grid", items: [
-            { image: "assets/img/work/salico/salico-s05.jpg", pad: { l: "34%" }, labels: [
-              { text: "Gears", x: 30, y: 18, side: "left" },
-              { text: "Motor", x: 55, y: 31, side: "left" },
-              { text: "Compliant grabber material", x: 58, y: 80, side: "left" }
+            { image: "assets/img/work/salico/salico-s05.jpg", pad: { l: "30%" }, labels: [
+              { text: "Gears", x: 27.5, y: 18.1, side: "left" },
+              { text: "Motor", x: 55.0, y: 31.4, side: "left" },
+              { text: "Compliant grabber material", x: 58.3, y: 81.6, side: "left" }
             ] },
-            { image: "assets/img/work/salico/salico-s06.jpg", pad: { l: "30%" }, labels: [
-              { text: "Pistons", x: 25, y: 40, side: "left" },
-              { text: "Double brushes", x: 66, y: 56, side: "left" },
-              { text: "Double rollers", x: 57, y: 72, side: "left" }
+            { image: "assets/img/work/salico/salico-s06.jpg", pad: { l: "22%" }, labels: [
+              { text: "Pistons", x: 24.9, y: 37.8, side: "left" },
+              { text: "Double brushes", x: 65.9, y: 54.6, side: "left" },
+              { text: "Double rollers", x: 56.9, y: 71.5, side: "left" }
             ] },
-            { image: "assets/img/work/salico/salico-s07.jpg", pad: { l: "22%", r: "22%" }, labels: [
-              { text: "Shield", x: 25, y: 30, side: "left" },
-              { text: "Pinching and lifting rollers", x: 38, y: 62, side: "left", at: 56 },
-              { text: "Conveyor", x: 22, y: 73, side: "left", at: 76 },
-              { text: "Cargo", x: 18, y: 88, side: "left" },
-              { text: "Temporary cargo", x: 80, y: 72, side: "right" }
+            { image: "assets/img/work/salico/salico-s07.jpg", pad: { l: "24%", r: "18%" }, labels: [
+              { text: "Shield", x: 24.5, y: 27.8, side: "left" },
+              { text: "Pinching and lifting rollers", x: 37.9, y: 60.8, side: "left", at: 56 },
+              { text: "Conveyor", x: 21.4, y: 72.1, side: "left", at: 76 },
+              { text: "Cargo", x: 17.3, y: 87.6, side: "left" },
+              { text: "Temporary cargo", x: 81.1, y: 71.1, side: "right" }
             ] },
             { image: "assets/img/work/salico/salico-s08.jpg", highlight: "To build", labels: [] }
           ] }
