@@ -106,7 +106,7 @@ const PROJECTS = [
     title: "Manchild",
     year: 2025,
     tags: ["design"],
-    materials: "Materials",
+    materials: "",
     summary: "In many rooms, progress depends less on who holds the wheel than on who quietly steers around it. This stroller, outfitted with an electric-vehicle steering wheel, reflects on the roles we learn early and carry into work: those who seem to be in control, and those who keep things moving.",
     details: [],
     cover: "assets/img/work/manchild/manchild-cover.jpg",
