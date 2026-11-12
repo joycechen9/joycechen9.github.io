@@ -51,7 +51,7 @@ const PROJECTS = [
     title: "New Windsor",
     year: 2026,
     tags: ["design"],
-    materials: "Steel, Walnut, Acrylic",
+    materials: "Steel, walnut, and acrylic",
     summary: "New Windsor is a modern spin on the classic Windsor chair. This design uses stacked acrylic sheets to mimic the iconic form of the turned Windsor chair legs, blending old and new, classic and modern, nostalgia and change.",
     details: [],
     cover: "assets/img/work/new-windsor/new-windsor-01.jpg",
