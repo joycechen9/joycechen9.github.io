@@ -568,6 +568,118 @@ const IMAGE_SIZES = {
 1048,
 1501
 ],
+"assets/img/work/new-windsor/nw-01.jpg": [
+578,
+944
+],
+"assets/img/work/new-windsor/nw-02.jpg": [
+326,
+854
+],
+"assets/img/work/new-windsor/nw-03.jpg": [
+1472,
+746
+],
+"assets/img/work/new-windsor/nw-04.jpg": [
+1210,
+536
+],
+"assets/img/work/new-windsor/nw-05.jpg": [
+1028,
+1086
+],
+"assets/img/work/new-windsor/nw-06.jpg": [
+718,
+1002
+],
+"assets/img/work/new-windsor/nw-07.jpg": [
+828,
+882
+],
+"assets/img/work/new-windsor/nw-08.jpg": [
+802,
+1166
+],
+"assets/img/work/new-windsor/nw-09.jpg": [
+1274,
+1182
+],
+"assets/img/work/new-windsor/nw-10.jpg": [
+1560,
+1362
+],
+"assets/img/work/new-windsor/nw-11.jpg": [
+874,
+1252
+],
+"assets/img/work/new-windsor/nw-12.jpg": [
+906,
+1228
+],
+"assets/img/work/new-windsor/nw-13.jpg": [
+964,
+1310
+],
+"assets/img/work/new-windsor/nw-14.jpg": [
+1350,
+1800
+],
+"assets/img/work/new-windsor/nw-15.jpg": [
+1350,
+1800
+],
+"assets/img/work/new-windsor/nw-16.jpg": [
+1800,
+1350
+],
+"assets/img/work/new-windsor/nw-fab-01.jpg": [
+1350,
+1800
+],
+"assets/img/work/new-windsor/nw-fab-02.jpg": [
+1350,
+1800
+],
+"assets/img/work/new-windsor/nw-fab-03.jpg": [
+1350,
+1800
+],
+"assets/img/work/new-windsor/nw-fab-04.jpg": [
+1350,
+1800
+],
+"assets/img/work/new-windsor/nw-fab-05.jpg": [
+1350,
+1800
+],
+"assets/img/work/new-windsor/nw-fab-06.jpg": [
+1350,
+1800
+],
+"assets/img/work/new-windsor/nw-fab-07.jpg": [
+1350,
+1800
+],
+"assets/img/work/new-windsor/nw-fab-08.jpg": [
+1350,
+1800
+],
+"assets/img/work/new-windsor/nw-fab-09.jpg": [
+1350,
+1800
+],
+"assets/img/work/new-windsor/nw-fab-10.jpg": [
+1350,
+1800
+],
+"assets/img/work/new-windsor/nw-fab-11.jpg": [
+1350,
+1800
+],
+"assets/img/work/new-windsor/nw-fab-12.jpg": [
+1350,
+1800
+],
 "assets/img/work/night/night-01.jpg": [
 1800,
 1304
@@ -687,6 +799,14 @@ const IMAGE_SIZES = {
 "assets/img/work/salico/salico-s13.jpg": [
 1812,
 1188
+],
+"assets/img/work/saturn-with-a-moon/saturn-cad-poster.jpg": [
+1000,
+622
+],
+"assets/img/work/saturn-with-a-moon/saturn-machining-poster.jpg": [
+562,
+1000
 ],
 "assets/img/work/saturn-with-a-moon/saturn-p01.jpg": [
 1695,
@@ -924,6 +1044,34 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/new-windsor/new-windsor-05.jpg": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACQAwCdASoQABgAPu1Ct1apoqakGAEwHYlnAAEd6LrQ9ho/5LxAAP76ZDKF8woWhpGqG3oCgSC6bM1Mxm92FquBwAA=",
 "assets/img/work/new-windsor/new-windsor-06.jpg": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAwCdASoRABgAPu1iqU2ppaOjMAgBMB2JaQDOdDDasuAA/u8x/lFD6DrjnJPUthQed19bXI8BQKRMWoX+v0sEKTl2oAAA",
 "assets/img/work/new-windsor/new-windsor-07.jpg": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAwCdASoRABgAPu1iqU2ppaOiMAgBMB2JaQDDrC5V0AAA/u9VwJZ6jfoEiT2JUDBCmJn77JAFmGqUytDhWwMIJ3W3lNAA",
+"assets/img/work/new-windsor/nw-01.jpg": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAwCdASoPABgAPu1iqk4ppaQiMAgBMB2JaQAAW+oIES9yYlV8rAAA/vHcLFJUZAdDq3to5ZpEDoXMxoAjdaKwAAA=",
+"assets/img/work/new-windsor/nw-02.jpg": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAABQAwCdASoJABgAPu1kqU2ppaOiMAgBMB2JaQAAexWZHwj8AAD+79n3khCjuz6Y0Yjq9UOAAAA=",
+"assets/img/work/new-windsor/nw-03.jpg": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAwCdASoYAAwAPu1iqU2ppaOiMAgBMB2JaQAAWqAmhygAAP7rHGwX2PF2K3fNQpeym3JfIW4QeKmuLekAAA==",
+"assets/img/work/new-windsor/nw-04.jpg": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACwAgCdASoYAAsAPu1kqU2ppaOiMAgBMB2JaQAAeyAA/vCTK+a+jP6Ldy/0zUQJIJNR/KDSNLQtebTgouuAAA==",
+"assets/img/work/new-windsor/nw-05.jpg": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADwAgCdASoXABgAPu1uq1EppiOjqAqpMB2JaQAAPn52AAD+8N8CjaCAAAA=",
+"assets/img/work/new-windsor/nw-06.jpg": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQBACdASoRABgAPu1qq08ppiOiMBgIATAdiUAABLXm4e7AxGyx+D6tAAD32uExUmXXohdah9CTkemQhcWt/3q/hT/JCGVwTU2OUrlkNCvjM44fH3f871O9S/gvKGJI5PAAAA==",
+"assets/img/work/new-windsor/nw-07.jpg": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABQBQCdASoXABgAPu1ep04ppKMiMBgMATAdiWYAwzRWSSnY/X0SddKtUvUUTBTSNZnnjgAA/k+bS4DYsZr6xV+EFSeliEGIhLVKQ9fP2SX7J5/XnjMoS/+P1cAC8Qn8ShicxOu3GS46HlBZ3D0jYmVLH54pYmCEW6EtUw/R4/wouJoqGgCQTY9Qwa4AAA==",
+"assets/img/work/new-windsor/nw-08.jpg": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABQBACdASoRABgAPu1mqk+ppSOiMBgIATAdiWUAACOnapWyck93DgLHwXUwAP7v4ukk3hWAK1Z3/OXy0Xw99SCAtCNg4TzFJT5LPsBovS6gPZGVyrFAy/YU+DMhYYdMMhQDnUGvnxznVBKR1VwCHbcPe0kxe4OD4MqG7a+FlAA=",
+"assets/img/work/new-windsor/nw-09.jpg": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBQCdASoYABYAPuVcpk2pJSOiMAwBIByJZQDHMCIG9Hy9YeTchIM3VcbGlGvXnblAAP7nM9kKQderTU2skbSRSdAJKaPGwH8BbqIBc1lDvKPFUrgWiEfnTOIQKXFg4WjWKtDk8iAAAA==",
+"assets/img/work/new-windsor/nw-10.jpg": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABwBACdASoYABUAPu1oqk+ppiOiKA1RMB2JaQAALmvFvQ31mZCyU7l9XkxNgAD+8EohF+Kohjw2p8gNVZmzpDU9IYk7yCF3GWef5WlJISUxARK8SJJlDRrvq6Kj1viq2q5A3SCaGYKK1jQAAAA=",
+"assets/img/work/new-windsor/nw-11.jpg": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAwCdASoRABgAPu1ur1KppiQiqAgBMB2JaQAALnX9skmUGYdazgcAAP7zcjzwBdoilTndoHqzbKn6egPolVyWfDkwaiZuLbE1k4YAAAA=",
+"assets/img/work/new-windsor/nw-12.jpg": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABwAwCdASoSABgAPu1urlIppiQiqAgBMB2JaQAALnXEUz2LReAA/vN0gZHB88KY2oge8lhxmap2xeqIb5O2tgYaqXZs9jdgGnr09Qfc02VZwKB9EEHee297Hl6YIkAA",
+"assets/img/work/new-windsor/nw-13.jpg": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwBACdASoSABgAPu1ur1IppiQiqAgBMB2JaQAALkLcuRYToLFSqEeIP0AA/vN/DwGmN0xvXQ3oiTZAPZ3U/erD6CH1GG8EfZtMTjerF3jp8NbPrcbQDXTiXWnhPUnqFx+RM2ll0BJIkAIA",
+"assets/img/work/new-windsor/nw-14.jpg": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwBQCdASoSABgAPu1kq1AppSOisBgIATAdiWcAzfwQ5wkfcpZHEgHnVzGNsByWe7qKAAD+3PsZSVxGLRnr7sSSpmDGPqWU0fd6PceKHzDgCDjQDitznz21tCYgouO/Fgr6G+VFa2tpgJRuuvEvUiXAAAA=",
+"assets/img/work/new-windsor/nw-15.jpg": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQBACdASoSABgAPu1qrlCppaQiqAqpMB2JZwDE2BEln5eTe2UcqNmBkig0ALi4AAD+3NvRgqbqwGar/YqFI+C0uceKZn5yF4G0Th9LXNokhOxbZQl11SyU/U9GY/ondpOJ85/lNoi+k6mgmGu2IIvxQOCKUxrEAAA=",
+"assets/img/work/new-windsor/nw-16.jpg": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQBACdASoYABIAPu1iqE2ppaOiMAgBMB2JZwAAUWfy8XyLsrkTGk/OMVBd4Gp8cAD+3ea6MGJQaa7Z54bVBwVi8CslKZ1w2zhxl7gPm3lq8eKyNSCqjWxQVUyFPlahCptPPnlAAAA=",
+"assets/img/work/new-windsor/nw-fab-01.jpg": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQBQCdASoSABgAPuVgpk2pJaOiMAwBIByJYgCxG68B7tCSo3lcbA/3u4OrzfR3NsNAAP7RmzT7mCjH9cBS8FF3tRTWT7seJDJeoWNOnAAZ503rnkdsomT+QfxCsnENoqQ+n1xiRUPC5rQytxUzkBGnRce1K8bbtUPzsiwO+W5G3IDrcerQlNyp9KRpd3vpagAAAA==",
+"assets/img/work/new-windsor/nw-fab-02.jpg": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAACwBQCdASoSABgAPu1eqU4ppKOiMBgMATAdiWQAnTKEe1jPwOShdRFosCFk/k0ZB/ts73PtMAAAzCLD/d17kOZ+ekpMh1wFOmX0akOyExpU65D8/2DBmROvp59loOGaA+pLL0N5MDzLoUFwswWlQ8zxa81Ij7z5ys0+KLRFVmlSFA6SJ9ajkaK0UpN1V4qSAAA=",
+"assets/img/work/new-windsor/nw-fab-03.jpg": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAADQBQCdASoSABgAPu1irVAppSQisBgIATAdiUAWI+0PwAKlQ94YHjqSm38n+/203iv382zZMO6AAP6graouGaBE5QD0/Xp0ICyJtZ24f21IbqenfizqYIeZkXdRsCKTg1QVI8GHL4frb4MHW2lf6bV/fQLA/p4CzyNWWD1J5PmnC8phF+6L+NOS2R60INOpFuJDhblZ8yl0aJ7ZH1MgAAAA",
+"assets/img/work/new-windsor/nw-fab-04.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAQBQCdASoSABgAPu1mrE+ppSQiMBgIATAdiUATpmmIMTrpIe2AUHpfqlPYp5veSbAAAMw5lrHA03F7oZjrNb31ny4zqZdLp8q5wxI1x1hUEYj0i0bLbrEizfGG4lx6n61Mq5lIYKyy07q/nz5PXWrzzwYRal3hLUMCyYTPSq3I3+M/4zaqnqwAAAA=",
+"assets/img/work/new-windsor/nw-fab-05.jpg": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAABwBQCdASoSABgAPu1ipk4ppSMiMBgMATAdiWIArhwLhxct/4zn7WFnZjNsm6wD33LUQ7GAAP59+z6Xs+sbGkIbnytIQZ4eGTCSlVPq6xQsdtMDbpKvKkJYp/Zw/RSM4WtmrkbRK1FJnSViJvszd9aR/jGvhocTSoxw7BquaTWtIbsSREPCx1HTWg0beoO13TAHl2CZLXRDdRE89EAAAA==",
+"assets/img/work/new-windsor/nw-fab-06.jpg": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAAAQBQCdASoSABgAPu1sqlEppaOiqAqpMB2JYwDE81/AFlBaptSh14KJ3WStt7G58acAAP6NgbJBzP9DH4EsMAqTpY78jHcJQZvx94NTqsBDRZIM4VtMIikR2ciUqRVFULsh1chGB+xS/VnDWIVg1qgXDO9CDQOAJfHs8+1MJj1NfpqHk3ILhnpieuEc9y9Ye+3xOQl0hAlwQhsAAAA=",
+"assets/img/work/new-windsor/nw-fab-07.jpg": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACQBACdASoSABgAPu1mqk8ppaOiMBgIATAdiWUArhwNjdVaHQWMYtgNmNVNh8AA+gl33ribXMtFu0FkF2U7F3iVkhxnfQIRHANWnTh2H0r4LBbbslVMhECQlRA5C1YN+uCEEJUAI7AwB6VvV+6tPs9E9X6tIe5ENgXmJ3rAfhhCbHAAAAA=",
+"assets/img/work/new-windsor/nw-fab-08.jpg": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABwBQCdASoSABgAPu1oqk+ppiOiKA1RMB2JQBWGZohTAlFo7Ta+F53hU+VaWZBTlvWv3vmAAP7w3vivRzY990NmXsyU5sjptn1UNsQWGceQ+QRgvCw4Dcf/VNhROQ594YxGpbvZ8VgAEILqMws2oS/UZkxd/VKvfw6mGpm5wpEAAA==",
+"assets/img/work/new-windsor/nw-fab-09.jpg": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAACwBACdASoSABgAPu1srlCppiQiqAqpMB2JYgCsM47BCW3InwNCQ3C9dP1bIISgAP6Tm4QeYt4lwkuHQbGvVgk62iY8S2gTvsWug5oMwvqlkEiaNTTy/opnw2nc0REvsMPqOcFaSdih2hTBWG89JWnVGhKLlSeFNQyBKs3Myan7MQlOi7zDGHLYQxsHyxjQAAA=",
+"assets/img/work/new-windsor/nw-fab-10.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAADQBACdASoSABgAPu1mq06ppaOiKA1RMB2JQBTigb6+YfZT5uHaTD3iJMQUtR8KoAD9GYfwKYmzyc6TaO/MI+WLZzhsZ3IZwPIkGi2cmht4AyRMSItkoWlTKGjsfbjPjb02lmkG4pH+RpnlKdXLrKuVUgJiztFzPzL8RgdgoEuW89argHmFxybKAAA=",
+"assets/img/work/new-windsor/nw-fab-11.jpg": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBQCdASoSABgAPu1srFEppaQiqAqpMB2JQBZZghrgB8firoopdZIIgEdl362IYVvgAP7sApXqafbwTLDZjEkLggVN+s5Szdwmi1+d3yj2tIZ1y2KCgBQkXEPi/D2YQrJUfSv5+w480d1xKaLbGzd+0umr4NhLnqZ2cqX1i1SL7AAA",
+"assets/img/work/new-windsor/nw-fab-12.jpg": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABwBQCdASoSABgAPu1sqlEppaOiqAqpMB2JZACw7BI0iU0UqpjJBJroGfkCD22myX9AKiYAAP4FuyXUbdzVJmF0HFMWF7wGhWSkthBakNxglU7sOhYlXiwp8VM6JqoN61gTggBspPEzrT+GXnVdA3wqlYUb7LczyGtt97TkIcRtsbxI5NDwZEGcw6NA6q65A9ET/Jltmi2jX9ZublcGuNjSKbAAAA==",
 "assets/img/work/night/night-01.jpg": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoYABEAPu1wsFKppiSiqAgBMB2JZQDH5A3foRpwXFe+iAD+zGaAx4Ci/ePGB9Kp1ieeiRFtjiZAuxl6jP1Bc8uSRzpE8Ms4VKja6wAA",
 "assets/img/work/perception/perception-01.jpg": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwAwCdASoYAA8APu1orU6ppiSiMAgBMB2JbAAdqqBiwQQEqPEsubqgAP7rJaFjUkYRfemVK8vyCCrQR+EVeI32p5zH/1ViZpwbPpZCDCsYJWR/4ZS1ttD0A1xkH7/esix3h9JW9e5bmQndPswVP1buw6Lrj3v8UpZACD+1G/sZ/kY/ACjQrgAA",
 "assets/img/work/perception/perception-pair.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABQBACdASoYAAcAPu1iqU2ppaQiMAgBMB2JbACdMoRwACIMxQwYt66/oN/gAP7giOWuQccoNGV5M0LSUGZrEMx2k1q1Oij5d3GogKFJzu6hcDhV1gypRoJdhGq19/yjENAMiqRtrgTqL6VdnQDYAAAA",
@@ -954,6 +1102,8 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/salico/salico-s11.jpg": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwBACdASoYABMAPu1sqlEppaOiqAqpMB2JQBWGZDA0gb+dkIVB8UVlObHcSwis9oAA+D+cGN8XYGb5J26or3C4WrvxVOFqaxSqiF7F2kD6m8TibhPOQNs3+JADV59/hhtgthMkJtNVXH/YlD7hEobh7lZNJ8Gi0rYSHfbwGkCiNz8HVD5opJQfiG5YAAAA",
 "assets/img/work/salico/salico-s12.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBACdASoYAA8APu1kqk4ppaQiMAgBMB2JaACdMoCGABe9zhi01KGnQLcAAPhF4lEiULuYtVBQ+NAVdL53GdsYegDIWeZuteG3Ezw1JlHGsWx80LyaiDpfMdDknutPh/E3BI3fP+Gdl4oS+qt1RklRuU7qzxDSw/htkaJJBEM/zyLQg6HE05NlgAA=",
 "assets/img/work/salico/salico-s13.jpg": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBACdASoYABAAPu1iqk2ppaQiMAgBMB2JaAC/OBl3Ys/i8yuzglzLYAD4LECxIRzLyx/3x8Rkyy9yHCfFLX44x+5yASGgzymJogcxe+ILGC45rkIG7ZPx17K8UtVSj/Hn76/z6LYaAumj4GlxqqR9OP5cv5PYX63v9N39wcl/LIQTy37eA3F0jhLImdT6EZl2cYnAAAA=",
+"assets/img/work/saturn-with-a-moon/saturn-cad-poster.jpg": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQBACdASoYAA8APu1kqU2ppaQiMAgBMB2JaQAAW4R1fc5aaQEW+h5GAAD+83SsX3ycQ4o6zLUb76OKrUAe5DI88wgZxe2ooEOWXHxuOdC0eAAA",
+"assets/img/work/saturn-with-a-moon/saturn-machining-poster.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoNABgAPu1iqk2ppaQiMAgBMB2JZwAAV9M2/S8WsgwhXGwzrAAA/uv63yGHAmu/YLY+Ts6WdIwCftVZjcKclWtNbG6jbkdH8IQZDjhRIyQoSJj9C/5B0veZon6w4rFRBOV7DxJX3cQhh5AA",
 "assets/img/work/saturn-with-a-moon/saturn-p01.jpg": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwBACdASoYABEAPu1oqU8ppiOiMBgIATAdiWkAAC54DPaPMo2BKvdSsEVOSKUAAP7x2S4F3rH6nHy8hqKgzXSM3CNC/XL/b0JzFRo4AAA=",
 "assets/img/work/saturn-with-a-moon/saturn-p02.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoYAA8APu1iqk4ppaQiMAgBMB2JaQAAQV29B5ZE4b4jWAAA/vA/RKMr6ccDvkVEI+onWPzjxqcX2CIOObmn84wAchKRRMdO2oCb2OT7hjIFG4vG1Tx2uk4ItLfIX2lYnkRbu7Nr6yFpAAAA",
 "assets/img/work/saturn-with-a-moon/saturn-p03.jpg": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAwCdASoYABAAPu1iqk4ppaQiMAgBMB2JaQAASomEyReWI90KECQAAP7yNFXTvW4oYnUOknZQGsEVyXlJBwFV7gkGzCmlr6HZx1Aa/3SCijjjOSLvASR1dT8UqZwIAAA=",

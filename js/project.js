@@ -393,15 +393,23 @@ function renderBlock(b, title) {
       return cell;
     });
     const per = () => (isNarrow() ? Math.min(2, b.perRow || 3) : b.perRow || 3);
+    let wasNarrow = null;
     let last = 0;
     const build = () => {
-      const n = per(); if (n === last) return; last = n;
+      const n = per();
+      if (n === last && wasNarrow === isNarrow()) return;
+      last = n; wasNarrow = isNarrow();
       el.innerHTML = "";
-      for (let k = 0; k < cells.length; k += n) {
+      // rows: [3, 2] = how many items go in each row (wide screens); else n per row
+      const sizes = !isNarrow() && b.rows ? b.rows : [];
+      let k = 0, r = 0;
+      while (k < cells.length) {
+        const take = sizes[r++] || n;
         const row = document.createElement("div");
         row.className = "mr-row";
-        cells.slice(k, k + n).forEach((c) => row.appendChild(c));
+        cells.slice(k, k + take).forEach((c) => row.appendChild(c));
         el.appendChild(row);
+        k += take;
       }
       fitSizes(el);
     };
