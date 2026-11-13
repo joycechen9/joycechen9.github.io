@@ -88,6 +88,10 @@ const PROJECTS = [
     poster: "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-poster.jpg",
     photos: [],
     sections: [
+      { label: "", blocks: [
+        { type: "media-rows", rows: [3], items: ["assets/img/work/saturn-with-a-moon/saturn-gallery-01.jpg", "assets/img/work/saturn-with-a-moon/saturn-gallery-02.jpg", "assets/img/work/saturn-with-a-moon/saturn-gallery-03.jpg"] },
+        { type: "caption", text: "On display at the Sol Koffler Gallery" }
+      ] },
       { label: "Detail Shots", photos: [
         "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-01.jpg",
         "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-02.jpg",

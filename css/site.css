@@ -405,6 +405,8 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .blk-text a:hover { color: var(--accent); }
 .blk-text mark { background: #e6f7c6; padding: 1px 3px; border-radius: 3px; }
 .blk-list ol { margin: 0; padding-left: 24px; }
+.blk-caption { margin-top: 10px; }
+.blk-caption p { font-size: 14px; font-style: italic; margin: 0; }
 .blk-stack img { width: 100%; height: auto; margin-bottom: 14px; }
 .blk-image figure, .ann { margin: 0; }
 .blk-image img { width: 100%; height: auto; }
