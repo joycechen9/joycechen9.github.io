@@ -195,7 +195,7 @@ const PROJECTS = [
       { label: "", blocks: [
         { type: "image", src: "assets/img/work/fountain-for-bees/fb-render.jpg", maxWidth: 900, center: true }
       ] },
-      { label: "Detail Shots", blocks: [
+      { label: "", blocks: [
         { type: "media-rows", rows: [4], items: ["assets/img/work/fountain-for-bees/fountain-for-bees-04.jpg", "assets/img/work/fountain-for-bees/fountain-for-bees-05.jpg", "assets/img/work/fountain-for-bees/fountain-for-bees-02.jpg", "assets/img/work/fountain-for-bees/fountain-for-bees-01.jpg"] }
       ] },
       { label: "Form Iteration", blocks: [
