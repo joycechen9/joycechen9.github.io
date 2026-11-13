@@ -295,19 +295,19 @@ if (fromHash) {
   fade();
 
   if (REDUCE) return;
-  let busy = false, absorbing = false, lastWheel = 0;
+  let busy = false, absorbing = false, lastWheel = 0, lastAbs = 0, landed = 0;
   // Ease-out: picks up the scroll's momentum immediately, then settles gently
   const ease = (x) => 1 - Math.pow(1 - x, 4);
   function glide(to) {
     busy = true;
     absorbing = true;   // swallow the rest of this scroll gesture so the page stops where it lands
-    const from = window.scrollY, d = to - from, dur = 850, t0 = performance.now();
+    const from = window.scrollY, d = to - from, dur = 700, t0 = performance.now();
     document.documentElement.style.scrollBehavior = "auto";
     (function step(now) {
       const p = Math.min(1, (now - t0) / dur);
       window.scrollTo(0, from + d * ease(p));
       if (p < 1) requestAnimationFrame(step);
-      else { busy = false; document.documentElement.style.scrollBehavior = ""; }
+      else { busy = false; landed = performance.now(); document.documentElement.style.scrollBehavior = ""; }
     })(t0);
   }
   // Decide whether a scroll gesture should snap between the two sections
@@ -317,13 +317,15 @@ if (fromHash) {
     else if (dy < 0 && y > 2 && y <= top + 2) { e.preventDefault(); glide(0); }
   }
   window.addEventListener("wheel", (e) => {
-    const now = performance.now(), gap = now - lastWheel;
-    lastWheel = now;
+    const now = performance.now(), gap = now - lastWheel, abs = Math.abs(e.deltaY), prev = lastAbs;
+    lastWheel = now; lastAbs = abs;
     if (busy) { e.preventDefault(); return; }
-    // Trackpads keep sending "momentum" scroll after you lift your fingers. Until there's a
-    // short pause (a new gesture), ignore it, so the page rests at the top of the work section.
+    // Trackpads keep sending "momentum" scroll after you lift your fingers, and it only fades.
+    // Ignore that tail so the page rests at the top of the work section, but stop ignoring as
+    // soon as a new swipe starts (a pause, or the scroll suddenly speeding up again).
     if (absorbing) {
-      if (gap < 250) { e.preventDefault(); return; }
+      const fresh = gap > 150 || abs > prev * 1.5 + 4 || now - landed > 2500;
+      if (!fresh) { e.preventDefault(); return; }
       absorbing = false;
     }
     if (Math.abs(e.deltaY) > 2) intent(e.deltaY, e);
