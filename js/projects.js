@@ -726,12 +726,12 @@ const SELECTED_WORKS = {
     "saturn-with-a-moon",
     "kong",
     "manchild",
+    "around-the-counter:3",
     "redbull-flugtag",
     "dad-and-crab",
     "display-shelf",
     "telescoping-drop-pole",
     "perception",
-    "for-sale",
     "working-on-the-car",
     "lego-rescue",
     "chinese-market:6",
@@ -742,8 +742,9 @@ const SELECTED_WORKS = {
     "cardboard-party",
     "night"
   ],
-  hide: ["around-the-counter", "campus", "my-dream-about-thunderstorms", "it-is-so-cute", "medusa"],
+  hide: ["for-sale", "campus", "my-dream-about-thunderstorms", "it-is-so-cute", "medusa"],
   covers: {
+    "around-the-counter": [3],
     "chinese-market": [2, 6]
   }
 };
