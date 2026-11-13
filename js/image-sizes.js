@@ -892,8 +892,8 @@ const IMAGE_SIZES = {
 1280,
 932
 ],
-"assets/img/work/telescoping-drop-pole/telescoping-drop-pole-01.jpg": [
-848,
+"assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg": [
+1188,
 1800
 ],
 "assets/img/work/working-on-the-car/working-on-the-car-01.jpg": [
@@ -1125,6 +1125,6 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-06.jpg": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABwBACdASoYABIAPu1srVEppiQiqAqpMB2JZwDNhAYKQKw0x1kj0OFmhh8KAAD9z14KuOjBYcyeOChIuxuPwA7oyHqmQzTza9PZNrfFCGc2LQfEsasDjAPCimbbmcgAAAA=",
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-cover.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACwBACdASoYABgAPu1uq1GppiOiqAqpMB2JZwDPZA9ma5C/bVuaf77DNJzlZXQAAP5xZcFy8S/ELr+HnWRGSoefBxcf82FDKasIcYxGYYKRyHGplQlkOBUXY1d+Ai9BQjhgxRvuiPWiqK3sTthp2jmwNjXW/AAA",
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-poster.jpg": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQBQCdASoYABEAPu1irVAppSQisBgIATAdiWcAsOwRT2LFX6QucE9ZiWcb2d167CMgAP7i5OU7Cf5WoOjLqZtXF1RyK6lOX7ARedC330LIz8PNzHXiuaGK2HEhwtZ7LFOotAAA",
-"assets/img/work/telescoping-drop-pole/telescoping-drop-pole-01.jpg": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAwCdASoLABgAPu1iqk2ppaQiMAgBMB2JZwC7ABGiQy70AADfRwzsn6qJV431aobyBBpR6jf5wPPLcrSqgD18c+zhy09z7fcAAAAA",
+"assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABwAwCdASoQABgAPu1iqk2ppaQiMAgBMB2JaQAAidMRPvszPAAA/t2HN8vLI+dmPgXIw61wHMfzr5bSE7rT4EcoNVdOwwDsCgAAAA==",
 "assets/img/work/working-on-the-car/working-on-the-car-01.jpg": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAADQBACdASoYABMAPu1mq08ppaOiKA1RMB2JQBOgAkavGOIb6cEOS6DmC96nX2l/KAD9m2MNqeSH5NUxRhuM6SLQ/IJCzci6Cnv4a1Nr4+OUkscx2DG1tCdBLXuIJDMvXVrlC6nllOTxPCmn5b152hm+vV1upwmHrA1yhcRtY8WD/AdUA8QGgMIt3WQvtdSjPt3Sl7h1e/yEAA=="
 };

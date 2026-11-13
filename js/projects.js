@@ -260,8 +260,8 @@ const PROJECTS = [
     materials: "Materials",
     summary: "One-line description.",
     details: [],
-    cover: "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-01.jpg",
-    featured: "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-01.jpg",
+    cover: "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg",
+    featured: "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg",
     photos: []
   },
 {
