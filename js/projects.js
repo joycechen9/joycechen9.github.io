@@ -121,7 +121,7 @@ const PROJECTS = [
     year: 2025,
     tags: ["design"],
     materials: "",
-    summary: "In many rooms, progress is a negotiation between those who hold the wheel and those who quietly steer behind it. This stroller, outfitted with an electric-vehicle steering wheel, reflects on the roles we learn earlier in life and carry into work: questioning control, workplace dynamics, and efficiency.",
+    summary: "In many rooms, progress is a negotiation between those who hold the wheel and those who quietly steer behind it. This stroller, outfitted with an electric-vehicle steering wheel, reflects on the roles we learn earlier in life and carry into work. This piece playfully questions control, workplace dynamics, and efficiency.",
     details: [],
     cover: "assets/img/work/manchild/manchild-cover.jpg",
     featured: "assets/img/work/manchild/manchild-featured.jpg",
