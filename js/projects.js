@@ -227,7 +227,7 @@ const PROJECTS = [
   },
 {
     id: "redbull-flugtag",
-    title: "Redbull Flugtag",
+    title: "Red Bull Flugtag",
     pageTitle: "Red Bull Flugtag: Snap Pea Flying Machine",
     year: 2022,
     tags: ["design", "engineering"],
@@ -713,7 +713,7 @@ const NAME_FLIP_MS = 1000;
    Tiles are cropped so every column ends at the same height, except those
    listed in `contain`, which are shown whole on a white background. */
 const GRID_LAYOUTS = {
-  // Selected Works: narrower left column, Redbull moved above Manchild
+  // Selected Works: narrower left column, Red Bull moved above Manchild
   all: {
     columns: [
       ["new-windsor", "around-the-counter", "display-shelf", "working-on-the-car", "fountain-for-bees", "chinese-market:2", "mark-making-and-sound", "night"],
@@ -730,7 +730,7 @@ const GRID_LAYOUTS = {
     // shown whole (never cropped); any leftover space is filled with white
     contain: ["kong"]
   },
-  // Hand-arranged: For Sale/Kong and Trinket Shelf/Redbull swapped from the automatic grid.
+  // Hand-arranged: For Sale/Kong and Trinket Shelf/Red Bull swapped from the automatic grid.
   // fit: false = tiles keep their own shape (no cropping, columns end unevenly)
   design: {
     columns: [["new-windsor", "for-sale"], ["saturn-with-a-moon", "kong", "fountain-for-bees"], ["manchild", "redbull-flugtag", "display-shelf"]],
