@@ -125,13 +125,21 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
 /* Same frosted fade as the header */
 .filters::before {
-  content: ""; position: absolute; inset: 0 0 -18px 0; z-index: -1;
-  background: linear-gradient(to bottom, rgba(255,255,255,.85), rgba(255,255,255,.55) 70%, rgba(255,255,255,0));
+  content: ""; position: absolute; z-index: -1;
+  /* reaches up behind the header and out to the page edges, so header + filters read as one fade */
+  top: calc(-1 * var(--header-h)); bottom: -18px;
+  left: calc(-1 * var(--side)); right: calc(-1 * var(--side));
+  background: linear-gradient(to bottom, rgba(255,255,255,.85), rgba(255,255,255,.7) 75%, rgba(255,255,255,0));
   -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
   -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent);
-          mask-image: linear-gradient(to bottom, #000 65%, transparent);
+          mask-image: linear-gradient(to bottom, #000 80%, transparent);
   pointer-events: none;
+  opacity: 0; transition: opacity .2s;
 }
+/* only while the filter bar is stuck under the header; then the header's own fade steps aside */
+.filters.stuck::before { opacity: 1; }
+body.filters-stuck .site-header::before { opacity: 0; }
+.site-header::before { transition: opacity .2s; }
 .filters button {
   font: inherit;
   font-size: 20px;

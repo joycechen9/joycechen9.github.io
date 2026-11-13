@@ -172,3 +172,18 @@ function flipper(box, frames, ms) {
     frames[i].classList.add("on");
   }, ms);
 }
+
+// Mark the sticky filter bar while it's pinned under the header (for the shared frosted fade)
+document.addEventListener("DOMContentLoaded", () => {
+  const f = document.querySelector(".filters");
+  const h = document.querySelector(".site-header");
+  if (!f || !h) return;
+  const check = () => {
+    const stuck = f.getBoundingClientRect().top <= h.offsetHeight + 1 && window.scrollY > 0;
+    f.classList.toggle("stuck", stuck);
+    document.body.classList.toggle("filters-stuck", stuck);
+  };
+  window.addEventListener("scroll", check, { passive: true });
+  window.addEventListener("resize", check);
+  check();
+});
