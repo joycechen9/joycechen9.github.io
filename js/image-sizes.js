@@ -708,6 +708,10 @@ const IMAGE_SIZES = {
 3600,
 1103
 ],
+"assets/img/work/redbull-flugtag/redbull-flight-clip-poster.jpg": [
+720,
+1200
+],
 "assets/img/work/redbull-flugtag/redbull-flugtag-02.jpg": [
 1024,
 768
@@ -735,6 +739,10 @@ const IMAGE_SIZES = {
 "assets/img/work/redbull-flugtag/redbull-flugtag-08.jpg": [
 768,
 1024
+],
+"assets/img/work/redbull-flugtag/redbull-flugtag-flight-crop.jpg": [
+1440,
+960
 ],
 "assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg": [
 1800,
@@ -803,6 +811,10 @@ const IMAGE_SIZES = {
 "assets/img/work/redbull-flugtag/redbull-stunt-04.jpg": [
 2400,
 1350
+],
+"assets/img/work/redbull-flugtag/redbull-stunt-flight-poster.jpg": [
+1000,
+988
 ],
 "assets/img/work/salico/salico-cover.jpg": [
 1800,
@@ -1159,6 +1171,7 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/night/night-01.jpg": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoYABEAPu1wsFKppiSiqAgBMB2JZQDH5A3foRpwXFe+iAD+zGaAx4Ci/ePGB9Kp1ieeiRFtjiZAuxl6jP1Bc8uSRzpE8Ms4VKja6wAA",
 "assets/img/work/perception/perception-01.jpg": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwAwCdASoYAA8APu1orU6ppiSiMAgBMB2JbAAdqqBiwQQEqPEsubqgAP7rJaFjUkYRfemVK8vyCCrQR+EVeI32p5zH/1ViZpwbPpZCDCsYJWR/4ZS1ttD0A1xkH7/esix3h9JW9e5bmQndPswVP1buw6Lrj3v8UpZACD+1G/sZ/kY/ACjQrgAA",
 "assets/img/work/perception/perception-pair.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABQBACdASoYAAcAPu1iqU2ppaQiMAgBMB2JbACdMoRwACIMxQwYt66/oN/gAP7giOWuQccoNGV5M0LSUGZrEMx2k1q1Oij5d3GogKFJzu6hcDhV1gypRoJdhGq19/yjENAMiqRtrgTqL6VdnQDYAAAA",
+"assets/img/work/redbull-flugtag/redbull-flight-clip-poster.jpg": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAwCdASoOABgAPu1kqU2ppaQiMAgBMB2JZAAAM5I/F1hzcyMBAAD+uwO0jj8EIsjL6N8E+fya+DaAfb649Buk4ffC28i1rEQtEA1Lm70ARpRiuOAAAA==",
 "assets/img/work/redbull-flugtag/redbull-flugtag-02.jpg": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAABQBQCdASoYABIAPu1srVEppaQiqAqpMB2JZQC/7y/ou0l2MUa6IZ3/yqvJTJEtjaZqFwAA/qrEudSmIW1WDtpp6bYI5Au6sXCXhuhOcGidhY+xCV3eZxjhuk2MIRhooOdm8uqjJkyPjWFuPlEQ97wODZzp+Yz9yal9+TPfHUv+JAO809cu/hAIDvgObmz/41FLmwkfQKHhIBQA",
 "assets/img/work/redbull-flugtag/redbull-flugtag-03.jpg": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQBQCdASoSABgAPu1srFEppaQiqAqpMB2JQBb3Aie65++bzl/ZkVCR7aT+Mjv6JaAAAOIoxbichClYYW4s5bLFEa83oYIlbU2HbPecyBTiFrIOxnrUDKzUxMtVukpASIWq1pUpntK0BPyYBhN0jKb3/dc+72h2JeZrpNA+4UiLa+JvwhFVDMFm3CUivWTI2qC4AA==",
 "assets/img/work/redbull-flugtag/redbull-flugtag-04.jpg": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwBQCdASoSABgAPuFgqE2opaQiMAwBEBwJYgDDNCKbLBbBw0P3AIoC+Lcv/rM9yMbHgAD+NC5mjV+lcNWNhUBV2N9AfyHh9dPtnxJCzwATNO+BuICvA6v/E131/jdV6h1yRixxnEfj3TH1QJdxN2wz80UQQaAPcZ4deiI+oKwgQAAA",
@@ -1166,6 +1179,7 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/redbull-flugtag/redbull-flugtag-06.jpg": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADwBACdASoSABgAPu1srFEppaQiqAqpMB2JZQDNwAhGhNVDeG4mDcQJwuW1z9HuEAAA+eLoCL8BeZsoIS3BOQtIF6ad6f2efPiOW5ZzRNPVhBY4/r3OV+AOmLKoydk/YEsgkT40UQPx7OMi0MH+Q+OiHAAFxsLvGwaWJwSULdDqokgA",
 "assets/img/work/redbull-flugtag/redbull-flugtag-07.jpg": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAACwBACdASoSABgAPu1kpk4ppaMiMBgMATAdiUAYG4GYYNRIijB1f094y/CDq6AAAP7NuzUGXymS8jVQaeYzv0QaNpRTef2tdzic3DEU0BlN8AUXrkuiDp5XP/gJTlF5hIyft88CPUeVJMA/laxb4RLn7YPiv+0Q9WGeqeDKeEZB+Qxf7A9jQAAA",
 "assets/img/work/redbull-flugtag/redbull-flugtag-08.jpg": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwBACdASoSABgAPu1kq06ppaQiKA1RMB2JQBbZAkUcMKP3u/AgmGVqUr5H5wjqrwAA/Z0fytXf4QlJYSwF05QfjiDOTSWNeb9GDcRdtk2ft10QUXZTb/lDCkw2ICOZCPukMJF78Mev5eOxBgI28ElAup18d9jokoxSmWrCGYo4kYzPxm4xoAAA",
+"assets/img/work/redbull-flugtag/redbull-flugtag-flight-crop.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JQBYeNQAuBEsMqrqyJMEZmwAA3Bp0mNdT/yGF1k0jTMmbXVhTblQhnpKLLUbUMRcQ9ncXB86cQWfFGL8r1++Izd6tvM9EpqE0b9IPL6AtFzDUpS5ESAAA",
 "assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JQBYdg1pCyoFhAOwnsADylxuOloLS4m8+Ty5J6WG3R2MwNcz7iChbCq1QAMgyVdCDZq12lrakpgM2Pz52B88h1E3IF/OTZCgERoiatFWfKeiEI/o/uogrAAA=",
 "assets/img/work/redbull-flugtag/redbull-flugtag-podium.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBQCdASoYABIAPu1krE+ppSQiMBgIATAdiWIAqSeOwa0BvxovohgrVnpmKgRLauUAAAD+xeVPqiyBnk/rkBEbsNm2NI5ZzxqImQQeB8EH+ooo9WEo4LM0QR8KSC+1OhKTS5pYH3GryxrqzzTjbU1+rKjTzllxL505A8GDZ3M6Tud2RJAsYTwAAAA=",
 "assets/img/work/redbull-flugtag/redbull-flugtag-race.jpg": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADwAwCdASoYAA0APu1iqU2ppaQiMAgBMB2JYwCnFB3XnQSWj6pU77YAAP7AL0SclJmx+34H1W+EzRAMOmQYbeMzbUfgTuuWsVEXzCqu0w1p4AT1OXEqQO7C8L0Q8a6/8t32oGev808fTPE+9XrrZ7uoui9sWRN8obhfIYZy4WVztA8WAAA=",
@@ -1183,6 +1197,7 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/redbull-flugtag/redbull-stunt-02.jpg": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACwAwCdASoYAA4APu1kqU2ppaOiMAgBMB2JZQAATtq9bs14WXtKOAD8ygXusnYAjHSKYtoVgyhDRyD6CReNBZb8kg21aKqomQw/+eIA1WUxpGbAhhP+WvVHbL4oCdxJ6TI6o1/qCkZwW2LMeEndCAbpztIOSMkr65hEwAAA",
 "assets/img/work/redbull-flugtag/redbull-stunt-03.jpg": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADwBACdASoYABIAPu1wsFKppiSiqAgBMB2JYgCw7BEcON2iuHbmVaB9pxzkXSdgNAAA/uqP2XYgj5JYi3J5seIz9Er8MB+dQ0cmvvEJdR+Hft5BQ0dA/9OelmOw20X1X3jICC0G0RQ94k2gXurI0ApxDfLV3NBBhBb5FyC7UJW+7J1gR2RP9m3BlxfwAA==",
 "assets/img/work/redbull-flugtag/redbull-stunt-04.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAwBACdASoYAA4APu1iqk2ppaQiMAgBMB2JZQAAXBjOWm85J93dK/bqf6AA/aas8GM0MxosjVw0RxXRdDbQAM1bJIvCyQW3Oue7FB4SYx9RiJ2vDmEnqpmvsrAfHww6T4u0bApTUb+EzQVajD7072SocokAOAAA",
+"assets/img/work/redbull-flugtag/redbull-stunt-flight-poster.jpg": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAABwAwCdASoYABgAPuVipk2pJaOiMAwBIByJaQAAAlb3hDcM/BAA+cyfj1wrSEMAasyEMjO96z73dP4YgdItEHJrhYDhjXhdjhmcGvMcAAA=",
 "assets/img/work/salico/salico-cover.jpg": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAABwBQCdASoYABIAPu1osFAppaUiqAqpMB2JQBdmZJfIBLxOdrvwF0SmcUU/Q2snTU3ApiWAAP7I38zx2BIJ05XmorB7Mx3gaCBDhcHRlopCZtw/X73IXIoUsjTR+DhyHVU7SsFXQmazHJEHDyH4Efc78tU1AsUF4BWdVUiCO8J7fDtCvmc54dXB1QKzkw9ncqwdE2SrY3B3wKNVV0SkAAAA",
 "assets/img/work/salico/salico-ponds-poster.jpg": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoYAAwAPu1iqk2ppaQiMAgBMB2JYgCdIIjCdQjOCzKxT4AA/iZ0UAK55faEsqtnL0vGVaK7FMAad1yf6W/5wYYZTVxsT1qPgpCql9gnUjxyLjxSsSwzDjLuc3S8mcvAAAA=",
 "assets/img/work/salico/salico-poster.jpg": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAwCdASoYAA4APu1orU2ppqSiMAgBMB2JQBOmUGYwCTQFtmwccqQA996WfY+K9A+5iTJzhcCB4GUMrHzTgRhg4DegOh2/dty3KQc17RqI8yjEwHlgAA==",

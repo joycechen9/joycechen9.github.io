@@ -235,7 +235,7 @@ const PROJECTS = [
     featuredLayout: "pair",
     featured: [
       { video: "assets/img/work/redbull-flugtag/redbull-flight-clip.mp4", poster: "assets/img/work/redbull-flugtag/redbull-flight-clip-poster.jpg", w: 720, h: 1200 },
-      "assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg"
+      "assets/img/work/redbull-flugtag/redbull-flugtag-flight-crop.jpg"
     ],
     photos: [],
     sections: [
