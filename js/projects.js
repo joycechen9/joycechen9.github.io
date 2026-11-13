@@ -701,6 +701,17 @@ const NAME_FLIP_MS = 1000;
    Tiles are cropped so every column ends at the same height, except those
    listed in `contain`, which are shown whole on a white background. */
 const GRID_LAYOUTS = {
+  // Selected Works: narrower left column, Redbull moved above Manchild
+  all: {
+    columns: [
+      ["new-windsor", "around-the-counter", "display-shelf", "working-on-the-car", "fountain-for-bees", "chinese-market:2", "mark-making-and-sound", "night"],
+      ["salico", "kong", "telescoping-drop-pole", "chinese-market:6", "dishwasher", "cardboard-party"],
+      ["saturn-with-a-moon", "redbull-flugtag", "manchild", "dad-and-crab", "perception", "lego-rescue"]
+    ],
+    widths: [0.85, 1.075, 1.075],
+    crop: { "redbull-flugtag": { bottom: 0.2 }, "manchild": { top: 0.06 } },
+    fit: false
+  },
   engineering: {
     columns: [["salico", "redbull-flugtag"], ["kong", "lego-rescue"], ["telescoping-drop-pole"]],
     widths: [750, 550, 390],

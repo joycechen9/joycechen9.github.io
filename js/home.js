@@ -116,7 +116,7 @@ function customLayout() {
     col.style.flex = `${(cfg.widths || [])[c] || 1} 1 0`;
     grid.appendChild(col);
     ids.forEach((id) => {
-      const t = visible.find((x) => x.dataset.pid === id && !placed.has(x));
+      const t = visible.find((x) => (x.dataset.key === id || x.dataset.pid === id) && !placed.has(x));
       if (t) { col.appendChild(t); placed.add(t); }
     });
     return col;
@@ -127,7 +127,12 @@ function customLayout() {
     cols.forEach((col) => [...col.children].forEach((t, i) => {
       t.classList.remove("contain");
       t.style.height = "";
-      t.style.aspectRatio = (1 / ratioOf(t, i)).toFixed(4);
+      // crop: { id: { top: 0.1, bottom: 0.2 } } trims that share off the tile's image
+      const cr = (cfg.crop || {})[t.dataset.key] || (cfg.crop || {})[t.dataset.pid] || {};
+      const top = cr.top || 0, bottom = cr.bottom || 0, keep = 1 - top - bottom;
+      t.style.aspectRatio = (1 / (ratioOf(t, i) * keep)).toFixed(4);
+      const img = t.querySelector("img");
+      if (img) img.style.objectPosition = keep < 1 ? `center ${(100 * top / (top + bottom)).toFixed(1)}%` : "";
     }));
     fitSizes(grid);
     return true;
