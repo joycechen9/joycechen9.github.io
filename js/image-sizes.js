@@ -744,10 +744,6 @@ const IMAGE_SIZES = {
 1440,
 960
 ],
-"assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg": [
-1800,
-1200
-],
 "assets/img/work/redbull-flugtag/redbull-flugtag-podium.jpg": [
 1800,
 1382
@@ -1180,7 +1176,6 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/redbull-flugtag/redbull-flugtag-07.jpg": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAACwBACdASoSABgAPu1kpk4ppaMiMBgMATAdiUAYG4GYYNRIijB1f094y/CDq6AAAP7NuzUGXymS8jVQaeYzv0QaNpRTef2tdzic3DEU0BlN8AUXrkuiDp5XP/gJTlF5hIyft88CPUeVJMA/laxb4RLn7YPiv+0Q9WGeqeDKeEZB+Qxf7A9jQAAA",
 "assets/img/work/redbull-flugtag/redbull-flugtag-08.jpg": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwBACdASoSABgAPu1kq06ppaQiKA1RMB2JQBbZAkUcMKP3u/AgmGVqUr5H5wjqrwAA/Z0fytXf4QlJYSwF05QfjiDOTSWNeb9GDcRdtk2ft10QUXZTb/lDCkw2ICOZCPukMJF78Mev5eOxBgI28ElAup18d9jokoxSmWrCGYo4kYzPxm4xoAAA",
 "assets/img/work/redbull-flugtag/redbull-flugtag-flight-crop.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JQBYeNQAuBEsMqrqyJMEZmwAA3Bp0mNdT/yGF1k0jTMmbXVhTblQhnpKLLUbUMRcQ9ncXB86cQWfFGL8r1++Izd6tvM9EpqE0b9IPL6AtFzDUpS5ESAAA",
-"assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JQBYdg1pCyoFhAOwnsADylxuOloLS4m8+Ty5J6WG3R2MwNcz7iChbCq1QAMgyVdCDZq12lrakpgM2Pz52B88h1E3IF/OTZCgERoiatFWfKeiEI/o/uogrAAA=",
 "assets/img/work/redbull-flugtag/redbull-flugtag-podium.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBQCdASoYABIAPu1krE+ppSQiMBgIATAdiWIAqSeOwa0BvxovohgrVnpmKgRLauUAAAD+xeVPqiyBnk/rkBEbsNm2NI5ZzxqImQQeB8EH+ooo9WEo4LM0QR8KSC+1OhKTS5pYH3GryxrqzzTjbU1+rKjTzllxL505A8GDZ3M6Tud2RJAsYTwAAAA=",
 "assets/img/work/redbull-flugtag/redbull-flugtag-race.jpg": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADwAwCdASoYAA0APu1iqU2ppaQiMAgBMB2JYwCnFB3XnQSWj6pU77YAAP7AL0SclJmx+34H1W+EzRAMOmQYbeMzbUfgTuuWsVEXzCqu0w1p4AT1OXEqQO7C8L0Q8a6/8t32oGev808fTPE+9XrrZ7uoui9sWRN8obhfIYZy4WVztA8WAAA=",
 "assets/img/work/redbull-flugtag/redbull-sketch-01.jpg": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAQBQCdASoYABgAPtFYok2oJaMiN+gBABoJaQAAiE0T4WULY+qAMT4VANVUZC78eswAAP72B4seYahpftHS0w/R1wSyCWStHMakVQXvD01B5ca3VQHzX2uy6y3Ja9gvOodw0zW4okgmwyNlnnSmVqyBxaGdQkQV5oPe53G4elPMthyvFJK9SymPn05KS4AAAAA=",

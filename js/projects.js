@@ -230,7 +230,7 @@ const PROJECTS = [
     links: [
       { label: "Learn more on SnapPea", href: "https://snappeadesign.com/we-can-design-anything/" }
     ],
-    cover: "assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg",
+    cover: "assets/img/work/redbull-flugtag/redbull-flugtag-flight-crop.jpg",
     featuredWide: true,
     featuredLayout: "pair",
     featured: [
