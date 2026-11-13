@@ -189,12 +189,22 @@ const PROJECTS = [
     details: [],
     cover: "assets/img/work/fountain-for-bees/fountain-for-bees-01.jpg",
     tagCovers: { art: "assets/img/work/fountain-for-bees/fountain-for-bees-02.jpg" },
-    featured: "assets/img/work/fountain-for-bees/fountain-for-bees-01.jpg",
-    photos: [
-      "assets/img/work/fountain-for-bees/fountain-for-bees-02.jpg"
-    ],
+    featuredLayout: "pair",
+    featured: ["assets/img/work/fountain-for-bees/fountain-for-bees-03.jpg", "assets/img/work/fountain-for-bees/fountain-for-bees-02.jpg"],
+    photos: [],
     sections: [
-      { label: "Sketchbook Ideation", layout: "row", photos: ["assets/img/work/fountain-for-bees/fountain-for-bees-sketch-01.jpg", "assets/img/work/fountain-for-bees/fountain-for-bees-sketch-02.jpg"] }
+      { label: "", blocks: [
+        { type: "image", src: "assets/img/work/fountain-for-bees/fb-render.jpg" }
+      ] },
+      { label: "Detail Shots", blocks: [
+        { type: "media-rows", rows: [3], items: ["assets/img/work/fountain-for-bees/fountain-for-bees-04.jpg", "assets/img/work/fountain-for-bees/fountain-for-bees-05.jpg", "assets/img/work/fountain-for-bees/fountain-for-bees-01.jpg"] }
+      ] },
+      { label: "Form Iteration", blocks: [
+        { type: "media-rows", rows: [5], items: ["assets/img/work/fountain-for-bees/fb-form-01.jpg", "assets/img/work/fountain-for-bees/fb-form-02.jpg", "assets/img/work/fountain-for-bees/fb-form-03.jpg", "assets/img/work/fountain-for-bees/fb-form-04.jpg", "assets/img/work/fountain-for-bees/fb-form-05.jpg"] }
+      ] },
+      { label: "Sketchbook Ideation and Research", blocks: [
+        { type: "media-rows", rows: [4, 4], items: ["assets/img/work/fountain-for-bees/fb-research-01.jpg", "assets/img/work/fountain-for-bees/fb-research-02.jpg", "assets/img/work/fountain-for-bees/fountain-for-bees-sketch-01.jpg", "assets/img/work/fountain-for-bees/fountain-for-bees-sketch-02.jpg", "assets/img/work/fountain-for-bees/fb-research-03.jpg", "assets/img/work/fountain-for-bees/fb-research-04.jpg", "assets/img/work/fountain-for-bees/fb-research-05.jpg", "assets/img/work/fountain-for-bees/fb-research-06.jpg"] }
+      ] }
     ]
   },
 {
