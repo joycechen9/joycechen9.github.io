@@ -711,6 +711,7 @@ const GRID_LAYOUTS = {
   // fit: false = tiles keep their own shape (no cropping, columns end unevenly)
   design: {
     columns: [["new-windsor", "for-sale"], ["saturn-with-a-moon", "kong", "fountain-for-bees"], ["manchild", "redbull-flugtag", "display-shelf"]],
+    widths: [1, 1, 1.25],   // third column a bit wider
     fit: false
   }
 };
