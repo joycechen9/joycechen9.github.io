@@ -7,8 +7,9 @@ if (!p) {
   document.getElementById("project").innerHTML =
     '<p class="not-found">Project not found. <a href="index.html#work">Back to work</a></p>';
 } else {
-  document.title = p.title + " | Joyce Chen";
-  document.getElementById("p-title").textContent = p.title.toUpperCase();
+  // pageTitle (optional): a longer title used only on the project page itself
+  document.title = (p.pageTitle || p.title) + " | Joyce Chen";
+  document.getElementById("p-title").textContent = (p.pageTitle || p.title).toUpperCase();
   // Materials, size and year, one per line
   const meta = document.getElementById("p-meta");
   [p.materials, p.size, String(p.year)].filter(Boolean).forEach((line, i) => {

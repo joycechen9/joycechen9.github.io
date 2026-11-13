@@ -228,6 +228,7 @@ const PROJECTS = [
 {
     id: "redbull-flugtag",
     title: "Redbull Flugtag",
+    pageTitle: "Red Bull Flugtag: Snap Pea Flying Machine",
     year: 2022,
     tags: ["design", "engineering"],
     materials: "Wood, bicycle wheels, balloons",
