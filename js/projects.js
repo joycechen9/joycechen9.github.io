@@ -176,7 +176,7 @@ const PROJECTS = [
       { label: "Details", layout: "row", photos: ["assets/img/work/display-shelf/shelf-05.jpg", "assets/img/work/display-shelf/shelf-06.jpg", "assets/img/work/display-shelf/shelf-07.jpg"] },
       { label: "Manual Fabrication", layout: "row", perRow: 4, photos: ["assets/img/work/display-shelf/shelf-21.jpg", "assets/img/work/display-shelf/shelf-22.jpg", "assets/img/work/display-shelf/shelf-23.jpg", "assets/img/work/display-shelf/shelf-24.jpg"] },
       { label: "Roughly Planning Out on CAD", layout: "row", perRow: 4, photos: ["assets/img/work/display-shelf/shelf-15.jpg", "assets/img/work/display-shelf/shelf-16.jpg", "assets/img/work/display-shelf/shelf-17.jpg", "assets/img/work/display-shelf/shelf-18.jpg"] },
-      { label: "Sketching and Brainstorming", layout: "row", perRow: 2, photos: ["assets/img/work/display-shelf/shelf-19.jpg", "assets/img/work/display-shelf/shelf-20.jpg"] }
+      { label: "Sketchbook Ideation", layout: "row", perRow: 3, photos: ["assets/img/work/display-shelf/shelf-19.jpg", "assets/img/work/display-shelf/shelf-20.jpg", "assets/img/work/display-shelf/shelf-25.jpg"] }
     ]
   },
 {
@@ -192,6 +192,9 @@ const PROJECTS = [
     featured: "assets/img/work/fountain-for-bees/fountain-for-bees-01.jpg",
     photos: [
       "assets/img/work/fountain-for-bees/fountain-for-bees-02.jpg"
+    ],
+    sections: [
+      { label: "Sketchbook Ideation", layout: "row", photos: ["assets/img/work/fountain-for-bees/fountain-for-bees-sketch-01.jpg", "assets/img/work/fountain-for-bees/fountain-for-bees-sketch-02.jpg"] }
     ]
   },
 {
@@ -608,7 +611,7 @@ const PROJECTS = [
 /* One sketchbook per tag. The SKETCHBOOK link under the work list opens
    the one for the selected filter: sketchbook.html?tag=design, etc. */
 const SKETCHBOOKS = {
-  design: { intro: "", images: ["assets/img/work/display-shelf/shelf-19.jpg", "assets/img/work/display-shelf/shelf-20.jpg"] },
+  design: { intro: "", images: ["assets/img/work/display-shelf/shelf-19.jpg", "assets/img/work/display-shelf/shelf-20.jpg", "assets/img/work/display-shelf/shelf-25.jpg", "assets/img/work/fountain-for-bees/fountain-for-bees-sketch-01.jpg", "assets/img/work/fountain-for-bees/fountain-for-bees-sketch-02.jpg"] },
   engineering: { intro: "", images: ["assets/img/work/display-shelf/shelf-19.jpg", "assets/img/work/display-shelf/shelf-20.jpg"] },
   art: {
     intro: "",
@@ -634,7 +637,9 @@ const SKETCHBOOKS = {
       "assets/img/sketchbook/art/art-sketch-27.jpg",
       "assets/img/sketchbook/art/art-sketch-28.jpg",
       "assets/img/sketchbook/art/art-sketch-29.jpg",
-      "assets/img/sketchbook/art/art-sketch-30.jpg"
+      "assets/img/sketchbook/art/art-sketch-30.jpg",
+      "assets/img/sketchbook/art/art-sketch-31.jpg",
+      "assets/img/sketchbook/art/art-sketch-32.jpg"
     ]
   }
 };

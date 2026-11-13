@@ -288,6 +288,14 @@ const IMAGE_SIZES = {
 1285,
 1800
 ],
+"assets/img/sketchbook/art/art-sketch-31.jpg": [
+1286,
+1800
+],
+"assets/img/sketchbook/art/art-sketch-32.jpg": [
+1161,
+1800
+],
 "assets/img/work/around-the-counter/around-the-counter-01.jpg": [
 1296,
 1800
@@ -468,6 +476,10 @@ const IMAGE_SIZES = {
 1350,
 1800
 ],
+"assets/img/work/display-shelf/shelf-25.jpg": [
+1286,
+1800
+],
 "assets/img/work/for-sale/for-sale-01.jpg": [
 1800,
 1200
@@ -482,6 +494,14 @@ const IMAGE_SIZES = {
 ],
 "assets/img/work/fountain-for-bees/fountain-for-bees-02.jpg": [
 1800,
+1800
+],
+"assets/img/work/fountain-for-bees/fountain-for-bees-sketch-01.jpg": [
+1256,
+1800
+],
+"assets/img/work/fountain-for-bees/fountain-for-bees-sketch-02.jpg": [
+1298,
 1800
 ],
 "assets/img/work/it-is-so-cute/it-is-so-cute-01.jpg": [
@@ -986,6 +1006,8 @@ const IMAGE_PREVIEWS = {
 "assets/img/sketchbook/art/art-sketch-28.jpg": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwBACdASoTABgAPu1kqlAppSOisBgIATAdiWUAnQAQ5DrdzJKKPDHpNw7rZ94FPcAA/q7+FQ22bY8zLnmgtKbcvXB8WAfNz5bI2ASJ02f401y59bFmceOGKM/IPJgA",
 "assets/img/sketchbook/art/art-sketch-29.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACQBACdASoSABgAPu1mq06ppaQiKA1RMB2JZQCo9AfDvffydKPolCF4Sz02AAAA/pQbibDuMtgtqTtDRQd7ca0TlurmucRC1BRIIw0aG5zYgZZhH27B1IuMvXwfvMawXzeyeBmH57mwZmIGfbeSAA==",
 "assets/img/sketchbook/art/art-sketch-30.jpg": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAwCdASoRABgAPu1opU4ppiMiMBgMATAdiWUAx+QQ5PP8y7/7F4AA/lPxjRuU94MtUreIw0a6IyL08fKNpOpTB/e2QAAA",
+"assets/img/sketchbook/art/art-sketch-31.jpg": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABQBACdASoRABgAPu1kqU2ppaQiMAgBMB2JaQDKtCHfiu7eKRZZa84sYiAAAP7eWUQwxbW7CpDSbtelVD9UbkiWyGgfpKbF7XVYn3j5HB7QAAAA",
+"assets/img/sketchbook/art/art-sketch-32.jpg": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAABQAwCdASoPABgAPu1iqk2ppaQiMAgBMB2JZwDImCx+fdLS4AD+6Jochtz2z6G0GSv051cWh0HFYjNYpdUAAA==",
 "assets/img/work/around-the-counter/around-the-counter-01.jpg": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwBACdASoRABgAPt1YpU2opSOiN/qoARAbiWUAw6welbxZudkBisyVoUm+AAD+w/2usIxtrxd+XJf35YeMy9+vr9uJZOBLaBxw+PvQc7Llrll/IzFSYs4amZKPPhJH6aOfIAAA",
 "assets/img/work/around-the-counter/around-the-counter-02.jpg": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAACQBACdASoYABQAPu1mq08ppaOiKA1RMB2JYgCdMw6AGRnwNDt6rboW3QCKYwAA+BmUfLQfFcwZBhxRE5ThXsmF2dJnmnYLGNYB92pCNsTQFLmDCd04svO2nxt9Cyyf1PAr39Q3GXgXTxrWNB+m06GtYOAAAA==",
 "assets/img/work/around-the-counter/around-the-counter-03.jpg": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAwBACdASoYAAsAPu1iqU2ppaQiMAgBMB2JZACdMoADCyHLXq0+2IzeAlQA3lbISPtvCx0g+2wbYMrkMwAj3BjkbxrElnuCQFmu1KIun13QQcK0xbR4ZA8USbbav6TQw/MczSJh1ZA5fzkAAAA=",
@@ -1031,10 +1053,13 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/display-shelf/shelf-22.jpg": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBQCdASoSABgAPu1sqlEppaOiqAqpMB2JYwDA3BI+T/tkMISsZrdSFfWbAk/Zh5zwAPfcqZvrBFkLXNSyuwI1w/KykAnysux4Z6isWIz3dUgZTtivmsZMpYwVlx0STbxmKS7YBpdhFUwqNwiC2UHghsVYupTDqLmuILhClNzCxthqAAAAAA==",
 "assets/img/work/display-shelf/shelf-23.jpg": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAABwBQCdASoSABgAPu1qq1EppaOiqAqpMB2JQBYeAQAMwgTQm+kfQqkN1v8FKMX+AIuQ7zQAAPtmCGhfDYnMnz7hFE1NWX/ncj1Y4yqlREKRwii70rgxY5GL7GVpdmAmMxWZpXCtmt7fqE2ESq8b+5u8+Suq0fP2kipgMkr8ZWbVUx7nPgOB1HPA/rBbP8aFhiLkryo/J95uQldXjyCZIE19Rk0T7xsLTkh/Yu6Qu1Y1ES6y3fTsvNT2wpgVCAAA",
 "assets/img/work/display-shelf/shelf-24.jpg": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAABwBACdASoSABgAPu1osFAppaSiqAqpMB2JQBWAAL/2kSlR7s529IUyvHTBIADeGrdfryWEXG7a5+bWw9yk0IDU255voHbVdtTSZqJF160xpsp7lZjz5qBUAePyiU+ofzcBzX5LOwzOAPssuCWUN/taC0vMC9d+Bi2jMe2Xajw9g7C7Ps9MtTbF7C2B1Rg9pRMGfhyfGsJKEv3CrCgAAA==",
+"assets/img/work/display-shelf/shelf-25.jpg": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACQAwCdASoRABgAPulgo02pJaMiMAwBIB0JaQDN/DCxqnPgeBIAAP7rck9Olp73N0dHIvS4PGrkTsIuD+O9sPpffAAAAA==",
 "assets/img/work/for-sale/for-sale-01.jpg": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JQBYdhDtPMt+pMJfOnDInAAD+rv7BCRmG7xvo6TLRJLSwFz7kCBMlv8krUuMNUjMltoMzjM3SL/MEhvje+Z6d29089IWdbcLjhMMT99csQZNrkdXortkUcYzdIVbYAAA=",
 "assets/img/work/for-sale/for-sale-02.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JYwCw7AMWN1cK+GAA/l/b1kmR4KA1swXNRv5/mOJBN/S/VqTFqnvwVcPRoCNUepi5/7kX2ltT21sIAM2gvj+AhTYYt3XYGPhLNLzwFLbuJLQpClfAAA==",
 "assets/img/work/fountain-for-bees/fountain-for-bees-01.jpg": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAADwBACdASoSABgAPu1qrlCppaQiqAqpMB2JaACxHoABHPSbIfRK23Tykzb0Q1c6a0AA/uXzRn74sjiWWCnzfxtngl7DH105edXoivA0FpXoYFaqaVtk2wMqYFLSvslKSmHiya2nXd72tTXaVQ8z9lduqi5dIRjNcfIODqwAZkjNwh9DhmEe0QDxaZ/fjCAxKlk5i8a+Rf19hLEiBg2d4AAA",
 "assets/img/work/fountain-for-bees/fountain-for-bees-02.jpg": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAABQBQCdASoYABgAPu1wr1IppiQiqAgBMB2JZACxHxhOAAwFG6B0qFqNAAEm6CxIoEsv7QAA/s8vDDLiSGsIZa8K0ZxI2r19BQaZ3Pd3Ve/N/ja3fAhbPuxbwBMbvxdI9MvbZutxX8CjNsthCRsuPxF99XerTacr64nj43TIu4SHola/n074+v6WWzj3QzmZaOSJsVlxUz1MLFxS1N/WukCuyRoQAS36sCDpnh3FvAoKguEBUccYm361ABX0jH/64ZgGa8IAAAA=",
+"assets/img/work/fountain-for-bees/fountain-for-bees-sketch-01.jpg": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAwCdASoRABgAPu1mqU2ppaOpMAgBMB2JaQAAW+gFCssGMdUzzfQA/tVbUr1nFf2XdX+Mglme5JjDivoyDKHZq40fvvWamyvlYS/xwAA=",
+"assets/img/work/fountain-for-bees/fountain-for-bees-sketch-02.jpg": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAwCdASoRABgAPu1kqU2ppaQiMAgBMB2JaQDJEC04ie/lx07rAAD+7A7JqPHGRuHJflkUZDy4OnU2WdNY8/1xOi10cQSwrkVCTs4AAAA=",
 "assets/img/work/it-is-so-cute/it-is-so-cute-01.jpg": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAADwBACdASoSABgAPu1grFAppKQisBgIATAdiWYAwqDugSmyX4VlLcbZ8klTMwcqJwAA/uxD4Vw1TzGerHiktK15p+05ZHC3R4ObT7d9XcLrOhkJnkQ3adUL+LXjwGGth+4ql09i8s4Z8q7jBac4eeBVi2nlMhJBHIGU4/BMZ2AehVJAgqkodMY47MaSmMoAAAA=",
 "assets/img/work/kong/kong-01.jpg": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoPABgAPu1kqk4ppaQiMAgBMB2JaQAAW+yipVPGbmAvPkMAAP7wQJ2FmLBSXJR9BP0yMdmVZE+BNW9H601KQC29My4t2wt00XcLHVhvIfa6ahAAAAA=",
 "assets/img/work/lego-rescue/lego-rescue-01.jpg": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAQBQCdASoWABgAPu1krE4ppaSiKA1RMB2JQBibAiO6BcFq1xOj0BTkWUkT7H7r3lAAAP7ep48Hr92N5IHa8QH9Muw8G4StmPqh1H+BW1/A2GgdgFaB8TfNGUXpfCyTRkNo8ctw0x42VBK2/iGtv3LeAnKXl0R1mijRLom/9x8US3JWFmBKetfHuPPtNsAAAAA=",
