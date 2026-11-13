@@ -234,7 +234,7 @@ const PROJECTS = [
     featured: "assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg",
     photos: [],
     sections: [
-      { label: "First Place in Canada", blocks: [
+      { label: "First Place Canada 2022", blocks: [
         { type: "media-rows", rows: [3], items: ["assets/img/work/redbull-flugtag/redbull-flugtag-08.jpg", "assets/img/work/redbull-flugtag/redbull-flugtag-podium.jpg", "assets/img/work/redbull-flugtag/redbull-flugtag-race.jpg"] }
       ] },
       { label: "Stunt Plane Ride", blocks: [
