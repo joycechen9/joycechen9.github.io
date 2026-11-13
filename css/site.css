@@ -250,7 +250,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .hidden { display: none !important; }
 
 /* ---------- 4. Project detail ---------- */
-.project { padding: 66px clamp(54px, 7.5vw, 140px) 40px; }
+.project { padding: 66px clamp(62px, 8.75vw, 165px) 40px; }
 
 .project-top {
   display: grid;
