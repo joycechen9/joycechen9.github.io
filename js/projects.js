@@ -222,13 +222,13 @@ const PROJECTS = [
     year: 2022,
     tags: ["design", "engineering"],
     materials: "Wood, bicycle wheels, balloons",
-    summary: "The Snap Pea Flying Machine, which won first place at Red Bull Flugtag Toronto 2022.",
+    summary: "The Snap Pea Flying Machine **[won first place at Red Bull Flugtag Toronto 2022](https://www.redbull.com/ca-en/red-bull-flugtag-toronto-2022-winners)**.",
     details: [
-      "I did the complete creative and mechanical design of the glider. Once we were accepted to the competition, I had limited time to turn my concept sketch into parts we could actually build. The project caught on at work, and soon the whole Product Design team was helping bring it to life.",
-      "We went into competition day cautiously optimistic and came away with first place. The prize was a ride in a stunt plane with a trained pilot."
+      "I did the complete creative and mechanical design of the glider. Once we were accepted to the competition, I had limited time to turn my concept sketch into parts we could actually build. The project caught on at work, and soon the whole Product Design team was working together to bring it to life.",
+      "We went into competition day cautiously optimistic and came away with first place. The prize was a ride in a stunt plane with Pete McLeod, the Canadian professional aerobatic pilot. Thank you Snap Pea team and Red Bull!"
     ],
     links: [
-      { label: "More about the project", href: "https://snappeadesign.com/we-can-design-anything/" }
+      { label: "Learn more on SnapPea", href: "https://snappeadesign.com/we-can-design-anything/" }
     ],
     cover: "assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg",
     featured: "assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg",

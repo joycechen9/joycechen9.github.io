@@ -429,6 +429,8 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .blk-text p, .blk-list li { font-size: 17px; line-height: 1.5; margin: 0 0 12px; max-width: 900px; }
 .blk-text a, .blk-list a { text-decoration: underline; text-underline-offset: 3px; }
 .blk-text a:hover { color: var(--accent); }
+#p-text a, #p-more a { text-decoration: underline; text-underline-offset: 3px; }
+#p-text a:hover, #p-more a:hover { color: var(--accent); }
 .blk-text mark { background: #e6f7c6; padding: 1px 3px; border-radius: 3px; }
 .blk-list ol { margin: 0; padding-left: 24px; }
 .blk-caption { margin-top: 10px; }
