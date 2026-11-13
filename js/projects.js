@@ -539,10 +539,8 @@ const PROJECTS = [
     tags: ["art"],
     materials: "Acrylic and ceramic on canvas",
     size: "30 \u00d7 40 in.",
-    summary: "A painting of my grandmother washing dishes. Pieces of a chipped plate from my kitchen are glued onto the canvas.",
-    details: [
-      "In my house, my family has only ever washed dishes by hand. The friction and effort of this task is a mundane but intrinsic piece of the cultural identity of my childhood."
-    ],
+    summary: "In my house, my family has only ever washed dishes by hand. The friction and effort of this task is a mundane but intrinsic piece of the cultural identity of my childhood.",
+    details: [],
     cover: "assets/img/work/dishwasher/dishwasher-01.jpg",
     featured: "assets/img/work/dishwasher/dishwasher-01.jpg",
     photos: [],
