@@ -62,7 +62,7 @@ const PROJECTS = [
         { type: "media-rows", rows: [3, 3], items: ["assets/img/work/new-windsor/new-windsor-01.jpg", "assets/img/work/new-windsor/new-windsor-03.jpg", "assets/img/work/new-windsor/new-windsor-04.jpg", "assets/img/work/new-windsor/new-windsor-05.jpg", "assets/img/work/new-windsor/new-windsor-06.jpg", "assets/img/work/new-windsor/new-windsor-07.jpg"] }
       ] },
       { label: "Sketching, Research, and Ideation", blocks: [
-        { type: "media-rows", rows: [3, 2], items: ["assets/img/work/new-windsor/nw-06.jpg", "assets/img/work/new-windsor/nw-07.jpg", "assets/img/work/new-windsor/nw-08.jpg", "assets/img/work/new-windsor/nw-09.jpg", "assets/img/work/new-windsor/nw-10.jpg"] }
+        { type: "media-rows", rows: [4], items: ["assets/img/work/new-windsor/nw-06.jpg", "assets/img/work/new-windsor/nw-08.jpg", "assets/img/work/new-windsor/nw-09.jpg", "assets/img/work/new-windsor/nw-10.jpg"] }
       ] },
       { label: "CAD", blocks: [
         { type: "media-rows", rows: [5, 3], items: ["assets/img/work/new-windsor/nw-01.jpg", "assets/img/work/new-windsor/nw-02.jpg", "assets/img/work/new-windsor/nw-03.jpg", "assets/img/work/new-windsor/nw-04.jpg", "assets/img/work/new-windsor/nw-05.jpg", "assets/img/work/new-windsor/nw-11.jpg", "assets/img/work/new-windsor/nw-12.jpg", "assets/img/work/new-windsor/nw-13.jpg"] }
