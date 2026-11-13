@@ -802,15 +802,15 @@ const IMAGE_SIZES = {
 ],
 "assets/img/work/saturn-with-a-moon/saturn-cad-poster.jpg": [
 1000,
-622
+612
 ],
 "assets/img/work/saturn-with-a-moon/saturn-gallery-01.jpg": [
 1800,
 1350
 ],
 "assets/img/work/saturn-with-a-moon/saturn-gallery-02.jpg": [
-1800,
-1350
+1350,
+1800
 ],
 "assets/img/work/saturn-with-a-moon/saturn-gallery-03.jpg": [
 1800,
@@ -1114,9 +1114,9 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/salico/salico-s11.jpg": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwBACdASoYABMAPu1sqlEppaOiqAqpMB2JQBWGZDA0gb+dkIVB8UVlObHcSwis9oAA+D+cGN8XYGb5J26or3C4WrvxVOFqaxSqiF7F2kD6m8TibhPOQNs3+JADV59/hhtgthMkJtNVXH/YlD7hEobh7lZNJ8Gi0rYSHfbwGkCiNz8HVD5opJQfiG5YAAAA",
 "assets/img/work/salico/salico-s12.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBACdASoYAA8APu1kqk4ppaQiMAgBMB2JaACdMoCGABe9zhi01KGnQLcAAPhF4lEiULuYtVBQ+NAVdL53GdsYegDIWeZuteG3Ezw1JlHGsWx80LyaiDpfMdDknutPh/E3BI3fP+Gdl4oS+qt1RklRuU7qzxDSw/htkaJJBEM/zyLQg6HE05NlgAA=",
 "assets/img/work/salico/salico-s13.jpg": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBACdASoYABAAPu1iqk2ppaQiMAgBMB2JaAC/OBl3Ys/i8yuzglzLYAD4LECxIRzLyx/3x8Rkyy9yHCfFLX44x+5yASGgzymJogcxe+ILGC45rkIG7ZPx17K8UtVSj/Hn76/z6LYaAumj4GlxqqR9OP5cv5PYX63v9N39wcl/LIQTy37eA3F0jhLImdT6EZl2cYnAAAA=",
-"assets/img/work/saturn-with-a-moon/saturn-cad-poster.jpg": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQBACdASoYAA8APu1kqU2ppaQiMAgBMB2JaQAAW4R1fc5aaQEW+h5GAAD+83SsX3ycQ4o6zLUb76OKrUAe5DI88wgZxe2ooEOWXHxuOdC0eAAA",
+"assets/img/work/saturn-with-a-moon/saturn-cad-poster.jpg": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACwAwCdASoYAA8APu1kqk4ppaQiMAgBMB2JaQAAW4L6G4EzjLj7AAD+83SsX3ycQ4o6zPTqx+n/F7V3Kk8SvgB+Th3nwKKU/EgNQXtnvAAAAA==",
 "assets/img/work/saturn-with-a-moon/saturn-gallery-01.jpg": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAQBQCdASoYABIAPu1arE2ppKSiMBgMATAdiUAWI+0QKQIGBgefdVB0toAL/Z6TyzYAAP51pQvCasPcNb/iR0fWVPbjBE7E0Fj5DTbHxwpAwK0iJr1QqgrBz2dCD6k1ntuQIBMAWJyR9Wh20S4Lx3h3gX2fGE4Jlrqh5WkYaOst2DtgAAA=",
-"assets/img/work/saturn-with-a-moon/saturn-gallery-02.jpg": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADQBACdASoYABIAPulkqU2pJiQiMBgMASAdCUAWo1AAJkmNogJYewBm/7sdp+VQAADhsn+adG6w+tA2weZ9qRMhHTcfVPx6pdbJnOrlRkTLanLWFzAq8dNtkc5sj7CF/EyLC6HZ4Ut+G12j5dEzoBAvZsDTdnycpDaMLtdCdLdUz7GS4LgucKxmNcAAAA==",
+"assets/img/work/saturn-with-a-moon/saturn-gallery-02.jpg": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACwBACdASoSABgAPu1iqE2ppaOiMAgBMB2JYwC7AB43TYM7NcxJX87yeltDeQQAAP5xXP/c46d1VueYFp101fju2LfXUalPtp3VuQFz7VgUYN61iLyvrVWyO12xZA/MYRReM9KwQ12Jdyzpl5lqErb+PTME5Fpsep9wAA==",
 "assets/img/work/saturn-with-a-moon/saturn-gallery-03.jpg": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABQBACdASoYAA0APu1iqk4ppaQiMAgBMB2JYwC+SCPpkak1BYc1HVl8qwsAAPa4Fi3hJUAErJ6UvmCg9GcCFNT/C655qL1T8/xUpuJUpPJ8KseU8Mhqyiq2NaxnuOSMoE6iJW5QM98Vn7VRrCnVhqP/eawDjtKRjhkIftPbdv1WOrlDExFeicmDSyuhUAAA",
 "assets/img/work/saturn-with-a-moon/saturn-machining-poster.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoNABgAPu1iqk2ppaQiMAgBMB2JZwAAV9M2/S8WsgwhXGwzrAAA/uv63yGHAmu/YLY+Ts6WdIwCftVZjcKclWtNbG6jbkdH8IQZDjhRIyQoSJj9C/5B0veZon6w4rFRBOV7DxJX3cQhh5AA",
 "assets/img/work/saturn-with-a-moon/saturn-p01.jpg": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwBACdASoYABEAPu1oqU8ppiOiMBgIATAdiWkAAC54DPaPMo2BKvdSsEVOSKUAAP7x2S4F3rH6nHy8hqKgzXSM3CNC/XL/b0JzFRo4AAA=",
