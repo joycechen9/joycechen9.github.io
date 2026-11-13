@@ -104,7 +104,7 @@ const PROJECTS = [
         { type: "media-rows", perRow: 3, items: ["assets/img/work/saturn-with-a-moon/saturn-p01.jpg", "assets/img/work/saturn-with-a-moon/saturn-p02.jpg", "assets/img/work/saturn-with-a-moon/saturn-p03.jpg"] }
       ] },
       { label: "CAD", blocks: [
-        { type: "media-rows", perRow: 3, items: ["assets/img/work/saturn-with-a-moon/saturn-p04.jpg", { video: "assets/img/work/saturn-with-a-moon/saturn-cad.mp4", poster: "assets/img/work/saturn-with-a-moon/saturn-cad-poster.jpg", w: 1000, h: 622 }, "assets/img/work/saturn-with-a-moon/saturn-p05.jpg"] }
+        { type: "media-rows", perRow: 3, items: ["assets/img/work/saturn-with-a-moon/saturn-p04.jpg", { video: "assets/img/work/saturn-with-a-moon/saturn-cad.mp4", poster: "assets/img/work/saturn-with-a-moon/saturn-cad-poster.jpg", w: 1000, h: 612 }, "assets/img/work/saturn-with-a-moon/saturn-p05.jpg"] }
       ] },
       { label: "Machining", blocks: [
         { type: "media-rows", perRow: 3, items: [
