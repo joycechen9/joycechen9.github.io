@@ -369,6 +369,7 @@ function renderBlock(b, title) {
   const el = document.createElement("div");
   el.className = "blk blk-" + b.type;
   if (b.maxWidth) el.style.maxWidth = b.maxWidth + "px";
+  if (b.center) { el.style.marginLeft = "auto"; el.style.marginRight = "auto"; }
   if (b.type === "text") {
     b.text.forEach((t) => { const p = document.createElement("p"); p.innerHTML = richText(t); el.appendChild(p); });
   } else if (b.type === "caption") {
