@@ -149,8 +149,35 @@ function rows(container, items, perRowFor) {
 
 // Pick masonry columns or equal-height rows for a photo group.
 function photoGrid(container, items, layout, perRow = 3) {
+  if (layout && layout.columns) return fitColumns(container, items, layout.columns);
   if (layout === "row") rows(container, items, () => (isNarrow() ? (perRow > 3 ? 2 : 1) : perRow));
   else masonry(container, items, gridColumns);
+}
+
+// Hand-placed columns whose widths are chosen so every column ends at the same height
+// (the photos form one clean rectangle). columns: [[0, 3], [1, 4], [2]] = item indexes.
+function fitColumns(container, items, columns) {
+  const fallback = masonry(container, items, gridColumns);
+  container._custom = () => {
+    if (isNarrow()) return false;
+    container.innerHTML = "";
+    const g = parseFloat(getComputedStyle(container).columnGap) || 0;
+    const cols = columns.map((idx) => idx.map((i) => items[i]).filter(Boolean));
+    const R = cols.map((c) => c.reduce((a, el) => a + ratioOf(el, 0), 0));
+    const W = container.clientWidth - g * (cols.length - 1);
+    const H = (W + cols.reduce((a, c, k) => a + g * (c.length - 1) / R[k], 0)) / R.reduce((a, r) => a + 1 / r, 0);
+    cols.forEach((c, k) => {
+      const col = document.createElement("div");
+      col.className = "m-col";
+      col.style.flex = `0 0 ${((H - g * (c.length - 1)) / R[k]).toFixed(2)}px`;
+      c.forEach((el) => { el.style.aspectRatio = (1 / ratioOf(el, 0)).toFixed(4); el.style.height = ""; col.appendChild(el); });
+      container.appendChild(col);
+    });
+    fitSizes(container);
+    return true;
+  };
+  fallback();
+  window.addEventListener("resize", fallback);
 }
 
 const isNarrow = () => window.matchMedia("(max-width: 900px)").matches;

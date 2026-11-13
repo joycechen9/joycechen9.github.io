@@ -432,14 +432,16 @@ const PROJECTS = [
     cover: "",
     covers: ["assets/img/work/chinese-market/chinese-market-01.jpg", "assets/img/work/chinese-market/chinese-market-02.jpg", "assets/img/work/chinese-market/chinese-market-03.jpg", "assets/img/work/chinese-market/chinese-market-04.jpg", "assets/img/work/chinese-market/chinese-market-05.jpg", "assets/img/work/chinese-market/chinese-market-06.jpg", "assets/img/work/chinese-market/chinese-market-07.jpg", "assets/img/work/chinese-market/chinese-market-08.jpg"],
     featured: "assets/img/work/chinese-market/chinese-market-01.jpg",
+    // Three columns sized so the photos end level; numbers point into the photos list below
+    photosLayout: { columns: [[0, 6, 1], [4, 2], [3, 5]] },
     photos: [
       "assets/img/work/chinese-market/chinese-market-02.jpg",
       "assets/img/work/chinese-market/chinese-market-03.jpg",
-      "assets/img/work/chinese-market/chinese-market-04.jpg",
-      "assets/img/work/chinese-market/chinese-market-05.jpg",
       "assets/img/work/chinese-market/chinese-market-06.jpg",
-      "assets/img/work/chinese-market/chinese-market-07.jpg",
-      "assets/img/work/chinese-market/chinese-market-08.jpg"
+      "assets/img/work/chinese-market/chinese-market-05.jpg",
+      "assets/img/work/chinese-market/chinese-market-08.jpg",
+      "assets/img/work/chinese-market/chinese-market-04.jpg",
+      "assets/img/work/chinese-market/chinese-market-07.jpg"
     ]
   },
   {
