@@ -232,31 +232,20 @@ const PROJECTS = [
     ],
     cover: "assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg",
     featured: "assets/img/work/redbull-flugtag/redbull-flugtag-flight.jpg",
-    photosLayout: "row",
-    photos: [
-      "assets/img/work/redbull-flugtag/redbull-flugtag-08.jpg",
-      "assets/img/work/redbull-flugtag/redbull-flugtag-podium.jpg"
-    ],
+    photos: [],
     sections: [
-      {
-        label: "Stunt Plane Ride",
-        layout: "row",
-        photos: [
-          "assets/img/work/redbull-flugtag/redbull-flugtag-09.jpg",
-          "assets/img/work/redbull-flugtag/redbull-flugtag-10.jpg"
-        ]
-      },
-      {
-        label: "Construction",
-        photos: [
-          "assets/img/work/redbull-flugtag/redbull-flugtag-02.jpg",
-          "assets/img/work/redbull-flugtag/redbull-flugtag-03.jpg",
-          "assets/img/work/redbull-flugtag/redbull-flugtag-04.jpg",
-          "assets/img/work/redbull-flugtag/redbull-flugtag-05.jpg",
-          "assets/img/work/redbull-flugtag/redbull-flugtag-06.jpg",
-          "assets/img/work/redbull-flugtag/redbull-flugtag-07.jpg"
-        ]
-      }
+      { label: "First Place in Canada", blocks: [
+        { type: "media-rows", rows: [3], items: ["assets/img/work/redbull-flugtag/redbull-flugtag-08.jpg", "assets/img/work/redbull-flugtag/redbull-flugtag-podium.jpg", "assets/img/work/redbull-flugtag/redbull-flugtag-race.jpg"] }
+      ] },
+      { label: "Stunt Plane Ride", blocks: [
+        { type: "media-rows", rows: [3, 1], items: ["assets/img/work/redbull-flugtag/redbull-stunt-01.jpg", "assets/img/work/redbull-flugtag/redbull-stunt-02.jpg", "assets/img/work/redbull-flugtag/redbull-stunt-03.jpg", "assets/img/work/redbull-flugtag/redbull-stunt-04.jpg"] }
+      ] },
+      { label: "Construction", blocks: [
+        { type: "media-rows", rows: [3, 3], items: ["assets/img/work/redbull-flugtag/redbull-flugtag-02.jpg", "assets/img/work/redbull-flugtag/redbull-flugtag-03.jpg", "assets/img/work/redbull-flugtag/redbull-flugtag-04.jpg", "assets/img/work/redbull-flugtag/redbull-flugtag-05.jpg", "assets/img/work/redbull-flugtag/redbull-flugtag-06.jpg", "assets/img/work/redbull-flugtag/redbull-flugtag-07.jpg"] }
+      ] },
+      { label: "Sketchbook Ideation", blocks: [
+        { type: "media-rows", rows: [2, 4, 4], items: ["assets/img/work/redbull-flugtag/redbull-sketch-08.jpg", "assets/img/work/redbull-flugtag/redbull-sketch-09.jpg", "assets/img/work/redbull-flugtag/redbull-sketch-01.jpg", "assets/img/work/redbull-flugtag/redbull-sketch-02.jpg", "assets/img/work/redbull-flugtag/redbull-sketch-03.jpg", "assets/img/work/redbull-flugtag/redbull-sketch-04.jpg", "assets/img/work/redbull-flugtag/redbull-sketch-05.jpg", "assets/img/work/redbull-flugtag/redbull-sketch-06.jpg", "assets/img/work/redbull-flugtag/redbull-sketch-07.jpg", "assets/img/work/redbull-flugtag/redbull-sketch-10.jpg"] }
+      ] }
     ]
   },
   {
