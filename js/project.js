@@ -70,6 +70,24 @@ if (!p) {
   }
   if (p.featuredLayout === "slider" && Array.isArray(p.featured)) {
     buildSlider(featBox, p.featured.map(srcOf), p.title);
+  } else if (p.featuredLayout === "pair" && Array.isArray(p.featured)) {
+    // Side by side, scaled so every piece shares one height (tops and bottoms line up)
+    featBox.classList.add("pair");
+    p.featured.forEach((f) => {
+      const cell = document.createElement("div");
+      cell.className = "pair-cell";
+      let w, h;
+      if (typeof f === "string") {
+        const d = SIZES[f] || [4, 3]; w = d[0]; h = d[1];
+        cell.appendChild(media(f, p.title, "(max-width: 900px) 100vw, 45vw"));
+      } else {
+        w = f.w; h = f.h;
+        cell.appendChild(loopVideo(f.video, f.poster, w, h));
+      }
+      cell.style.flex = `${(w / h).toFixed(4)} 1 0`;
+      cell.style.aspectRatio = `${w} / ${h}`;
+      featBox.appendChild(cell);
+    });
   } else if (p.featuredLayout === "trio" && Array.isArray(p.featured) && p.featured.length === 3) {
     // Two stacked on the left, one tall on the right, sized so both columns end level
     featBox.classList.add("trio");
