@@ -593,6 +593,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
 }
 .pill-green #p-text a:hover, .pill-green #p-more a:hover { background: #d3f0a0; color: #1f420a; }
 .pill-green #p-more .p-link a, .pill-blue #p-more .p-link a, .pill-green #p-text .p-link a, .pill-blue #p-text .p-link a { margin-left: 0; }   /* a link on its own line lines up with the text */
+.pill-green .p-link, .pill-blue .p-link { margin-top: 18px; }
 
 .not-found { font-size: 18px; }
 .not-found a { text-decoration: underline; }
