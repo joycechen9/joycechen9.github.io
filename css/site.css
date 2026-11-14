@@ -441,7 +441,12 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .diagram.stacked .diagram-notes { display: grid; grid-template-columns: 1fr 1fr; column-gap: 64px; }
 .diagram.stacked .diagram-notes::before { display: none; }
 .diagram.stacked .diagram-notes li { margin-bottom: 0; }
+.diagram > .p-more { margin: 0; }
+/* thin line joining the first heading to the next note's bubble */
+.diagram.stacked .diagram-notes li:not(:last-child) .note-title { display: flex; align-items: center; gap: 22px; }
+.diagram.stacked .diagram-notes li:not(:last-child) .note-title::after { content: ""; flex: 1; border-top: 1px solid #333; margin-right: -18px; }
 .diagram.stacked.three .diagram-notes { grid-template-columns: 1fr 1fr 1fr; column-gap: 72px; }
+.diagram.stacked.three .diagram-notes li:not(:last-child) .note-title::after { margin-right: -26px; }
 .diagram.stacked.roomy .diagram-fig { padding: 96px 0 0; }
 
 /* Narrow screens: numbered dots on the image, labels listed underneath */
@@ -458,6 +463,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
   }
   .diagram-notes li { text-align: left; line-height: 1.6; }
   .diagram.stacked .diagram-notes, .diagram.stacked.three .diagram-notes { grid-template-columns: 1fr; row-gap: 22px; }
+  .diagram.stacked .diagram-notes li .note-title::after { display: none; }
   .diagram.stacked .diagram-fig { padding: 0; }
   .diagram-list { display: block; margin: 16px 0 0; padding-left: 30px; columns: 2; column-gap: 28px; font-size: 13px; line-height: 1.45; }
   .diagram-list li { margin-bottom: 8px; break-inside: avoid; }

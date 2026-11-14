@@ -27,7 +27,8 @@ function media(src, label, sizes) {
     const dims = SIZES[src];
     if (dims) {
       const base = src.replace(/\.[^.]+$/, "");
-      img.srcset = `${base}.w800.webp 800w, ${base}.w1200.webp 1200w, ${base}.w1600.webp 1600w`;
+      img.srcset = `${base}.w800.webp 800w, ${base}.w1200.webp 1200w, ${base}.w1600.webp 1600w` +
+        (dims[0] > 2400 ? `, ${base}.w2400.webp 2400w` : "") + (dims[0] > 3200 ? `, ${base}.w3200.webp 3200w` : "");
       img.sizes = sizes || "(max-width: 900px) 50vw, 33vw";
       img.width = dims[0];
       img.height = dims[1];

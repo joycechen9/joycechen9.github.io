@@ -137,6 +137,11 @@ if (!p) {
     // The labelled diagram itself is the featured image
     featBox.classList.add("diagram-box");
     buildDiagram(featBox, p.diagram, p.title);
+    // textFirst: the TLDR paragraphs sit between the diagram and its numbered notes
+    if (p.diagram.textFirst) {
+      const notes = featBox.querySelector(".diagram-notes");
+      if (notes) notes.parentNode.insertBefore(document.getElementById("p-more"), notes);
+    }
   } else {
     featBox.appendChild(media(p.featured, p.featured ? p.title : "featured photo",
       p.featuredWide ? "100vw" : "(max-width: 900px) 100vw, 65vw"));

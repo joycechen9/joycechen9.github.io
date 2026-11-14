@@ -688,9 +688,13 @@ const IMAGE_SIZES = {
 1570,
 1064
 ],
+"assets/img/work/kong/kong-diagram-dark.png": [
+900,
+416
+],
 "assets/img/work/kong/kong-diagram.jpg": [
-2400,
-1109
+3800,
+1756
 ],
 "assets/img/work/kong/kong-dk10.jpg": [
 1004,
@@ -1462,7 +1466,8 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/kong/kong-case-04.jpg": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADQBACdASoSABgAPt1WpU2opKOiN/qoARAbiWkAAFu1EWd6772OK1xBJxl0kn+UgAD+5GVY1Qr3X3jeloOq43o2eubcTsDcPozBoFWyznf3rPMJVORXI7NztvDF3M+JGm6JXRaEYQvNUcRo/EbPdWlAAAA=",
 "assets/img/work/kong/kong-case-05.jpg": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBACdASoPABgAPu1iqU2ppaOiMAgBMB2JYwCdABpHEMAFvC7Wv8vnAAD94xNgZyCh2tmCRFlVB0Nz9tzHCHGhCOrC1UNC22NIqwFBfRm9MWi1jJPbEkBQUQExwqYqIOPDL902eaN7zLHSfxLUR/fjZaT++b2zEEmbkRSb3DVsQAAA",
 "assets/img/work/kong/kong-case-06.jpg": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZQCzhagBnQstpurNDZZy/8VAAPwNZ2krf6ebsGr1d0iedWMiBrfKPXh7YnAtu6+8jgwV0BwkNyC9tMpMAUgcMBL/hFcXCqZ2MsrGSFHnNLuQy74Iqra50eVuHkUjoyhTL910xOJc0EONAMgAAA==",
-"assets/img/work/kong/kong-diagram.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwAwCdASoYAAsAPu1kqk4ppaQiMAgBMB2JaQAAYcCjK7ytH82Ec5IAAP7rMQbjvmV7hC9Bm/cWZ1NJArkm3EVM0oymRRIhSZzzE9uNSOKDRWfqvFI56CAYLLtpAufVrD7ub9YflRTRWe+ekRYAAA==",
+"assets/img/work/kong/kong-diagram-dark.png": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAACwAwCdASoYAAsAPu1iqU2ppaQiMAgBMB2JaQAAYe2Uolnsauc+8AD+7OC+1i+GOghPjDbElLiykyFpFiuilCukYj6AJynI7TscyaG5wCtJNxE7/Xj+N60pnAI7ifdyVSZa3J6r3h8x6PgJiK2/0hVtRQJvsklk5177c+bFQ5gAAA==",
+"assets/img/work/kong/kong-diagram.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoYAAsAPu1iqU2ppaQiMAgBMB2JaQAAYcCjK7ys6kCNFAAA/usxBuO+ZXuEL0Gb9xZnU0kCuSbcRUzSjKZFEiFJnPMT7QErQ4DEWDVp4nO/RTOfQS7X9zkAKX0MKRDYpCxwftT7F3jFAAAA",
 "assets/img/work/kong/kong-dk10.jpg": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoYAA4APu1iqk2ppaQiMAgBMB2JZwDG9CHpSEKtmu6Y3PMPAAD+wk8k2nQt6YZWTMKlK54/y64/0sW336WrvV+JIVALVL/Cf691A4BLO4PDIV9F9VXIM/LJ9LuzMRhy19JeG/qC97JErQgQmaPoAA==",
 "assets/img/work/kong/kong-dk11-inside.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBQCdASoYABIAPu1gpk4ppSMiMBgMATAdiWcAzYQLGerZQBBiA9tSKQbhaGz46y+qAAD+YCyL/eX1zRWLK8ysL1iRkJFbyBiwdVNObxgtRp4fZ4MXR8yV/nhRxcC4sZ7itZHy5NRVDla9JLLMs/ZOZAvufvzZBQNWkUHAmVAV2qjLHm0RvgFNAAA=",
 "assets/img/work/kong/kong-dk11.jpg": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAwCdASoYAA4APu1iqU2ppaQiMAgBMB2JaQAAW8vccfINQjl1fAAA+OVXzHTLXE+eVO0kcyhDC6uwZg/wjNU4haWZcgcoJ6+GJ2ZzNrWTAZ/u8RLZjdOmCpM3WAAA",

@@ -220,8 +220,8 @@ const PROJECTS = [
     materials: "",
     summary: "A plug-and-play demo kit for security devices, designed during my internship at Verkada. [See Verkada's website for DK22 ↗](https://www.verkada.com/ca/access-control/dk22/)",
     details: [
-      "**TLDR:** Kong was my **main project while I worked at Verkada.** I helped with the end of the **industrial design development, and completed all the engineering design until production.** I oversaw the manufacturing, made the standard operating procedure, and taught assembly line workers to get Kong to the finish line. There was a team on Kong to support me, but almost all the design work is my own.",
-      "I visited the sheet metal vendor in Taiwan and assembled the first prototypes by hand, then worked with the injection moulder on the magnetic back panel. At the assembly house in Texas, I taught and supervised the line workers to build and test each unit. Kong launched at Verkada One with 650 units built."
+      "**TLDR:** Kong was my **main project while I worked at Verkada** in 2024 for 8 months. I helped with the end of the **industrial design development, and completed all the engineering design until production.** I oversaw the manufacturing, made the standard operating procedure, and taught assembly line workers to get Kong to the finish line. Nearly all the design work is my own, but there was a team on Kong to support and work with me (special thanks to Andrew Deagon, Andrew Carmedelle, David Miller, Gokul Beeda, Michelle Truong, Jeffery Chang, Ayesha Mohammedally, & Michael Maslakowski).",
+      "I saw Kong through every stage, from concept and mock-ups, through the EVT, DVT, and PVT builds, to mass production. I visited vendors in Asia and assembled the first prototypes by hand before working with them through design iterations. At the assembly house in Texas, I taught and supervised the line workers to build and test each unit. Kong launched at Verkada One with over 650 units built by the end of my internship."
     ],
     cover: "assets/img/work/kong/kong-01.jpg",
     featuredWide: true,
@@ -235,6 +235,7 @@ const PROJECTS = [
       darkMask: "assets/img/work/kong/kong-diagram-dark.png",   // lines turn light grey over dark parts
       aspect: 2.164,
       layout: "stacked",
+      textFirst: true,   // TLDR goes between the diagram and the notes
       featured: true,   // shown as the page's featured image, right under the title
       labels: [
         { text: "Mini Dome Camera", x: 2.9, y: 33, lx: 2.9, ly: 3, side: "top", w: 10 },
@@ -250,14 +251,14 @@ const PROJECTS = [
         { text: "Door Controller", x: 89.3, y: 69.6, lx: 90.5, ly: 92, side: "bottom", w: 8 }
       ],
       notes: [
-        { title: "Background", text: "DK22 (AKA Kong) is the third generation of ==Verkada's Access Control Demo Kit.== Kong is a plug-and-play portable device that lets you quickly ==experience== the power of Verkada's ==cloud-based physical security== platform. [See Verkada's website for DK22 here](https://www.verkada.com/ca/access-control/dk22/)." },
+        { title: "Background", text: "DK22 (AKA Kong) is the third generation of ==Verkada's Access Control Demo Kit.== Kong is a plug-and-play portable device that lets you quickly ==experience== the power of Verkada's ==cloud-based physical security== platform." },
         { title: "Problem and need", text: "Kong is a ==tool for marketing== the sale of the Access Control product suite. Sales representatives can take Kong to conventions, meetings, and site visits. Customers use Kong to see products in action with ==little to no setup and installation friction.==" }
       ]
     },
     numberSections: 3,
     sections: [
       { label: "Studying Older Generations", blocks: [
-        { type: "text", text: ["Before Kong (DK22), there was DK10 (left) and DK11 (middle). There were some things that were good about them, but lots to improve. The goal for DK22 was to make a ==beautiful, light, portable, and updated== Demo Kit. ==To understand the project better, I studied its predecessors.=="] },
+        { type: "text", text: ["Before Kong (DK22), there was DK10 (left) and DK11 (middle). ==I studied this project's predecessors== for great things to carry forward, and learnings to improve upon. The goal for DK22 was to make a ==beautiful, light, portable, and updated== Demo Kit."] },
         { type: "media-rows", rows: [3], items: ["assets/img/work/kong/kong-dk10.jpg", "assets/img/work/kong/kong-dk11.jpg", "assets/img/work/kong/kong-dk11-inside.jpg"] }
       ] },
       { label: "Brainstorming & Sketching", blocks: [
@@ -296,7 +297,7 @@ const PROJECTS = [
         { type: "media-rows", rows: [3, 3], items: ["assets/img/work/kong/kong-case-01.jpg", "assets/img/work/kong/kong-case-04.jpg", "assets/img/work/kong/kong-case-05.jpg", "assets/img/work/kong/kong-case-02.jpg", "assets/img/work/kong/kong-case-03.jpg", "assets/img/work/kong/kong-case-06.jpg"] }
       ] },
       { label: "Prototyping and Testing", blocks: [
-        { type: "text", text: ["**Building so many units!** For the first sheet metal prototype, I visited ==Timson, a sheet metal vendor in Taiwan.== I assembled those units by hand myself. Learnings from there were implemented in the new design. The second and third rounds of prototypes were ==assembled at Cynergy,== an assembly house in Texas. I tested, taught, and supervised the line workers there to not only ==build the device,== but to ==test its functionality.== The plastic back panel was ==injection moulded,== and I worked closely with a vendor called ==CanDo Mould== to refine the locating features, magnets, look, and feel."] },
+        { type: "text", text: ["**Building so many units!** For the first EVT prototype I visited ==a sheet metal vendor in Taiwan.== I assembled those units by hand, and learnings from there were implemented in the new design. The second and third rounds of prototypes were ==assembled at an assembly house in Texas.== I tested, taught, and supervised the line workers there to not only ==build the device,== but to ==test its functionality.== The plastic back panel was ==injection moulded,== and I worked closely with ==a vendor in China== to refine the locating features, magnets, look, and feel."] },
         { type: "media-rows", rows: [5, 6], items: ["assets/img/work/kong/kong-build-01.jpg", "assets/img/work/kong/kong-build-02.jpg", "assets/img/work/kong/kong-build-03.jpg", "assets/img/work/kong/kong-build-04.jpg", "assets/img/work/kong/kong-build-05.jpg", "assets/img/work/kong/kong-build-06.jpg", "assets/img/work/kong/kong-build-07.jpg", "assets/img/work/kong/kong-build-08.jpg", "assets/img/work/kong/kong-build-09.jpg", "assets/img/work/kong/kong-build-10.jpg", "assets/img/work/kong/kong-build-11.jpg"] }
       ] },
       { label: "Final Design", blocks: [
@@ -320,7 +321,7 @@ const PROJECTS = [
             { text: "The **middle panel slides onto the main panel** by matching the slots to the PEM studs. The piece locks in place with the two PEM screws in the front face. This allows there to be **as little screws showing as possible**.", x: 29.4, w: 40 }
           ] }
       ] },
-      { label: "Launch, 650 Units Built!", blocks: [
+      { label: "Launch, >650 Units Built!", blocks: [
         { type: "media-rows", rows: [2], items: ["assets/img/work/kong/kong-launch-01.jpg", "assets/img/work/kong/kong-launch-02.jpg"] },
         { type: "caption", text: "Kong at the security conference, Verkada One." }
       ] }

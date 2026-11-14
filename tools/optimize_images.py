@@ -37,7 +37,8 @@ for p in paths:
     t.save(buf, "WEBP", quality=40)
     previews[p] = "data:image/webp;base64," + base64.b64encode(buf.getvalue()).decode()
     base = os.path.splitext(p)[0]
-    for w in WIDTHS:
+    # extra-large copies only for the few images that are bigger than 2400px (e.g. diagrams)
+    for w in WIDTHS + [x for x in (2400, 3200) if im.width > x]:
         out = f"{base}.w{w}.webp"
         if os.path.exists(out) and os.path.getmtime(out) >= os.path.getmtime(p):
             continue
