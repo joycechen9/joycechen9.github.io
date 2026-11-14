@@ -119,7 +119,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .filters {
   position: sticky;
-  top: var(--header-h);
+  top: calc(var(--header-h) - var(--tuck, 22px));   /* tucks up under the header's empty lower half when stuck */
   z-index: 5;
   background: none;
   display: flex;
@@ -132,7 +132,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .filters::before {
   content: ""; position: absolute; z-index: -1;
   /* reaches up behind the header and out to the page edges, so header + filters read as one fade */
-  top: calc(-1 * var(--header-h)); bottom: -18px;
+  top: calc(var(--tuck, 22px) - var(--header-h)); bottom: -8px;
   left: calc(-1 * var(--side)); right: calc(-1 * var(--side));
   background: linear-gradient(to bottom, rgba(255,255,255,.85), rgba(255,255,255,.7) 75%, rgba(255,255,255,0));
   -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
@@ -560,7 +560,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
 
 /* ---------- Sketchbook ---------- */
 .sketchbook { padding: 24px var(--side) 40px; }
-.sketchbook .filters { top: var(--header-h); padding-top: 0; margin-bottom: 24px; }
+.sketchbook .filters { --tuck: 0px; top: var(--header-h); padding-top: 0; margin-bottom: 24px; }
 .sketchbook-intro { font-size: 17px; font-style: italic; margin: 0 0 24px; text-align: center; }
 .sketchbook-intro:empty { display: none; }
 .sketchbook-head { margin-bottom: 32px; }
