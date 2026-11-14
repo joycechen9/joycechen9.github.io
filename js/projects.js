@@ -478,26 +478,7 @@ const PROJECTS = [
       {
         label: "CAD of the Top Options",
         blocks: [
-          { type: "annotated-grid", items: [
-            { image: "assets/img/work/salico/salico-s05.jpg", pad: { l: "30%" }, labels: [
-              { text: "Gears", x: 27.5, y: 18.1, side: "left" },
-              { text: "Motor", x: 55.0, y: 31.4, side: "left" },
-              { text: "Compliant grabber material", x: 58.3, y: 81.6, side: "left" }
-            ] },
-            { image: "assets/img/work/salico/salico-s06.jpg", pad: { l: "22%" }, labels: [
-              { text: "Pistons", x: 24.9, y: 37.8, side: "left" },
-              { text: "Double brushes", x: 65.9, y: 54.6, side: "left" },
-              { text: "Double rollers", x: 56.9, y: 71.5, side: "left" }
-            ] },
-            { image: "assets/img/work/salico/salico-s07.jpg", pad: { l: "24%", r: "18%" }, labels: [
-              { text: "Shield", x: 24.5, y: 27.8, side: "left" },
-              { text: "Pinching and lifting rollers", x: 37.9, y: 60.8, side: "left", at: 56 },
-              { text: "Conveyor", x: 21.4, y: 72.1, side: "left", at: 76 },
-              { text: "Cargo", x: 17.3, y: 87.6, side: "left" },
-              { text: "Temporary cargo", x: 81.1, y: 71.1, side: "right" }
-            ] },
-            { image: "assets/img/work/salico/salico-s08.jpg", highlight: "To build", labels: [] }
-          ] }
+          { type: "media-rows", rows: [4], items: ["assets/img/work/salico/salico-cad-1.jpg", "assets/img/work/salico/salico-cad-2.jpg", "assets/img/work/salico/salico-cad-3.jpg", "assets/img/work/salico/salico-cad-4.jpg"] }
         ]
       },
       {

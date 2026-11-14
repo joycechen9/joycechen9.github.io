@@ -1196,6 +1196,22 @@ const IMAGE_SIZES = {
 1000,
 988
 ],
+"assets/img/work/salico/salico-cad-1.jpg": [
+1046,
+788
+],
+"assets/img/work/salico/salico-cad-2.jpg": [
+1182,
+1020
+],
+"assets/img/work/salico/salico-cad-3.jpg": [
+1252,
+674
+],
+"assets/img/work/salico/salico-cad-4.jpg": [
+1194,
+810
+],
 "assets/img/work/salico/salico-cover.jpg": [
 1800,
 1350
@@ -1227,22 +1243,6 @@ const IMAGE_SIZES = {
 "assets/img/work/salico/salico-roller-test-poster.jpg": [
 600,
 924
-],
-"assets/img/work/salico/salico-s05.jpg": [
-1087,
-1328
-],
-"assets/img/work/salico/salico-s06.jpg": [
-1607,
-1354
-],
-"assets/img/work/salico/salico-s07.jpg": [
-1691,
-1260
-],
-"assets/img/work/salico/salico-s08.jpg": [
-1222,
-1143
 ],
 "assets/img/work/salico/salico-s09.jpg": [
 1362,
@@ -1765,6 +1765,10 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/redbull-flugtag/redbull-stunt-03.jpg": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADwBACdASoYABIAPu1wsFKppiSiqAgBMB2JYgCw7BEcON2iuHbmVaB9pxzkXSdgNAAA/uqP2XYgj5JYi3J5seIz9Er8MB+dQ0cmvvEJdR+Hft5BQ0dA/9OelmOw20X1X3jICC0G0RQ94k2gXurI0ApxDfLV3NBBhBb5FyC7UJW+7J1gR2RP9m3BlxfwAA==",
 "assets/img/work/redbull-flugtag/redbull-stunt-04.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAwBACdASoYAA4APu1iqk2ppaQiMAgBMB2JZQAAXBjOWm85J93dK/bqf6AA/aas8GM0MxosjVw0RxXRdDbQAM1bJIvCyQW3Oue7FB4SYx9RiJ2vDmEnqpmvsrAfHww6T4u0bApTUb+EzQVajD7072SocokAOAAA",
 "assets/img/work/redbull-flugtag/redbull-stunt-flight-poster.jpg": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAABwAwCdASoYABgAPuVipk2pJaOiMAwBIByJaQAAAlb3hDcM/BAA+cyfj1wrSEMAasyEMjO96z73dP4YgdItEHJrhYDhjXhdjhmcGvMcAAA=",
+"assets/img/work/salico/salico-cad-1.jpg": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAACwBACdASoYABIAPuFeqk2opSQiMAwBEBwJZwAAW/Ehx8BCg7brr9E4pLlQ0rEAAP7zkNkGFKwqo1nmLuyPRaeO3fDQO4pqvfNsYBBRZDg72ndtonIKUxQKGD+9pmZWMRC27QPjXE1MAAAA",
+"assets/img/work/salico/salico-cad-2.jpg": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADwBACdASoYABUAPu1mqE2ppaOiMBgMATAdiWUAAC5DSZxKzisiU7f7tdHrnLV+vsAA/vN+39IH3Mln8KONhZWasjShv1+zY4QA5+gmj4/DtZVd5zgDCtdgQxbUin5FrtGoFH8SAAA=",
+"assets/img/work/salico/salico-cad-3.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwAwCdASoYAA0APu1kqU2ppaQiMAgBMB2JZwAAUWBmKGBv7ti6jgIAAP7x4MYBexSJkeCAe9CqUlVgJpMUs3h5Jzy0l9o3DJ7WDWjOUX+ohfgp1Uk45W5TQxORRAimnJXHdXbwm4JY/Yban8AgAA==",
+"assets/img/work/salico/salico-cad-4.jpg": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABwBACdASoYABAAPu1kqk4ppaQiMAgBMB2JZQDLLCHpMlRapp7ckvYInmrrUAD+8dqlmFJ02w5Q3FWX88SyaObZIhaqvnX1E3HqKcursaxslNypQEJLHbCO2c0fdzcsJkkHkL79YRCNIls+t9r4IfPgAAA=",
 "assets/img/work/salico/salico-cover.jpg": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAABwBQCdASoYABIAPu1osFAppaUiqAqpMB2JQBdmZJfIBLxOdrvwF0SmcUU/Q2snTU3ApiWAAP7I38zx2BIJ05XmorB7Mx3gaCBDhcHRlopCZtw/X73IXIoUsjTR+DhyHVU7SsFXQmazHJEHDyH4Efc78tU1AsUF4BWdVUiCO8J7fDtCvmc54dXB1QKzkw9ncqwdE2SrY3B3wKNVV0SkAAAA",
 "assets/img/work/salico/salico-ponds-poster.jpg": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoYAAwAPu1iqk2ppaQiMAgBMB2JYgCdIIjCdQjOCzKxT4AA/iZ0UAK55faEsqtnL0vGVaK7FMAad1yf6W/5wYYZTVxsT1qPgpCql9gnUjxyLjxSsSwzDjLuc3S8mcvAAAA=",
 "assets/img/work/salico/salico-poster.jpg": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAwCdASoYAA4APu1orU2ppqSiMAgBMB2JQBOmUGYwCTQFtmwccqQA996WfY+K9A+5iTJzhcCB4GUMrHzTgRhg4DegOh2/dty3KQc17RqI8yjEwHlgAA==",
@@ -1773,10 +1777,6 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/salico/salico-proto3-poster.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAACwAwCdASoYAA4APu1iqU2ppaQiMAgBMB2JaACdAAmLsAeL8p55kAD97XnqrGT3vzEgCB6xD02wOw+PJ95St/Gg6yz7vhd+0jjs07Zs2jBFLTUVTMHyR46/Rpobv/JMPiifiE9xs9NhA3OKLf4oAAAA",
 "assets/img/work/salico/salico-render.png": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwAwCdASoYAA0APu1iqU2ppaQiMAgBMB2JQBfnA6cLI8OUyN26xo/AAP7zgnfoOasumFN0W2PCKQhYXk4FkbQdNPxdcM8fyh+occgq4R88ly77qzEM193CPzK9dhkVp8pEx/87s42o35eg7wVXUKda2hrRJLIyvVQIAAAA",
 "assets/img/work/salico/salico-roller-test-poster.jpg": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAAAwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYwC7Ad0YhcuPsjYnxYqQ8cwA9oXB0mLtoBMdJdvihE7kPTCGyMKeaO+ji/JVIX3xEgPMi1JGT4xb+KnWLAY6G1GIs9cFlnBd9i7l5KWt0lQV10vR/ZFPYyyPwZ4Mzz0fck2xf5g6JYU28kEl/o34MopfFCWoCwJgi8pN9lN89ryMVSBbgAAA",
-"assets/img/work/salico/salico-s05.jpg": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABQBQCdASoUABgAPu1orlCppaQiqAqpMB2JYwDO7BEbCwLpMv9Amth9WW4PObU42e8w+IAA/thMU/2TV0ZsEN+jOnz391y1MS4NlOtFD6s7biyK3CRAYKLv2Jhoq79Q/ybW6eEuCY3c6fRQ2KD33x2ZKdYrdBx1e33S1lB6JPljERVvEAA=",
-"assets/img/work/salico/salico-s06.jpg": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACwBACdASoYABQAPtlepU2oJaOiN/qoAQAbCUAAC3a/fT1w6p4rHLiWdaRtAJgAAP70y46nv2gciMxekPm1jrVK9Y5bzFGE8C1SYfZUq93qe2/T7igf6V7AcC6HOX3HnwSsgQRkE3x9dIfewmg/pD5OK6ZWH386V60oHelA1EQc+e1SpMPfxInBnVAAAA==",
-"assets/img/work/salico/salico-s07.jpg": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADwBACdASoYABIAPu1eqE4ppKOiMBgMATAdiWcAAClCCbk4KtGzKiwvwfb4addl9cAA/vOCtQvlJslJFzAntjnCNc1+GIAoT+MA6wXlPAXBb9m+hbUoVLoqJF/mSehVgEnBZckCqDgJ+XM244pHuOToit1cSsEBVbxLfBnRGmSYyhAA",
-"assets/img/work/salico/salico-s08.jpg": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACQBQCdASoYABYAPu1qrlCppaQiqAqpMB2JYwAAKuDnix5PS2C/8cvWeuRYInGaD1X5ug+p2AD+84K5BNRhdDbFu7NTTCPDTESiUJyuDE7RFpaFi0Dt0SsULDTuiOO8+h8S58rTeYSm+Rf8VaTvd42YuF60pwr5vDGEgPWbvLEphxEG7x9S33dgNPFb4EQFnauv1wXBKpLXzg3V+CmD/8zahjKuvDVB3qFgAAAA",
 "assets/img/work/salico/salico-s09.jpg": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAABwBgCdASoWABgAPu1ur1IppiQiqAgBMB2JQBWGab3/y7ADVg/YYsmNeF69n/UD+rmW/TlOrHVLYdZM/4AAzEeK7D59prKssLlvOi/O5QspfEQm5jTvnoyMF82NdkCUJVu4jbfjbh9Cq+SI5oDPNFf1ABH8vmUuaZqYzAdGHkvsDF9NGoVqnoeTbOi7Bfs15iosPNizqiRUH2pWoKmjs0kczaKT+c4evB/9ecZ/DWDibeakRcLJBptDytlD/dblUP0FIPgfascT8IVtyJqpMoAAAAA=",
 "assets/img/work/salico/salico-s11.jpg": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwBACdASoYABMAPu1sqlEppaOiqAqpMB2JQBWGZDA0gb+dkIVB8UVlObHcSwis9oAA+D+cGN8XYGb5J26or3C4WrvxVOFqaxSqiF7F2kD6m8TibhPOQNs3+JADV59/hhtgthMkJtNVXH/YlD7hEobh7lZNJ8Gi0rYSHfbwGkCiNz8HVD5opJQfiG5YAAAA",
 "assets/img/work/salico/salico-s12.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBACdASoYAA8APu1kqk4ppaQiMAgBMB2JaACdMoCGABe9zhi01KGnQLcAAPhF4lEiULuYtVBQ+NAVdL53GdsYegDIWeZuteG3Ezw1JlHGsWx80LyaiDpfMdDknutPh/E3BI3fP+Gdl4oS+qt1RklRuU7qzxDSw/htkaJJBEM/zyLQg6HE05NlgAA=",
