@@ -352,8 +352,8 @@ const PROJECTS = [
     ],
     photos: [],
     sections: [
-      { label: "First Place Canada 2022", blocks: [
-        { type: "media-rows", rows: [3], items: ["assets/img/work/redbull-flugtag/redbull-flugtag-08.jpg", "assets/img/work/redbull-flugtag/redbull-flugtag-podium.jpg", "assets/img/work/redbull-flugtag/redbull-flugtag-race.jpg"] }
+      { label: "1st Place Canada 2022", blocks: [
+        { type: "media-rows", rows: [3], items: ["assets/img/work/redbull-flugtag/redbull-flugtag-team.jpg", "assets/img/work/redbull-flugtag/redbull-flugtag-podium.jpg", "assets/img/work/redbull-flugtag/redbull-flugtag-race.jpg"] }
       ] },
       { label: "Stunt Plane Ride", blocks: [
         { type: "media-rows", rows: [3, 2], items: ["assets/img/work/redbull-flugtag/redbull-stunt-01.jpg", "assets/img/work/redbull-flugtag/redbull-stunt-02.jpg", "assets/img/work/redbull-flugtag/redbull-stunt-03.jpg", { video: "assets/img/work/redbull-flugtag/redbull-stunt-flight.mp4", poster: "assets/img/work/redbull-flugtag/redbull-stunt-flight-poster.jpg", w: 1000, h: 988 }, "assets/img/work/redbull-flugtag/redbull-stunt-04.jpg"] }
