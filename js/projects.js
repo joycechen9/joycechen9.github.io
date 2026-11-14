@@ -491,6 +491,7 @@ const PROJECTS = [
       {
         label: "Prototyping",
         blocks: [
+          { type: "text", text: ["We built three rounds of prototypes: Proto 1 in October, Proto 2 in February, and Proto 3 in March."] },
           { type: "media-rows", rows: [3, 2], items: [
             { src: "assets/img/work/salico/salico-proto-3.jpg", caption: "Proto 1" },
             { src: "assets/img/work/salico/salico-proto-1.jpg", caption: "Proto 2.1" },
