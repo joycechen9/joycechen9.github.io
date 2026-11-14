@@ -570,7 +570,7 @@ const PROJECTS = [
     title: "Chinese Market",
     year: 2026,
     tags: ["art"],
-    materials: "Acrylic, collage, and pen on plywood and paper",
+    materials: "Acrylic, collage, and pen on plywood, canvas, and paper",
     size: "Sizes vary",
     summary: "This is a collection of work exploring the vibrant, busy atmosphere of the Chinese grocery stores in Toronto. Growing up in a Chinese immigrant home in Toronto and loving food meant that this was a common scene in my life. Using a variety of media, I experimented with recreating the noise, colour, and movement characteristic of this space.",
     details: [],
