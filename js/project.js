@@ -331,25 +331,22 @@ function buildDiagram(parent, d, title) {
   svg.setAttribute("preserveAspectRatio", "none");
   svg.classList.add("diagram-lines");
   stage.appendChild(svg);
-  // darkMask (optional): a black/white map of the render's dark areas. Leader lines are drawn
-  // a second time in light grey, shown only where they cross those dark areas.
+  // darkMask (optional): a PNG whose opaque pixels mark the render's dark areas. Leader lines are
+  // drawn a second time in light grey inside a layer masked to those areas.
   let lightGroup = null;
   if (d.darkMask) {
-    const id = "dm" + Math.random().toString(36).slice(2, 8);
-    const defs = document.createElementNS(NS, "defs");
-    const mask = document.createElementNS(NS, "mask");
-    mask.setAttribute("id", id);
-    mask.setAttribute("maskUnits", "userSpaceOnUse");
-    mask.setAttribute("x", "0"); mask.setAttribute("y", "0"); mask.setAttribute("width", "100"); mask.setAttribute("height", "100");
-    const mi = document.createElementNS(NS, "image");
-    mi.setAttribute("href", d.darkMask);
-    mi.setAttribute("x", "0"); mi.setAttribute("y", IMG_TOP); mi.setAttribute("width", "100"); mi.setAttribute("height", IMG_H);
-    mi.setAttribute("preserveAspectRatio", "none");
-    mask.appendChild(mi); defs.appendChild(mask); svg.appendChild(defs);
-    lightGroup = document.createElementNS(NS, "g");
-    lightGroup.setAttribute("mask", `url(#${id})`);
-    lightGroup.classList.add("on-dark");
-    svg.appendChild(lightGroup);
+    const layer = document.createElement("div");
+    layer.className = "diagram-dark";
+    layer.style.top = IMG_TOP + "%"; layer.style.height = IMG_H + "%";
+    layer.style.webkitMaskImage = layer.style.maskImage = `url("${d.darkMask}")`;
+    lightGroup = document.createElementNS(NS, "svg");
+    lightGroup.setAttribute("viewBox", "0 0 100 100");
+    lightGroup.setAttribute("preserveAspectRatio", "none");
+    lightGroup.classList.add("diagram-lines", "on-dark");
+    lightGroup.style.top = (-IMG_TOP / IMG_H * 100) + "%";
+    lightGroup.style.height = (100 / IMG_H * 100) + "%";
+    layer.appendChild(lightGroup);
+    stage.appendChild(layer);
   }
 
   const list = document.createElement("ol");
@@ -645,7 +642,7 @@ function buildGroups(el, b, title) {
     const box = document.createElement("figure");
     box.className = "grp" + (g.outline ? " grp-" + g.outline : "");
     if (b.timeline) el.classList.add("timeline");
-    const row = document.createElement("div"); row.className = "grp-row";
+    const row = document.createElement("div"); row.className = "grp-row" + (g.stack ? " stack" : "");
     const imgs = g.images.map((src) => {
       const d = SIZES[src] || [3, 4];
       const im = media(src, title);
@@ -658,18 +655,28 @@ function buildGroups(el, b, title) {
     if (g.star) { const st = document.createElement("span"); st.className = "grp-star"; st.innerHTML = STAR_SVG; box.appendChild(st); }
     if (g.caption) { const c = document.createElement("figcaption"); c.textContent = g.caption; box.appendChild(c); }
     el.appendChild(box);
-    return { box, imgs, pad: g.outline && g.outline !== "none" ? PAD : 0 };
+    return { box, imgs, stack: !!g.stack, pad: g.outline && g.outline !== "none" ? PAD : 0 };
   });
   const layout = () => {
     const W = el.clientWidth - 2;   // a hair of slack so rounding never pushes the last set onto a new line
     const gap = parseFloat(getComputedStyle(el).columnGap) || 14;
     const sized = (list, width) => {
       // width = sum over groups of (H * sum(r) + gaps inside + 2*pad) + gaps between
+      // a stacked set (images on top of each other, total height H) is H*k - GAP_IN*k wide, k = 1/sum(1/r)
       let fixed = gap * (list.length - 1), R = 0;
-      list.forEach((g) => { fixed += 2 * g.pad + GAP_IN * (g.imgs.length - 1); g.imgs.forEach((im) => (R += +im.dataset.r)); });
+      list.forEach((g) => {
+        fixed += 2 * g.pad;
+        if (g.stack) { const k = 1 / g.imgs.reduce((a, im) => a + 1 / im.dataset.r, 0); R += k; fixed -= GAP_IN * (g.imgs.length - 1) * k; }
+        else { fixed += GAP_IN * (g.imgs.length - 1); g.imgs.forEach((im) => (R += +im.dataset.r)); }
+      });
       return Math.max(40, (width - fixed) / R);
     };
-    const apply = (list, H) => list.forEach((g) => g.imgs.forEach((im) => { im.style.height = H + "px"; im.style.width = H * im.dataset.r + "px"; }));
+    const apply = (list, H) => list.forEach((g) => {
+      if (g.stack) {
+        const k = 1 / g.imgs.reduce((a, im) => a + 1 / im.dataset.r, 0), w = (H - GAP_IN * (g.imgs.length - 1)) * k;
+        g.imgs.forEach((im) => { im.style.width = w + "px"; im.style.height = w / im.dataset.r + "px"; });
+      } else g.imgs.forEach((im) => { im.style.height = H + "px"; im.style.width = H * im.dataset.r + "px"; });
+    });
     // Split into as few rows as needed to keep images a usable size; rows hold an even share
     // of the sets (e.g. 3+3, 4+3), never a lone straggler.
     const n = groups.length, minH = isNarrow() ? 100 : 90;

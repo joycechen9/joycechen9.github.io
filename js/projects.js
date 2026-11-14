@@ -302,8 +302,8 @@ const PROJECTS = [
       ] },
       { label: "Final Design", blocks: [
         { type: "groups", timeline: true, items: [
-          { label: "EVT", images: ["assets/img/work/kong/kong-evt-01.jpg", "assets/img/work/kong/kong-evt-02.jpg"], caption: "Engineering Validation Testing (EVT)" },
-          { label: "DVT", images: ["assets/img/work/kong/kong-dvt-01.jpg", "assets/img/work/kong/kong-dvt-02.jpg"], caption: "Design Validation Testing (DVT)" },
+          { label: "EVT", stack: true, images: ["assets/img/work/kong/kong-evt-01.jpg", "assets/img/work/kong/kong-evt-02.jpg"], caption: "Engineering Validation Testing (EVT)" },
+          { label: "DVT", stack: true, images: ["assets/img/work/kong/kong-dvt-01.jpg", "assets/img/work/kong/kong-dvt-02.jpg"], caption: "Design Validation Testing (DVT)" },
           { label: "PVT", images: ["assets/img/work/kong/kong-pvt.jpg"], outline: "chosen", star: true, caption: "Product Validation Testing (PVT)" }
         ] },
         { type: "overlay", image: "assets/img/work/kong/kong-exploded.jpg",
