@@ -435,7 +435,8 @@ const PROJECTS = [
       ]
     },
     // Process story under the diagram. Each section is a heading plus blocks, in order.
-    numberSections: 4,   // section headings continue the numbered bubbles from the diagram notes
+    numberSections: 4,
+    sectionGap: 48,         // tighter spacing between sections   // section headings continue the numbered bubbles from the diagram notes
     sections: [
       {
         label: "",
@@ -488,18 +489,14 @@ const PROJECTS = [
         ]
       },
       {
-        label: "Prototyping Round 1",
+        label: "Prototyping",
         blocks: [
-          { type: "text", text: ["There are 4 main subsystems to consider: picking, transporting harvested tips, cargo, and traversal. For our first prototype, we zoom in on just the picker mechanism and make a small scale version to validate the roller design for our first trip to Hawaii."] },
-          { type: "pair", items: [
-            { type: "image", src: "assets/img/work/salico/salico-s09.jpg", caption: "Making cast urethane and plastic rollers, assembling the frame, and calibrating the motors." },
-            { type: "annotated", image: "assets/img/work/salico/salico-s11.jpg", pad: { t: "64px", b: "70px" }, caption: "Assembled first prototype", labels: [
-              { text: "Motor", x: 18, y: 42, side: "top", at: 17 },
-              { text: "3D printed hub", x: 66, y: 27, side: "top", at: 62 },
-              { text: "Crossed polyurethane belting", x: 78, y: 20, side: "top", at: 84, row: 1 },
-              { text: "Aluminum frame", x: 47.3, y: 80, side: "bottom", row: 1 },
-              { text: "Cast urethane rollers (Vytaflex 10)", x: 76.2, y: 80, side: "bottom" }
-            ] }
+          { type: "media-rows", rows: [3, 2], items: [
+            { src: "assets/img/work/salico/salico-proto-3.jpg", caption: "Proto 1" },
+            { src: "assets/img/work/salico/salico-proto-1.jpg", caption: "Proto 2.1" },
+            { src: "assets/img/work/salico/salico-proto-2.jpg", caption: "Proto 2.2" },
+            { src: "assets/img/work/salico/salico-proto-4.jpg", caption: "Proto 3.1" },
+            { src: "assets/img/work/salico/salico-proto-5.jpg", caption: "Proto 3.2" }
           ] }
         ]
       },

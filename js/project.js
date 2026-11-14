@@ -541,15 +541,28 @@ function renderBlock(b, title) {
       const cell = document.createElement("div");
       cell.className = "mr-cell";
       let w, h;
-      if (typeof it === "string") {
-        const d = SIZES[it] || [4, 3]; w = d[0]; h = d[1];
-        cell.appendChild(media(it, title));
+      let el2;
+      if (typeof it === "string" || it.src) {   // an image path, or { src, caption }
+        const src = typeof it === "string" ? it : it.src;
+        const d = SIZES[src] || [4, 3]; w = d[0]; h = d[1];
+        el2 = media(src, title);
       } else {
         w = it.w; h = it.h;
-        cell.appendChild(loopVideo(it.video, it.poster, w, h));
+        el2 = loopVideo(it.video, it.poster, w, h);
       }
       cell.style.flex = `${(w / h).toFixed(4)} 1 0`;
-      cell.style.aspectRatio = `${w} / ${h}`;
+      if (it.caption) {
+        // media keeps its shape in a box; the caption sits underneath
+        const box = document.createElement("div");
+        box.className = "mr-media"; box.style.aspectRatio = `${w} / ${h}`;
+        box.appendChild(el2);
+        const cap = document.createElement("div");
+        cap.className = "mr-cap"; cap.innerHTML = richText(it.caption);
+        cell.classList.add("has-cap"); cell.append(box, cap);
+      } else {
+        cell.style.aspectRatio = `${w} / ${h}`;
+        cell.appendChild(el2);
+      }
       return cell;
     });
     const per = () => (isNarrow() ? Math.min(2, b.perRow || 3) : b.perRow || 3);
