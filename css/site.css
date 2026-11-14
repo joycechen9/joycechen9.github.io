@@ -409,6 +409,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .diagram-img { position: absolute; left: 0; width: 100%; object-fit: contain; background: none !important; }
 .diagram-lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
 .diagram-lines polyline { fill: none; stroke: #333; stroke-width: 1; stroke-dasharray: 3 3; }
+.diagram-lines .on-dark polyline { stroke: #d6d6d6; }
 .diagram-dot {
   position: absolute; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px;
   background: #333; border-radius: 50%; font-size: 0; box-shadow: 0 0 0 1.5px #fff;

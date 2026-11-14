@@ -232,6 +232,7 @@ const PROJECTS = [
     // Labelled renders: side, front, back. x/y = point on the device, lx/ly = label position (% of the box)
     diagram: {
       image: "assets/img/work/kong/kong-diagram.jpg",
+      darkMask: "assets/img/work/kong/kong-diagram-dark.png",   // lines turn light grey over dark parts
       aspect: 2.164,
       layout: "stacked",
       featured: true,   // shown as the page's featured image, right under the title

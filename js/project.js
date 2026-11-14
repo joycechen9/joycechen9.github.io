@@ -326,6 +326,26 @@ function buildDiagram(parent, d, title) {
   svg.setAttribute("preserveAspectRatio", "none");
   svg.classList.add("diagram-lines");
   stage.appendChild(svg);
+  // darkMask (optional): a black/white map of the render's dark areas. Leader lines are drawn
+  // a second time in light grey, shown only where they cross those dark areas.
+  let lightGroup = null;
+  if (d.darkMask) {
+    const id = "dm" + Math.random().toString(36).slice(2, 8);
+    const defs = document.createElementNS(NS, "defs");
+    const mask = document.createElementNS(NS, "mask");
+    mask.setAttribute("id", id);
+    mask.setAttribute("maskUnits", "userSpaceOnUse");
+    mask.setAttribute("x", "0"); mask.setAttribute("y", "0"); mask.setAttribute("width", "100"); mask.setAttribute("height", "100");
+    const mi = document.createElementNS(NS, "image");
+    mi.setAttribute("href", d.darkMask);
+    mi.setAttribute("x", "0"); mi.setAttribute("y", IMG_TOP); mi.setAttribute("width", "100"); mi.setAttribute("height", IMG_H);
+    mi.setAttribute("preserveAspectRatio", "none");
+    mask.appendChild(mi); defs.appendChild(mask); svg.appendChild(defs);
+    lightGroup = document.createElementNS(NS, "g");
+    lightGroup.setAttribute("mask", `url(#${id})`);
+    lightGroup.classList.add("on-dark");
+    svg.appendChild(lightGroup);
+  }
 
   const list = document.createElement("ol");
   list.className = "diagram-list";
@@ -336,6 +356,7 @@ function buildDiagram(parent, d, title) {
     path.setAttribute("points", `${l.lx},${l.ly} ${l.lx},${py} ${l.x},${py}`);
     path.setAttribute("vector-effect", "non-scaling-stroke");
     svg.appendChild(path);
+    if (lightGroup) lightGroup.appendChild(path.cloneNode());
 
     const dot = document.createElement("span");
     dot.className = "diagram-dot";
