@@ -478,7 +478,7 @@ const PROJECTS = [
       {
         label: "CAD of the Top Options",
         blocks: [
-          { type: "media-rows", rows: [4], items: ["assets/img/work/salico/salico-cad-1.jpg", "assets/img/work/salico/salico-cad-2.jpg", "assets/img/work/salico/salico-cad-3.jpg", "assets/img/work/salico/salico-cad-4.jpg"] }
+          { type: "media-rows", rows: [2, 2], items: ["assets/img/work/salico/salico-cad-1.jpg", "assets/img/work/salico/salico-cad-2.jpg", "assets/img/work/salico/salico-cad-3.jpg", "assets/img/work/salico/salico-cad-4.jpg"] }
         ]
       },
       {
