@@ -526,8 +526,14 @@ function renderBlock(b, title) {
   } else if (b.type === "videos") {
     b.items.forEach((v) => {
       const vid = loopVideo(v.src, v.poster, v.w, v.h);
-      vid.style.flex = `${(v.w / v.h).toFixed(4)} 1 0`;
-      el.appendChild(vid);
+      if (!v.caption) { vid.style.flex = `${(v.w / v.h).toFixed(4)} 1 0`; el.appendChild(vid); return; }
+      const fig = document.createElement("figure");   // video with a caption underneath
+      fig.className = "vid-fig";
+      fig.style.flex = `${(v.w / v.h).toFixed(4)} 1 0`;
+      const cap = document.createElement("figcaption");
+      cap.innerHTML = richText(v.caption);
+      fig.append(vid, cap);
+      el.appendChild(fig);
     });
   } else if (b.type === "media-rows") {
     // Rows of images and looping videos; everything in a row shares one height

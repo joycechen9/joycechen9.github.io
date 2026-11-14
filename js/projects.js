@@ -304,7 +304,7 @@ const PROJECTS = [
         { type: "groups", timeline: true, items: [
           { label: "EVT", stack: true, images: ["assets/img/work/kong/kong-evt-01.jpg", "assets/img/work/kong/kong-evt-02.jpg"], caption: "Engineering Validation" },
           { label: "DVT", stack: true, images: ["assets/img/work/kong/kong-dvt-01.jpg", "assets/img/work/kong/kong-dvt-02.jpg"], caption: "Design Validation" },
-          { label: "PVT", images: ["assets/img/work/kong/kong-pvt.jpg"], outline: "chosen", star: true, caption: "Product Validation" }
+          { label: "PVT", images: ["assets/img/work/kong/kong-pvt-front.jpg", "assets/img/work/kong/kong-pvt-back.jpg", "assets/img/work/kong/kong-pvt-case.jpg"], outline: "chosen", star: true, caption: "Product Validation" }
         ] },
         { type: "overlay", image: "assets/img/work/kong/kong-exploded.jpg",
           notes: [
@@ -438,6 +438,33 @@ const PROJECTS = [
     numberSections: 4,   // section headings continue the numbered bubbles from the diagram notes
     sections: [
       {
+        label: "",
+        blocks: [
+          { type: "videos", items: [
+            { src: "assets/img/work/salico/salico-proto3.mp4", poster: "assets/img/work/salico/salico-proto3-poster.jpg", w: 1280, h: 720, caption: "Proto 3 picking" }
+          ] },
+          { type: "videos", items: [
+            { src: "assets/img/work/salico/salico-roller-test.mp4", poster: "assets/img/work/salico/salico-roller-test-poster.jpg", w: 600, h: 924, caption: "Proto 1 picking" },
+            { src: "assets/img/work/salico/salico-proto2.mp4", poster: "assets/img/work/salico/salico-proto2-poster.jpg", w: 1280, h: 720, caption: "Proto 2 picking" }
+          ] }
+        ]
+      },
+      {
+        label: "Harvesting Procedure",
+        blocks: [
+          { type: "image", src: "assets/img/work/salico/salico-procedure.jpg" },
+          { type: "list", items: [
+            "Move down while rolling",
+            "Once enough of the plant has entered the rollers, stop rolling",
+            "Pull up",
+            "Continue rolling to deposit plants onto the ramp while blowing fan",
+            "Repeat steps 1-4 at multiple different heights of plant",
+            "Move to the next row",
+            "Repeat all steps"
+          ] }
+        ]
+      },
+      {
         label: "Brainstorming & Sketching",
         blocks: [
           { type: "text", text: ["There are two main challenges:"] },
@@ -496,7 +523,6 @@ const PROJECTS = [
           { type: "row", images: ["assets/img/work/salico/salico-s12.jpg", "assets/img/work/salico/salico-s13.jpg"] },
           { type: "text", text: ["Our first urethane roller prototype harvesting the plant, trying out the hand picking procedure, and learning from Dr. Wenhao Sun in the ponds."] },
           { type: "videos", items: [
-            { src: "assets/img/work/salico/salico-roller-test.mp4", poster: "assets/img/work/salico/salico-roller-test-poster.jpg", w: 600, h: 924 },
             { src: "assets/img/work/salico/salico-ponds.mp4", poster: "assets/img/work/salico/salico-ponds-poster.jpg", w: 1280, h: 618 }
           ] }
         ]

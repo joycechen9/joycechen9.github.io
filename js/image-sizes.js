@@ -808,9 +808,17 @@ const IMAGE_SIZES = {
 416,
 1106
 ],
-"assets/img/work/kong/kong-pvt.jpg": [
-1790,
-828
+"assets/img/work/kong/kong-pvt-back.jpg": [
+920,
+1412
+],
+"assets/img/work/kong/kong-pvt-case.jpg": [
+1088,
+1442
+],
+"assets/img/work/kong/kong-pvt-front.jpg": [
+964,
+1380
 ],
 "assets/img/work/kong/kong-sketches.jpg": [
 2400,
@@ -1199,6 +1207,18 @@ const IMAGE_SIZES = {
 "assets/img/work/salico/salico-poster.jpg": [
 1600,
 900
+],
+"assets/img/work/salico/salico-procedure.jpg": [
+2400,
+1308
+],
+"assets/img/work/salico/salico-proto2-poster.jpg": [
+1280,
+720
+],
+"assets/img/work/salico/salico-proto3-poster.jpg": [
+1280,
+720
 ],
 "assets/img/work/salico/salico-render.png": [
 2800,
@@ -1648,7 +1668,9 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/kong/kong-mock-02.jpg": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAADQBACdASoRABgAPu1mqk+ppSOiMBgIATAdiWQAuwAOkdNrv5PhVG6KqutAPDmCBAD8izVk3cU8yGmbfX0uchPLStuLx0mF/Uy3ZsPd0xvxmFTxFrMpUjaPVCTOq5rZ/vPL30B13ebD2j2Lyb3ucX9vjfYNTwyzkV8AWSvcwSRfIOE3eS4Tk41imLvBrxkqd+GOc+lYYjAJB73FBJX43n3I+za+IAAA",
 "assets/img/work/kong/kong-mock-03.jpg": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwBACdASoYAAsAPu1iqU2ppaQiMAgBMB2JagCdMoACfLrs4OugiJ6U6UAA/GOt0Mn2aS7mJF5+W+b6DjA8RGqgoe+1nX/vBXd9AhGABRYpo0PUq221Mf5osl+DP51ol10jDLbjI9BtnUPiucXTFz0+68AAAA==",
 "assets/img/work/kong/kong-mock-04.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACwAwCdASoJABgAPu1iqU2ppaOiMAgBMB2JZACdAGMkR3hyTEPqAAD+8LXuTPZ5mfiXfme3mHUU/nmKNBdlFKiwrLBE171d6MRq/Zk5W0o8c0U+ToKJgkSk13xX4Dtj4I9wA4G1paSy9nQ0ul+YyhmSFrb+XwAA",
-"assets/img/work/kong/kong-pvt.jpg": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQAwCdASoYAAsAPu1iqk2ppaQiMAgBMB2JZwAATt3JwmQc88MeXAAA22ngdszEvKtg3XT0P/KbpY56TOKOUpgQ6QAHjxQue1w2oh7vm5M+9vY++LzE8xMpttROiO5YTmnUK7Ab5OP3Az5Dgt0orViOcWYxYAhGlcnAiMAA",
+"assets/img/work/kong/kong-pvt-back.jpg": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JZwAAURxAHObcOoIEjPYA/tH18VZsg71hO1+Lzid8BuGA7XnncAwi15LDDLcL38dVQ/G9WiuJFVg8bi9ygypWZ3YSlPwpLGWz2vqxpuP0IogV6oe6kWLtdVnwAA==",
+"assets/img/work/kong/kong-pvt-case.jpg": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAABwBQCdASoSABgAPu1sqk8ppiOiMBgIATAdiWUAzNARD9MKqhuJArkJPTuZZ9bx0NJTSVsAAP7NeG8FBk8lIm67npy99/lVOFJFHL12iDobytUcW3wCt2HCjSnznXh8aKqap5rAzim3tR3C+k7arGtk4zGAr162NvUiu/s+G8I3BKNomarb9rLZZNCJAZUBBvVZ6lH9/z7+QYsiDWnDaQ4AAAA=",
+"assets/img/work/kong/kong-pvt-front.jpg": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAADQBACdASoRABgAPu1ur1IppiQiqAgBMB2JZwDI1A8V1XNR5EAkfCWj883Y0DgQAADffpNARQj+/STNZ7D9WAQaSFyp36LYzixSBCTdg0NXo4y3Kg7L0O/t7wSSN3viajWlgEpVKQ7kFnXKntGg+bEAvbSdAW/4XxNsUb5826n9WfvD7bEAAA==",
 "assets/img/work/kong/kong-sketches.jpg": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAwCdASoYAAcAPu1iqU2ppaOiMAgBMB2JaQAAW+n1SXW+lzUS1AAA/u1HkoTSFNVp3Il8WbToi02N+PMN+DuzxiGiysAAAAA=",
 "assets/img/work/lego-rescue/lego-labelled-1.jpg": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAAAQBQCdASoWABgAPu1orlCppaQiqAqpMB2JbACdMxgBs/mkYCbviUzXqYescMN7nxIAAOHaGsU92w37Ef2daIdJSlhpcMVIzL0D00Nv4CR8QSoH/nf8JqsMvIkWs9w//cSgo8jWhcTeJYaZnHaqY+pvTuSjO8D9aH+4nvggRD0F2lu0xBV10xkj7QtRbmQruYt4ff2KrKsstMTBGOG0mF1Pon6jWO8izBc+P4oQDBEwVTA4rKc4gAAA",
 "assets/img/work/lego-rescue/lego-labelled-2.jpg": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAABQBQCdASoYABQAPu1irVAppSQisBgIATAdiWwAnTMchCAS2GX6F2GK0JFPNqk/fUiFxTAA/p45DuE64XQwqnK2Dvxlt1jJdFfqQJSw8wVSBrE35N1FYZ1QZjbeIbV721RaFgstmutAIMqXz70FVtr13j+W2PZetrDPtL7o73d8Ojo+BBL7A4E9iDj4699H/Ba97TP1gdQhUFICxJ3K/sNa3fmWhermUp4TBZ9IcfBfUgAA",
@@ -1746,6 +1768,9 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/salico/salico-cover.jpg": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAABwBQCdASoYABIAPu1osFAppaUiqAqpMB2JQBdmZJfIBLxOdrvwF0SmcUU/Q2snTU3ApiWAAP7I38zx2BIJ05XmorB7Mx3gaCBDhcHRlopCZtw/X73IXIoUsjTR+DhyHVU7SsFXQmazHJEHDyH4Efc78tU1AsUF4BWdVUiCO8J7fDtCvmc54dXB1QKzkw9ncqwdE2SrY3B3wKNVV0SkAAAA",
 "assets/img/work/salico/salico-ponds-poster.jpg": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoYAAwAPu1iqk2ppaQiMAgBMB2JYgCdIIjCdQjOCzKxT4AA/iZ0UAK55faEsqtnL0vGVaK7FMAad1yf6W/5wYYZTVxsT1qPgpCql9gnUjxyLjxSsSwzDjLuc3S8mcvAAAA=",
 "assets/img/work/salico/salico-poster.jpg": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAwCdASoYAA4APu1orU2ppqSiMAgBMB2JQBOmUGYwCTQFtmwccqQA996WfY+K9A+5iTJzhcCB4GUMrHzTgRhg4DegOh2/dty3KQc17RqI8yjEwHlgAA==",
+"assets/img/work/salico/salico-procedure.jpg": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoYAA0APu1krU2ppaSiMAgBMB2JZQDA3CHfY307SB2+uf6AAP7v0RwZDzLAuXY7rxIcCWjS9jD8VnR+upJut33bPErKGcNDjKCCJEtauGyv5826Zwmfs3loHFPwAA==",
+"assets/img/work/salico/salico-proto2-poster.jpg": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoYAA4APu1iqU2ppaOiMAgBMB2JbACsH8AB4sTsCYBcSlKFnzAA/j48AWVAoq5W6dVobla8m2jDUmK1ikg7ZD4fFR7MR9zfcag88V4lPKTeuqTNZArbctfhixxV+2S1kmlJY5VfVwvxRAvyavpcg2AXy+O+REXUZeeyF4QAAAA=",
+"assets/img/work/salico/salico-proto3-poster.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAACwAwCdASoYAA4APu1iqU2ppaQiMAgBMB2JaACdAAmLsAeL8p55kAD97XnqrGT3vzEgCB6xD02wOw+PJ95St/Gg6yz7vhd+0jjs07Zs2jBFLTUVTMHyR46/Rpobv/JMPiifiE9xs9NhA3OKLf4oAAAA",
 "assets/img/work/salico/salico-render.png": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwAwCdASoYAA0APu1iqU2ppaQiMAgBMB2JQBfnA6cLI8OUyN26xo/AAP7zgnfoOasumFN0W2PCKQhYXk4FkbQdNPxdcM8fyh+occgq4R88ly77qzEM193CPzK9dhkVp8pEx/87s42o35eg7wVXUKda2hrRJLIyvVQIAAAA",
 "assets/img/work/salico/salico-roller-test-poster.jpg": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAAAwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYwC7Ad0YhcuPsjYnxYqQ8cwA9oXB0mLtoBMdJdvihE7kPTCGyMKeaO+ji/JVIX3xEgPMi1JGT4xb+KnWLAY6G1GIs9cFlnBd9i7l5KWt0lQV10vR/ZFPYyyPwZ4Mzz0fck2xf5g6JYU28kEl/o34MopfFCWoCwJgi8pN9lN89ryMVSBbgAAA",
 "assets/img/work/salico/salico-s05.jpg": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABQBQCdASoUABgAPu1orlCppaQiqAqpMB2JYwDO7BEbCwLpMv9Amth9WW4PObU42e8w+IAA/thMU/2TV0ZsEN+jOnz391y1MS4NlOtFD6s7biyK3CRAYKLv2Jhoq79Q/ybW6eEuCY3c6fRQ2KD33x2ZKdYrdBx1e33S1lB6JPljERVvEAA=",
