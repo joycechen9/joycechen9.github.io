@@ -1,0 +1,756 @@
+// Project detail page: reads ?id= from the URL and fills the page from PROJECTS.
+
+const id = new URLSearchParams(location.search).get("id");
+const p = PROJECTS.find((x) => x.id === id);
+
+if (!p) {
+  document.getElementById("project").innerHTML =
+    '<p class="not-found">Project not found. <a href="index.html#work">Back to work</a></p>';
+} else {
+  // pageTitle (optional): a longer title used only on the project page itself
+  document.title = (p.pageTitle || p.title) + " | Joyce Chen";
+  if (p.highlight) document.documentElement.style.setProperty("--mark", p.highlight);   // ==text== colour for this page
+  if (p.sectionGap) document.documentElement.style.setProperty("--sec-gap", p.sectionGap + "px");   // space between story sections
+  if (p.linkPill) document.body.classList.add("pill-" + p.linkPill);   // links in the intro text shown as a coloured pill
+  document.getElementById("p-title").textContent = (p.pageTitle || p.title).toUpperCase();
+  // Materials, size and year, one per line
+  const meta = document.getElementById("p-meta");
+  [p.materials, p.size, String(p.year)].filter(Boolean).forEach((line, i) => {
+    if (i) meta.appendChild(document.createElement("br"));
+    meta.appendChild(document.createTextNode(line));
+  });
+
+  // Text: on wide-layout pages only the one-line summary sits above the big image;
+  // the longer paragraphs and links go underneath it.
+  const text = document.getElementById("p-text");
+  const more = p.featuredWide ? document.getElementById("p-more") : text;
+  const addPara = (box, t) => {
+    const para = document.createElement("p");
+    para.innerHTML = richText(t);
+    box.appendChild(para);
+  };
+  if (p.summary) addPara(text, p.summary);
+  (p.details || []).forEach((t) => addPara(more, t));
+
+  (p.links || []).forEach((l) => {
+    const para = document.createElement("p");
+    para.className = "p-link";
+    const a = document.createElement("a");
+    a.href = l.href; a.target = "_blank"; a.rel = "noopener";
+    a.textContent = l.label + " ↗";
+    para.appendChild(a);
+    if (l.top) para.classList.add("p-link-top");
+    (l.top ? text : more).appendChild(para);
+  });
+
+  // Featured block: a photo, or a video (.mp4) that plays silently on loop
+  const featBox = document.getElementById("p-featured");
+  if (p.featuredWide) document.querySelector(".project-top").classList.add("wide");
+  if (p.centerTitle) document.querySelector(".project-top").classList.add("centered");
+  const srcOf = (f) => (typeof f === "string" ? f : f.src);
+  const piece = (f, sizes) => {
+    const fig = document.createElement("figure");
+    fig.className = "piece";
+    fig.appendChild(media(srcOf(f), f.materials ? `${p.title}, ${f.label || ""}: ${f.materials}` : p.title, sizes));
+    return fig;
+  };
+  // Gallery-style label: each piece's position, materials and size, under the title
+  const labelled = p.pieces ||
+    (Array.isArray(p.featured) ? p.featured.filter((f) => typeof f === "object" && (f.materials || f.size)) : []);
+  if (labelled.length) {
+    const dl = document.createElement("dl");
+    dl.className = "piece-list";
+    // On full-width pages the pieces sit side by side; beside images they stack
+    if (p.featuredWide) dl.classList.add("inline");
+    labelled.forEach((f) => {
+      const item = document.createElement("div");
+      const dt = document.createElement("dt");
+      dt.textContent = f.label || "";
+      const dd = document.createElement("dd");
+      dd.innerHTML = [f.materials, f.size].filter(Boolean).map((x) => x.replace(/</g, "&lt;")).join("<br>");
+      item.append(dt, dd);
+      dl.appendChild(item);
+    });
+    text.appendChild(dl);
+  }
+  if (p.featuredLayout === "slider" && Array.isArray(p.featured)) {
+    buildSlider(featBox, p.featured.map(srcOf), p.title);
+  } else if (p.featuredLayout === "pair" && Array.isArray(p.featured)) {
+    // Side by side, scaled so every piece shares one height (tops and bottoms line up)
+    featBox.classList.add("pair");
+    p.featured.forEach((f) => {
+      const cell = document.createElement("div");
+      cell.className = "pair-cell";
+      let w, h;
+      if (typeof f === "string") {
+        const d = SIZES[f] || [4, 3]; w = d[0]; h = d[1];
+        cell.appendChild(media(f, p.title, "(max-width: 900px) 100vw, 45vw"));
+      } else {
+        w = f.w; h = f.h;
+        cell.appendChild(loopVideo(f.video, f.poster, w, h));
+      }
+      cell.style.flex = `${(w / h).toFixed(4)} 1 0`;
+      cell.style.aspectRatio = `${w} / ${h}`;
+      featBox.appendChild(cell);
+    });
+  } else if (p.featuredLayout === "trio" && Array.isArray(p.featured) && p.featured.length === 3) {
+    // Two stacked on the left, one tall on the right, sized so both columns end level
+    featBox.classList.add("trio");
+    const r = p.featured.map((f) => { const d = SIZES[srcOf(f)]; return d ? d[1] / d[0] : 1; });
+    const left = document.createElement("div"), right = document.createElement("div");
+    left.className = "trio-col"; right.className = "trio-col";
+    left.append(piece(p.featured[0], "35vw"), piece(p.featured[1], "35vw"));
+    right.append(piece(p.featured[2], "30vw"));
+    featBox.append(left, right);
+    // Pick column widths so the left stack (2 images + 2 captions + gap) and the
+    // right piece (1 image + 1 caption) end at exactly the same height.
+    const fit = () => {
+      if (getComputedStyle(featBox).flexDirection === "column") {
+        left.style.flex = right.style.flex = ""; return;
+      }
+      const g = parseFloat(getComputedStyle(featBox).columnGap) || 0;
+      const cap = featBox.querySelector("figcaption");
+      const c = cap ? cap.offsetHeight + parseFloat(getComputedStyle(cap).marginTop) : 0;
+      const W = featBox.clientWidth;
+      const wL = ((W - g) * r[2] - c - g) / (r[0] + r[1] + r[2]);
+      left.style.flex = `0 0 ${wL}px`;
+      right.style.flex = `0 0 ${W - g - wL}px`;
+    };
+    fit();
+    window.addEventListener("resize", fit);
+  } else if (Array.isArray(p.featured)) {
+    featBox.classList.add("stacked");
+    p.featured.forEach((f) => featBox.appendChild(media(srcOf(f), p.title, "(max-width: 900px) 100vw, 65vw")));
+  } else if (/\.(mp4|webm|mov)$/i.test(p.featured)) {
+    const v = document.createElement("video");
+    v.src = p.featured;
+    if (p.poster) v.poster = p.poster;
+    v.muted = true;
+    v.loop = true;
+    v.playsInline = true;
+    v.preload = "auto";
+    v.setAttribute("aria-label", p.title + " video");
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) v.autoplay = true;
+    else v.controls = true;
+    featBox.appendChild(v);
+  } else if (p.diagram && p.diagram.featured) {
+    // The labelled diagram itself is the featured image
+    featBox.classList.add("diagram-box");
+    buildDiagram(featBox, p.diagram, p.title);
+    // textFirst: the TLDR paragraphs sit between the diagram and its numbered notes
+    if (p.diagram.textFirst) {
+      const notes = featBox.querySelector(".diagram-notes");
+      if (notes) notes.parentNode.insertBefore(document.getElementById("p-more"), notes);
+    }
+  } else {
+    featBox.appendChild(media(p.featured, p.featured ? p.title : "featured photo",
+      p.featuredWide ? "100vw" : "(max-width: 900px) 100vw, 65vw"));
+  }
+
+  // Spotify player, under the text
+  if (p.spotify) {
+    const m = p.spotify.match(/open\.spotify\.com\/(playlist|album|track)\/(\w+)/);
+    if (m) {
+      const f = document.createElement("iframe");
+      f.src = `https://open.spotify.com/embed/${m[1]}/${m[2]}?utm_source=generator`;
+      f.className = "p-spotify";
+      f.title = p.title + " playlist";
+      f.loading = "lazy";
+      f.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+      more.appendChild(f);
+      // line the bottom of the player up with the bottom of the artwork
+      if (!p.featuredWide) document.querySelector(".project-top").classList.add("align-bottom");
+    }
+  }
+
+  // YouTube video. YouTube needs to know which site is embedding it (the Referer),
+  // and a page opened straight from a file has none, which shows "Error 153".
+  // So when previewing locally, show a still that links to YouTube instead.
+  if (p.video) {
+    const m = p.video.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/);
+    if (m) {
+      const box = document.getElementById("p-video");
+      if (location.protocol === "file:") {
+        const a = document.createElement("a");
+        a.href = `https://www.youtube.com/watch?v=${m[1]}`;
+        a.target = "_blank"; a.rel = "noopener";
+        a.className = "p-video-link";
+        a.innerHTML = `<img src="https://i.ytimg.com/vi/${m[1]}/hqdefault.jpg" alt=""><span>▶ Watch on YouTube</span>`;
+        box.appendChild(a);
+      } else {
+        const f = document.createElement("iframe");
+        f.src = `https://www.youtube-nocookie.com/embed/${m[1]}?rel=0`;
+        f.title = p.title + " video";
+        f.loading = "lazy";
+        f.referrerPolicy = "strict-origin-when-cross-origin";
+        f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen";
+        f.allowFullscreen = true;
+        box.appendChild(f);
+      }
+    }
+  }
+
+  // Other photos: 3-column masonry, each photo keeps its own shape
+  const photos = (p.photos.length ? p.photos : p.featured || p.diagram || p.sections ? [] : ["", "", "", "", ""]).map((src) => {
+    const cell = document.createElement("div");
+    cell.className = "photo";
+    cell.appendChild(media(src, src ? p.title + " photo" : "other photo"));
+    return cell;
+  });
+  photoGrid(document.getElementById("p-photos"), photos, p.photosLayout);
+
+  if (p.diagram && !p.diagram.featured) buildDiagram(document.getElementById("p-sections"), p.diagram, p.title);
+
+  // Extra labelled sections (e.g. "Iteration 1"), each with its own photo grid
+  const secBox = document.getElementById("p-sections");
+  if (p.numberSections) {
+    secBox.classList.add("numbered");
+    secBox.style.counterReset = `sec ${p.numberSections - 1}`;
+  }
+  (p.sections || []).forEach((sec) => {
+    const wrap = document.createElement("section");
+    wrap.className = "project-section";
+    const h = document.createElement("h2");
+    h.textContent = (sec.label || "").toUpperCase();
+    if (!sec.label) { h.hidden = true; wrap.classList.add("no-label"); }
+    wrap.appendChild(h);
+    secBox.appendChild(wrap);
+    if (sec.blocks) { renderBlocks(wrap, sec.blocks, p.title); return; }
+    const g = document.createElement("div");
+    g.className = "project-photos";
+    wrap.appendChild(g);
+    const cells = sec.photos.map((src) => {
+      const cell = document.createElement("div");
+      cell.className = "photo";
+      cell.appendChild(media(src, p.title + " " + sec.label));
+      return cell;
+    });
+    photoGrid(g, cells, sec.layout, sec.perRow);
+  });
+
+  // The big image at the top loads first
+  const top = document.querySelector("#p-featured img");
+  if (top) { top.loading = "eager"; top.fetchPriority = "high"; }
+}
+
+/* Slider: one image at a time, sliding to the next every 2.5 seconds.
+   Arrows and dots to move by hand; swipe on touch screens; pauses on hover. */
+function buildSlider(box, srcs, title, ms = 2500) {
+  box.classList.add("slider-box");
+  const view = document.createElement("div");
+  view.className = "slider";
+  const track = document.createElement("div");
+  track.className = "slider-track";
+  // a copy of the first slide at the end lets the loop keep sliding forward
+  [...srcs, srcs[0]].forEach((src, i) => {
+    const cell = document.createElement("div");
+    cell.className = "slide";
+    const img = media(src, i < srcs.length ? `${title}, photo ${i + 1} of ${srcs.length}` : "", "(max-width: 900px) 100vw, 60vw");
+    if (i === 0) { img.loading = "eager"; img.fetchPriority = "high"; }
+    cell.appendChild(img);
+    track.appendChild(cell);
+  });
+  view.appendChild(track);
+
+  const prev = document.createElement("button"), next = document.createElement("button");
+  prev.className = "slider-arrow prev"; prev.setAttribute("aria-label", "Previous photo"); prev.textContent = "←";
+  next.className = "slider-arrow next"; next.setAttribute("aria-label", "Next photo"); next.textContent = "→";
+  view.append(prev, next);
+
+  const dots = document.createElement("div");
+  dots.className = "slider-dots";
+  srcs.forEach((_, i) => {
+    const d = document.createElement("button");
+    d.setAttribute("aria-label", `Photo ${i + 1}`);
+    d.addEventListener("click", () => go(i));
+    dots.appendChild(d);
+  });
+  box.append(view, dots);
+
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let i = 0, timer = null;
+  const place = (animate) => {
+    track.style.transition = animate && !reduce ? "transform .7s cubic-bezier(.65,0,.35,1)" : "none";
+    track.style.transform = `translateX(${-100 * i}%)`;
+    [...dots.children].forEach((d, k) => d.classList.toggle("on", k === i % srcs.length));
+  };
+  const go = (k) => { i = k; place(true); restart(); };
+  track.addEventListener("transitionend", () => {
+    if (i === srcs.length) { i = 0; place(false); }   // landed on the copy: jump back to the real first slide
+  });
+  next.addEventListener("click", () => go(i + 1));
+  prev.addEventListener("click", () => {
+    if (i === 0) { i = srcs.length; place(false); void track.offsetWidth; }
+    go(i - 1);
+  });
+  const restart = () => {
+    clearInterval(timer);
+    if (!reduce && srcs.length > 1) timer = setInterval(() => { i += 1; place(true); }, ms);
+  };
+  view.addEventListener("mouseenter", () => clearInterval(timer));
+  view.addEventListener("mouseleave", restart);
+  let x0 = null;
+  view.addEventListener("touchstart", (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+  view.addEventListener("touchend", (e) => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) (dx < 0 ? next : prev).click();
+  });
+  place(false);
+  restart();
+}
+
+/* Labelled diagram: an image with labels and dotted leader lines on wide screens;
+   on narrow screens the labels become numbered dots with a list underneath. */
+function buildDiagram(parent, d, title) {
+  const esc = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const marked = (t) => esc(t).replace(/==(.+?)==/g, "<mark>$1</mark>");
+  const IMG_TOP = 6, IMG_H = 82;             // where the image sits in the box (%)
+  const Y = (y) => IMG_TOP + (y * IMG_H) / 100;
+
+  const wrap = document.createElement("section");
+  wrap.className = "diagram";
+  if (d.layout === "stacked") {   // notes go under the image, in columns
+    wrap.classList.add("stacked");
+    if ((d.notes || []).length === 3) wrap.classList.add("three");
+    if (d.roomy) wrap.classList.add("roomy");   // extra room above for tall labels
+  }
+  const fig = document.createElement("figure");
+  fig.className = "diagram-fig";
+  const stage = document.createElement("div");
+  stage.className = "diagram-stage";
+  if (d.aspect) stage.style.setProperty("--ar", d.aspect);   // image width / height
+  const img = media(d.image, title + " render with labelled parts", "(max-width: 1000px) 100vw, 65vw");
+  img.className = "diagram-img";
+  img.style.top = IMG_TOP + "%"; img.style.height = IMG_H + "%";
+  stage.appendChild(img);
+
+  const NS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(NS, "svg");
+  svg.setAttribute("viewBox", "0 0 100 100");
+  svg.setAttribute("preserveAspectRatio", "none");
+  svg.classList.add("diagram-lines");
+  stage.appendChild(svg);
+  // darkMask (optional): a PNG whose opaque pixels mark the render's dark areas. Leader lines are
+  // drawn a second time in light grey inside a layer masked to those areas.
+  let lightGroup = null;
+  if (d.darkMask) {
+    const layer = document.createElement("div");
+    layer.className = "diagram-dark";
+    layer.style.top = IMG_TOP + "%"; layer.style.height = IMG_H + "%";
+    layer.style.webkitMaskImage = layer.style.maskImage = `url("${d.darkMask}")`;
+    lightGroup = document.createElementNS(NS, "svg");
+    lightGroup.setAttribute("viewBox", "0 0 100 100");
+    lightGroup.setAttribute("preserveAspectRatio", "none");
+    lightGroup.classList.add("diagram-lines", "on-dark");
+    lightGroup.style.top = (-IMG_TOP / IMG_H * 100) + "%";
+    lightGroup.style.height = (100 / IMG_H * 100) + "%";
+    layer.appendChild(lightGroup);
+    stage.appendChild(layer);
+  }
+
+  const list = document.createElement("ol");
+  list.className = "diagram-list";
+
+  d.labels.forEach((l, n) => {
+    const py = Y(l.y);
+    const path = document.createElementNS(NS, "polyline");
+    path.setAttribute("points", `${l.lx},${l.ly} ${l.lx},${py} ${l.x},${py}`);
+    path.setAttribute("vector-effect", "non-scaling-stroke");
+    svg.appendChild(path);
+    if (lightGroup) lightGroup.appendChild(path.cloneNode());
+
+    const dot = document.createElement("span");
+    dot.className = "diagram-dot";
+    dot.style.left = l.x + "%";
+    dot.style.setProperty("--y", l.y);   // CSS places it (the image sits differently on phones)
+    dot.textContent = n + 1;
+    stage.appendChild(dot);
+
+    const lab = document.createElement("span");
+    lab.className = "diagram-label " + l.side;
+    lab.style.left = l.lx + "%"; lab.style.top = l.ly + "%";
+    lab.style.width = (l.w || 15) + "%";
+    lab.textContent = l.text;
+    stage.appendChild(lab);
+
+    const li = document.createElement("li");
+    li.textContent = l.text;
+    list.appendChild(li);
+  });
+  fig.append(stage, list);
+
+  const notes = document.createElement("ol");
+  notes.className = "diagram-notes";
+  (d.notes || []).forEach((t) => {
+    const li = document.createElement("li");
+    li.innerHTML = `<h3 class="note-title">${esc(t.title)}</h3>${richText(t.text)}`;
+    notes.appendChild(li);
+  });
+  wrap.append(fig, notes);
+  parent.appendChild(wrap);
+
+  // Side-by-side layout: widen the notes column just enough that the notes end about where the
+  // render ends, so both fit on screen together (the render shrinks a little to make room).
+  if (!d.layout) {
+    const notes = wrap.querySelector(".diagram-notes");
+    const balance = () => {
+      wrap.style.gridTemplateColumns = "";
+      // target: no taller than the render, or than the screen (whichever is more generous)
+      const target = Math.max(fig.offsetHeight, window.innerHeight - 110);
+      if (window.innerWidth <= 1000 || !notes || notes.offsetHeight <= target) return;
+      const W = wrap.clientWidth;
+      let lo = notes.offsetWidth, hi = W * 0.45;
+      for (let i = 0; i < 12; i++) {
+        const mid = (lo + hi) / 2;
+        wrap.style.gridTemplateColumns = `minmax(0, 1fr) ${mid}px`;
+        if (notes.offsetHeight > target) lo = mid; else hi = mid;
+      }
+      wrap.style.gridTemplateColumns = `minmax(0, 1fr) ${Math.round(hi)}px`;
+    };
+    let raf = 0;
+    window.addEventListener("resize", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(balance); });
+    requestAnimationFrame(balance);
+  }
+}
+
+/* ---------- Story blocks (sections with `blocks`) ---------- */
+function richText(t) {
+  return t.replace(/&/g, "&amp;").replace(/</g, "&lt;")
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/==(.+?)==/g, "<mark>$1</mark>")
+    .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+}
+
+function renderBlocks(box, blocks, title) {
+  blocks.forEach((b) => box.appendChild(renderBlock(b, title)));
+}
+
+function renderBlock(b, title) {
+  const el = document.createElement("div");
+  el.className = "blk blk-" + b.type;
+  if (b.maxWidth) el.style.maxWidth = b.maxWidth + "px";
+  if (b.center) { el.style.marginLeft = "auto"; el.style.marginRight = "auto"; }
+  if (b.type === "text") {
+    b.text.forEach((t) => { const p = document.createElement("p"); p.innerHTML = richText(t); el.appendChild(p); });
+  } else if (b.type === "caption") {
+    const p = document.createElement("p"); p.innerHTML = richText(b.text); el.appendChild(p);
+  } else if (b.type === "list") {
+    const ol = document.createElement(b.bullets ? "ul" : "ol");   // bullets: true = dots instead of numbers
+    b.items.forEach((t) => { const li = document.createElement("li"); li.innerHTML = richText(t); ol.appendChild(li); });
+    el.appendChild(ol);
+  } else if (b.type === "split") {
+    // Columns of stacked images, widths chosen so every column ends at the same height
+    b.columns.forEach((col) => {
+      const c = document.createElement("div");
+      c.className = "split-col";
+      const r = col.reduce((a, src) => { const d = SIZES[src] || [4, 3]; return a + d[1] / d[0]; }, 0);
+      c.style.flex = `${(1 / r).toFixed(4)} 1 0`;
+      col.forEach((src) => c.appendChild(media(src, title + " sketch", "(max-width: 900px) 100vw, 50vw")));
+      el.appendChild(c);
+    });
+  } else if (b.type === "stack") {
+    b.images.forEach((src) => el.appendChild(media(src, title + " sketch", "(max-width: 900px) 100vw, 1000px")));
+  } else if (b.type === "image") {
+    const fig = document.createElement("figure");
+    fig.appendChild(media(b.src, b.caption || title, "(max-width: 900px) 100vw, 50vw"));
+    if (b.caption) { const c = document.createElement("figcaption"); c.textContent = b.caption; fig.appendChild(c); }
+    el.appendChild(fig);
+  } else if (b.type === "row") {
+    const cells = b.images.map((src) => { const c = document.createElement("div"); c.className = "photo"; c.appendChild(media(src, title)); return c; });
+    rows(el, cells, () => (isNarrow() ? 1 : b.images.length));
+  } else if (b.type === "pair") {
+    b.items.forEach((it) => el.appendChild(renderBlock(it, title)));
+  } else if (b.type === "overlay") {
+    // Image with text placed on its white space (no leader lines); captions can sit under it.
+    // notes: [{ text, x, y, w }] in % of the image. On phones the notes stack under the image.
+    const stage = document.createElement("div");
+    stage.className = "ov-stage";
+    stage.appendChild(media(b.image, title, "100vw"));
+    b.notes.forEach((n) => {
+      const t = document.createElement("div");
+      t.className = "ov-note";
+      t.style.left = n.x + "%"; t.style.top = n.y + "%"; t.style.width = n.w + "%";
+      t.innerHTML = richText(n.text);
+      stage.appendChild(t);
+    });
+    el.appendChild(stage);
+    if (b.captions) {
+      const row = document.createElement("div");
+      row.className = "ov-captions";
+      b.captions.forEach((c) => {
+        const t = document.createElement("div");
+        t.style.marginLeft = c.x + "%"; t.style.width = c.w + "%";
+        t.innerHTML = richText(c.text);
+        row.appendChild(t);
+      });
+      el.appendChild(row);
+    }
+  } else if (b.type === "slider") {
+    // Full-width slideshow: { type: "slider", images: [...], interval: 2000 }
+    el.classList.add("slider-box", "slider-wide");
+    const r = Math.max(...b.images.map((src) => { const d = SIZES[src] || [16, 9]; return d[0] / d[1]; }));
+    el.style.setProperty("--sr", r.toFixed(3));
+    buildSlider(el, b.images, title, b.interval || 2500);
+  } else if (b.type === "side") {
+    // An image with other blocks beside it: { type: "side", image, width: "55%", blocks: [...] }
+    el.style.setProperty("--side-w", b.width || "55%");
+    const fig = document.createElement("div"); fig.className = "side-img";
+    fig.appendChild(media(b.image, title, "(max-width: 900px) 100vw, 50vw"));
+    const col = document.createElement("div"); col.className = "side-col";
+    renderBlocks(col, b.blocks || [], title);
+    el.append(fig, col);
+  } else if (b.type === "groups") {
+    buildGroups(el, b, title);
+  } else if (b.type === "cad-row") {
+    // Images share one height; a caption can sit above and/or below each one
+    b.items.forEach((it) => {
+      const d = SIZES[it.image] || [3, 4];
+      const cell = document.createElement("figure");
+      cell.className = "cad-item";
+      cell.style.setProperty("--r", (d[0] / d[1]).toFixed(4));
+      // top / bottom: a caption, or an array of captions spread across the image (null = none)
+      const cap = (cls, v) => {
+        const d = document.createElement("div"); d.className = cls;
+        if (Array.isArray(v)) {
+          d.classList.add("cad-split");
+          v.forEach((t) => { const c = document.createElement("div"); if (t) c.innerHTML = richText(t); d.appendChild(c); });
+        } else if (v) d.innerHTML = richText(v);
+        return d;
+      };
+      const top = cap("cad-top", it.top), bot = cap("cad-bottom", it.bottom);
+      // wide: let a caption over a narrow image spill into the free space beside it (px)
+      if (it.wide) [top, bot].forEach((c) => c.style.setProperty("--wide", it.wide + "px"));
+      const pic = document.createElement("div"); pic.className = "cad-img";
+      pic.appendChild(media(it.image, title));
+      cell.append(top, pic, bot);
+      el.appendChild(cell);
+    });
+    el.style.gridTemplateColumns = b.items.map((it) => { const d = SIZES[it.image] || [3, 4]; return `${(d[0] / d[1]).toFixed(4)}fr`; }).join(" ");
+  } else if (b.type === "annotated-grid") {
+    b.items.forEach((it) => el.appendChild(annotated(it, title)));
+  } else if (b.type === "annotated") {
+    el.appendChild(annotated(b, title));
+  } else if (b.type === "videos") {
+    b.items.forEach((v) => {
+      const vid = loopVideo(v.src, v.poster, v.w, v.h);
+      if (!v.caption) { vid.style.flex = `${(v.w / v.h).toFixed(4)} 1 0`; el.appendChild(vid); return; }
+      const fig = document.createElement("figure");   // video with a caption underneath
+      fig.className = "vid-fig";
+      fig.style.flex = `${(v.w / v.h).toFixed(4)} 1 0`;
+      const cap = document.createElement("figcaption");
+      cap.innerHTML = richText(v.caption);
+      fig.append(vid, cap);
+      el.appendChild(fig);
+    });
+  } else if (b.type === "media-rows") {
+    // Rows of images and looping videos; everything in a row shares one height
+    const cells = b.items.map((it) => {
+      const cell = document.createElement("div");
+      cell.className = "mr-cell";
+      let w, h;
+      let el2;
+      if (typeof it === "string" || it.src) {   // an image path, or { src, caption }
+        const src = typeof it === "string" ? it : it.src;
+        const d = SIZES[src] || [4, 3]; w = d[0]; h = d[1];
+        el2 = media(src, title);
+      } else {
+        w = it.w; h = it.h;
+        el2 = loopVideo(it.video, it.poster, w, h);
+      }
+      cell.style.flex = `${(w / h).toFixed(4)} 1 0`;
+      if (it.caption) {
+        // media keeps its shape in a box; the caption sits underneath
+        const box = document.createElement("div");
+        box.className = "mr-media"; box.style.aspectRatio = `${w} / ${h}`;
+        box.appendChild(el2);
+        const cap = document.createElement("div");
+        cap.className = "mr-cap"; cap.innerHTML = richText(it.caption);
+        cell.classList.add("has-cap"); cell.append(box, cap);
+      } else {
+        cell.style.aspectRatio = `${w} / ${h}`;
+        cell.appendChild(el2);
+      }
+      return cell;
+    });
+    const per = () => (isNarrow() ? Math.min(2, b.perRow || 3) : b.perRow || 3);
+    let wasNarrow = null;
+    let last = 0;
+    const build = () => {
+      const n = per();
+      if (n === last && wasNarrow === isNarrow()) return;
+      last = n; wasNarrow = isNarrow();
+      el.innerHTML = "";
+      // rows: [3, 2] = how many items go in each row (wide screens); else n per row
+      const sizes = !isNarrow() && b.rows ? b.rows : [];
+      let k = 0, r = 0;
+      while (k < cells.length) {
+        const take = sizes[r++] || n;
+        const row = document.createElement("div");
+        row.className = "mr-row";
+        cells.slice(k, k + take).forEach((c) => row.appendChild(c));
+        el.appendChild(row);
+        k += take;
+      }
+      fitSizes(el);
+    };
+    build();
+    window.addEventListener("resize", build);
+  }
+  return el;
+}
+
+/* Image with labels joined to points on it by dotted lines.
+   label: { text, x, y (% of image), side: left|right|top|bottom, at (% along that side), row } */
+function annotated(cfg, title) {
+  const wrap = document.createElement("figure");
+  wrap.className = "ann" + (cfg.highlight ? " ann-highlight" : "");
+  const fig = document.createElement("div");
+  fig.className = "ann-fig";
+  const pad = cfg.pad || {};
+  fig.style.padding = `${pad.t || 0} ${pad.r || 0} ${pad.b || 0} ${pad.l || 0}`;
+  const img = media(cfg.image, title, "(max-width: 900px) 90vw, 45vw");
+  fig.appendChild(img);
+  const NS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(NS, "svg");
+  svg.classList.add("ann-lines");
+  fig.appendChild(svg);
+  const labs = (cfg.labels || []).map((l) => {
+    const s = document.createElement("span");
+    s.className = "ann-label " + l.side;
+    s.textContent = l.text;
+    fig.appendChild(s);
+    return s;
+  });
+  wrap.appendChild(fig);
+  if (cfg.highlight || cfg.caption) {
+    const c = document.createElement("figcaption");
+    c.textContent = cfg.highlight || cfg.caption;
+    wrap.appendChild(c);
+  }
+
+  function layout() {
+    const F = fig.getBoundingClientRect(), R = img.getBoundingClientRect();
+    if (!R.width) return;
+    const ix = R.left - F.left, iy = R.top - F.top, iw = R.width, ih = R.height;
+    svg.setAttribute("viewBox", `0 0 ${F.width} ${F.height}`);
+    svg.innerHTML = "";
+    const gap = 8, rowH = 20;
+    cfg.labels.forEach((l, k) => {
+      const s = labs[k];
+      const px = ix + (l.x / 100) * iw, py = iy + (l.y / 100) * ih;
+      let ax, ay, pts;
+      if (l.side === "left" || l.side === "right") {
+        ay = l.at != null ? iy + (l.at / 100) * ih : py;
+        ax = l.side === "left" ? ix - gap : ix + iw + gap;
+        s.style.top = ay + "px";
+        if (l.side === "left") { s.style.right = (F.width - ax + 6) + "px"; s.style.left = ""; s.style.maxWidth = (ax - 6) + "px"; }
+        else { s.style.left = (ax + 6) + "px"; s.style.maxWidth = (F.width - ax - 6) + "px"; }
+        pts = [[ax, ay], [px, ay], [px, py]];
+      } else {
+        ax = l.at != null ? ix + (l.at / 100) * iw : px;
+        const off = (l.row || 0) * rowH;
+        ay = l.side === "top" ? iy - gap - off : iy + ih + gap + off;
+        s.style.top = ay + "px";
+        // centre the label on its line, but keep it inside the figure
+        s.style.maxWidth = Math.min(F.width * 0.45, 260) + "px";
+        const w = s.offsetWidth;
+        s.style.left = Math.max(0, Math.min(F.width - w, ax - w / 2)) + "px";
+        pts = [[ax, ay], [ax, py], [px, py]];
+      }
+      const line = document.createElementNS(NS, "polyline");
+      line.setAttribute("points", pts.map((p) => p.join(",")).join(" "));
+      svg.appendChild(line);
+      const dot = document.createElementNS(NS, "circle");
+      dot.setAttribute("cx", ax); dot.setAttribute("cy", ay); dot.setAttribute("r", 2.6);
+      svg.appendChild(dot);
+    });
+  }
+  if (cfg.labels && cfg.labels.length) {
+    img.addEventListener("load", layout);
+    new ResizeObserver(layout).observe(fig);
+    requestAnimationFrame(layout);
+  }
+  return wrap;
+}
+
+// Silent looping video that plays only while it's on screen
+function loopVideo(src, poster, w, h) {
+  const vid = document.createElement("video");
+  vid.src = src; vid.poster = poster || "";
+  vid.muted = true; vid.loop = true; vid.playsInline = true; vid.preload = "metadata";
+  if (w && h) vid.style.aspectRatio = `${w} / ${h}`;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) vid.controls = true;
+  else {
+    vid.autoplay = true;
+    new IntersectionObserver(([e]) => (e.isIntersecting ? vid.play().catch(() => {}) : vid.pause())).observe(vid);
+  }
+  return vid;
+}
+
+/* ---------- Groups: a row of image sets, some outlined (the chosen option) ----------
+   { type: "groups", items: [ { images: [...], outline: "chosen" | "alt" | "plain", star: true, caption: "" } ] }
+   Every image in the row shares one height; outlined sets get padding inside a rounded box. */
+function buildGroups(el, b, title) {
+  const STAR_SVG = '<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3l4.9 10.6 11.6 1.3-8.6 7.9 2.4 11.4L20 28.4 9.7 34.2l2.4-11.4L3.5 14.9l11.6-1.3z" fill="#fff" stroke="#9be22d" stroke-width="3" stroke-linejoin="round"/></svg>';
+  const PAD = 10, GAP_IN = 8;
+  const groups = b.items.map((g) => {
+    const box = document.createElement("figure");
+    box.className = "grp" + (g.outline ? " grp-" + g.outline : "");
+    if (b.timeline) el.classList.add("timeline");
+    const row = document.createElement("div"); row.className = "grp-row" + (g.stack ? " stack" : "");
+    const imgs = g.images.map((src) => {
+      const d = SIZES[src] || [3, 4];
+      const im = media(src, title);
+      im.dataset.r = d[0] / d[1];
+      row.appendChild(im);
+      return im;
+    });
+    if (g.label) { const lb = document.createElement("div"); lb.className = "grp-label"; lb.textContent = g.label; box.appendChild(lb); }
+    box.appendChild(row);
+    if (g.star) { const st = document.createElement("span"); st.className = "grp-star"; st.innerHTML = STAR_SVG; box.appendChild(st); }
+    if (g.caption) { const c = document.createElement("figcaption"); c.textContent = g.caption; box.appendChild(c); }
+    el.appendChild(box);
+    return { box, imgs, stack: !!g.stack, pad: g.outline && g.outline !== "none" ? PAD : 0 };
+  });
+  const layout = () => {
+    const W = el.clientWidth - 2;   // a hair of slack so rounding never pushes the last set onto a new line
+    const gap = parseFloat(getComputedStyle(el).columnGap) || 14;
+    const sized = (list, width) => {
+      // width = sum over groups of (H * sum(r) + gaps inside + 2*pad) + gaps between
+      // a stacked set (images on top of each other, total height H) is H*k - GAP_IN*k wide, k = 1/sum(1/r)
+      let fixed = gap * (list.length - 1), R = 0;
+      list.forEach((g) => {
+        fixed += 2 * g.pad;
+        if (g.stack) { const k = 1 / g.imgs.reduce((a, im) => a + 1 / im.dataset.r, 0); R += k; fixed -= GAP_IN * (g.imgs.length - 1) * k; }
+        else { fixed += GAP_IN * (g.imgs.length - 1); g.imgs.forEach((im) => (R += +im.dataset.r)); }
+      });
+      return Math.max(40, (width - fixed) / R);
+    };
+    const apply = (list, H) => list.forEach((g) => {
+      if (g.stack) {
+        const k = 1 / g.imgs.reduce((a, im) => a + 1 / im.dataset.r, 0), w = (H - GAP_IN * (g.imgs.length - 1)) * k;
+        g.imgs.forEach((im) => { im.style.width = w + "px"; im.style.height = w / im.dataset.r + "px"; });
+      } else g.imgs.forEach((im) => { im.style.height = H + "px"; im.style.width = H * im.dataset.r + "px"; });
+    });
+    // Split into as few rows as needed to keep images a usable size; rows hold an even share
+    // of the sets (e.g. 3+3, 4+3), never a lone straggler.
+    const n = groups.length, minH = isNarrow() ? 100 : 90;
+    el.querySelectorAll(".grp-break").forEach((x) => x.remove());
+    for (let k = 1; k <= n; k++) {
+      const rows = [], base = Math.floor(n / k), extra = n % k;
+      if (base === 1 && extra > 0) continue;   // would leave single sets hanging next to pairs
+      for (let i = 0, start = 0; i < k; i++) { const len = base + (i < extra ? 1 : 0); rows.push(groups.slice(start, start + len)); start += len; }
+      const hs = rows.map((r) => sized(r, W));
+      if (Math.min(...hs) >= minH || k === n) {
+        rows.forEach((r, i) => {
+          apply(r, Math.min(isNarrow() ? 320 : 9999, hs[i]));
+          if (i > 0) { const br = document.createElement("div"); br.className = "grp-break"; el.insertBefore(br, r[0].box); }
+        });
+        break;
+      }
+    }
+  };
+  requestAnimationFrame(layout);
+  window.addEventListener("resize", layout);
+}
