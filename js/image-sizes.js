@@ -862,19 +862,19 @@ const IMAGE_SIZES = {
 ],
 "assets/img/work/lego-rescue/lego-v2-poster.jpg": [
 1280,
-720
+576
 ],
 "assets/img/work/lego-rescue/lego-v3-poster.jpg": [
 720,
-1280
+1024
 ],
 "assets/img/work/lego-rescue/lego-v4-poster.jpg": [
 640,
-360
+288
 ],
 "assets/img/work/lego-rescue/lego-v5-poster.jpg": [
 720,
-1280
+1024
 ],
 "assets/img/work/manchild/manchild-01.jpg": [
 1323,
@@ -1096,10 +1096,6 @@ const IMAGE_SIZES = {
 768,
 1024
 ],
-"assets/img/work/redbull-flugtag/redbull-flugtag-08.jpg": [
-768,
-1024
-],
 "assets/img/work/redbull-flugtag/redbull-flugtag-flight-crop.jpg": [
 1440,
 960
@@ -1111,6 +1107,10 @@ const IMAGE_SIZES = {
 "assets/img/work/redbull-flugtag/redbull-flugtag-race.jpg": [
 1480,
 782
+],
+"assets/img/work/redbull-flugtag/redbull-flugtag-team.jpg": [
+1592,
+1430
 ],
 "assets/img/work/redbull-flugtag/redbull-sketch-01.jpg": [
 806,
@@ -1557,10 +1557,10 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/lego-rescue/lego-p09.jpg": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAADQBQCdASoYABIAPu1eqE4ppKOiMBgMATAdiWIAuzMy9tAfod9hVzl+Yos21Dl+UM8S+Ast88gAAP6t1SR2STrvETwyTwYcJLLO5c/EydDTOQ58kOQp5WoUmJzEwrzWoyYUnkdpLylWcTMAj0b1OCy4LhN7JdczrMBuqBQMKDz3mRCZwES595DzZ/my4o0KvvnQYVmvRx8FgAAA",
 "assets/img/work/lego-rescue/lego-p10.jpg": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAABQBQCdASoSABgAPu1qrVCppaQiqAqpMB2JbACpJxgBeJE8dkDd1jleEIYD3hL+uLR6QAAA+oEPGnDrtqyeCasJv+UVekDbsnTd4a6tU4rjwdW/Tm79M5SpRLUtyPLbSBQ6rBA3XkKTHEsrwm4S8+PbqzUQzsPUwRcAdTEk7ptrMIXMahlKT75SQrLriveTRbMrN+uCrJaEAxJxUuLbhTG0O/oZxJl0VEA0rVFfpBKbjChcQGYAAA==",
 "assets/img/work/lego-rescue/lego-rescue-01.jpg": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAQBQCdASoWABgAPu1krE4ppaSiKA1RMB2JQBibAiO6BcFq1xOj0BTkWUkT7H7r3lAAAP7ep48Hr92N5IHa8QH9Muw8G4StmPqh1H+BW1/A2GgdgFaB8TfNGUXpfCyTRkNo8ctw0x42VBK2/iGtv3LeAnKXl0R1mijRLom/9x8US3JWFmBKetfHuPPtNsAAAAA=",
-"assets/img/work/lego-rescue/lego-v2-poster.jpg": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADwAwCdASoYAA4APu1iqU2ppaOiMAgBMB2JQBWAAvZNksLkKXoZJ1qAAP7ysNaj0dQSEiEFlL6ihBNoKrQa+7lfb5MV/Omo4QjZraXRibZR49yyzP282SLhQ1kVfJp/MyPNa12FmcfJk6yBsLZm89+sAAA=",
-"assets/img/work/lego-rescue/lego-v3-poster.jpg": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADwAwCdASoNABgAPu1kq04ppaQiMAgBMB2JQBOgBC2NrA40EwMsIJ2AAN5DbuN90a6595KWlaiur8a/J9nR2IIGmhKNiEpeXKWjdnFO3jeok3qzJaWoMyLPc6lWX3lI9YPAacGupxpQAI9DLsVMlfjAAAA=",
-"assets/img/work/lego-rescue/lego-v4-poster.jpg": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAABQAwCdASoYAA4APu1kqU2ppaQiMAgBMB2JYwC7AA/b1vvFAAD+z2MJffEnK8o4Ssps5SZenpgXK+cexeKkzwT6Mk0KIctvCuaXFJZrskZ5M0uB3QKLhQWnxhtloeNbBIBsWJy6AAA=",
-"assets/img/work/lego-rescue/lego-v5-poster.jpg": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQAwCdASoNABgAPu1kqU2ppaOiMAgBMB2JYgC7ABIazs33h7iIcngA9dVAWqLIL3OE/EOLch2Q2DchuBbdmW1mLlyJ0Xf7hxvfFgI47l99GGhNAFFKXGd0Cio8se/VlDPl4YV+gLKWtdd2CSUXbjNk1cEFYe3m0Hum/GAA",
+"assets/img/work/lego-rescue/lego-v2-poster.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQAwCdASoYAAsAPu1iqk2ppaQiMAgBMB2JQBWAAX+rmM39IE22igAA/vKzMyPFt7o6VeD4ppF03/ANtE/IRfsvea6Qp1gFRjgdhy04VxcLjYDLQO+Lz454okgCc1nrJWDJK9X/T5DMWM6pOYWsAA==",
+"assets/img/work/lego-rescue/lego-v3-poster.jpg": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAACwBACdASoRABgAPu1srlCppiQiqAqpMB2JYwBWhAPVFMTInkL/V9bF8iVFI1sAAMsH5oiIUOJl6iYwkTCC7/kQ+l/NF+lSkSdKGJs3jHdQRRJJjL48nfHaWrHMhI13PCJc43maQG7Yc4OI3vfEm5hE7/AUhapw7NKyLzOKmqAAAA==",
+"assets/img/work/lego-rescue/lego-v4-poster.jpg": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQBACdASoYAAsAPu1iqU2ppaOiMAgBMB2JQBdgA9aubQ/eRjFf6RJTAAD+71A3Nl4ZNQ+S8+hGbpxYHLA/GK8CI1o9qYIsrJi71vZd0CIYkvDfi7nWA/8Y+AAAAA==",
+"assets/img/work/lego-rescue/lego-v5-poster.jpg": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAACQBQCdASoRABgAPu1qrFEppaQiqAqpMB2JZRtgAchOGB4AIW/ibsz/OmzXhHTt7wiF1UvUAAD1FRa6Est/tNmSE3Hch7zWrc7Gg+1S/uVgJJnYLv5kJuukYlbB6UHsIoQ3xEo3g4YYiSMvtV+7RgqZw2S6kwGtr8YQPg6r9FvKwELGKIBKfxQh5/VUDxgAAAA=",
 "assets/img/work/manchild/manchild-01.jpg": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAACwBACdASoSABgAPu1kqU2ppaQiMAgBMB2JYwCdG1/AWGgpKuTQUPFhytDZ2wlYAP7etGsRFgpwSeMmWF5z27RfEfXdvUu2v87yVABZktCSM+NNVD5Al1I+HMJse5KAqPaM+loGL0wJWci2yDIL6VmCNxhJF8vhymH+x0MA9cAae4OGsL0UWNkQRgCYzFZsUwoAAA==",
 "assets/img/work/manchild/manchild-02.jpg": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYgCdIFzCNoHWOqJj1FCHAVAlgAD84WZUN6Z8q5lcarNNVwIG5/J62zYA65LkNJFBijRpdv0OFl2enuxqQQrQO93Isprg2YmHR4FMmWK4CDfbdvcimT6Wc3c+KHSKFfS4NpTd3jYQ0eUd3nk1Twh9Hjy+yQAA",
 "assets/img/work/manchild/manchild-03.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAACQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYwCdMoADyBHYIj8FhkCWmCetFgAAyJf3GsEkKDElMfg6N+F2gF3S2HjxEcLhpWz4AVnY0AmLZ4S4qIOQi71f5JVUrbGS3kkHX8T35sy3cgEbBvHBL00UuD5n4+jQaTKYDc7+TB6VEoqknGhIh96xIAA=",
@@ -1616,10 +1616,10 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/redbull-flugtag/redbull-flugtag-05.jpg": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwAwCdASoNABgAPu1iqU2ppaOiMAgBMB2JQBXDgkdzhXxEgwgW7tyIAP5+mDQLqtkkF3VerG9hyRbP4gTOpDxdbOEJJQlx9YZ1kS4Xwq1E+ozHmmvcQweH8zaUZzdjnb9wo8AA",
 "assets/img/work/redbull-flugtag/redbull-flugtag-06.jpg": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADwBACdASoSABgAPu1srFEppaQiqAqpMB2JZQDNwAhGhNVDeG4mDcQJwuW1z9HuEAAA+eLoCL8BeZsoIS3BOQtIF6ad6f2efPiOW5ZzRNPVhBY4/r3OV+AOmLKoydk/YEsgkT40UQPx7OMi0MH+Q+OiHAAFxsLvGwaWJwSULdDqokgA",
 "assets/img/work/redbull-flugtag/redbull-flugtag-07.jpg": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAACwBACdASoSABgAPu1kpk4ppaMiMBgMATAdiUAYG4GYYNRIijB1f094y/CDq6AAAP7NuzUGXymS8jVQaeYzv0QaNpRTef2tdzic3DEU0BlN8AUXrkuiDp5XP/gJTlF5hIyft88CPUeVJMA/laxb4RLn7YPiv+0Q9WGeqeDKeEZB+Qxf7A9jQAAA",
-"assets/img/work/redbull-flugtag/redbull-flugtag-08.jpg": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwBACdASoSABgAPu1kq06ppaQiKA1RMB2JQBbZAkUcMKP3u/AgmGVqUr5H5wjqrwAA/Z0fytXf4QlJYSwF05QfjiDOTSWNeb9GDcRdtk2ft10QUXZTb/lDCkw2ICOZCPukMJF78Mev5eOxBgI28ElAup18d9jokoxSmWrCGYo4kYzPxm4xoAAA",
 "assets/img/work/redbull-flugtag/redbull-flugtag-flight-crop.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JQBYeNQAuBEsMqrqyJMEZmwAA3Bp0mNdT/yGF1k0jTMmbXVhTblQhnpKLLUbUMRcQ9ncXB86cQWfFGL8r1++Izd6tvM9EpqE0b9IPL6AtFzDUpS5ESAAA",
 "assets/img/work/redbull-flugtag/redbull-flugtag-podium.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBQCdASoYABIAPu1krE+ppSQiMBgIATAdiWIAqSeOwa0BvxovohgrVnpmKgRLauUAAAD+xeVPqiyBnk/rkBEbsNm2NI5ZzxqImQQeB8EH+ooo9WEo4LM0QR8KSC+1OhKTS5pYH3GryxrqzzTjbU1+rKjTzllxL505A8GDZ3M6Tud2RJAsYTwAAAA=",
 "assets/img/work/redbull-flugtag/redbull-flugtag-race.jpg": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADwAwCdASoYAA0APu1iqU2ppaQiMAgBMB2JYwCnFB3XnQSWj6pU77YAAP7AL0SclJmx+34H1W+EzRAMOmQYbeMzbUfgTuuWsVEXzCqu0w1p4AT1OXEqQO7C8L0Q8a6/8t32oGev808fTPE+9XrrZ7uoui9sWRN8obhfIYZy4WVztA8WAAA=",
+"assets/img/work/redbull-flugtag/redbull-flugtag-team.jpg": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAAAQBQCdASoYABYAPu1ur1KppiQiqAgBMB2JQBOgAVcUYfOwLnBVcFaHhK5Snes08+AAAN2XvWFL1vzrD0Tb3tFSdq0KAbPAHeaNIUvRigGtOw0g9s4un5k5Zz+1Xyr8JDVLTJniRCvbYMyGy5333YbUTKDSK+nq2eG1/jbvmCh2yNXtXwh+G6UiR1bo5CZwJaWqB2f/6JucABybmlfqws6DFGc6v30d2JYAwb7AegAAAA==",
 "assets/img/work/redbull-flugtag/redbull-sketch-01.jpg": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAQBQCdASoYABgAPtFYok2oJaMiN+gBABoJaQAAiE0T4WULY+qAMT4VANVUZC78eswAAP72B4seYahpftHS0w/R1wSyCWStHMakVQXvD01B5ca3VQHzX2uy6y3Ja9gvOodw0zW4okgmwyNlnnSmVqyBxaGdQkQV5oPe53G4elPMthyvFJK9SymPn05KS4AAAAA=",
 "assets/img/work/redbull-flugtag/redbull-sketch-02.jpg": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoYAA0APu1iqU2ppaQiMAgBMB2JZgCdH8ACGNtSPnucFwnDoAD+8EHtkRsdtMvxwZ6he7IwpbTn6u8XyBBf4sKZU4/gXyUWPApdAMcIT9+6+wCnQmCTdfVdKvqBPjUT0Oooj8251ixQAt9Ac8Um2sPdz1tfCmwAAAA=",
 "assets/img/work/redbull-flugtag/redbull-sketch-03.jpg": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACwBACdASoYABIAPu1kqE2ppaOiMBgMATAdiWcAAC2p64xZVSPzqJfbEohzwEZoAP7zdTKriMOlh6ncoJNbZsl0BBbXCvZiXNJeOzeRhycfvxqSw9Mxo9ZA5O8VHNc2PX9JJt6V8Snjj8KEQ5srNTrOvTFPzMZYu7zrm1OHJtMezr0cOInnN8L0goAAAA==",
