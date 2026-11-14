@@ -492,6 +492,14 @@ function renderBlock(b, title) {
     const r = Math.max(...b.images.map((src) => { const d = SIZES[src] || [16, 9]; return d[0] / d[1]; }));
     el.style.setProperty("--sr", r.toFixed(3));
     buildSlider(el, b.images, title, b.interval || 2500);
+  } else if (b.type === "side") {
+    // An image with other blocks beside it: { type: "side", image, width: "55%", blocks: [...] }
+    el.style.setProperty("--side-w", b.width || "55%");
+    const fig = document.createElement("div"); fig.className = "side-img";
+    fig.appendChild(media(b.image, title, "(max-width: 900px) 100vw, 50vw"));
+    const col = document.createElement("div"); col.className = "side-col";
+    renderBlocks(col, b.blocks || [], title);
+    el.append(fig, col);
   } else if (b.type === "groups") {
     buildGroups(el, b, title);
   } else if (b.type === "cad-row") {

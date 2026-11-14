@@ -706,3 +706,9 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .vid-fig { margin: 0; min-width: 0; }
 .vid-fig video { display: block; width: 100%; height: auto; }
 .vid-fig figcaption { font-size: 13px; font-style: italic; color: #555; margin-top: 6px; }
+
+/* Image with text beside it (side block) */
+.blk-side { display: grid; grid-template-columns: var(--side-w, 55%) 1fr; gap: 36px; align-items: center; }
+.side-img img { display: block; width: 100%; height: auto; }
+.side-col > .blk:first-child { margin-top: 0; }
+@media (max-width: 900px) { .blk-side { grid-template-columns: 1fr; gap: 20px; } }

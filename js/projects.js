@@ -439,12 +439,12 @@ const PROJECTS = [
     sectionGap: 48,         // tighter spacing between sections   // section headings continue the numbered bubbles from the diagram notes
     sections: [
       {
-        label: "",
+        label: "Picking Videos",
         blocks: [
-          { type: "videos", items: [
+          { type: "videos", maxWidth: 760, center: true, items: [
             { src: "assets/img/work/salico/salico-proto3.mp4", poster: "assets/img/work/salico/salico-proto3-poster.jpg", w: 1280, h: 720, caption: "Proto 3 picking" }
           ] },
-          { type: "videos", items: [
+          { type: "videos", maxWidth: 760, center: true, items: [
             { src: "assets/img/work/salico/salico-roller-test.mp4", poster: "assets/img/work/salico/salico-roller-test-poster.jpg", w: 600, h: 924, caption: "Proto 1 picking" },
             { src: "assets/img/work/salico/salico-proto2.mp4", poster: "assets/img/work/salico/salico-proto2-poster.jpg", w: 1280, h: 720, caption: "Proto 2 picking" }
           ] }
@@ -453,15 +453,16 @@ const PROJECTS = [
       {
         label: "Harvesting Procedure",
         blocks: [
-          { type: "image", src: "assets/img/work/salico/salico-procedure.jpg" },
-          { type: "list", items: [
-            "Move down while rolling",
-            "Once enough of the plant has entered the rollers, stop rolling",
-            "Pull up",
-            "Continue rolling to deposit plants onto the ramp while blowing fan",
-            "Repeat steps 1-4 at multiple different heights of plant",
-            "Move to the next row",
-            "Repeat all steps"
+          { type: "side", image: "assets/img/work/salico/salico-procedure.jpg", width: "58%", blocks: [
+            { type: "list", items: [
+              "Move down while rolling",
+              "Once enough of the plant has entered the rollers, stop rolling",
+              "Pull up",
+              "Continue rolling to deposit plants onto the ramp while blowing fan",
+              "Repeat steps 1-4 at multiple different heights of plant",
+              "Move to the next row",
+              "Repeat all steps"
+            ] }
           ] }
         ]
       },
