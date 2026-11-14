@@ -501,7 +501,7 @@ const PROJECTS = [
     photos: [],
     sections: [
       { label: "Sketching and Ideating", blocks: [
-        { type: "media-rows", rows: [2, 3], items: ["assets/img/work/lego-rescue/lego-p02.jpg", "assets/img/work/lego-rescue/lego-p03.jpg", "assets/img/work/lego-rescue/lego-p01.jpg", "assets/img/work/lego-rescue/lego-p04.jpg", "assets/img/work/lego-rescue/lego-p05.jpg"] }
+        { type: "media-rows", maxWidth: 760, center: true, rows: [2, 3], items: ["assets/img/work/lego-rescue/lego-p02.jpg", "assets/img/work/lego-rescue/lego-p03.jpg", "assets/img/work/lego-rescue/lego-p01.jpg", "assets/img/work/lego-rescue/lego-p04.jpg", "assets/img/work/lego-rescue/lego-p05.jpg"] }
       ] },
       { label: "Building and Prototyping", blocks: [
         { type: "media-rows", rows: [5], items: ["assets/img/work/lego-rescue/lego-p06.jpg", "assets/img/work/lego-rescue/lego-p07.jpg", "assets/img/work/lego-rescue/lego-p08.jpg", "assets/img/work/lego-rescue/lego-p09.jpg", "assets/img/work/lego-rescue/lego-p10.jpg"] }
