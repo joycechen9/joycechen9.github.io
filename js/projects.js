@@ -375,17 +375,18 @@ const PROJECTS = [
     summary: "One-line description.",
     details: [],
     cover: "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg",
-    featured: "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg",
+    featuredLayout: "pair",
+    featured: ["assets/img/work/telescoping-drop-pole/tdp-feat-pole.jpg", "assets/img/work/telescoping-drop-pole/tdp-feat-plate.jpg", "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg"],
     photos: [],
     sections: [
       { label: "Fit, Assembly, & ID Evaluation", blocks: [
-        { type: "slider", interval: 2000, images: ["assets/img/work/telescoping-drop-pole/tdp-eval-1.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-2.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-3.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-4.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-5.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-6.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-7.jpg"] }
+        { type: "slider", interval: 3000, images: ["assets/img/work/telescoping-drop-pole/tdp-eval-1.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-2.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-3.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-4.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-5.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-6.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-7.jpg"] }
       ] },
       { label: "UX Testing", blocks: [
-        { type: "slider", interval: 2000, images: ["assets/img/work/telescoping-drop-pole/tdp-ux-1.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-2.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-3.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-4.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-5.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-6.jpg"] }
+        { type: "slider", interval: 3000, images: ["assets/img/work/telescoping-drop-pole/tdp-ux-1.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-2.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-3.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-4.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-5.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-6.jpg"] }
       ] },
       { label: "Load Testing", blocks: [
-        { type: "slider", interval: 2000, images: ["assets/img/work/telescoping-drop-pole/tdp-load-1.jpg", "assets/img/work/telescoping-drop-pole/tdp-load-2.jpg", "assets/img/work/telescoping-drop-pole/tdp-load-3.jpg"] }
+        { type: "slider", interval: 3000, images: ["assets/img/work/telescoping-drop-pole/tdp-load-1.jpg", "assets/img/work/telescoping-drop-pole/tdp-load-2.jpg", "assets/img/work/telescoping-drop-pole/tdp-load-3.jpg"] }
       ] },
       { label: "Install Guide, Labels/Stickers, Packaging", blocks: [
         { type: "text", text: ["Worked with the ID, Packaging, and Graphic Design teams to wrap up the [install guide ↗](https://docs.verkada.com/docs/Verkada-ACC-CAM-MNT-TCEIL-1-Install-Guide.pdf), labels/pad prints/stickers, and packaging."] },
