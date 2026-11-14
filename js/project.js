@@ -436,7 +436,7 @@ function renderBlock(b, title) {
   } else if (b.type === "caption") {
     const p = document.createElement("p"); p.innerHTML = richText(b.text); el.appendChild(p);
   } else if (b.type === "list") {
-    const ol = document.createElement("ol");
+    const ol = document.createElement(b.bullets ? "ul" : "ol");   // bullets: true = dots instead of numbers
     b.items.forEach((t) => { const li = document.createElement("li"); li.innerHTML = richText(t); ol.appendChild(li); });
     el.appendChild(ol);
   } else if (b.type === "split") {

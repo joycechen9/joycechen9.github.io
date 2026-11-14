@@ -516,7 +516,21 @@ const PROJECTS = [
       {
         label: "Capstone Symposium",
         blocks: [
+          { type: "text", text: ["Watch the [symposium video ↗](https://www.youtube.com/watch?v=6P6a0z8bSIY)."] },
           { type: "media-rows", rows: [2, 3], items: ["assets/img/work/salico/salico-sym-1.jpg", "assets/img/work/salico/salico-sym-2.jpg", "assets/img/work/salico/salico-sym-3.jpg", "assets/img/work/salico/salico-sym-4.jpg", "assets/img/work/salico/salico-sym-5.jpg"] }
+        ]
+      },
+      {
+        label: "Awards",
+        blocks: [
+          { type: "media-rows", rows: [3], items: ["assets/img/work/salico/salico-award-1.jpg", "assets/img/work/salico/salico-award-2.jpg", "assets/img/work/salico/salico-award-3.jpg"] },
+          { type: "list", bullets: true, items: [
+            "Best Overall Project, Mechatronics Engineering 2025",
+            "[Norman Esch Entrepreneurship Finalist ↗](https://uwaterloo.ca/mechanical-mechatronics-engineering/news/mechatronics-students-win-big-annual-esch-pitch-competition) ([more ↗](https://uwaterloo.ca/news/eweal-bold-ideas-win-big-esch-contest))",
+            "[Sedra People's Choice Award ↗](https://uwaterloo.ca/news/eweal-bold-ideas-win-big-esch-contest)",
+            "[Winner of Wrench Fund 2025 ↗](https://wrenchfund.ca/)",
+            "[Recipient of Engineer of the Future Fund ↗](https://uwaterloo.ca/engineering/entrepreneurship/funding/engineer-future-trust/engineer-future-fund-recipients)"
+          ] }
         ]
       }
     ],

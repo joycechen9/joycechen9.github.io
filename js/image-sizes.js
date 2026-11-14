@@ -1196,6 +1196,18 @@ const IMAGE_SIZES = {
 1000,
 988
 ],
+"assets/img/work/salico/salico-award-1.jpg": [
+2000,
+1333
+],
+"assets/img/work/salico/salico-award-2.jpg": [
+2000,
+1333
+],
+"assets/img/work/salico/salico-award-3.jpg": [
+2000,
+1333
+],
 "assets/img/work/salico/salico-build-01.jpg": [
 1202,
 822
@@ -1861,6 +1873,9 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/redbull-flugtag/redbull-stunt-03.jpg": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADwBACdASoYABIAPu1wsFKppiSiqAgBMB2JYgCw7BEcON2iuHbmVaB9pxzkXSdgNAAA/uqP2XYgj5JYi3J5seIz9Er8MB+dQ0cmvvEJdR+Hft5BQ0dA/9OelmOw20X1X3jICC0G0RQ94k2gXurI0ApxDfLV3NBBhBb5FyC7UJW+7J1gR2RP9m3BlxfwAA==",
 "assets/img/work/redbull-flugtag/redbull-stunt-04.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAwBACdASoYAA4APu1iqk2ppaQiMAgBMB2JZQAAXBjOWm85J93dK/bqf6AA/aas8GM0MxosjVw0RxXRdDbQAM1bJIvCyQW3Oue7FB4SYx9RiJ2vDmEnqpmvsrAfHww6T4u0bApTUb+EzQVajD7072SocokAOAAA",
 "assets/img/work/redbull-flugtag/redbull-stunt-flight-poster.jpg": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAABwAwCdASoYABgAPuVipk2pJaOiMAwBIByJaQAAAlb3hDcM/BAA+cyfj1wrSEMAasyEMjO96z73dP4YgdItEHJrhYDhjXhdjhmcGvMcAAA=",
+"assets/img/work/salico/salico-award-1.jpg": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JYwC2yBtHzgs3daUs3+WeKAD+wAT9ZKxo5pINhL6YAzq0qvicd5kpyim+C9RxgdcNPaeiW/pey8jtbGfofFHFyNYrFEc4lg91dlObhPcEnbUP0X97qbbgAoKBVWdFlZh0tfgudb5cfDh9+8sXVshE5n2zfER2HoAAAA==",
+"assets/img/work/salico/salico-award-2.jpg": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JYwC06CB/2tXWdipF0xS2pmaWAAD+50CSX6JFDle5q+au3xNIGslj0j/sE0lykKy7QHpCjy5YMa35oJsjFVQ4bmIetPQpwhx90TO5MBHQKdwkKKoD1S6ETdi/eEGT0tUzsCvZo0M0iBkQwAA=",
+"assets/img/work/salico/salico-award-3.jpg": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZQAARoaNl+asMP321bUfcNUAAPa/XGnE1NIcsqLmi9oHTqxMmeoP49GX1PZV6F68YfgINe67/etGhlqICtufNsrm6jpygrr2tmTsHUFMH8fV+hqlTN/OozFjbq6XHxYBniyJEcvwPC/8tI9pOBRzwAawOaDAAAA=",
 "assets/img/work/salico/salico-build-01.jpg": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JYgCsIP8CdnqGhB47ZfBOJ8AAzi8QIQLGWab9N+CKoeThlehaJ++77zBhVcopjFGC0uVY8I6z+B+0VwCT2yxtdxe3hFIrD9vT7NvWQ/7ZyHVhDYfvuo8uZZI3rfCVal25gzKpr0FYAAAA",
 "assets/img/work/salico/salico-build-02.jpg": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAACQBQCdASoYABYAPu1qrFEppaQiqAqpMB2JYgC7M2QBb7s7XM1zZu8tKiQ6AL62TPuuiJIQAADePkbsK8R82BSJzKcBXA/NnG4lAw8jqDtDtv7GgercgUz75fUgKi1CSHx3JqzHNhVusrfWNVAd91JMIOiAOHIbsPk5syRzd12WzvFzW+Gdvtcilxhfv7OOZAkNT4sIfsUa77r3kHR5mM4dZwkLBoEsOmomVXbNG2dEAwn5ha2UQP0yUIAAAA==",
 "assets/img/work/salico/salico-build-03.jpg": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAACwBQCdASoYABYAPu1qrE+ppiQiMBgIATAdiWIAnTMJwYoPV7ZEl+uBhyoYGN1PsW9b/poRnAAA/dJHuBLpQns0MAE13+uCkPdaY9ENi3brVR5T4L6xoHYPYniKZyhJ3Uv9hDdPd8gm9C/srYPBqlt/6hDDDkTn1dCyPbr0uaQXzh7n1SLhjCzFJjp263ihGhSON0OGDWBX8zYNgjk614d7V0MXerAAAAA=",
