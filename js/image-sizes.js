@@ -620,14 +620,6 @@ const IMAGE_SIZES = {
 894,
 1402
 ],
-"assets/img/work/kong/kong-cad-02.jpg": [
-717,
-921
-],
-"assets/img/work/kong/kong-cad-03.jpg": [
-634,
-982
-],
 "assets/img/work/kong/kong-cad-04.jpg": [
 388,
 956
@@ -639,6 +631,10 @@ const IMAGE_SIZES = {
 "assets/img/work/kong/kong-cad-06.jpg": [
 766,
 1308
+],
+"assets/img/work/kong/kong-cad-23.jpg": [
+1892,
+1426
 ],
 "assets/img/work/kong/kong-case-01.jpg": [
 1610,
@@ -698,7 +694,7 @@ const IMAGE_SIZES = {
 ],
 "assets/img/work/kong/kong-exploded.jpg": [
 2260,
-1650
+1652
 ],
 "assets/img/work/kong/kong-iter-01.jpg": [
 862,
@@ -786,7 +782,7 @@ const IMAGE_SIZES = {
 ],
 "assets/img/work/kong/kong-sketches.jpg": [
 2400,
-803
+657
 ],
 "assets/img/work/lego-rescue/lego-rescue-01.jpg": [
 1205,
@@ -1421,11 +1417,10 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/kong/kong-build-10.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBACdASoPABgAPu1iqU2ppaQiMAgBMB2JZwAAWetRUoS467lUfpQ/gAD97wv4m6prBn+Do3nFh4v8MI6j/bsEoIQ1j8zrnK7fFZXub6kHPuDBTX6gkh2jtDNeSuh60efwhvviwPCtvajM0QdDgAAA",
 "assets/img/work/kong/kong-build-11.jpg": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAABQBQCdASoXABgAPu1iqE4ppaOiMAgBMB2JYgC3uCK5ujyq8DHyVT5tUsJxQvbT11qIRWAA/uAFw6mknVET71Ti0cVKn2M9xe4Sy4TfB3bwfjEadXPJaIyYhorUYDEHks/RBO/hSLCggKt5rHFnXyttPzl/wEziC7QPR0fCgWAAcB/K7GbCdfXDpBf2JiwoUP7XoO1Vt4FT8ABR8P3/uyhOGV2xt5OwtiZlynPPA4LPzKGHCfgFEIADs1u3fCxE2kMuw5FxmGZj3Ir7A/Juh+goAAA=",
 "assets/img/work/kong/kong-cad-01.jpg": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAwCdASoPABgAPu1kqU2ppaQiMAgBMB2JZQC7Af6seVQiDaV4pZHgAP7okg4kh88i9gEc+KU0dSNoBx8UxC9MT0dphjHUQhPqTxg3U31hBGGmGZnIAhtU8OWccmeifcPZAom3mAAAAA==",
-"assets/img/work/kong/kong-cad-02.jpg": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACQBACdASoTABgAPuVeqE2pJSQiMAwBIByJZwAAUo+96aUtN+gMXMPfRs5tkgAA/gEwkRYYInMvh5aCWbtlacU4JtdBa3E1CoGKA5+KbLf+Jl9b+Za+rb1CkYAAAA==",
-"assets/img/work/kong/kong-cad-03.jpg": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoPABgAPu1kqU2ppaQiMAgBMB2JZwAAPH8XDrkbTZHi4AD+8ilrx0pjv8X32f1IiuekMa2QzHeD8n6GTyTFipsvASShJeW1DbRUWfdVs9kokUunw9CymLJ8AAA=",
 "assets/img/work/kong/kong-cad-04.jpg": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoKABgAPu1orU6ppiSiMAgBMB2JZwDE2CFo7XF3yNKX9EAA/sQyhWdd2ZvA3VwlM0YKOEn9WjRR7dgCxQRZezvhFJ8PLNUeL6YAAA==",
 "assets/img/work/kong/kong-cad-05.jpg": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoMABgAPu1qrU8ppiQiMAgBMB2JZQAAV9CIcTcxa91oYAD+4eq4skuMGgqQ+f6J/a8wrsJIzxNOpfphvG3JJO0n/KDM0DzVJvg423XcHbaHJ8cP6dNLjBCIAAA=",
 "assets/img/work/kong/kong-cad-06.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQBACdASoOABgAPu1kqU2ppaQiMAgBMB2JZwAAVOOf6XtzZaHIcaqmQAD+6JIPFSIINGDAUNoVo9lvDK4eOAuMj4LsoGC6b69+rzrSmW+4Ee5du7r5egjDek4x9fku561WBCKwjJ1do/kZoN/FuOoc0rMnwAAA",
+"assets/img/work/kong/kong-cad-23.jpg": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABwBQCdASoYABIAPu1eqk4ppKQiMBgMATAdiWcAy6QRVW/XcKHLe5PYkAGZxIF17/khLiAAAP60Lcb0WQyn/FAh2usKUKqCdq7tZqTZO5d99jKsSg81HNl273s6NJAJxeKs0rEMoHkITBmnaQ+ifuNAAAA=",
 "assets/img/work/kong/kong-case-01.jpg": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAwAwCdASoYAAkAPu1oqk6ppiQiMAgBMB2JZQAAG/Qwe0oAAPc9dS+LFLScTItBokWvMljoHgu85jBJ9e8+jQqTbL9GoaocRCd0ROxRn4D17M3Tr31lelAIXE8giSv7aCHCphWAAAA=",
 "assets/img/work/kong/kong-case-02.jpg": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADQBACdASoRABgAPu1mrE+ppSQiMBgIATAdiWMAwoANtFYPz9o86cqugbqCG8lYIAD0YWAZWTYVRbdiQ8iBxkc1WM5M+7Y1JatWSHrPMefBoEKjo8jEZ0O4QnaA0xO/TgoF5Wi1kZLZiMUib7zAf7LwFQLV3LMreFu4HBC2VAFhNi745JVqAAAA",
 "assets/img/work/kong/kong-case-03.jpg": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABQBACdASoYABYAPu1ur1IppiQjqAgBMB2JZwDOOBEduxFieP3M0M6Ku2UAAP7VCNM2eMfBZXh0ZXq0m2qqWjjwMHAVusVtmiKbxjxDJ0AAAA==",
@@ -1440,7 +1435,7 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/kong/kong-dvt-02.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoPABgAPu1kqU4ppaOiMAgBMB2JYwC7AB6EMRQJXxyYf+AA/u1f2Wlv4ZFufMalqOQu6/9O0SxPUNROhdwGnzfgqrALfnwYuZzpj4DbOVTSap0i5R87Ro/LpysRX0nQzZFXsRmCaWb3w6gA",
 "assets/img/work/kong/kong-evt-01.jpg": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAwCdASoPABgAPu1kq04ppaQiMAgBMB2JZQAALFYCdUIaGgdPxm4AAP7TmyG4KXQNzYiY0AqGDTd6QS6EN7kFfvbImph5yWzHbzkOZ7rn/vayZaCvW0tsoU+eX6dZqJVt/1/Bg18fM9b/mbgB37qsQGAAAA==",
 "assets/img/work/kong/kong-evt-02.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwAwCdASoPABgAPu1kq04ppaQiMAgBMB2JZQDCgBn3/P0pelraAAD+3ux2S+QPwegnm8Q0E0EJp1GJxjw6qqX4C+vHX+B+VTL3Jpu1jJb8Xe27AjIP6srQR1ClqoBZ94x/if86wdOWk7teKbUAAA==",
-"assets/img/work/kong/kong-exploded.jpg": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwBACdASoYABIAPu1iqU2ppaQiMBgMATAdiWk3AAAA32xL6wlcxM1L7pAueLG20gAA/vNyRk/CGMGUhgZ8KRhZF1MfsDwCEGGObhnP5y22Z95uOdq2wXA5UBbJPQAJaH1f8NI44EAb0hTQeYlf5+GF60CKBSDgAAA=",
+"assets/img/work/kong/kong-exploded.jpg": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAACwBACdASoYABIAPu1iqE4ppaOiMBgMATAdiWkAAC51wZ+xPQCgw2a4JaOReCBAAP7zckZPwhjBlIYGfCkYWRdTH7A8AhBhjm4Zz+cttmfebjnatsFwOVAWyT0ACWh9X/DSOOCyr5BYKw5sevX1/nNC8Fhj+GHAAAA=",
 "assets/img/work/kong/kong-iter-01.jpg": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACwBACdASoRABgAPu1sq1EppaOiqAqpMB2JaQAAIV9oeKqLjAOUmycOvRqa3KIAAP7iR4Rgoe5Ba7sq2oessQtZuYG3fQcQl954dqelGGZzonm+JQ9Hzu+SbOTnNnHLLDEXAgsAckOpGpvD7LOAcwAZDsuKvaME1DCwAAAA",
 "assets/img/work/kong/kong-iter-02.jpg": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAABwBACdASoUABgAPu1ur1KppiQiqAgBMB2JaQAALlTNXx6Z+y2gVC6Q9ZegAAD+8icReLDe+ojXZ19H19nuy/LhQA3Zj4Odbzpj4UwMGHdSyY6sTx6RStk7B2TZA6l0gdQxUoJfdM4SYIkAKdg19V04+pDNMhqYaAAAAA==",
 "assets/img/work/kong/kong-iter-03.jpg": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoOABgAPu1iqU2ppaQiMAgBMB2JaQAAW+mqB9kQklIuZXFAAP7x0kGgqg5LV3nVnGr6SdOW2YT3MlENlUz9b1Ob2exG79kedd5vmeizttVWQckOEAA=",
@@ -1462,7 +1457,7 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/kong/kong-mock-03.jpg": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwBACdASoYAAsAPu1iqU2ppaQiMAgBMB2JagCdMoACfLrs4OugiJ6U6UAA/GOt0Mn2aS7mJF5+W+b6DjA8RGqgoe+1nX/vBXd9AhGABRYpo0PUq221Mf5osl+DP51ol10jDLbjI9BtnUPiucXTFz0+68AAAA==",
 "assets/img/work/kong/kong-mock-04.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACwAwCdASoJABgAPu1iqU2ppaOiMAgBMB2JZACdAGMkR3hyTEPqAAD+8LXuTPZ5mfiXfme3mHUU/nmKNBdlFKiwrLBE171d6MRq/Zk5W0o8c0U+ToKJgkSk13xX4Dtj4I9wA4G1paSy9nQ0ul+YyhmSFrb+XwAA",
 "assets/img/work/kong/kong-pvt.jpg": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQAwCdASoYAAsAPu1iqk2ppaQiMAgBMB2JZwAATt3JwmQc88MeXAAA22ngdszEvKtg3XT0P/KbpY56TOKOUpgQ6QAHjxQue1w2oh7vm5M+9vY++LzE8xMpttROiO5YTmnUK7Ab5OP3Az5Dgt0orViOcWYxYAhGlcnAiMAA",
-"assets/img/work/kong/kong-sketches.jpg": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAwCdASoYAAgAPu1iqk2ppaQiMAgBMB2JaQAAetF9AAAA/vBmGujwHk4Ad9X/UPFTn/9CPoWR9JPtaTengGAAAAA=",
+"assets/img/work/kong/kong-sketches.jpg": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAwCdASoYAAcAPu1iqU2ppaOiMAgBMB2JaQAAW+n1SXW+lzUS1AAA/u1HkoTSFNVp3Il8WbToi02N+PMN+DuzxiGiysAAAAA=",
 "assets/img/work/lego-rescue/lego-rescue-01.jpg": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAQBQCdASoWABgAPu1krE4ppaSiKA1RMB2JQBibAiO6BcFq1xOj0BTkWUkT7H7r3lAAAP7ep48Hr92N5IHa8QH9Muw8G4StmPqh1H+BW1/A2GgdgFaB8TfNGUXpfCyTRkNo8ctw0x42VBK2/iGtv3LeAnKXl0R1mijRLom/9x8US3JWFmBKetfHuPPtNsAAAAA=",
 "assets/img/work/manchild/manchild-01.jpg": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAACwBACdASoSABgAPu1kqU2ppaQiMAgBMB2JYwCdG1/AWGgpKuTQUPFhytDZ2wlYAP7etGsRFgpwSeMmWF5z27RfEfXdvUu2v87yVABZktCSM+NNVD5Al1I+HMJse5KAqPaM+loGL0wJWci2yDIL6VmCNxhJF8vhymH+x0MA9cAae4OGsL0UWNkQRgCYzFZsUwoAAA==",
 "assets/img/work/manchild/manchild-02.jpg": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYgCdIFzCNoHWOqJj1FCHAVAlgAD84WZUN6Z8q5lcarNNVwIG5/J62zYA65LkNJFBijRpdv0OFl2enuxqQQrQO93Isprg2YmHR4FMmWK4CDfbdvcimT6Wc3c+KHSKFfS4NpTd3jYQ0eUd3nk1Twh9Hjy+yQAA",

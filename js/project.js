@@ -361,7 +361,7 @@ function buildDiagram(parent, d, title) {
   notes.className = "diagram-notes";
   (d.notes || []).forEach((t) => {
     const li = document.createElement("li");
-    li.innerHTML = `<strong>${esc(t.title).toUpperCase()}:</strong> ${richText(t.text)}`;
+    li.innerHTML = `<h3 class="note-title">${esc(t.title)}</h3>${richText(t.text)}`;
     notes.appendChild(li);
   });
   wrap.append(fig, notes);
@@ -449,10 +449,16 @@ function renderBlock(b, title) {
       const cell = document.createElement("figure");
       cell.className = "cad-item";
       cell.style.setProperty("--r", (d[0] / d[1]).toFixed(4));
-      const top = document.createElement("div"); top.className = "cad-top";
-      if (it.top) top.innerHTML = richText(it.top);
-      const bot = document.createElement("div"); bot.className = "cad-bottom";
-      if (it.bottom) bot.innerHTML = richText(it.bottom);
+      // top / bottom: a caption, or an array of captions spread across the image (null = none)
+      const cap = (cls, v) => {
+        const d = document.createElement("div"); d.className = cls;
+        if (Array.isArray(v)) {
+          d.classList.add("cad-split");
+          v.forEach((t) => { const c = document.createElement("div"); if (t) c.innerHTML = richText(t); d.appendChild(c); });
+        } else if (v) d.innerHTML = richText(v);
+        return d;
+      };
+      const top = cap("cad-top", it.top), bot = cap("cad-bottom", it.bottom);
       const pic = document.createElement("div"); pic.className = "cad-img";
       pic.appendChild(media(it.image, title));
       cell.append(top, pic, bot);

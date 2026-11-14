@@ -278,8 +278,7 @@ const PROJECTS = [
         { type: "text", text: ["After the general form of the device was narrowed down, the engineering work began. The **unit had to be portable** which meant it had to be ==**light.**== The unit had to be ==**beautiful and easy to assemble**==, and I had to be clever about designing it with as little screws showing as possible. It had to be ==**robust, built for a life time of travel and handling.**=="] },
         { type: "cad-row", items: [
           { image: "assets/img/work/kong/kong-cad-01.jpg", top: "Removable plastic back panel. Had to be **cheap** (low quantity), and **easy to take on and off.**", bottom: "To put the **“plug”** in plug-and-play, the power bar had to easily insert here." },
-          { image: "assets/img/work/kong/kong-cad-02.jpg", bottom: "An inner frame considered as a method of assembly." },
-          { image: "assets/img/work/kong/kong-cad-03.jpg", top: "Brackets were considered as a method of assembly." },
+          { image: "assets/img/work/kong/kong-cad-23.jpg", top: [null, "Brackets were considered as a method of assembly."], bottom: ["An inner frame considered as a method of assembly.", null] },
           { image: "assets/img/work/kong/kong-cad-04.jpg", top: "**Handle** options were considered so the device would be easy to grab.", bottom: "To have as little screws visible as possible, **PEM studs and nuts** were useful." },
           { image: "assets/img/work/kong/kong-cad-05.jpg", bottom: "Reducing the number of pieces by being creative with the shape." },
           { image: "assets/img/work/kong/kong-cad-06.jpg", top: "**Attachments for the devices** such as the camera had to be simple and strong. Cellular gateway **antennas** were fragile and had to be able to **reach signal.**", bottom: "The door **hinge** had to be **robust** and **hidden**." }
@@ -395,7 +394,7 @@ const PROJECTS = [
         { text: "Fans redirect the harvested plant coming from the picking mechanism", x: 51.2, y: 34.6, lx: 59, ly: 3, side: "top", w: 15 },
         { text: "Pneumatic box", x: 70, y: 6, lx: 84, ly: 10, side: "top", w: 12 },
         { text: "Direct drive motors run the rollers, one from each side", x: 31.5, y: 42.7, lx: 19, ly: 78, side: "bottom", w: 14 },
-        { text: "The cast urethane rollers, along with the hinged sheet metal frame and spring, provide compliance to wrap and pinch around the plant, mimicking a human hand", x: 43.5, y: 43.5, lx: 57, ly: 85, side: "right", w: 30 },
+        { text: "The cast urethane rollers, along with the hinged sheet metal frame and spring, provide compliance to wrap and pinch around the plant, mimicking a human hand", x: 43.5, y: 43.5, lx: 57, ly: 88, side: "right", w: 30 },
         { text: "The ramp acts like a cup when the machine is lowered and a slide when it is lifted", x: 49.8, y: 45, lx: 63, ly: 63, side: "right", w: 15 },
         { text: "Tray to collect the harvested plant", x: 58, y: 52, lx: 80, ly: 63, side: "right", w: 13 },
         { text: "Pontoons for floating in ponds", x: 93.8, y: 54.1, lx: 93.8, ly: 72, side: "bottom", w: 11 }
