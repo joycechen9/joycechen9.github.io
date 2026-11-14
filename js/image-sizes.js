@@ -1332,6 +1332,34 @@ const IMAGE_SIZES = {
 1280,
 932
 ],
+"assets/img/work/telescoping-drop-pole/tdp-eval-1.jpg": [
+2198,
+878
+],
+"assets/img/work/telescoping-drop-pole/tdp-eval-2.jpg": [
+2236,
+980
+],
+"assets/img/work/telescoping-drop-pole/tdp-eval-3.jpg": [
+2130,
+988
+],
+"assets/img/work/telescoping-drop-pole/tdp-eval-4.jpg": [
+1870,
+874
+],
+"assets/img/work/telescoping-drop-pole/tdp-eval-5.jpg": [
+2152,
+1002
+],
+"assets/img/work/telescoping-drop-pole/tdp-eval-6.jpg": [
+1976,
+972
+],
+"assets/img/work/telescoping-drop-pole/tdp-eval-7.jpg": [
+1848,
+1062
+],
 "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg": [
 1188,
 1800
@@ -1675,6 +1703,13 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-06.jpg": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABwBACdASoYABIAPu1srVEppiQiqAqpMB2JZwDNhAYKQKw0x1kj0OFmhh8KAAD9z14KuOjBYcyeOChIuxuPwA7oyHqmQzTza9PZNrfFCGc2LQfEsasDjAPCimbbmcgAAAA=",
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-cover.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACwBACdASoYABgAPu1uq1GppiOiqAqpMB2JZwDPZA9ma5C/bVuaf77DNJzlZXQAAP5xZcFy8S/ELr+HnWRGSoefBxcf82FDKasIcYxGYYKRyHGplQlkOBUXY1d+Ai9BQjhgxRvuiPWiqK3sTthp2jmwNjXW/AAA",
 "assets/img/work/saturn-with-a-moon/saturn-with-a-moon-poster.jpg": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQBQCdASoYABEAPu1irVAppSQisBgIATAdiWcAsOwRT2LFX6QucE9ZiWcb2d167CMgAP7i5OU7Cf5WoOjLqZtXF1RyK6lOX7ARedC330LIz8PNzHXiuaGK2HEhwtZ7LFOotAAA",
+"assets/img/work/telescoping-drop-pole/tdp-eval-1.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQAwCdASoYAAoAPu1iqk2ppaQiMAgBMB2JQBOgAijoUW9r9c1k/IAA/N1JQ4MZ7pTwZzkD3sVErmgUwRP34tYtEHMpAvjJh7LsbHEbgJ2nadWQhRYdu/naN+yXvhyuidksAfKDGjWZbAQHpelAAA==",
+"assets/img/work/telescoping-drop-pole/tdp-eval-2.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADQAwCdASoYAAsAPu1mqk2ppaQiMAgBMB2JZwAAXez6Db+DOunMKgAA/vHql3x66q3fYeoIzE5FeJN+hBUrh13zuWU3vnaXKVq7vOXdoesCP8Uy8dnOUQREs9nNjV6iUBW0UcGT+znvcYSIodNNbLIlH15VgAAA",
+"assets/img/work/telescoping-drop-pole/tdp-eval-3.jpg": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQBACdASoYAAsAPu1oqk6ppiQiMAgBMB2JZwAAXGST1FooT6h4NLwoAAD+8erRQ+1F2lXrFMFoXxreEvrOteyJpgK7sKPElam3Tgbj3fp9soc/Rawb7eESmQv6rQDgewHgAA==",
+"assets/img/work/telescoping-drop-pole/tdp-eval-4.jpg": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADwAwCdASoYAAsAPu1oqk6ppiQiMAgBMB2JZQAAW7tHN1ifP5c/61IAAP7v+89YZStl7XYdUCUolumRbdK3Hvh5z9WA+hNZayXjiQgrrNthFeZADDYuTCphkbyEVKfrF8T440ALAO0LypfrnvXt4ypJfBnDPlLAoOgAAA==",
+"assets/img/work/telescoping-drop-pole/tdp-eval-5.jpg": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoYAAsAPu1iqU2ppaQiMAgBMB2JZwAASoidGSn/Wg+0tA4/wAD+4eyQwmhB5+9AedraTMlzKLX2BjWOvfoZpzbEjXYpG48OfR5W+6GlSqc0nRkNLz/S/6DWQYvPF/+xdmPIX2Ye+SIDgs+c7bW1o/kWwgWrd96AAAA=",
+"assets/img/work/telescoping-drop-pole/tdp-eval-6.jpg": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoYAAwAPu1iqU2ppaOiMAgBMB2JZQDCgCKI1vt8r4Cgp801nAD+6zJ3sFWhB/oVxCpQR8ADgJpZsxWW+MPd3xObEpoZiO63jyvQzq4zCiK2rIDS+5d5TFoHAAt0Sep0+eVO3hW6PI4csxnSUAAAAA==",
+"assets/img/work/telescoping-drop-pole/tdp-eval-7.jpg": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADQAwCdASoYAA4APu1iqU2ppaOiMAgBMB2JZwAASjrxxx1nN8UpIkgA/uhfrosfSeALOzKwkWwrN2HcccOgkZTDk9eXm1VYkGKUKFaD8mDd46/+XdTkL1Wybu74aszTkYYiXgAA",
 "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABwAwCdASoQABgAPu1iqk2ppaQiMAgBMB2JaQAAidMRPvszPAAA/t2HN8vLI+dmPgXIw61wHMfzr5bSE7rT4EcoNVdOwwDsCgAAAA==",
 "assets/img/work/working-on-the-car/working-on-the-car-01.jpg": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAADQBACdASoYABMAPu1mq08ppaOiKA1RMB2JQBOgAkavGOIb6cEOS6DmC96nX2l/KAD9m2MNqeSH5NUxRhuM6SLQ/IJCzci6Cnv4a1Nr4+OUkscx2DG1tCdBLXuIJDMvXVrlC6nllOTxPCmn5b152hm+vV1upwmHrA1yhcRtY8WD/AdUA8QGgMIt3WQvtdSjPt3Sl7h1e/yEAA=="
 };

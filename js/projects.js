@@ -376,7 +376,12 @@ const PROJECTS = [
     details: [],
     cover: "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg",
     featured: "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg",
-    photos: []
+    photos: [],
+    sections: [
+      { label: "Fit, Assembly, & ID Evaluation", blocks: [
+        { type: "slider", interval: 2000, images: ["assets/img/work/telescoping-drop-pole/tdp-eval-1.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-2.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-3.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-4.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-5.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-6.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-7.jpg"] }
+      ] }
+    ]
   },
 {
     id: "salico",

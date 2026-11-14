@@ -351,6 +351,11 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .slider:hover .slider-arrow, .slider-arrow:focus-visible { opacity: 1; }
 .slider-arrow:hover { color: var(--accent); }
 .slider-dots { display: flex; gap: 8px; margin-top: 12px; }
+/* Full-width slideshow inside a section: slides keep their whole image (no cropping) */
+.blk-slider.slider-wide { display: flex; flex-direction: column; align-items: center; }
+.slider-wide .slider { width: 100%; height: auto; aspect-ratio: var(--sr, 2); }
+.slider-wide .slide img { object-fit: contain; background: #fff !important; }
+.slider-wide .slider-arrow { opacity: .85; border-radius: 50%; box-shadow: 0 1px 4px rgba(0,0,0,.15); }
 .slider-dots button { width: 7px; height: 7px; border-radius: 50%; border: 0; padding: 0; background: #ccc; cursor: pointer; }
 .slider-dots button.on { background: #000; }
 @media (hover: none) { .slider-arrow { opacity: 1; } }

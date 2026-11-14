@@ -235,7 +235,7 @@ if (!p) {
 
 /* Slider: one image at a time, sliding to the next every 2.5 seconds.
    Arrows and dots to move by hand; swipe on touch screens; pauses on hover. */
-function buildSlider(box, srcs, title) {
+function buildSlider(box, srcs, title, ms = 2500) {
   box.classList.add("slider-box");
   const view = document.createElement("div");
   view.className = "slider";
@@ -285,7 +285,7 @@ function buildSlider(box, srcs, title) {
   });
   const restart = () => {
     clearInterval(timer);
-    if (!reduce && srcs.length > 1) timer = setInterval(() => { i += 1; place(true); }, 2500);
+    if (!reduce && srcs.length > 1) timer = setInterval(() => { i += 1; place(true); }, ms);
   };
   view.addEventListener("mouseenter", () => clearInterval(timer));
   view.addEventListener("mouseleave", restart);
@@ -486,6 +486,12 @@ function renderBlock(b, title) {
       });
       el.appendChild(row);
     }
+  } else if (b.type === "slider") {
+    // Full-width slideshow: { type: "slider", images: [...], interval: 2000 }
+    el.classList.add("slider-box", "slider-wide");
+    const r = Math.max(...b.images.map((src) => { const d = SIZES[src] || [16, 9]; return d[0] / d[1]; }));
+    el.style.setProperty("--sr", r.toFixed(3));
+    buildSlider(el, b.images, title, b.interval || 2500);
   } else if (b.type === "groups") {
     buildGroups(el, b, title);
   } else if (b.type === "cad-row") {
