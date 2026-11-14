@@ -422,9 +422,9 @@ const PROJECTS = [
         { text: "Fans redirect the harvested plant coming from the picking mechanism", x: 51.2, y: 34.6, lx: 59, ly: 3, side: "top", w: 15 },
         { text: "Pneumatic box", x: 70, y: 6, lx: 84, ly: 10, side: "top", w: 12 },
         { text: "Direct drive motors run the rollers, one from each side", x: 31.5, y: 42.7, lx: 19, ly: 78, side: "bottom", w: 14 },
-        { text: "The cast urethane rollers, along with the hinged sheet metal frame and spring, provide compliance to wrap and pinch around the plant, mimicking a human hand", x: 43.5, y: 43.5, lx: 57, ly: 88, side: "right", w: 30 },
-        { text: "The ramp acts like a cup when the machine is lowered and a slide when it is lifted", x: 49.8, y: 45, lx: 63, ly: 63, side: "right", w: 18 },
-        { text: "Tray to collect the harvested plant", x: 58, y: 52, lx: 80, ly: 63, side: "right", w: 13 },
+        { text: "The cast urethane rollers, along with the hinged sheet metal frame and spring, provide compliance to wrap and pinch around the plant, mimicking a human hand", x: 43.5, y: 43.5, lx: 43.5, ly: 88, side: "bottom", w: 30 },
+        { text: "The ramp acts like a cup when the machine is lowered and a slide when it is lifted", x: 49.8, y: 45, lx: 73.5, ly: 62, side: "right", w: 14 },
+        { text: "Tray to collect the harvested plant", x: 58, y: 52, lx: 62, ly: 62, side: "right", w: 10.5 },
         { text: "Pontoons for floating in ponds", x: 93.8, y: 54.1, lx: 93.8, ly: 72, side: "bottom", w: 11 }
       ],
       // ==text== is highlighted
