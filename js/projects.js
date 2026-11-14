@@ -501,13 +501,13 @@ const PROJECTS = [
     photos: [],
     sections: [
       { label: "Sketching and Ideating", blocks: [
-        { type: "media-rows", rows: [3, 2], items: ["assets/img/work/lego-rescue/lego-p01.jpg", "assets/img/work/lego-rescue/lego-p02.jpg", "assets/img/work/lego-rescue/lego-p03.jpg", "assets/img/work/lego-rescue/lego-p04.jpg", "assets/img/work/lego-rescue/lego-p05.jpg"] }
+        { type: "media-rows", rows: [2, 3], items: ["assets/img/work/lego-rescue/lego-p02.jpg", "assets/img/work/lego-rescue/lego-p03.jpg", "assets/img/work/lego-rescue/lego-p01.jpg", "assets/img/work/lego-rescue/lego-p04.jpg", "assets/img/work/lego-rescue/lego-p05.jpg"] }
       ] },
       { label: "Building and Prototyping", blocks: [
         { type: "media-rows", rows: [5], items: ["assets/img/work/lego-rescue/lego-p06.jpg", "assets/img/work/lego-rescue/lego-p07.jpg", "assets/img/work/lego-rescue/lego-p08.jpg", "assets/img/work/lego-rescue/lego-p09.jpg", "assets/img/work/lego-rescue/lego-p10.jpg"] }
       ] },
       { label: "Testing", blocks: [
-        { type: "media-rows", rows: [2, 2], items: [{ video: "assets/img/work/lego-rescue/lego-v2.mp4", poster: "assets/img/work/lego-rescue/lego-v2-poster.jpg", w: 1280, h: 720 }, { video: "assets/img/work/lego-rescue/lego-v3.mp4", poster: "assets/img/work/lego-rescue/lego-v3-poster.jpg", w: 720, h: 1280 }, { video: "assets/img/work/lego-rescue/lego-v4.mp4", poster: "assets/img/work/lego-rescue/lego-v4-poster.jpg", w: 640, h: 360 }, { video: "assets/img/work/lego-rescue/lego-v5.mp4", poster: "assets/img/work/lego-rescue/lego-v5-poster.jpg", w: 720, h: 1280 }] }
+        { type: "media-rows", rows: [2, 2], items: [{ video: "assets/img/work/lego-rescue/lego-v2.mp4", poster: "assets/img/work/lego-rescue/lego-v2-poster.jpg", w: 1280, h: 576 }, { video: "assets/img/work/lego-rescue/lego-v3.mp4", poster: "assets/img/work/lego-rescue/lego-v3-poster.jpg", w: 720, h: 1024 }, { video: "assets/img/work/lego-rescue/lego-v4.mp4", poster: "assets/img/work/lego-rescue/lego-v4-poster.jpg", w: 640, h: 288 }, { video: "assets/img/work/lego-rescue/lego-v5.mp4", poster: "assets/img/work/lego-rescue/lego-v5-poster.jpg", w: 720, h: 1024 }] }
       ] }
     ]
   },
