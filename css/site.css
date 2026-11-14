@@ -485,6 +485,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
 
 /* ---------- Story blocks ---------- */
 .blk { margin-top: 22px; }
+.blk-row + .blk-media-rows, .blk-media-rows + .blk-media-rows { margin-top: var(--gap); }   /* stacked photo rows sit as close as photos in a row */
 .blk:first-of-type { margin-top: 0; }
 .blk-text p, .blk-list li { font-size: var(--body); line-height: 1.5; margin: 0 0 12px; }
 .blk-text a, .blk-list a { text-decoration: underline; text-underline-offset: 3px; }
