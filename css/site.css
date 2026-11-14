@@ -629,6 +629,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .cad-top, .cad-bottom { font-size: var(--body); line-height: 1.5; text-align: center; padding: 0 4px; }
 .cad-top { align-self: end; padding-bottom: 10px; }
 .cad-bottom { align-self: start; padding-top: 10px; }
+.cad-top[style*="--wide"], .cad-bottom[style*="--wide"] { width: max(100%, var(--wide)); justify-self: center; }
 .cad-split { display: flex; gap: 18px; }
 .cad-split > div { flex: 1; }
 .cad-top:not(:empty):not(.cad-split)::after, .cad-bottom:not(:empty):not(.cad-split)::before,

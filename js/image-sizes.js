@@ -649,11 +649,11 @@ const IMAGE_SIZES = {
 1402
 ],
 "assets/img/work/kong/kong-cad-04.jpg": [
-388,
+631,
 956
 ],
 "assets/img/work/kong/kong-cad-05.jpg": [
-500,
+678,
 997
 ],
 "assets/img/work/kong/kong-cad-06.jpg": [
@@ -1456,8 +1456,8 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/kong/kong-build-10.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBACdASoPABgAPu1iqU2ppaQiMAgBMB2JZwAAWetRUoS467lUfpQ/gAD97wv4m6prBn+Do3nFh4v8MI6j/bsEoIQ1j8zrnK7fFZXub6kHPuDBTX6gkh2jtDNeSuh60efwhvviwPCtvajM0QdDgAAA",
 "assets/img/work/kong/kong-build-11.jpg": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAABQBQCdASoXABgAPu1iqE4ppaOiMAgBMB2JYgC3uCK5ujyq8DHyVT5tUsJxQvbT11qIRWAA/uAFw6mknVET71Ti0cVKn2M9xe4Sy4TfB3bwfjEadXPJaIyYhorUYDEHks/RBO/hSLCggKt5rHFnXyttPzl/wEziC7QPR0fCgWAAcB/K7GbCdfXDpBf2JiwoUP7XoO1Vt4FT8ABR8P3/uyhOGV2xt5OwtiZlynPPA4LPzKGHCfgFEIADs1u3fCxE2kMuw5FxmGZj3Ir7A/Juh+goAAA=",
 "assets/img/work/kong/kong-cad-01.jpg": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAwCdASoPABgAPu1kqU2ppaQiMAgBMB2JZQC7Af6seVQiDaV4pZHgAP7okg4kh88i9gEc+KU0dSNoBx8UxC9MT0dphjHUQhPqTxg3U31hBGGmGZnIAhtU8OWccmeifcPZAom3mAAAAA==",
-"assets/img/work/kong/kong-cad-04.jpg": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoKABgAPu1orU6ppiSiMAgBMB2JZwDE2CFo7XF3yNKX9EAA/sQyhWdd2ZvA3VwlM0YKOEn9WjRR7dgCxQRZezvhFJ8PLNUeL6YAAA==",
-"assets/img/work/kong/kong-cad-05.jpg": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoMABgAPu1qrU8ppiQiMAgBMB2JZQAAV9CIcTcxa91oYAD+4eq4skuMGgqQ+f6J/a8wrsJIzxNOpfphvG3JJO0n/KDM0DzVJvg423XcHbaHJ8cP6dNLjBCIAAA=",
+"assets/img/work/kong/kong-cad-04.jpg": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACQAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JZwAAUU6zP8K0BfIQAP7wNfyHIDCTlLR2wwunIjrfl1gqZYrhV726hOXzqUfvecxfXfvc63i4AA==",
+"assets/img/work/kong/kong-cad-05.jpg": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAwCdASoQABgAPu1kq04ppaQiMAgBMB2JZwDA3CB/bMC8a+AqUHAAAP7wQJaPZLO5I5rILKoNvTHJQULodddk7rPCszgQD9CE3EP3psMkNfDza5wJDIRKxDn0q6wAAAA=",
 "assets/img/work/kong/kong-cad-06.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQBACdASoOABgAPu1kqU2ppaQiMAgBMB2JZwAAVOOf6XtzZaHIcaqmQAD+6JIPFSIINGDAUNoVo9lvDK4eOAuMj4LsoGC6b69+rzrSmW+4Ee5du7r5egjDek4x9fku561WBCKwjJ1do/kZoN/FuOoc0rMnwAAA",
 "assets/img/work/kong/kong-cad-23.jpg": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABwBQCdASoYABIAPu1eqk4ppKQiMBgMATAdiWcAy6QRVW/XcKHLe5PYkAGZxIF17/khLiAAAP60Lcb0WQyn/FAh2usKUKqCdq7tZqTZO5d99jKsSg81HNl273s6NJAJxeKs0rEMoHkITBmnaQ+ifuNAAAA=",
 "assets/img/work/kong/kong-case-01.jpg": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAwAwCdASoYAAkAPu1oqk6ppiQiMAgBMB2JZQAAG/Qwe0oAAPc9dS+LFLScTItBokWvMljoHgu85jBJ9e8+jQqTbL9GoaocRCd0ROxRn4D17M3Tr31lelAIXE8giSv7aCHCphWAAAA=",

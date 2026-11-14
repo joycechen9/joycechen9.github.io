@@ -485,6 +485,8 @@ function renderBlock(b, title) {
         return d;
       };
       const top = cap("cad-top", it.top), bot = cap("cad-bottom", it.bottom);
+      // wide: let a caption over a narrow image spill into the free space beside it (px)
+      if (it.wide) [top, bot].forEach((c) => c.style.setProperty("--wide", it.wide + "px"));
       const pic = document.createElement("div"); pic.className = "cad-img";
       pic.appendChild(media(it.image, title));
       cell.append(top, pic, bot);

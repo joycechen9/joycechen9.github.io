@@ -288,12 +288,12 @@ const PROJECTS = [
           { image: "assets/img/work/kong/kong-cad-01.jpg", top: "Removable plastic back panel. Had to be **cheap** (low quantity), and **easy to take on and off.**", bottom: "To put the **“plug”** in plug-and-play, the power bar had to easily insert here." },
           { image: "assets/img/work/kong/kong-cad-23.jpg", top: [null, "Brackets were considered as a method of assembly."], bottom: ["An inner frame considered as a method of assembly.", null] },
           { image: "assets/img/work/kong/kong-cad-04.jpg", top: "**Handle** options were considered so the device would be easy to grab.", bottom: "To have as little screws visible as possible, **PEM studs and nuts** were useful." },
-          { image: "assets/img/work/kong/kong-cad-05.jpg", bottom: "Reducing the number of pieces by being creative with the shape." },
-          { image: "assets/img/work/kong/kong-cad-06.jpg", top: "**Attachments for the devices** such as the camera had to be simple and strong. Cellular gateway **antennas** were fragile and had to be able to **reach signal.**", bottom: "The door **hinge** had to be **robust** and **hidden**." }
+          { image: "assets/img/work/kong/kong-cad-05.jpg", top: "**Attachments for the devices** such as the camera had to be simple and strong.", bottom: "Reducing the number of pieces by being creative with the shape." },
+          { image: "assets/img/work/kong/kong-cad-06.jpg", top: "Cellular gateway **antennas** were fragile and had to be able to **reach signal.**", bottom: "The door **hinge** had to be **robust** and **hidden**." }
         ] }
       ] },
       { label: "Packaging - Pelican Cases", blocks: [
-        { type: "text", text: ["Several shapes, sizes, colours, and arrangements were tested. The best case was selected based on ==**convenience, portability, and protectiveness.**== This is an example of a decision where function had to trump form."] },
+        { type: "text", text: ["Several shapes, sizes, colours, and arrangements were tested. The best case was selected based on ==**convenience, portability, and protection.**== This is an example of a decision where function had to trump form."] },
         { type: "media-rows", rows: [3, 3], items: ["assets/img/work/kong/kong-case-01.jpg", "assets/img/work/kong/kong-case-04.jpg", "assets/img/work/kong/kong-case-05.jpg", "assets/img/work/kong/kong-case-02.jpg", "assets/img/work/kong/kong-case-03.jpg", "assets/img/work/kong/kong-case-06.jpg"] }
       ] },
       { label: "Prototyping and Testing", blocks: [
