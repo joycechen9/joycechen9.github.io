@@ -204,7 +204,8 @@ function buildList(tag, match) {
 const sketchLink = document.createElement("a");
 sketchLink.className = "extra-link";
 sketchLink.textContent = "SKETCHBOOK";
-list.appendChild(sketchLink);
+const SHOW_SKETCHBOOK = false;   // hidden for now; set to true to show the sketchbook link again
+if (SHOW_SKETCHBOOK) list.appendChild(sketchLink);
 
 // Filtering
 const REDUCE = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
