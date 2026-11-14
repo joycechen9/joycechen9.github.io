@@ -503,13 +503,13 @@ const PROJECTS = [
         ]
       },
       {
-        label: "Testing Round 1",
+        label: "Testing",
         blocks: [
-          { type: "text", text: ["The first trip to the farm for testing prioritized characterization of the plant and its associated properties, and validating our roller design. The team made a list of [experiments](https://salico-uw.github.io/2024-10-06-does/) to complete."] },
+          { type: "text", text: ["We made three trips to the farm in Hawaii to test: in October, January, and February. See the [development blog ↗](https://salico-uw.github.io/) for more testing details."] },
           { type: "row", images: ["assets/img/work/salico/salico-s12.jpg", "assets/img/work/salico/salico-s13.jpg"] },
-          { type: "text", text: ["Our first urethane roller prototype harvesting the plant, trying out the hand picking procedure, and learning from Dr. Wenhao Sun in the ponds."] },
+          { type: "media-rows", rows: [6], items: ["assets/img/work/salico/salico-test-1.jpg", "assets/img/work/salico/salico-test-2.jpg", "assets/img/work/salico/salico-test-3.jpg", "assets/img/work/salico/salico-test-4.jpg", "assets/img/work/salico/salico-test-5.jpg", "assets/img/work/salico/salico-test-6.jpg"] },
           { type: "videos", items: [
-            { src: "assets/img/work/salico/salico-ponds.mp4", poster: "assets/img/work/salico/salico-ponds-poster.jpg", w: 1280, h: 618 }
+            { src: "assets/img/work/salico/salico-ponds.mp4", poster: "assets/img/work/salico/salico-ponds-poster.jpg", w: 1280, h: 618, caption: "Trying out hand harvesting" }
           ] }
         ]
       }
