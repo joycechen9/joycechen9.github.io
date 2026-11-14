@@ -851,7 +851,7 @@ const GRID_LAYOUTS = {
     columns: [
       ["new-windsor", "around-the-counter", "display-shelf", "working-on-the-car", "fountain-for-bees", "chinese-market:2", "mark-making-and-sound", "night"],
       ["salico", "kong", "telescoping-drop-pole", "chinese-market:6", "dishwasher", "cardboard-party"],
-      ["saturn-with-a-moon", "redbull-flugtag", "manchild", "dad-and-crab", "perception", "lego-rescue"]
+      ["saturn-with-a-moon", "redbull-flugtag", "manchild", "campus", "dad-and-crab", "perception", "lego-rescue"]
     ],
     widths: [0.85, 1.075, 1.075],
     crop: { "redbull-flugtag": { bottom: 0.2 }, "manchild": { top: 0.06 } },
@@ -899,7 +899,7 @@ const SELECTED_WORKS = {
     "cardboard-party",
     "night"
   ],
-  hide: ["for-sale", "campus", "my-dream-about-thunderstorms", "it-is-so-cute", "medusa"],
+  hide: ["for-sale", "my-dream-about-thunderstorms", "it-is-so-cute", "medusa"],
   covers: {
     "around-the-counter": [3],
     "chinese-market": [2, 6]
