@@ -372,7 +372,7 @@ const PROJECTS = [
     year: 2026,
     tags: ["engineering"],
     materials: "Aluminum, steel, plastic, rubber, hardware",
-    summary: "This was one of my projects during my 3-month internship at Verkada. I took on the project when we had just received the first tooled parts, and was responsible for testing and making changes before production. Special thanks to Mark Washington, Haoda Ma, Matty Martin, Cathy Su, & Jim Castro. [Install guide on Verkada's site ↗](https://docs.verkada.com/docs/Verkada-ACC-CAM-MNT-TCEIL-1-Install-Guide.pdf)",
+    summary: "This was one of my projects during my 3-month internship at Verkada. I took on the project when we had just received the first tooled parts, and was responsible for testing and making changes before production. Special thanks to Mark Washington, Haoda Ma, Matty Martin, Cathy Su, Jim Castro, Joel Freeman, & Francisco Hernandez. [Install guide on Verkada's site ↗](https://docs.verkada.com/docs/Verkada-ACC-CAM-MNT-TCEIL-1-Install-Guide.pdf)",
     linkPill: "blue",
     details: [],
     cover: "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg",
