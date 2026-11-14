@@ -512,6 +512,12 @@ const PROJECTS = [
             { src: "assets/img/work/salico/salico-ponds.mp4", poster: "assets/img/work/salico/salico-ponds-poster.jpg", w: 1280, h: 618, caption: "Trying out hand harvesting" }
           ] }
         ]
+      },
+      {
+        label: "Capstone Symposium",
+        blocks: [
+          { type: "media-rows", rows: [2, 3], items: ["assets/img/work/salico/salico-sym-1.jpg", "assets/img/work/salico/salico-sym-2.jpg", "assets/img/work/salico/salico-sym-3.jpg", "assets/img/work/salico/salico-sym-4.jpg", "assets/img/work/salico/salico-sym-5.jpg"] }
+        ]
       }
     ],
     cover: "assets/img/work/salico/salico-cover.jpg",
