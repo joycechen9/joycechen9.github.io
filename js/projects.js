@@ -507,7 +507,7 @@ const PROJECTS = [
         blocks: [
           { type: "text", text: ["We made three trips to the farm in Hawaii to test: in October, January, and February. See the [development blog ↗](https://salico-uw.github.io/) for more testing details."] },
           { type: "row", images: ["assets/img/work/salico/salico-s12.jpg", "assets/img/work/salico/salico-s13.jpg"] },
-          { type: "media-rows", rows: [6], items: ["assets/img/work/salico/salico-test-1.jpg", "assets/img/work/salico/salico-test-2.jpg", "assets/img/work/salico/salico-test-3.jpg", "assets/img/work/salico/salico-test-4.jpg", "assets/img/work/salico/salico-test-5.jpg", "assets/img/work/salico/salico-test-6.jpg"] },
+          { type: "media-rows", rows: [4], items: ["assets/img/work/salico/salico-test-1.jpg", "assets/img/work/salico/salico-test-4.jpg", "assets/img/work/salico/salico-test-5.jpg", "assets/img/work/salico/salico-test-6.jpg"] },
           { type: "videos", items: [
             { src: "assets/img/work/salico/salico-ponds.mp4", poster: "assets/img/work/salico/salico-ponds-poster.jpg", w: 1280, h: 618, caption: "Trying out hand harvesting" }
           ] }

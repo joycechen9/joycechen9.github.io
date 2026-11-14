@@ -1352,14 +1352,6 @@ const IMAGE_SIZES = {
 1040,
 628
 ],
-"assets/img/work/salico/salico-test-2.jpg": [
-830,
-1078
-],
-"assets/img/work/salico/salico-test-3.jpg": [
-1500,
-2000
-],
 "assets/img/work/salico/salico-test-4.jpg": [
 1500,
 2000
@@ -1912,8 +1904,6 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/salico/salico-sym-4.jpg": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAABwBQCdASoSABgAPu1gq1AppKOisBgIATAdiUAX6wTpP8AzBwnwIPZ9xZ5McFeJx03rrmwAAPzZMLqe/EumsLGjZ0WnMTdzy6mkJZyrYLXR2e97EtLoG/mYGomfADcjzPG/ieSJ0SH12VzRKT1FWymirPX18EbAQTGyRR6++aChhhgoFD4kzI9ZlyucG6LMjtgHQwUBFFgvXyGukeFh15a6HZ56KfHqel5lVEmu83JlCsnh9No/zFZkbTpP4D7iigl89354AAA=",
 "assets/img/work/salico/salico-sym-5.jpg": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAADwBACdASoSABgAPu1irFAppSQisBgIATAdiUATpll4hALMeEJ/Zs8kWOwDa3n5CAAA+GIK4oYd3hzaN7/eRwcCjYio5FIkyY0sbv4jY6oBsylb4LV9zCP4N0CQx3doV2W62QcvLAy+VyvImR9hb84TmPjVErORTb7UiC4bsima/qaofBdkAA==",
 "assets/img/work/salico/salico-test-1.jpg": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JQBdgA2jj+DY/UAD+5STuWCwVXn1NH+uPjsJ8RSHYnDv4SRTa0WW3Yjd35/lQOrHtWeaS0RPEstuApOMI+LP2h6tgn524wKarmcyayKlmncyEsIwz53qiKEhxMTArwMpODXgYZ71FceckMcPKpK4vSrOUgcrGs1AJwAAA",
-"assets/img/work/salico/salico-test-2.jpg": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAAAwBgCdASoSABgAPu1or1CppaQiqAqpMB2JQBWGXqXa/+XYMYAE7Yuk0chXWeSVO3TLlehQLrnGygoAAPzkwIjrp/Ad/rRylSlrv/0XTMs/xiYar94tjQS4js6KYBK3xEAKmdHtneTjpfodbTFp7g8kGxd95JP5iF+QajKuUsoBTSCVTmJAibkUpOoHKkS8nPFHe3lpJ2Lo5fekOgHZV8YPg+d6fj3Ogppx0wZWLxRlKdvQh0MNgagAAAA=",
-"assets/img/work/salico/salico-test-3.jpg": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABwBQCdASoSABgAPu1gqE2ppSOiMAgBMB2JaAC1GvU6AEnGkComOCY6Qb35vsDubydXimmAAP7fRnB1+EryAMuSR34iLWX/FyplBD9zJpndiHpR+2NcX2CBTtfTyQceDGaRVKyUgtvd2jCQePODGAFTFJlPjy7ZaKfs3gj9QGaqAcYZUZLhW4SX3MObrEhAmlo7HStQAAA=",
 "assets/img/work/salico/salico-test-4.jpg": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAADwBACdASoSABgAPu1osFAppaSiqAqpMB2JQBahGggrXx+8JWgZQ3xbAGtjs8ALfoAA/r3XjUfMt5Ft3OP/X6Yletf1gBCxKxstU4+t9Vf6dQ1EiFulKo7KJvwQ5SyRUD8nx8a9BEDk3Gg3QXcd4LoZ3QV8b5ihmAfmw6sxU6jgltEEOjbhm3UEozigHEYddlBmHTp9msd4Frk6P0oXiYkdG09qIGihRzFVzAAA",
 "assets/img/work/salico/salico-test-5.jpg": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAwBQCdASoYABIAPu1kqE2ppaOiMBgMATAdiWQAnTMM8+Qd1CAI5XnrH0a/LQBCPy4B0gD4S3PTUbM4Pm0oyxJOl6nK52HUlrjgcILzeoQ6UTU83s8mmkLcZJQdabnhDawAnYOG0gmWWN4rxR0XZis6locw+02NrNgchFT8MclPhbMBdOIG+YnodVngAAAA",
 "assets/img/work/salico/salico-test-6.jpg": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAQBACdASoYAA4APu1iqk4ppaQiMAgBMB2JbAC7ACGLMbAqInmKM24T4ADwb/oMDnrb4qHG+3PNz/AIkTrrypa7srYnEKFcvfVbgEp5zLVlZSOSFJN5v6IH68NiNKVrAScoTkIqeAqp3hglzDX0u6cQe6/WK9cEZA2AAA==",
