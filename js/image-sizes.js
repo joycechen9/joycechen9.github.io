@@ -488,6 +488,34 @@ const IMAGE_SIZES = {
 1800,
 1200
 ],
+"assets/img/work/for-sale/for-sale-p1.jpg": [
+2400,
+1600
+],
+"assets/img/work/for-sale/for-sale-p2.jpg": [
+2400,
+1600
+],
+"assets/img/work/for-sale/for-sale-p3.jpg": [
+2400,
+1600
+],
+"assets/img/work/for-sale/for-sale-p4.jpg": [
+2400,
+1422
+],
+"assets/img/work/for-sale/for-sale-p5.jpg": [
+2400,
+1600
+],
+"assets/img/work/for-sale/for-sale-p6.jpg": [
+2400,
+1600
+],
+"assets/img/work/for-sale/for-sale-p7.jpg": [
+1600,
+2400
+],
 "assets/img/work/fountain-for-bees/fb-form-01.jpg": [
 1502,
 942
@@ -1384,6 +1412,13 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/display-shelf/shelf-25.jpg": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACQAwCdASoRABgAPulgo02pJaMiMAwBIB0JaQDN/DCxqnPgeBIAAP7rck9Olp73N0dHIvS4PGrkTsIuD+O9sPpffAAAAA==",
 "assets/img/work/for-sale/for-sale-01.jpg": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JQBYdhDtPMt+pMJfOnDInAAD+rv7BCRmG7xvo6TLRJLSwFz7kCBMlv8krUuMNUjMltoMzjM3SL/MEhvje+Z6d29089IWdbcLjhMMT99csQZNrkdXortkUcYzdIVbYAAA=",
 "assets/img/work/for-sale/for-sale-02.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JYwCw7AMWN1cK+GAA/l/b1kmR4KA1swXNRv5/mOJBN/S/VqTFqnvwVcPRoCNUepi5/7kX2ltT21sIAM2gvj+AhTYYt3XYGPhLNLzwFLbuJLQpClfAAA==",
+"assets/img/work/for-sale/for-sale-p1.jpg": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAACQBACdASoYABAAPu1iqk4ppaQiMAgBMB2JaAC7IMgCpEngH1T2CmaocvL7zAAA9vhT5NprRBKl8/OFEJ1TyGWFZWv/RaCfRvgKqriG6TaBld7jSt0Xky4Gv4jcV7a7BQJh3QjORTTygTgtqVFYvSPKaOYVF1QAAAA=",
+"assets/img/work/for-sale/for-sale-p2.jpg": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JQBgbhDvSyg5sIOwSWHVnIgD98u4Dkaj+POVuWgklpY7bKvORDc818cXxuRBPLUskCbHmA92yjSv8MnHtrhyRisPCihlityropIzt/Y241w1jiFc5w8SeNP7y9lX4BOTBVfhgmXMt3YZOQKuuMqrSnoAAAA==",
+"assets/img/work/for-sale/for-sale-p3.jpg": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JYwCw7A2XG4kygl4g+AAA/l/b1kmRM05fd+AtbhDy+XfQz+QHafpO44LI/FyKY9Vb0yrb7MTZlo33lhJajyI02Gw0NYTpq8htwKZFJLgUU+lnIAA=",
+"assets/img/work/for-sale/for-sale-p4.jpg": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwAwCdASoYAA4APu1iqk2ppaQiMAgBMB2JYwC7ACHZwa2OPG1waKxgAP7DF2H+wfpybxan1hQqKmO98z1/Z0ymUGsYvsG+KCOz2CD5FMnhPASS2GvOeSIXF0SzSU6MwpPugAAA",
+"assets/img/work/for-sale/for-sale-p5.jpg": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAwBACdASoYABAAPu1iqk2ppaQiMAgBMB2JQBYdhDtPjFibADXLoO9ZYAAA/q7+wQkZhu8b6Ok302IQv2WKqp99ego2OG8Vk/pa9VyrEfw7gMMSpOc9f5np3b3T43P881k3kdMjoj3KoCwe9+XYXXx4P/1fKUv5x3WCQAAA",
+"assets/img/work/for-sale/for-sale-p6.jpg": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAADwAwCdASoYABAAPu1kqk4ppaQiMAgBMB2JbACdLwABd5UYvDp57xWAAP7sV6NJWBXweO+g3RzShgWnUeNiTOmB5b+zUUOEUxvzrkj/TDr8nxa+JQGRQIslbL26Wtanv0oul7YKPwkazlcCM50b+jTYKlPtwE/9BXLi33q1BT/OaSPnsonAAA==",
+"assets/img/work/for-sale/for-sale-p7.jpg": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoQABgAPu1iqU2ppaQiMAgBMB2JQBOgAr/W6koSouznA4FAAMz6xUm4R8kTnR3FbxpgmY4sifqCmc2+YZiPV0JX6bhv6ol05977VcogAGz/7/69qevExLmYXeltQuK0WXTAyiRc9lhB2X5Qaa3qvZJwwAA=",
 "assets/img/work/fountain-for-bees/fb-form-01.jpg": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACwAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JaAAAXg7abaiLN1fccgD+8dvYcYBRh5oog6CHPF8Orjhpt5ee54rpboAUpHECSZkT4a23Gh4/2FbyOGkpjvgKq3kU3TiX3SqaakI7fNVOj172MU5RQoAXgAA=",
 "assets/img/work/fountain-for-bees/fb-form-02.jpg": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBACdASoYAA0APu1iqU2ppaQiMAgBMB2JZgC7ACPtd1Hxg28mCm8eaAD+4fMt5NXKtfKnSN4eYp6ck7KDrRNXfcp0AvnViUMPDlLJhCWlmSuJ5CT/gjUTTckD3rJUIyHG0ncuFVJhiTAES2AB+qmj0upEcPoAAAA=",
 "assets/img/work/fountain-for-bees/fb-form-03.jpg": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwBACdASoYAA4APu1kqk4ppaQiMAgBMB2JagC7AB6WfaiGIxjB0Sq50AAA/vN7fQXmkfq+B/bfDCNgueA15Y0aTCFW3lMUu5zjw9b/Nval64N8aOr0W4+cWX29Kg3qTMtw9L5vi7qGK6fqFy7UZ3GjAAA=",

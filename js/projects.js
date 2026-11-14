@@ -148,14 +148,20 @@ const PROJECTS = [
     title: "For Sale",
     year: 2025,
     tags: ["design", "art"],
-    materials: "Materials",
-    summary: "One-line description.",
+    materials: "Plastic toys, photographs",
+    summary: "For many Chinese immigrant children in North America, the theatre of existence is the family restaurant, where days and years go by watching your parents behind the counter and soon standing there yourself. For Sale blends play, personal life, childhood, and work.",
     details: [],
     cover: "assets/img/work/for-sale/for-sale-01.jpg",
     tagCovers: { art: "assets/img/work/for-sale/for-sale-02.jpg" },
-    featured: "assets/img/work/for-sale/for-sale-01.jpg",
-    photos: [
-      "assets/img/work/for-sale/for-sale-02.jpg"
+    featured: "assets/img/work/for-sale/for-sale-p3.jpg",
+    photos: [],
+    sections: [
+      { label: "", blocks: [
+        { type: "media-rows", rows: [2, 2], items: ["assets/img/work/for-sale/for-sale-p4.jpg", "assets/img/work/for-sale/for-sale-p5.jpg", "assets/img/work/for-sale/for-sale-p2.jpg", "assets/img/work/for-sale/for-sale-p1.jpg"] }
+      ] },
+      { label: "", blocks: [
+        { type: "media-rows", rows: [2], items: ["assets/img/work/for-sale/for-sale-p6.jpg", "assets/img/work/for-sale/for-sale-p7.jpg"] }
+      ] }
     ]
   },
 {
