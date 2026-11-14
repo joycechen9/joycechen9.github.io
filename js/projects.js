@@ -520,6 +520,9 @@ const PROJECTS = [
     featured: "assets/img/work/lego-rescue/lego-v1.mp4",
     photos: [],
     sections: [
+      { label: "", blocks: [
+        { type: "media-rows", rows: [4], items: ["assets/img/work/lego-rescue/lego-labelled-1.jpg", "assets/img/work/lego-rescue/lego-labelled-2.jpg", "assets/img/work/lego-rescue/lego-labelled-3.jpg", "assets/img/work/lego-rescue/lego-labelled-4.jpg"] }
+      ] },
       { label: "Sketching and Ideating", blocks: [
         { type: "media-rows", maxWidth: 760, center: true, rows: [2, 3], items: ["assets/img/work/lego-rescue/lego-p02.jpg", "assets/img/work/lego-rescue/lego-p03.jpg", "assets/img/work/lego-rescue/lego-p01.jpg", "assets/img/work/lego-rescue/lego-p04.jpg", "assets/img/work/lego-rescue/lego-p05.jpg"] }
       ] },

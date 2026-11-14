@@ -816,6 +816,22 @@ const IMAGE_SIZES = {
 2400,
 657
 ],
+"assets/img/work/lego-rescue/lego-labelled-1.jpg": [
+897,
+972
+],
+"assets/img/work/lego-rescue/lego-labelled-2.jpg": [
+1179,
+972
+],
+"assets/img/work/lego-rescue/lego-labelled-3.jpg": [
+726,
+982
+],
+"assets/img/work/lego-rescue/lego-labelled-4.jpg": [
+822,
+964
+],
 "assets/img/work/lego-rescue/lego-p01.jpg": [
 880,
 1096
@@ -1634,6 +1650,10 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/kong/kong-mock-04.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACwAwCdASoJABgAPu1iqU2ppaOiMAgBMB2JZACdAGMkR3hyTEPqAAD+8LXuTPZ5mfiXfme3mHUU/nmKNBdlFKiwrLBE171d6MRq/Zk5W0o8c0U+ToKJgkSk13xX4Dtj4I9wA4G1paSy9nQ0ul+YyhmSFrb+XwAA",
 "assets/img/work/kong/kong-pvt.jpg": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQAwCdASoYAAsAPu1iqk2ppaQiMAgBMB2JZwAATt3JwmQc88MeXAAA22ngdszEvKtg3XT0P/KbpY56TOKOUpgQ6QAHjxQue1w2oh7vm5M+9vY++LzE8xMpttROiO5YTmnUK7Ab5OP3Az5Dgt0orViOcWYxYAhGlcnAiMAA",
 "assets/img/work/kong/kong-sketches.jpg": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAwCdASoYAAcAPu1iqU2ppaOiMAgBMB2JaQAAW+n1SXW+lzUS1AAA/u1HkoTSFNVp3Il8WbToi02N+PMN+DuzxiGiysAAAAA=",
+"assets/img/work/lego-rescue/lego-labelled-1.jpg": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAAAQBQCdASoWABgAPu1orlCppaQiqAqpMB2JbACdMxgBs/mkYCbviUzXqYescMN7nxIAAOHaGsU92w37Ef2daIdJSlhpcMVIzL0D00Nv4CR8QSoH/nf8JqsMvIkWs9w//cSgo8jWhcTeJYaZnHaqY+pvTuSjO8D9aH+4nvggRD0F2lu0xBV10xkj7QtRbmQruYt4ff2KrKsstMTBGOG0mF1Pon6jWO8izBc+P4oQDBEwVTA4rKc4gAAA",
+"assets/img/work/lego-rescue/lego-labelled-2.jpg": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAABQBQCdASoYABQAPu1irVAppSQisBgIATAdiWwAnTMchCAS2GX6F2GK0JFPNqk/fUiFxTAA/p45DuE64XQwqnK2Dvxlt1jJdFfqQJSw8wVSBrE35N1FYZ1QZjbeIbV721RaFgstmutAIMqXz70FVtr13j+W2PZetrDPtL7o73d8Ojo+BBL7A4E9iDj4699H/Ba97TP1gdQhUFICxJ3K/sNa3fmWhermUp4TBZ9IcfBfUgAA",
+"assets/img/work/lego-rescue/lego-labelled-3.jpg": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAwBQCdASoSABgAPu1oqVAppiOiqA1RMB2JZACxHxgBR3sg56tn6c8dd7W4It66DMD+AAD+qFtU/vLB1VgfLdZtYBrYXDye3fX82b8cZFS/gDCd/uoR2Ei9K3AyqPQULgTrNybkhek5jr+8OniZ+ArCi2wgcgsUgAG9V2Lom9YiakJNyTpdN5wKpSan9LZhG76zX9uhBT8I6QqONOBpjIAELgAAAA==",
+"assets/img/work/lego-rescue/lego-labelled-4.jpg": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAACQBACdASoUABgAPu1wsFKppiSiqAgBMB2JQBTigcb9Ycg41kZFC1yXSzHR0QAA/uxIyvVc8Ms16G+rBq2U2pHOkA/pcKek+rXd2IJQnFawUprq8NOf06VERePL1WEP4FtQX4Q4/h3/3oCSRvYTnl5bz9HNsuxOHtnENn8L17UuvVxfCPmQUmsEQqaGHbGg+H5QhvKPKnG5T3IKDG8S1KgmWAAAAA==",
 "assets/img/work/lego-rescue/lego-p01.jpg": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAwBQCdASoTABgAPu1qqFAppiOiqA1RMB2JZwDOdBE0lCv6V5IuBO0yq/vF34UTAvGwoAD+837pNl+L12zsuqzfNrGR/wgqgBoLvsjq8o0AlI8EBmBs4Ow5E/EpFU/5CrbSL/Sl27tXP3NjAm4j/HlcU2E1q5eYVyp5QShctT9TMbdrC/xvAtShkD8YbsGsi90kXaJgZwAAAA==",
 "assets/img/work/lego-rescue/lego-p02.jpg": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAwCdASoYABEAPu1orE8ppiQiMBgIATAdiWkAAC52YdeMkaC8VwAA/vN0gBM0Bo7I5slNiInbgJPtEAAAAA==",
 "assets/img/work/lego-rescue/lego-p03.jpg": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACQAwCdASoYAAoAPu1kqk2ppaQiMAgBMB2JZQAAWvVPNQxQ81YAAP7wSiHr4uSfkneSYq4wFUrMmc6CWUbGi9nU1XYYelofhzqu1ukJIZxtgP8scQC/zMtACdsYAA==",
