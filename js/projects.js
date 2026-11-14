@@ -517,7 +517,7 @@ const PROJECTS = [
         label: "Capstone Symposium",
         blocks: [
           { type: "text", text: ["Watch the [symposium video ↗](https://www.youtube.com/watch?v=6P6a0z8bSIY&t=133s)."] },
-          { type: "media-rows", maxWidth: 800, center: true, rows: [2, 3], items: ["assets/img/work/salico/salico-sym-1.jpg", "assets/img/work/salico/salico-sym-2.jpg", "assets/img/work/salico/salico-sym-3.jpg", "assets/img/work/salico/salico-sym-4.jpg", "assets/img/work/salico/salico-sym-5.jpg"] }
+          { type: "media-rows", maxWidth: 850, center: true, rows: [2, 3], items: ["assets/img/work/salico/salico-sym-1.jpg", "assets/img/work/salico/salico-sym-2.jpg", "assets/img/work/salico/salico-sym-3.jpg", "assets/img/work/salico/salico-sym-4.jpg", "assets/img/work/salico/salico-sym-5.jpg"] }
         ]
       },
       {
