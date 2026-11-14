@@ -383,6 +383,9 @@ const PROJECTS = [
       ] },
       { label: "UX Testing", blocks: [
         { type: "slider", interval: 2000, images: ["assets/img/work/telescoping-drop-pole/tdp-ux-1.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-2.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-3.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-4.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-5.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-6.jpg"] }
+      ] },
+      { label: "Load Testing", blocks: [
+        { type: "slider", interval: 2000, images: ["assets/img/work/telescoping-drop-pole/tdp-load-1.jpg", "assets/img/work/telescoping-drop-pole/tdp-load-2.jpg", "assets/img/work/telescoping-drop-pole/tdp-load-3.jpg"] }
       ] }
     ]
   },
