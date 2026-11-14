@@ -2,50 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Joyce Chen Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joyce Chen</title>
+  <meta name="description" content="Joyce Chen — designer, engineer, and artist." />
+  <link rel="icon" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="css/site.css" />
 </head>
 <body>
-  <div id="header">
-    <h1 id="name" onclick="toggleMenu()">
-      <span class="highlight">JOYCE</span> CHEN
-    </h1>
-    <nav id="menu" class="hidden">
-      <a href="projects.html">PROJECTS</a>
-      <a href="assets/pdfs/resume.pdf">RESUME</a>
+
+  <header class="site-header">
+    <a href="#about" class="nav-link">ABOUT</a>
+    <a href="index.html" class="site-name">JOYCE CHEN</a>
+    <a href="#work" class="nav-link">WORK</a>
+  </header>
+
+  <!-- 1. ABOUT -->
+  <section id="about" class="hero">
+    <div class="hero-inner">
+      <div class="name-flipper" id="name-flipper" aria-label="Photos of Joyce"></div>
+      <div class="intro">
+        <p class="intro-lead"><strong>Joyce</strong> is</p>
+        <ul class="intro-list">
+          <li>a <strong>designer, engineer,</strong> &amp; <strong>artist.</strong></li>
+          <li>opinionated, sharp, versatile, dedicated, resilient, &amp; thoughtful.</li>
+          <li>a Master&rsquo;s student in <strong>Industrial Design @ RISD</strong> &amp;<br>an alumni of <strong>Mechatronics Engineering @ UWaterloo</strong>.</li>
+          <li>a prev. engineer @ Verkada, Viryl, &amp; SnapPea.</li>
+          <li>thinking about perception, identity, performance, sincerity, &amp; shadows.</li>
+          <li id="reading">currently reading <em>Flights by Olga Tokarczuk</em>, <em>Atlas of AI by Kate Crawford</em>, &amp; <em>The Warmth of Other Suns by Isabel Wilkerson</em>.</li>
+        </ul>
+      </div>
+    </div>
+    <nav class="contact-links">
+      <a href="https://www.linkedin.com/in/joycechen9/" target="_blank" rel="noopener">LINKEDIN</a>
+      <span>//</span>
+      <a href="assets/pdfs/resume.pdf" target="_blank" rel="noopener">RESUME</a>
+      <span>//</span>
+      <a href="mailto:joyc.chn@gmail.com">EMAIL</a>
     </nav>
-  </div>
+  </section>
 
-  <hr class="divider" />
+  <!-- 2–3. WORK -->
+  <section id="work" class="work">
+    <nav class="filters" id="filters" aria-label="Filter work by tag">
+      <button data-tag="all" class="active">SELECTED WORKS</button>
+      <button data-tag="design">DESIGN</button>
+      <button data-tag="engineering">ENGINEERING</button>
+      <button data-tag="art">ART</button>
+    </nav>
 
-  <div class="about">
-    <p>
-      Hi I'm Joyce! I’m an engineer and also an artist. I like to observe, and I like to create. I bring a unique, creative perspective while also having the technical training, experience, and dedication to turn an idea into reality. I want to work on projects that matter: useful, thought-provoking, and beautiful.
-    </p>
-  </div>
+    <div class="work-body" id="work-body">
+      <aside class="work-list" id="work-list" aria-label="All works"></aside>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
 
-  <footer>
-    <a href="mailto:joyc.chn@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-    <a href="https://www.linkedin.com/in/joycechen9/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+
+  <footer class="site-footer">
+    <a href="https://www.linkedin.com/in/joycechen9/" target="_blank" rel="noopener">LINKEDIN</a>
+    <span>//</span>
+    <a href="assets/pdfs/resume.pdf" target="_blank" rel="noopener">RESUME</a>
+    <span>//</span>
+    <a href="mailto:joyc.chn@gmail.com">EMAIL</a>
   </footer>
-  
-  <div class="site-notice">
-    <i class="fas fa-cog"></i> Site in progress.
-  </div>
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('menu');
-      menu.classList.toggle('hidden');
-    }
-  </script>
+  <script src="js/reading.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/image-sizes.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>
-
-
-
-
-
-
