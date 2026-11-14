@@ -303,7 +303,6 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .project-top.wide .project-featured img,
 .project-top.wide .project-featured video { width: auto; max-width: 100%; height: auto; max-height: calc(100vh - var(--header-h) - 175px); }
 /* Labelled diagram as featured: shrink to fit the screen height (stage is 1.774:1 plus room for labels) */
-.project-top.wide .diagram-box .diagram-fig { max-width: max(780px, calc((100vh - var(--header-h) - 175px - 96px) * 1.774)); width: 100%; margin: 0 auto; }
 .project-top.wide .diagram-box .diagram-img { max-height: none; }
 .project-top.wide .project-featured.pair img, .project-top.wide .project-featured.pair video { max-height: none; width: 100%; height: 100%; }
 /* centerTitle: title, year and intro centred over the featured piece (like a poster) */
@@ -415,7 +414,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
   top: calc(6% + var(--y) * 0.82%);
 }
 .diagram-label {
-  position: absolute; font-size: clamp(11px, 0.95vw, 13px); line-height: 1.45;
+  position: absolute; font-size: 12px; line-height: 1.4;
   transform: translateX(-50%); text-align: center;
 }
 .diagram-label.top { transform: translate(-50%, -100%); padding-bottom: 6px; }
@@ -439,6 +438,8 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .diagram.stacked .diagram-notes { display: grid; grid-template-columns: 1fr 1fr; column-gap: 64px; }
 .diagram.stacked .diagram-notes::before { display: none; }
 .diagram.stacked .diagram-notes li { margin-bottom: 0; }
+.diagram.stacked.three .diagram-notes { grid-template-columns: 1fr 1fr 1fr; column-gap: 72px; }
+.diagram.stacked.roomy .diagram-fig { padding: 96px 0 0; }
 
 /* Narrow screens: numbered dots on the image, labels listed underneath */
 @media (max-width: 1000px) {
@@ -453,7 +454,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
     top: calc(var(--y) * 1%);
   }
   .diagram-notes li { text-align: left; line-height: 1.6; }
-  .diagram.stacked .diagram-notes { grid-template-columns: 1fr; row-gap: 22px; }
+  .diagram.stacked .diagram-notes, .diagram.stacked.three .diagram-notes { grid-template-columns: 1fr; row-gap: 22px; }
   .diagram.stacked .diagram-fig { padding: 0; }
   .diagram-list { display: block; margin: 16px 0 0; padding-left: 30px; columns: 2; column-gap: 28px; font-size: 13px; line-height: 1.45; }
   .diagram-list li { margin-bottom: 8px; break-inside: avoid; }

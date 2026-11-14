@@ -304,7 +304,11 @@ function buildDiagram(parent, d, title) {
 
   const wrap = document.createElement("section");
   wrap.className = "diagram";
-  if (d.layout === "stacked") wrap.classList.add("stacked");   // notes go under the image, in two columns
+  if (d.layout === "stacked") {   // notes go under the image, in columns
+    wrap.classList.add("stacked");
+    if ((d.notes || []).length === 3) wrap.classList.add("three");
+    if (d.roomy) wrap.classList.add("roomy");   // extra room above for tall labels
+  }
   const fig = document.createElement("figure");
   fig.className = "diagram-fig";
   const stage = document.createElement("div");
