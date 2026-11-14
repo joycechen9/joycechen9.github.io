@@ -45,6 +45,7 @@ if (!p) {
   // Featured block: a photo, or a video (.mp4) that plays silently on loop
   const featBox = document.getElementById("p-featured");
   if (p.featuredWide) document.querySelector(".project-top").classList.add("wide");
+  if (p.centerTitle) document.querySelector(".project-top").classList.add("centered");
   const srcOf = (f) => (typeof f === "string" ? f : f.src);
   const piece = (f, sizes) => {
     const fig = document.createElement("figure");

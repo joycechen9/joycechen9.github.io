@@ -230,13 +230,13 @@ const PROJECTS = [
       featured: true,   // shown as the page's featured image, right under the title
       labels: [
         { text: "Mini Dome Camera", x: 2.9, y: 33, lx: 2.9, ly: 3, side: "top", w: 10 },
-        { text: "Request to Exit and Lockdown Button, Indicator Light", x: 7.7, y: 53, lx: 5, ly: 92, side: "bottom", w: 9 },
+        { text: "Request to Exit and Lockdown Button, Indicator Light", x: 7.7, y: 53, lx: 3.5, ly: 92, side: "bottom", w: 9.5 },
         { text: "Powder Coated Steel Sheet Metal 1.2 mm SECC", x: 16.4, y: 87, lx: 15, ly: 92, side: "bottom", w: 8.5 },
-        { text: "ABS Plastic Feet", x: 22, y: 97.5, lx: 23.5, ly: 92, side: "bottom", w: 6 },
+        { text: "ABS Plastic Feet", x: 22, y: 97.5, lx: 24.5, ly: 92, side: "bottom", w: 6.5 },
         { text: "Badge/Fob Door Reader", x: 41, y: 87, lx: 41, ly: 92, side: "bottom", w: 9 },
         { text: "Door with Electromagnet and Position Sensor", x: 50.7, y: 87, lx: 51.5, ly: 92, side: "bottom", w: 11 },
         { text: "Cellular Gateway", x: 81.4, y: 23, lx: 81.4, ly: 3, side: "top", w: 10 },
-        { text: "N42 Neodymium Magnets", x: 89.6, y: 29, lx: 92, ly: 3, side: "top", w: 10 },
+        { text: "N42 Neodymium Magnets", x: 89.6, y: 29, lx: 92.5, ly: 3, side: "top", w: 13 },
         { text: "Translucent PC110 Back Panel VDI-24", x: 72.5, y: 78, lx: 72.5, ly: 92, side: "bottom", w: 10 },
         { text: "Power", x: 81.8, y: 92.5, lx: 81.8, ly: 92, side: "bottom", w: 6 },
         { text: "Door Controller", x: 89.3, y: 69.6, lx: 90.5, ly: 92, side: "bottom", w: 8 }
@@ -347,14 +347,12 @@ const PROJECTS = [
     year: 2025,
     tags: ["engineering"],
     materials: "",
-    summary: "An automatic harvester for sea asparagus, built with farmer and scientist Dr. Wenhao Sun for Olakai, his farm in Hawaii.",
+    summary: "An automatic harvester for sea asparagus, built with farmer and scientist Dr. Wenhao Sun for Olakai, his farm in Hawaii. [Development blog ↗](https://salico-uw.github.io/)",
+    linkPill: "green",
     details: [
       "**TLDR: Sea asparagus is a salt-tolerant crop that cleans water and helps with carbon capture.** As fresh water and farmland run short, it's a crop for the future, but the best **harvest is still done by hand**, which limits how far it can scale. Existing machines cut and bruise the plant, hurting its quality and shelf life.",
       "**Salico mimics hand harvesting.** Two cast urethane rollers grip the plant and pull, so the ripe tips separate naturally at the nodes. A ramp and conveyor carry the tips to a floating cargo bin.",
       "This was my Mechatronics Engineering capstone (over 8 months long, team of 5). I was a mechanical engineer, project manager, and visual designer. We prototyped the picker in Toronto without any sea asparagus to test on, then took three trips to the farm in Hawaii to test the roller design and the full-size robot. This robot now lives at Olakai farm, serving as a proof of concept for future innovation."
-    ],
-    links: [
-      { label: "Development blog", href: "https://salico-uw.github.io/", top: true }
     ],
     // Labelled render. x/y = the point on the machine, lx/ly = where the label sits
     // (all in % of the diagram box). side: which side of the line the text goes.

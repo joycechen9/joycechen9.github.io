@@ -294,9 +294,22 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .project-featured.diagram-box .diagram { margin-top: 0; }
 
 /* Full-width featured image under the title (featuredWide) */
-.project-top.wide { grid-template-columns: 1fr; gap: 28px; }
+/* Kept compact so the whole featured piece fits on the first screen */
+.project:has(.project-top.wide) { padding-top: 26px; }
+.project-top.wide { grid-template-columns: 1fr; gap: 18px; }
+.project-top.wide .project-info h1 { margin-bottom: 8px; }
+.project-top.wide .project-info p { margin-bottom: 8px; }
+.project-top.wide .project-info p:last-child { margin-bottom: 0; }
 .project-top.wide .project-featured img,
-.project-top.wide .project-featured video { width: 100%; max-height: none; height: auto; }
+.project-top.wide .project-featured video { width: auto; max-width: 100%; height: auto; max-height: calc(100vh - var(--header-h) - 175px); }
+/* Labelled diagram as featured: shrink to fit the screen height (stage is 1.774:1 plus room for labels) */
+.project-top.wide .diagram-box .diagram-fig { max-width: max(780px, calc((100vh - var(--header-h) - 175px - 96px) * 1.774)); width: 100%; margin: 0 auto; }
+.project-top.wide .diagram-box .diagram-img { max-height: none; }
+.project-top.wide .project-featured.pair img, .project-top.wide .project-featured.pair video { max-height: none; width: 100%; height: 100%; }
+/* centerTitle: title, year and intro centred over the featured piece (like a poster) */
+.project-top.centered .project-info { text-align: center; }
+.project-top.centered .project-info h1 { font-size: 40px; }
+.project-top.wide .diagram-box .diagram.stacked .diagram-fig { padding-top: 34px; }
 
 /* Spotify player */
 .project-top.align-bottom { align-items: end; }
@@ -411,7 +424,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .diagram-list { display: none; }
 .diagram-notes { list-style: none; counter-reset: n; margin: 0; padding: 0 0 0 46px; position: relative; }
 .diagram-notes::before { content: ""; position: absolute; left: 13px; top: 6px; bottom: 6px; border-left: 1px solid #333; }
-.diagram-notes li { counter-increment: n; position: relative; font-size: var(--body); line-height: 1.6; text-align: justify; margin-bottom: 26px; }
+.diagram-notes li { counter-increment: n; position: relative; font-size: var(--body); line-height: 1.6; margin-bottom: 26px; }
 .diagram-notes li::before {
   content: counter(n); position: absolute; left: -46px; top: 0;
   width: 26px; height: 30px; border: 1px solid #333; border-radius: 13px;
