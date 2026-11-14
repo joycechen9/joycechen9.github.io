@@ -181,7 +181,7 @@ const PROJECTS = [
       { label: "Installation", layout: "row", perRow: 4, photos: ["assets/img/work/display-shelf/shelf-01.jpg", "assets/img/work/display-shelf/shelf-02.jpg", "assets/img/work/display-shelf/shelf-03.jpg", "assets/img/work/display-shelf/shelf-04.jpg"] },
       { label: "Details", layout: "row", photos: ["assets/img/work/display-shelf/shelf-05.jpg", "assets/img/work/display-shelf/shelf-06.jpg", "assets/img/work/display-shelf/shelf-07.jpg"] },
       { label: "Fabrication", layout: "row", perRow: 4, photos: ["assets/img/work/display-shelf/shelf-21.jpg", "assets/img/work/display-shelf/shelf-22.jpg", "assets/img/work/display-shelf/shelf-23.jpg", "assets/img/work/display-shelf/shelf-24.jpg"] },
-      { label: "Roughly Planning Out on CAD", layout: "row", perRow: 4, photos: ["assets/img/work/display-shelf/shelf-15.jpg", "assets/img/work/display-shelf/shelf-16.jpg", "assets/img/work/display-shelf/shelf-17.jpg", "assets/img/work/display-shelf/shelf-18.jpg"] },
+      { label: "Planning Out on CAD", layout: "row", perRow: 4, photos: ["assets/img/work/display-shelf/shelf-15.jpg", "assets/img/work/display-shelf/shelf-16.jpg", "assets/img/work/display-shelf/shelf-17.jpg", "assets/img/work/display-shelf/shelf-18.jpg"] },
       { label: "Sketchbook Ideation", layout: "row", perRow: 3, photos: ["assets/img/work/display-shelf/shelf-19.jpg", "assets/img/work/display-shelf/shelf-20.jpg", "assets/img/work/display-shelf/shelf-25.jpg"] }
     ]
   },
