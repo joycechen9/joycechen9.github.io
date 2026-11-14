@@ -1372,6 +1372,10 @@ const IMAGE_SIZES = {
 1972,
 1092
 ],
+"assets/img/work/telescoping-drop-pole/tdp-pack.jpg": [
+2180,
+834
+],
 "assets/img/work/telescoping-drop-pole/tdp-ux-1.jpg": [
 1928,
 1016
@@ -1749,6 +1753,7 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/telescoping-drop-pole/tdp-load-1.jpg": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAABQBACdASoYAA0APu1iqk2ppaQiMAgBMB2JZwDA3B0lzEi15EiLfq9Rgf1IAP7rFCgzrphZ4mSyYK/SNOCueeuS5T0RGJ2Sq/N7CqGfpyTbBMn0e0b9mSDyoDpkOWS8Xj8TDyhX2/1+E/icxUhXbc4lNCIlcJg31wHgAA==",
 "assets/img/work/telescoping-drop-pole/tdp-load-2.jpg": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwAwCdASoYAA0APu1iqU2ppaQiMAgBMB2JZwDCgCHPVf0/QSGIAAD+4M2QyHFZrlEgtlL5Lrxq71DfiqisZl3+k0NKFttMhpSbbd3uNslKANenlCCmz5wd2AanMAAA",
 "assets/img/work/telescoping-drop-pole/tdp-load-3.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBACdASoYAA0APu1iqk2ppaQiMAgBMB2JZQDG9CKT7bMgkOOsG9DYXAD+YWqxQmARSavYgaNgxNh62xxVQ3eMbYPOJK4j73TfWqtDxLDSuJoX2c7bklJf0V90Jmh0HROGc2xyxCKvtJMtZVFpSgAA",
+"assets/img/work/telescoping-drop-pole/tdp-pack.jpg": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAwCdASoYAAkAPu1iqU2ppaOiMAgBMB2JZQC7ACKG65OxkWOB04AA/seCPinK4Jb+4tRirS8eyvEn0zQn3EF4fC3BrLN57S/3nJfSfWNMHAI8hTu1YG7uwlu+lNsJfoAAAA==",
 "assets/img/work/telescoping-drop-pole/tdp-ux-1.jpg": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQAwCdASoYAA0APu1iqU2ppaQiMAgBMB2JYwC2yCERqFPhAGW1dVIA/tYmAOBjeqhwvi6jw4hrgNxEnm5TvbupcBazkiYJ0iKCbaKH5F1mEIw/PfsvxWkIv7F6crpRST5feGdQT6SnpQWlGM79n0jl95rygwSgMAA=",
 "assets/img/work/telescoping-drop-pole/tdp-ux-2.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoYAAsAPu1iqU2ppaOiMAgBMB2JZwBTAAY6RKv7pYMSuAAA/vAy/p6dQSTNjkNy2Es+wfCeLwiun0FTovV3vFbzkhMKc7+sxfllDlOar12CrtXy1fNDf5PqRKCZ40AAXqo/kQHiFBtonsAA",
 "assets/img/work/telescoping-drop-pole/tdp-ux-3.jpg": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwBACdASoYAA0APu1iqk4ppaQiMAgBMB2JZQCw7CIB942hRrKUY6CKfnAA/pT6mMkchUO5gQH9xIfBENzt3P2jd3V5aD4Pec43rPWsiF6jOq8xNNL13sOpSZOiPOUQCYh4gAAA",

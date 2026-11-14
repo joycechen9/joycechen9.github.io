@@ -386,6 +386,10 @@ const PROJECTS = [
       ] },
       { label: "Load Testing", blocks: [
         { type: "slider", interval: 2000, images: ["assets/img/work/telescoping-drop-pole/tdp-load-1.jpg", "assets/img/work/telescoping-drop-pole/tdp-load-2.jpg", "assets/img/work/telescoping-drop-pole/tdp-load-3.jpg"] }
+      ] },
+      { label: "Install Guide, Labels/Stickers, Packaging", blocks: [
+        { type: "text", text: ["Worked with the ID, Packaging, and Graphic Design teams to wrap up the [install guide ↗](https://docs.verkada.com/docs/Verkada-ACC-CAM-MNT-TCEIL-1-Install-Guide.pdf), labels/pad prints/stickers, and packaging."] },
+        { type: "image", src: "assets/img/work/telescoping-drop-pole/tdp-pack.jpg" }
       ] }
     ]
   },
