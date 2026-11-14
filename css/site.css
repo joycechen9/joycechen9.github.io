@@ -573,13 +573,13 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .p-link-top a:hover { background: #d3f0a0; color: #1f420a; }
 .pill-blue #p-text a {
   display: inline-block; font-style: normal; text-decoration: none;
-  background: #dfe1fb; color: #2b33a8; padding: 2px 11px; border-radius: 999px; margin-left: 2px;
+  background: #dfe1fb; color: #2b33a8; padding: 2px 11px; border-radius: 999px; margin-left: 8px;
   transition: background .2s, color .2s;
 }
 .pill-blue #p-text a:hover { background: #c9cdf8; color: #1c2287; }
 .pill-green #p-text a, .pill-green #p-more a {
   display: inline-block; font-style: normal; text-decoration: none;
-  background: #e6f7c6; color: #2f5a12; padding: 2px 11px; border-radius: 999px; margin-left: 2px;
+  background: #e6f7c6; color: #2f5a12; padding: 2px 11px; border-radius: 999px; margin-left: 8px;
   transition: background .2s, color .2s;
 }
 .pill-green #p-text a:hover, .pill-green #p-more a:hover { background: #d3f0a0; color: #1f420a; }
