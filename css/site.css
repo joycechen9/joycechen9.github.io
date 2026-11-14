@@ -387,7 +387,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .r-row { display: flex; gap: var(--gap); width: 100%; }
 .r-row > .photo { min-width: 0; }
 
-.project-section { margin-top: 72px; }
+.project-section { margin-top: var(--sec-gap, 72px); }
 .diagram + .project-section { margin-top: 40px; }
 .project-section.no-label { margin-top: 40px; }
 .project-top + .p-more:empty + .p-video:empty + .project-photos:empty + #p-sections .project-section:first-child { margin-top: 120px; }
@@ -503,7 +503,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
 #p-sections.numbered > .project-section > h2 { position: static; }
 /* line from each bubble down to the next one */
 #p-sections.numbered > .project-section::before {
-  content: ""; position: absolute; left: 13px; top: -72px; height: 72px; border-left: 1px solid #333;
+  content: ""; position: absolute; left: 13px; top: calc(-1 * var(--sec-gap, 72px)); height: var(--sec-gap, 72px); border-left: 1px solid #333;
 }
 #p-sections.numbered > .diagram + .project-section::before { top: -40px; height: 40px; }
 #p-sections.numbered > .project-section:first-child::before { display: none; }
@@ -608,7 +608,8 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .grp-chosen { box-shadow: inset 0 0 0 3px #3b5bfd; }
 .grp-alt { box-shadow: inset 0 0 0 3px #4f8fe8; border-radius: 6px; }
 .grp-plain { box-shadow: inset 0 0 0 1.5px #b9b9b9; }
-.grp figcaption { font-size: 13px; letter-spacing: .5px; text-transform: uppercase; margin-top: 8px; text-align: center; color: #555; }
+.grp-break { flex-basis: 100%; height: 0; margin-top: -11px; }
+.grp figcaption { width: 0; min-width: 100%; font-size: 13px; letter-spacing: .5px; text-transform: uppercase; margin-top: 8px; text-align: center; color: #555; }
 .grp-chosen figcaption { color: #3b5bfd; font-weight: 600; }
 .grp-star { position: absolute; right: -14px; bottom: 14px; width: 40px; height: 40px; }
 .grp-star svg { width: 100%; height: 100%; display: block; }
@@ -626,4 +627,44 @@ body.filters-stuck .site-header::before { opacity: 0; }
 @media (max-width: 900px) {
   .blk-cad-row { grid-template-columns: 1fr 1fr !important; row-gap: 28px; }
   .cad-top:not(:empty)::after, .cad-bottom:not(:empty)::before { display: none; }
+}
+
+/* ---------- Timeline variant of groups (Kong build stages) ---------- */
+.blk-groups.timeline { position: relative; padding-top: 0; flex-wrap: nowrap; }
+.blk-groups.timeline::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 9px; border-top: 1.5px solid #3b5bfd;
+}
+.blk-groups.timeline::after {
+  content: ""; position: absolute; right: -1px; top: 5px; width: 8px; height: 8px;
+  border-top: 1.5px solid #3b5bfd; border-right: 1.5px solid #3b5bfd; transform: rotate(45deg);
+}
+.blk-groups.timeline .grp { display: flex; flex-direction: column; align-items: center; }
+.grp-label {
+  position: relative; z-index: 1; background: #fff; padding: 0 10px; margin-bottom: 0;
+  color: #3b5bfd; font-weight: 700; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; line-height: 20px;
+}
+.blk-groups.timeline .grp-label::after {
+  content: ""; display: block; width: 0; height: 26px; margin: 2px auto 10px; border-left: 1.5px dashed #3b5bfd;
+}
+.blk-groups.timeline .grp-label::before {
+  content: ""; position: absolute; left: 50%; bottom: 6px; width: 7px; height: 7px; margin-left: -3.5px; border-radius: 50%; background: #3b5bfd;
+}
+.blk-groups.timeline .grp-chosen { padding: 0; box-shadow: none; }
+.blk-groups.timeline .grp-chosen .grp-row { padding: 6px; border-radius: 14px; box-shadow: inset 0 0 0 3px #3b5bfd; }
+.blk-groups.timeline figcaption { color: #111; font-weight: 700; font-size: 13px; }
+.blk-groups.timeline .grp-star { bottom: 28px; left: -14px; right: auto; }
+@media (max-width: 900px) {
+  .blk-groups.timeline { flex-wrap: wrap; }
+  .blk-groups.timeline::before, .blk-groups.timeline::after, .blk-groups.timeline .grp-label::after, .blk-groups.timeline .grp-label::before { display: none; }
+}
+
+/* ---------- Overlay: notes placed on an image's white space ---------- */
+.ov-stage { position: relative; }
+.ov-stage img { display: block; width: 100%; height: auto; background: none !important; }
+.ov-note { position: absolute; font-size: 11.5px; line-height: 1.4; }
+.ov-captions { display: flex; font-size: 11.5px; line-height: 1.45; margin-top: 10px; }
+@media (max-width: 900px) {
+  .ov-note { position: static; width: auto !important; font-size: var(--body); margin-top: 12px; }
+  .ov-captions { display: block; font-size: var(--body); }
+  .ov-captions > div { margin: 12px 0 0 !important; width: auto !important; }
 }

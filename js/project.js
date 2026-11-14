@@ -10,6 +10,7 @@ if (!p) {
   // pageTitle (optional): a longer title used only on the project page itself
   document.title = (p.pageTitle || p.title) + " | Joyce Chen";
   if (p.highlight) document.documentElement.style.setProperty("--mark", p.highlight);   // ==text== colour for this page
+  if (p.sectionGap) document.documentElement.style.setProperty("--sec-gap", p.sectionGap + "px");   // space between story sections
   if (p.linkPill) document.body.classList.add("pill-" + p.linkPill);   // links in the intro text shown as a coloured pill
   document.getElementById("p-title").textContent = (p.pageTitle || p.title).toUpperCase();
   // Materials, size and year, one per line
@@ -414,6 +415,31 @@ function renderBlock(b, title) {
     rows(el, cells, () => (isNarrow() ? 1 : b.images.length));
   } else if (b.type === "pair") {
     b.items.forEach((it) => el.appendChild(renderBlock(it, title)));
+  } else if (b.type === "overlay") {
+    // Image with text placed on its white space (no leader lines); captions can sit under it.
+    // notes: [{ text, x, y, w }] in % of the image. On phones the notes stack under the image.
+    const stage = document.createElement("div");
+    stage.className = "ov-stage";
+    stage.appendChild(media(b.image, title, "100vw"));
+    b.notes.forEach((n) => {
+      const t = document.createElement("div");
+      t.className = "ov-note";
+      t.style.left = n.x + "%"; t.style.top = n.y + "%"; t.style.width = n.w + "%";
+      t.innerHTML = richText(n.text);
+      stage.appendChild(t);
+    });
+    el.appendChild(stage);
+    if (b.captions) {
+      const row = document.createElement("div");
+      row.className = "ov-captions";
+      b.captions.forEach((c) => {
+        const t = document.createElement("div");
+        t.style.marginLeft = c.x + "%"; t.style.width = c.w + "%";
+        t.innerHTML = richText(c.text);
+        row.appendChild(t);
+      });
+      el.appendChild(row);
+    }
   } else if (b.type === "groups") {
     buildGroups(el, b, title);
   } else if (b.type === "cad-row") {
@@ -584,6 +610,7 @@ function buildGroups(el, b, title) {
   const groups = b.items.map((g) => {
     const box = document.createElement("figure");
     box.className = "grp" + (g.outline ? " grp-" + g.outline : "");
+    if (b.timeline) el.classList.add("timeline");
     const row = document.createElement("div"); row.className = "grp-row";
     const imgs = g.images.map((src) => {
       const d = SIZES[src] || [3, 4];
@@ -592,6 +619,7 @@ function buildGroups(el, b, title) {
       row.appendChild(im);
       return im;
     });
+    if (g.label) { const lb = document.createElement("div"); lb.className = "grp-label"; lb.textContent = g.label; box.appendChild(lb); }
     box.appendChild(row);
     if (g.star) { const st = document.createElement("span"); st.className = "grp-star"; st.innerHTML = STAR_SVG; box.appendChild(st); }
     if (g.caption) { const c = document.createElement("figcaption"); c.textContent = g.caption; box.appendChild(c); }
@@ -599,7 +627,7 @@ function buildGroups(el, b, title) {
     return { box, imgs, pad: g.outline && g.outline !== "none" ? PAD : 0 };
   });
   const layout = () => {
-    const W = el.clientWidth;
+    const W = el.clientWidth - 2;   // a hair of slack so rounding never pushes the last set onto a new line
     const gap = parseFloat(getComputedStyle(el).columnGap) || 14;
     const sized = (list, width) => {
       // width = sum over groups of (H * sum(r) + gaps inside + 2*pad) + gaps between
@@ -608,8 +636,23 @@ function buildGroups(el, b, title) {
       return Math.max(40, (width - fixed) / R);
     };
     const apply = (list, H) => list.forEach((g) => g.imgs.forEach((im) => { im.style.height = H + "px"; im.style.width = H * im.dataset.r + "px"; }));
-    if (isNarrow()) for (let i = 0; i < groups.length; i += 2) { const pair = groups.slice(i, i + 2); apply(pair, Math.min(260, sized(pair, W))); }
-    else apply(groups, sized(groups, W));
+    // Split into as few rows as needed to keep images a usable size; rows hold an even share
+    // of the sets (e.g. 3+3, 4+3), never a lone straggler.
+    const n = groups.length, minH = isNarrow() ? 100 : 90;
+    el.querySelectorAll(".grp-break").forEach((x) => x.remove());
+    for (let k = 1; k <= n; k++) {
+      const rows = [], base = Math.floor(n / k), extra = n % k;
+      if (base === 1 && extra > 0) continue;   // would leave single sets hanging next to pairs
+      for (let i = 0, start = 0; i < k; i++) { const len = base + (i < extra ? 1 : 0); rows.push(groups.slice(start, start + len)); start += len; }
+      const hs = rows.map((r) => sized(r, W));
+      if (Math.min(...hs) >= minH || k === n) {
+        rows.forEach((r, i) => {
+          apply(r, Math.min(isNarrow() ? 320 : 9999, hs[i]));
+          if (i > 0) { const br = document.createElement("div"); br.className = "grp-break"; el.insertBefore(br, r[0].box); }
+        });
+        break;
+      }
+    }
   };
   requestAnimationFrame(layout);
   window.addEventListener("resize", layout);

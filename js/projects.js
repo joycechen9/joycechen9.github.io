@@ -222,6 +222,7 @@ const PROJECTS = [
     photos: [],
     highlight: "#dfe1fb",   // lavender ==highlights== on this page
     linkPill: "blue",       // the Verkada link in the intro shows as a blue pill
+    sectionGap: 40,         // tighter spacing between sections
     // Labelled renders: side, front, back. x/y = point on the device, lx/ly = label position (% of the box)
     diagram: {
       image: "assets/img/work/kong/kong-diagram.jpg",
@@ -263,7 +264,7 @@ const PROJECTS = [
           { images: ["assets/img/work/kong/kong-iter-06.jpg"], outline: "plain", caption: "Box" },
           { images: ["assets/img/work/kong/kong-iter-07.jpg"], outline: "plain", caption: "Display" }
         ] },
-        { type: "groups", items: [ { images: ["assets/img/work/kong/kong-iter2-01.jpg", "assets/img/work/kong/kong-iter2-02.jpg", "assets/img/work/kong/kong-iter2-03.jpg", "assets/img/work/kong/kong-iter2-04.jpg", "assets/img/work/kong/kong-iter2-05.jpg", "assets/img/work/kong/kong-iter2-06.jpg", "assets/img/work/kong/kong-iter2-07.jpg"] } ] }
+        { type: "groups", items: [{ images: ["assets/img/work/kong/kong-iter2-01.jpg"] }, { images: ["assets/img/work/kong/kong-iter2-02.jpg"] }, { images: ["assets/img/work/kong/kong-iter2-03.jpg"] }, { images: ["assets/img/work/kong/kong-iter2-04.jpg"] }, { images: ["assets/img/work/kong/kong-iter2-05.jpg"] }, { images: ["assets/img/work/kong/kong-iter2-06.jpg"] }, { images: ["assets/img/work/kong/kong-iter2-07.jpg"] }] }
       ] },
       { label: "Creating 3D Mock Ups of Top Options", blocks: [
         { type: "groups", items: [
@@ -287,6 +288,35 @@ const PROJECTS = [
       { label: "Packaging - Pelican Cases", blocks: [
         { type: "text", text: ["Several shapes, sizes, colours, and arrangements were tested. The best case was selected based on ==**convenience, portability, and protectiveness.**== This is an example of a decision where function had to trump form."] },
         { type: "media-rows", rows: [3, 3], items: ["assets/img/work/kong/kong-case-01.jpg", "assets/img/work/kong/kong-case-04.jpg", "assets/img/work/kong/kong-case-05.jpg", "assets/img/work/kong/kong-case-02.jpg", "assets/img/work/kong/kong-case-03.jpg", "assets/img/work/kong/kong-case-06.jpg"] }
+      ] },
+      { label: "Prototyping and Testing", blocks: [
+        { type: "text", text: ["**Building so many units!** For the first sheet metal prototype, I visited ==Timson, a sheet metal vendor in Taiwan.== I assembled those units by hand myself. Learnings from there were implemented in the new design. The second and third rounds of prototypes were ==assembled at Cynergy,== an assembly house in Texas. I tested, taught, and supervised the line workers there to not only ==build the device,== but to ==test its functionality.== The plastic back panel was ==injection moulded,== and I worked closely with a vendor called ==CanDo Mould== to refine the locating features, magnets, look, and feel."] },
+        { type: "media-rows", rows: [5, 6], items: ["assets/img/work/kong/kong-build-01.jpg", "assets/img/work/kong/kong-build-02.jpg", "assets/img/work/kong/kong-build-03.jpg", "assets/img/work/kong/kong-build-04.jpg", "assets/img/work/kong/kong-build-05.jpg", "assets/img/work/kong/kong-build-06.jpg", "assets/img/work/kong/kong-build-07.jpg", "assets/img/work/kong/kong-build-08.jpg", "assets/img/work/kong/kong-build-09.jpg", "assets/img/work/kong/kong-build-10.jpg", "assets/img/work/kong/kong-build-11.jpg"] }
+      ] },
+      { label: "Final Design", blocks: [
+        { type: "groups", timeline: true, items: [
+          { label: "EVT", images: ["assets/img/work/kong/kong-evt-01.jpg", "assets/img/work/kong/kong-evt-02.jpg"], caption: "Engineering Validation Testing (EVT)" },
+          { label: "DVT", images: ["assets/img/work/kong/kong-dvt-01.jpg", "assets/img/work/kong/kong-dvt-02.jpg"], caption: "Design Validation Testing (DVT)" },
+          { label: "PVT", images: ["assets/img/work/kong/kong-pvt.jpg"], outline: "chosen", star: true, caption: "Product Validation Testing (PVT)" }
+        ] },
+        { type: "overlay", image: "assets/img/work/kong/kong-exploded.jpg",
+          notes: [
+            { text: "**Top panel** has **PEM studs** that fit through the **holes made from the handles** of the main frame. A lock nut tightens them.", x: 16.8, y: 9, w: 16.5 },
+            { text: "The **camera** and **door reader** are attached with screws on their mounting plates onto PEM nuts. Holes are **cut in the middle for wires and to reduce weight.**", x: 5, y: 21.5, w: 17 },
+            { text: "The **buttons and indicator light** are tightened with a nut from the back.", x: 15.3, y: 49.8, w: 12 },
+            { text: "The **cellular gateway** and **door controller** are attached with screws on their mounting plates onto PEM nuts. Holes are **cut in the middle for wires and to reduce weight.**", x: 70.5, y: 3.4, w: 18.5 },
+            { text: "**Magnets** glued to the **plastic back panel** and the middle sheet hold them closed. A **tab** on the bottom helps align the pieces.", x: 88.6, y: 30, w: 11.4 },
+            { text: "The **bottom panel** screws onto the base and middle panel with screws onto PEM nuts. A cutout is for the power plug.", x: 79.5, y: 56.8, w: 20.5 },
+            { text: "The **power bar** is clamped with a bracket with foam inserts. Lock nuts are tightened over the PEM studs in the base.", x: 50.5, y: 67.8, w: 9 }
+          ],
+          captions: [
+            { text: "The **custom door and hinge** are **spot welded**. A **DPI sensor and electromagnet** are installed on the inside. Extra studs on the interior are for **cable harnessing**.", x: 0.5, w: 30 },
+            { text: "The **middle panel slides onto the main panel** by matching the slots to the PEM studs. The piece locks in place with the two PEM screws in the front face. This allows there to be **as little screws showing as possible**.", x: 29.4, w: 40 }
+          ] }
+      ] },
+      { label: "Launch, 650 Units Built!", blocks: [
+        { type: "media-rows", rows: [2], items: ["assets/img/work/kong/kong-launch-01.jpg", "assets/img/work/kong/kong-launch-02.jpg"] },
+        { type: "caption", text: "Kong at the security conference, Verkada One." }
       ] }
     ]
   },
