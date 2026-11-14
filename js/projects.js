@@ -482,6 +482,12 @@ const PROJECTS = [
         ]
       },
       {
+        label: "Building",
+        blocks: [
+          { type: "media-rows", rows: [5, 5], items: ["assets/img/work/salico/salico-build-01.jpg", "assets/img/work/salico/salico-build-02.jpg", "assets/img/work/salico/salico-build-03.jpg", "assets/img/work/salico/salico-build-04.jpg", "assets/img/work/salico/salico-build-05.jpg", "assets/img/work/salico/salico-build-06.jpg", "assets/img/work/salico/salico-build-07.jpg", "assets/img/work/salico/salico-build-08.jpg", "assets/img/work/salico/salico-build-09.jpg", "assets/img/work/salico/salico-build-10.jpg"] }
+        ]
+      },
+      {
         label: "Prototyping Round 1",
         blocks: [
           { type: "text", text: ["There are 4 main subsystems to consider: picking, transporting harvested tips, cargo, and traversal. For our first prototype, we zoom in on just the picker mechanism and make a small scale version to validate the roller design for our first trip to Hawaii."] },
