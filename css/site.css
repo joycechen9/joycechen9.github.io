@@ -483,6 +483,8 @@ body.filters-stuck .site-header::before { opacity: 0; }
 #p-text a:hover, #p-more a:hover { color: var(--accent); }
 .blk-text mark { background: var(--mark, #e6f7c6); padding: 1px 3px; border-radius: 3px; }
 .blk-list ol { margin: 0; padding-left: 24px; }
+.blk-list li { margin-bottom: 2px; }
+.blk-text + .blk-list { margin-top: -6px; }
 .blk-caption { margin-top: 10px; }
 .blk-caption p { font-size: 14px; font-style: italic; margin: 0; }
 .blk-stack img { width: 100%; height: auto; margin-bottom: 14px; }

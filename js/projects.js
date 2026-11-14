@@ -403,15 +403,15 @@ const PROJECTS = [
         { text: "Pneumatic box", x: 70, y: 6, lx: 84, ly: 10, side: "top", w: 12 },
         { text: "Direct drive motors run the rollers, one from each side", x: 31.5, y: 42.7, lx: 19, ly: 78, side: "bottom", w: 14 },
         { text: "The cast urethane rollers, along with the hinged sheet metal frame and spring, provide compliance to wrap and pinch around the plant, mimicking a human hand", x: 43.5, y: 43.5, lx: 57, ly: 88, side: "right", w: 30 },
-        { text: "The ramp acts like a cup when the machine is lowered and a slide when it is lifted", x: 49.8, y: 45, lx: 63, ly: 63, side: "right", w: 15 },
+        { text: "The ramp acts like a cup when the machine is lowered and a slide when it is lifted", x: 49.8, y: 45, lx: 63, ly: 63, side: "right", w: 18 },
         { text: "Tray to collect the harvested plant", x: 58, y: 52, lx: 80, ly: 63, side: "right", w: 13 },
         { text: "Pontoons for floating in ponds", x: 93.8, y: 54.1, lx: 93.8, ly: 72, side: "bottom", w: 11 }
       ],
       // ==text== is highlighted
       notes: [
-        { title: "Background", text: "The world is limited on our supply of clean, fresh water. ==Sea asparagus (Salicornia)== is a salt-tolerant plant that is not only ==delicious and nutritious==, but also has a variety of environmental benefits. As a food, it's rich in vitamins, minerals, and iodine. As a plant, it ==cleans water and helps in carbon capture, mangrove restoration, and desalination.==" },
-        { title: "Problem and need", text: "The current harvesting process relies on ==manual labour==, which ==limits scalability.== Existing semi-automated harvesting machines cut and bruise the plant, resulting in worse quality and shelf life. The ideal harvest requires the tips of the plant to be ==pulled off at its nodes instead of cut.==" },
-        { title: "Resolution", text: "This automated harvester ==mimics hand harvesting== by using a ==double roller mechanism that grips and pulls the sea asparagus.== The ripe, tender parts naturally separate at the nodes of the plant. This machine improves ==harvesting efficiency, speed, and greatly reduces manual labour.==" }
+        { title: "Background", text: "Fresh water is limited. ==Sea asparagus (Salicornia)== is a salt-tolerant plant that is ==delicious and nutritious==, and it ==cleans water and helps with carbon capture, mangrove restoration, and desalination.==" },
+        { title: "Problem and need", text: "Harvesting relies on ==manual labour==, which ==limits scalability.== Existing machines cut and bruise the plant, hurting quality and shelf life. Ideally, the tips are ==pulled off at the nodes instead of cut.==" },
+        { title: "Resolution", text: "This harvester ==mimics hand harvesting== with a ==double roller mechanism that grips and pulls the plant==, so the tender tips separate naturally at the nodes. It ==speeds up harvesting and greatly reduces manual labour.==" }
       ]
     },
     // Process story under the diagram. Each section is a heading plus blocks, in order.
@@ -423,9 +423,9 @@ const PROJECTS = [
           { type: "text", text: ["There are two main challenges:"] },
           { type: "list", items: [
             "We cannot cut or bruise the sea asparagus.",
-            "We do not have any sea asparagus to test with where we live (Toronto, Canada). A large part of the initial design is guessing until we get to Hawaii for testing."
+            "We do not have any sea asparagus to test with where we live (Toronto). A large part of the initial design is guessing until we get to Hawaii for testing."
           ] },
-          { type: "split", columns: [["assets/img/work/salico/salico-s01.jpg", "assets/img/work/salico/salico-s02.jpg"], ["assets/img/work/salico/salico-s03.jpg"]] }
+          { type: "image", src: "assets/img/work/salico/salico-sketches.jpg" }
         ]
       },
       {

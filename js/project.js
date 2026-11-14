@@ -389,6 +389,29 @@ function buildDiagram(parent, d, title) {
   });
   wrap.append(fig, notes);
   parent.appendChild(wrap);
+
+  // Side-by-side layout: widen the notes column just enough that the notes end about where the
+  // render ends, so both fit on screen together (the render shrinks a little to make room).
+  if (!d.layout) {
+    const notes = wrap.querySelector(".diagram-notes");
+    const balance = () => {
+      wrap.style.gridTemplateColumns = "";
+      // target: no taller than the render, or than the screen (whichever is more generous)
+      const target = Math.max(fig.offsetHeight, window.innerHeight - 110);
+      if (window.innerWidth <= 1000 || !notes || notes.offsetHeight <= target) return;
+      const W = wrap.clientWidth;
+      let lo = notes.offsetWidth, hi = W * 0.45;
+      for (let i = 0; i < 12; i++) {
+        const mid = (lo + hi) / 2;
+        wrap.style.gridTemplateColumns = `minmax(0, 1fr) ${mid}px`;
+        if (notes.offsetHeight > target) lo = mid; else hi = mid;
+      }
+      wrap.style.gridTemplateColumns = `minmax(0, 1fr) ${Math.round(hi)}px`;
+    };
+    let raf = 0;
+    window.addEventListener("resize", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(balance); });
+    requestAnimationFrame(balance);
+  }
 }
 
 /* ---------- Story blocks (sections with `blocks`) ---------- */
