@@ -297,7 +297,7 @@ const PROJECTS = [
     linkPill: "green",      // links shown as green pills
     year: 2022,
     tags: ["design", "engineering"],
-    materials: "Wood, bicycle wheels, balloons",
+    materials: "",
     summary: "The Snap Pea Flying Machine [won first place at Red Bull Flugtag Toronto ↗](https://www.redbull.com/ca-en/red-bull-flugtag-toronto-2022-winners).",
     details: [
       "I did the complete creative and mechanical design of the glider. Once we were accepted to the competition, I had limited time to turn my concept sketch into parts we could actually build. The project caught on at work, and soon the whole Product Design team was working together to bring it to life (special thanks to Thai Nguyen, Steve McPhee, Marco Li, Mina Wang, Emily Rose, Jacqueline Lee, Tim MacKay, and Michael Connelly).",
