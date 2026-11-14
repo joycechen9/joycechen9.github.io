@@ -371,7 +371,7 @@ const PROJECTS = [
     title: "Telescoping Drop Pole",
     year: 2026,
     tags: ["engineering"],
-    materials: "Aluminum, steel, plastic",
+    materials: "Aluminum, steel, plastic, rubber, hardware",
     summary: "Telescoping Drop Pole was one of my projects during my 3-month internship at Verkada. I took on the project when we had just received the first tooled parts, and was responsible for testing and making changes before production. [See the install guide on Verkada's website ↗](https://docs.verkada.com/docs/Verkada-ACC-CAM-MNT-TCEIL-1-Install-Guide.pdf)",
     linkPill: "blue",
     details: [],
