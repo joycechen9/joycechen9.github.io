@@ -2,12 +2,16 @@
 (function () {
   const li = document.getElementById("reading");
   if (!li || typeof READING === "undefined" || !READING.length) return;
-  const items = READING.map((b) => `${b.title} by ${b.author}`);
-  const list = items.length < 3 ? items.join(" & ") : items.slice(0, -1).join(", ") + ", & " + items[items.length - 1];
+  // Each book in italics; the commas and "&" between them stay upright
   li.textContent = "currently reading ";
-  const em = document.createElement("em");
-  em.textContent = list + ".";
-  li.appendChild(em);
+  READING.forEach((bk, i) => {
+    const n = READING.length;
+    if (i > 0) li.append(n === 2 ? " & " : i === n - 1 ? ", & " : ", ");
+    const em = document.createElement("em");
+    em.textContent = `${bk.title} by ${bk.author}`;
+    li.appendChild(em);
+  });
+  li.append(".");
 })();
 
 // Homepage: name-photo flipper, work grid, tag filters, work list.
