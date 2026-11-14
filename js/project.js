@@ -9,6 +9,8 @@ if (!p) {
 } else {
   // pageTitle (optional): a longer title used only on the project page itself
   document.title = (p.pageTitle || p.title) + " | Joyce Chen";
+  if (p.highlight) document.documentElement.style.setProperty("--mark", p.highlight);   // ==text== colour for this page
+  if (p.linkPill) document.body.classList.add("pill-" + p.linkPill);   // links in the intro text shown as a coloured pill
   document.getElementById("p-title").textContent = (p.pageTitle || p.title).toUpperCase();
   // Materials, size and year, one per line
   const meta = document.getElementById("p-meta");
@@ -129,6 +131,10 @@ if (!p) {
     if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) v.autoplay = true;
     else v.controls = true;
     featBox.appendChild(v);
+  } else if (p.diagram && p.diagram.featured) {
+    // The labelled diagram itself is the featured image
+    featBox.classList.add("diagram-box");
+    buildDiagram(featBox, p.diagram, p.title);
   } else {
     featBox.appendChild(media(p.featured, p.featured ? p.title : "featured photo",
       p.featuredWide ? "100vw" : "(max-width: 900px) 100vw, 65vw"));
@@ -178,7 +184,7 @@ if (!p) {
   }
 
   // Other photos: 3-column masonry, each photo keeps its own shape
-  const photos = (p.photos.length ? p.photos : p.featured ? [] : ["", "", "", "", ""]).map((src) => {
+  const photos = (p.photos.length ? p.photos : p.featured || p.diagram || p.sections ? [] : ["", "", "", "", ""]).map((src) => {
     const cell = document.createElement("div");
     cell.className = "photo";
     cell.appendChild(media(src, src ? p.title + " photo" : "other photo"));
@@ -186,7 +192,7 @@ if (!p) {
   });
   photoGrid(document.getElementById("p-photos"), photos, p.photosLayout);
 
-  if (p.diagram) buildDiagram(document.getElementById("p-sections"), p.diagram, p.title);
+  if (p.diagram && !p.diagram.featured) buildDiagram(document.getElementById("p-sections"), p.diagram, p.title);
 
   // Extra labelled sections (e.g. "Iteration 1"), each with its own photo grid
   const secBox = document.getElementById("p-sections");
@@ -297,10 +303,12 @@ function buildDiagram(parent, d, title) {
 
   const wrap = document.createElement("section");
   wrap.className = "diagram";
+  if (d.layout === "stacked") wrap.classList.add("stacked");   // notes go under the image, in two columns
   const fig = document.createElement("figure");
   fig.className = "diagram-fig";
   const stage = document.createElement("div");
   stage.className = "diagram-stage";
+  if (d.aspect) stage.style.setProperty("--ar", d.aspect);   // image width / height
   const img = media(d.image, title + " render with labelled parts", "(max-width: 1000px) 100vw, 65vw");
   img.className = "diagram-img";
   img.style.top = IMG_TOP + "%"; img.style.height = IMG_H + "%";
@@ -347,7 +355,7 @@ function buildDiagram(parent, d, title) {
   notes.className = "diagram-notes";
   (d.notes || []).forEach((t) => {
     const li = document.createElement("li");
-    li.innerHTML = `<strong>${esc(t.title).toUpperCase()}:</strong> ${marked(t.text)}`;
+    li.innerHTML = `<strong>${esc(t.title).toUpperCase()}:</strong> ${richText(t.text)}`;
     notes.appendChild(li);
   });
   wrap.append(fig, notes);
@@ -401,6 +409,25 @@ function renderBlock(b, title) {
     rows(el, cells, () => (isNarrow() ? 1 : b.images.length));
   } else if (b.type === "pair") {
     b.items.forEach((it) => el.appendChild(renderBlock(it, title)));
+  } else if (b.type === "groups") {
+    buildGroups(el, b, title);
+  } else if (b.type === "cad-row") {
+    // Images share one height; a caption can sit above and/or below each one
+    b.items.forEach((it) => {
+      const d = SIZES[it.image] || [3, 4];
+      const cell = document.createElement("figure");
+      cell.className = "cad-item";
+      cell.style.setProperty("--r", (d[0] / d[1]).toFixed(4));
+      const top = document.createElement("div"); top.className = "cad-top";
+      if (it.top) top.innerHTML = richText(it.top);
+      const bot = document.createElement("div"); bot.className = "cad-bottom";
+      if (it.bottom) bot.innerHTML = richText(it.bottom);
+      const pic = document.createElement("div"); pic.className = "cad-img";
+      pic.appendChild(media(it.image, title));
+      cell.append(top, pic, bot);
+      el.appendChild(cell);
+    });
+    el.style.gridTemplateColumns = b.items.map((it) => { const d = SIZES[it.image] || [3, 4]; return `${(d[0] / d[1]).toFixed(4)}fr`; }).join(" ");
   } else if (b.type === "annotated-grid") {
     b.items.forEach((it) => el.appendChild(annotated(it, title)));
   } else if (b.type === "annotated") {
@@ -541,4 +568,44 @@ function loopVideo(src, poster, w, h) {
     new IntersectionObserver(([e]) => (e.isIntersecting ? vid.play().catch(() => {}) : vid.pause())).observe(vid);
   }
   return vid;
+}
+
+/* ---------- Groups: a row of image sets, some outlined (the chosen option) ----------
+   { type: "groups", items: [ { images: [...], outline: "chosen" | "alt" | "plain", star: true, caption: "" } ] }
+   Every image in the row shares one height; outlined sets get padding inside a rounded box. */
+function buildGroups(el, b, title) {
+  const STAR_SVG = '<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3l4.9 10.6 11.6 1.3-8.6 7.9 2.4 11.4L20 28.4 9.7 34.2l2.4-11.4L3.5 14.9l11.6-1.3z" fill="#fff" stroke="#9be22d" stroke-width="3" stroke-linejoin="round"/></svg>';
+  const PAD = 10, GAP_IN = 8;
+  const groups = b.items.map((g) => {
+    const box = document.createElement("figure");
+    box.className = "grp" + (g.outline ? " grp-" + g.outline : "");
+    const row = document.createElement("div"); row.className = "grp-row";
+    const imgs = g.images.map((src) => {
+      const d = SIZES[src] || [3, 4];
+      const im = media(src, title);
+      im.dataset.r = d[0] / d[1];
+      row.appendChild(im);
+      return im;
+    });
+    box.appendChild(row);
+    if (g.star) { const st = document.createElement("span"); st.className = "grp-star"; st.innerHTML = STAR_SVG; box.appendChild(st); }
+    if (g.caption) { const c = document.createElement("figcaption"); c.textContent = g.caption; box.appendChild(c); }
+    el.appendChild(box);
+    return { box, imgs, pad: g.outline && g.outline !== "none" ? PAD : 0 };
+  });
+  const layout = () => {
+    const W = el.clientWidth;
+    const gap = parseFloat(getComputedStyle(el).columnGap) || 14;
+    const sized = (list, width) => {
+      // width = sum over groups of (H * sum(r) + gaps inside + 2*pad) + gaps between
+      let fixed = gap * (list.length - 1), R = 0;
+      list.forEach((g) => { fixed += 2 * g.pad + GAP_IN * (g.imgs.length - 1); g.imgs.forEach((im) => (R += +im.dataset.r)); });
+      return Math.max(40, (width - fixed) / R);
+    };
+    const apply = (list, H) => list.forEach((g) => g.imgs.forEach((im) => { im.style.height = H + "px"; im.style.width = H * im.dataset.r + "px"; }));
+    if (isNarrow()) for (let i = 0; i < groups.length; i += 2) { const pair = groups.slice(i, i + 2); apply(pair, Math.min(260, sized(pair, W))); }
+    else apply(groups, sized(groups, W));
+  };
+  requestAnimationFrame(layout);
+  window.addEventListener("resize", layout);
 }

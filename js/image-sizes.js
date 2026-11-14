@@ -572,6 +572,146 @@ const IMAGE_SIZES = {
 1153,
 1800
 ],
+"assets/img/work/kong/kong-cad-01.jpg": [
+894,
+1402
+],
+"assets/img/work/kong/kong-cad-02.jpg": [
+717,
+921
+],
+"assets/img/work/kong/kong-cad-03.jpg": [
+634,
+982
+],
+"assets/img/work/kong/kong-cad-04.jpg": [
+388,
+956
+],
+"assets/img/work/kong/kong-cad-05.jpg": [
+500,
+997
+],
+"assets/img/work/kong/kong-cad-06.jpg": [
+766,
+1308
+],
+"assets/img/work/kong/kong-case-01.jpg": [
+1610,
+572
+],
+"assets/img/work/kong/kong-case-02.jpg": [
+834,
+1180
+],
+"assets/img/work/kong/kong-case-03.jpg": [
+1284,
+1190
+],
+"assets/img/work/kong/kong-case-04.jpg": [
+782,
+1062
+],
+"assets/img/work/kong/kong-case-05.jpg": [
+732,
+1180
+],
+"assets/img/work/kong/kong-case-06.jpg": [
+1570,
+1064
+],
+"assets/img/work/kong/kong-diagram.jpg": [
+2400,
+1109
+],
+"assets/img/work/kong/kong-dk10.jpg": [
+1004,
+592
+],
+"assets/img/work/kong/kong-dk11-inside.jpg": [
+1774,
+1332
+],
+"assets/img/work/kong/kong-dk11.jpg": [
+1724,
+1034
+],
+"assets/img/work/kong/kong-iter-01.jpg": [
+862,
+1230
+],
+"assets/img/work/kong/kong-iter-02.jpg": [
+1136,
+1336
+],
+"assets/img/work/kong/kong-iter-03.jpg": [
+790,
+1348
+],
+"assets/img/work/kong/kong-iter-04.jpg": [
+1076,
+1376
+],
+"assets/img/work/kong/kong-iter-05.jpg": [
+962,
+1232
+],
+"assets/img/work/kong/kong-iter-06.jpg": [
+964,
+1258
+],
+"assets/img/work/kong/kong-iter-07.jpg": [
+544,
+1168
+],
+"assets/img/work/kong/kong-iter2-01.jpg": [
+814,
+1044
+],
+"assets/img/work/kong/kong-iter2-02.jpg": [
+1048,
+1220
+],
+"assets/img/work/kong/kong-iter2-03.jpg": [
+858,
+1186
+],
+"assets/img/work/kong/kong-iter2-04.jpg": [
+1046,
+1270
+],
+"assets/img/work/kong/kong-iter2-05.jpg": [
+710,
+1220
+],
+"assets/img/work/kong/kong-iter2-06.jpg": [
+910,
+1118
+],
+"assets/img/work/kong/kong-iter2-07.jpg": [
+842,
+1132
+],
+"assets/img/work/kong/kong-mock-01.jpg": [
+1490,
+1334
+],
+"assets/img/work/kong/kong-mock-02.jpg": [
+810,
+1120
+],
+"assets/img/work/kong/kong-mock-03.jpg": [
+1666,
+778
+],
+"assets/img/work/kong/kong-mock-04.jpg": [
+416,
+1106
+],
+"assets/img/work/kong/kong-sketches.jpg": [
+2400,
+803
+],
 "assets/img/work/lego-rescue/lego-rescue-01.jpg": [
 1205,
 1306
@@ -1193,6 +1333,41 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/fountain-for-bees/fountain-for-bees-sketch-02.jpg": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAwCdASoRABgAPu1kqU2ppaQiMAgBMB2JaQDJEC04ie/lx07rAAD+7A7JqPHGRuHJflkUZDy4OnU2WdNY8/1xOi10cQSwrkVCTs4AAAA=",
 "assets/img/work/it-is-so-cute/it-is-so-cute-01.jpg": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAADwBACdASoSABgAPu1grFAppKQisBgIATAdiWYAwqDugSmyX4VlLcbZ8klTMwcqJwAA/uxD4Vw1TzGerHiktK15p+05ZHC3R4ObT7d9XcLrOhkJnkQ3adUL+LXjwGGth+4ql09i8s4Z8q7jBac4eeBVi2nlMhJBHIGU4/BMZ2AehVJAgqkodMY47MaSmMoAAAA=",
 "assets/img/work/kong/kong-01.jpg": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoPABgAPu1kqk4ppaQiMAgBMB2JaQAAW+yipVPGbmAvPkMAAP7wQJ2FmLBSXJR9BP0yMdmVZE+BNW9H601KQC29My4t2wt00XcLHVhvIfa6ahAAAAA=",
+"assets/img/work/kong/kong-cad-01.jpg": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAwCdASoPABgAPu1kqU2ppaQiMAgBMB2JZQC7Af6seVQiDaV4pZHgAP7okg4kh88i9gEc+KU0dSNoBx8UxC9MT0dphjHUQhPqTxg3U31hBGGmGZnIAhtU8OWccmeifcPZAom3mAAAAA==",
+"assets/img/work/kong/kong-cad-02.jpg": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACQBACdASoTABgAPuVeqE2pJSQiMAwBIByJZwAAUo+96aUtN+gMXMPfRs5tkgAA/gEwkRYYInMvh5aCWbtlacU4JtdBa3E1CoGKA5+KbLf+Jl9b+Za+rb1CkYAAAA==",
+"assets/img/work/kong/kong-cad-03.jpg": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoPABgAPu1kqU2ppaQiMAgBMB2JZwAAPH8XDrkbTZHi4AD+8ilrx0pjv8X32f1IiuekMa2QzHeD8n6GTyTFipsvASShJeW1DbRUWfdVs9kokUunw9CymLJ8AAA=",
+"assets/img/work/kong/kong-cad-04.jpg": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoKABgAPu1orU6ppiSiMAgBMB2JZwDE2CFo7XF3yNKX9EAA/sQyhWdd2ZvA3VwlM0YKOEn9WjRR7dgCxQRZezvhFJ8PLNUeL6YAAA==",
+"assets/img/work/kong/kong-cad-05.jpg": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoMABgAPu1qrU8ppiQiMAgBMB2JZQAAV9CIcTcxa91oYAD+4eq4skuMGgqQ+f6J/a8wrsJIzxNOpfphvG3JJO0n/KDM0DzVJvg423XcHbaHJ8cP6dNLjBCIAAA=",
+"assets/img/work/kong/kong-cad-06.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQBACdASoOABgAPu1kqU2ppaQiMAgBMB2JZwAAVOOf6XtzZaHIcaqmQAD+6JIPFSIINGDAUNoVo9lvDK4eOAuMj4LsoGC6b69+rzrSmW+4Ee5du7r5egjDek4x9fku561WBCKwjJ1do/kZoN/FuOoc0rMnwAAA",
+"assets/img/work/kong/kong-case-01.jpg": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAwAwCdASoYAAkAPu1oqk6ppiQiMAgBMB2JZQAAG/Qwe0oAAPc9dS+LFLScTItBokWvMljoHgu85jBJ9e8+jQqTbL9GoaocRCd0ROxRn4D17M3Tr31lelAIXE8giSv7aCHCphWAAAA=",
+"assets/img/work/kong/kong-case-02.jpg": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADQBACdASoRABgAPu1mrE+ppSQiMBgIATAdiWMAwoANtFYPz9o86cqugbqCG8lYIAD0YWAZWTYVRbdiQ8iBxkc1WM5M+7Y1JatWSHrPMefBoEKjo8jEZ0O4QnaA0xO/TgoF5Wi1kZLZiMUib7zAf7LwFQLV3LMreFu4HBC2VAFhNi745JVqAAAA",
+"assets/img/work/kong/kong-case-03.jpg": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABQBACdASoYABYAPu1ur1IppiQjqAgBMB2JZwDOOBEduxFieP3M0M6Ku2UAAP7VCNM2eMfBZXh0ZXq0m2qqWjjwMHAVusVtmiKbxjxDJ0AAAA==",
+"assets/img/work/kong/kong-case-04.jpg": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADQBACdASoSABgAPt1WpU2opKOiN/qoARAbiWkAAFu1EWd6772OK1xBJxl0kn+UgAD+5GVY1Qr3X3jeloOq43o2eubcTsDcPozBoFWyznf3rPMJVORXI7NztvDF3M+JGm6JXRaEYQvNUcRo/EbPdWlAAAA=",
+"assets/img/work/kong/kong-case-05.jpg": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBACdASoPABgAPu1iqU2ppaOiMAgBMB2JYwCdABpHEMAFvC7Wv8vnAAD94xNgZyCh2tmCRFlVB0Nz9tzHCHGhCOrC1UNC22NIqwFBfRm9MWi1jJPbEkBQUQExwqYqIOPDL902eaN7zLHSfxLUR/fjZaT++b2zEEmbkRSb3DVsQAAA",
+"assets/img/work/kong/kong-case-06.jpg": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZQCzhagBnQstpurNDZZy/8VAAPwNZ2krf6ebsGr1d0iedWMiBrfKPXh7YnAtu6+8jgwV0BwkNyC9tMpMAUgcMBL/hFcXCqZ2MsrGSFHnNLuQy74Iqra50eVuHkUjoyhTL910xOJc0EONAMgAAA==",
+"assets/img/work/kong/kong-diagram.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwAwCdASoYAAsAPu1kqk4ppaQiMAgBMB2JaQAAYcCjK7ytH82Ec5IAAP7rMQbjvmV7hC9Bm/cWZ1NJArkm3EVM0oymRRIhSZzzE9uNSOKDRWfqvFI56CAYLLtpAufVrD7ub9YflRTRWe+ekRYAAA==",
+"assets/img/work/kong/kong-dk10.jpg": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoYAA4APu1iqk2ppaQiMAgBMB2JZwDG9CHpSEKtmu6Y3PMPAAD+wk8k2nQt6YZWTMKlK54/y64/0sW336WrvV+JIVALVL/Cf691A4BLO4PDIV9F9VXIM/LJ9LuzMRhy19JeG/qC97JErQgQmaPoAA==",
+"assets/img/work/kong/kong-dk11-inside.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBQCdASoYABIAPu1gpk4ppSMiMBgMATAdiWcAzYQLGerZQBBiA9tSKQbhaGz46y+qAAD+YCyL/eX1zRWLK8ysL1iRkJFbyBiwdVNObxgtRp4fZ4MXR8yV/nhRxcC4sZ7itZHy5NRVDla9JLLMs/ZOZAvufvzZBQNWkUHAmVAV2qjLHm0RvgFNAAA=",
+"assets/img/work/kong/kong-dk11.jpg": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAwCdASoYAA4APu1iqU2ppaQiMAgBMB2JaQAAW8vccfINQjl1fAAA+OVXzHTLXE+eVO0kcyhDC6uwZg/wjNU4haWZcgcoJ6+GJ2ZzNrWTAZ/u8RLZjdOmCpM3WAAA",
+"assets/img/work/kong/kong-iter-01.jpg": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACwBACdASoRABgAPu1sq1EppaOiqAqpMB2JaQAAIV9oeKqLjAOUmycOvRqa3KIAAP7iR4Rgoe5Ba7sq2oessQtZuYG3fQcQl954dqelGGZzonm+JQ9Hzu+SbOTnNnHLLDEXAgsAckOpGpvD7LOAcwAZDsuKvaME1DCwAAAA",
+"assets/img/work/kong/kong-iter-02.jpg": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAABwBACdASoUABgAPu1ur1KppiQiqAgBMB2JaQAALlTNXx6Z+y2gVC6Q9ZegAAD+8icReLDe+ojXZ19H19nuy/LhQA3Zj4Odbzpj4UwMGHdSyY6sTx6RStk7B2TZA6l0gdQxUoJfdM4SYIkAKdg19V04+pDNMhqYaAAAAA==",
+"assets/img/work/kong/kong-iter-03.jpg": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoOABgAPu1iqU2ppaQiMAgBMB2JaQAAW+mqB9kQklIuZXFAAP7x0kGgqg5LV3nVnGr6SdOW2YT3MlENlUz9b1Ob2exG79kedd5vmeizttVWQckOEAA=",
+"assets/img/work/kong/kong-iter-04.jpg": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwAwCdASoTABgAPu1mqk2ppaQiMAgBMB2JaQAAPqQkxo3Wu/f0h8AAAP7v+/Mnvt1UWTD1jNa4/jt3FkGzEMCjQ0ze3B7MK/NhIR5u8DVXPMWW/S7du0WoOIYxMFbrqZZMAAAA",
+"assets/img/work/kong/kong-iter-05.jpg": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAACQBACdASoTABgAPu1gq02ppaQiMBgMATAdiWkAADFl/KG12/FaLi48IjkWXwAA/u2tBiMblZ4tMeXnFBwId8gBo7s9VUzSowevRqAfPfQDjURkVIXAqeilbYF7Jsp2ZSTO7XtYzhf/kAAA",
+"assets/img/work/kong/kong-iter-06.jpg": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBQCdASoSABgAPu1orFEppaQqqAqpUB2JaQAAL2pSS0JE4jCat9Qlf59R1UJoQs6AAP7wPzbAeMjYXx/CUZdAhERHdEm5rwrQHKGU9+aOSGGVlzaYyLaIGfiDcAd726xUxxyDIsO4qYQ5PyJTughvwVQjbwNF7lWcAAAA",
+"assets/img/work/kong/kong-iter-07.jpg": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwAwCdASoLABgAPu1mqk2ppaQiMAgBMB2JaQAASmUtVouI1BJGAAD+79ZuxMNySugyTNXtxfGhuk2txV7ztq7B8tGpw+I9sUONQIJyRqHmqOCPYsmx090dWwOMt0AA",
+"assets/img/work/kong/kong-iter2-01.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQBACdASoTABgAPu1gq1AppSOisBgIATAdiWkAAC7XxjgdVdfIR5lcgw07fEUtgAD+8dtSb1UYA22V5xHmHdL4HZ45WXUkLP+HqEUBMCofW5KQvl0juwrNFJqonLZZNpiLWosq4yApZLm4QkiAAA==",
+"assets/img/work/kong/kong-iter2-02.jpg": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAACQBACdASoVABgAPu1ur1IppiQiqAgBMB2JaQAALou7rQw6wf8xN4FDQXrVGAAA/vInez4/U0w712RdGPctuKgDIaTtYJYbZJWsO3jBYf6DQf6t7B4r84u5PALU7GDIGiJEJEzjE07tJqH7uZuYA9TgC6AksEyOEtyNfXozl1RaBrscYn3S8zgAAAA=",
+"assets/img/work/kong/kong-iter2-03.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADQBACdASoRABgAPu1qrVCppaQiqAqpMB2JaQAAKSJkWuF7oS/wi98T9k00BChcAAD+84K5JmwSPursdH//7eMVm+h0nCnPvs2Tmo3T3MjOgHdLxvbgn1Oa3VLR3nHGweNxj3SV/XzQspv9VH4JaL7og2EWAAAA",
+"assets/img/work/kong/kong-iter2-04.jpg": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQBACdASoUABgAPu1oqk8ppiOiMBgIATAdiWkAACEd462f/0NZQ1uaRXc/9IIsAAD+6zV8QgLwJXB3zNa/eeg51yF8uCsP1QlGUl9aqIL4RHXu7V3f2K/O6A/oc+Og0BgUk9KZErDilHfvAAAAAA==",
+"assets/img/work/kong/kong-iter2-05.jpg": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAwCdASoOABgAPu1kqU2ppaQiMAgBMB2JaQAAXBt78rzS5NNFLOL4AP7wQKOohll+CJ8RaYi+WcSlSJqm9BrB7ZjUb0lanuHqGw+nEHvaXD6eHd7fHZTNz3s4shQAAAA=",
+"assets/img/work/kong/kong-iter2-06.jpg": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACwBACdASoUABgAPu1orlCppaQiqAqpMB2JaQAALnYXz7r7S18bxcPVYbmNt4QAAP7xyX0dPyPXIIBwyunqT7CoB7UcSmPLoOV2y0NZyfJQwODKCZv6bf87u4Ns9z6aqEGrF7IrMG2Xb4uG6RUR7yjJRL0UyL1ZsRGXk4AA",
+"assets/img/work/kong/kong-iter2-07.jpg": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQBACdASoSABgAPu1mqk8ppaOiKA1RMB2JaQAAI1pGvTY3yJ43evnwsmIL4oxgAAD+8D8oolfuR4lpyjPNzCH69+XRSfdP94VHGQgDuOQNmOvCWdseWNKUiO3vbhZalvXWimVf76qHlskKvdj66q/+x69mbbPwinIYAAAA",
+"assets/img/work/kong/kong-mock-01.jpg": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABQBQCdASoYABUAPu1eq02ppKQiMBgMATAdiUAXZl0QNYVmtV2m0QThE1xhNKMiGgCC5EAA/OP22YOI71T74ddqqwJMS0FQqLlQtDTdTBGYBw+Rfnzq9RmODC1TvPTM08cDBNk0Fp5sNdk6lLnidgJN5y5qnM4hFvl7l0fnFGKixeiZ/GVKrY4+qIlWuEnKq4SzChfb+IDmvUagmSkNRs6HrZZBVXXsAAA=",
+"assets/img/work/kong/kong-mock-02.jpg": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAADQBACdASoRABgAPu1mqk+ppSOiMBgIATAdiWQAuwAOkdNrv5PhVG6KqutAPDmCBAD8izVk3cU8yGmbfX0uchPLStuLx0mF/Uy3ZsPd0xvxmFTxFrMpUjaPVCTOq5rZ/vPL30B13ebD2j2Lyb3ucX9vjfYNTwyzkV8AWSvcwSRfIOE3eS4Tk41imLvBrxkqd+GOc+lYYjAJB73FBJX43n3I+za+IAAA",
+"assets/img/work/kong/kong-mock-03.jpg": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwBACdASoYAAsAPu1iqU2ppaQiMAgBMB2JagCdMoACfLrs4OugiJ6U6UAA/GOt0Mn2aS7mJF5+W+b6DjA8RGqgoe+1nX/vBXd9AhGABRYpo0PUq221Mf5osl+DP51ol10jDLbjI9BtnUPiucXTFz0+68AAAA==",
+"assets/img/work/kong/kong-mock-04.jpg": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACwAwCdASoJABgAPu1iqU2ppaOiMAgBMB2JZACdAGMkR3hyTEPqAAD+8LXuTPZ5mfiXfme3mHUU/nmKNBdlFKiwrLBE171d6MRq/Zk5W0o8c0U+ToKJgkSk13xX4Dtj4I9wA4G1paSy9nQ0ul+YyhmSFrb+XwAA",
+"assets/img/work/kong/kong-sketches.jpg": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAwCdASoYAAgAPu1iqk2ppaQiMAgBMB2JaQAAetF9AAAA/vBmGujwHk4Ad9X/UPFTn/9CPoWR9JPtaTengGAAAAA=",
 "assets/img/work/lego-rescue/lego-rescue-01.jpg": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAQBQCdASoWABgAPu1krE4ppaSiKA1RMB2JQBibAiO6BcFq1xOj0BTkWUkT7H7r3lAAAP7ep48Hr92N5IHa8QH9Muw8G4StmPqh1H+BW1/A2GgdgFaB8TfNGUXpfCyTRkNo8ctw0x42VBK2/iGtv3LeAnKXl0R1mijRLom/9x8US3JWFmBKetfHuPPtNsAAAAA=",
 "assets/img/work/manchild/manchild-01.jpg": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAACwBACdASoSABgAPu1kqU2ppaQiMAgBMB2JYwCdG1/AWGgpKuTQUPFhytDZ2wlYAP7etGsRFgpwSeMmWF5z27RfEfXdvUu2v87yVABZktCSM+NNVD5Al1I+HMJse5KAqPaM+loGL0wJWci2yDIL6VmCNxhJF8vhymH+x0MA9cAae4OGsL0UWNkQRgCYzFZsUwoAAA==",
 "assets/img/work/manchild/manchild-02.jpg": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYgCdIFzCNoHWOqJj1FCHAVAlgAD84WZUN6Z8q5lcarNNVwIG5/J62zYA65LkNJFBijRpdv0OFl2enuxqQQrQO93Isprg2YmHR4FMmWK4CDfbdvcimT6Wc3c+KHSKFfS4NpTd3jYQ0eUd3nk1Twh9Hjy+yQAA",

@@ -9,6 +9,7 @@
   --gap: 10px;
   --accent: #0000f5;     /* ultramarine: hover colour for text links */
   --side: 40px;          /* page side margin */
+  --body: 15.5px;   /* body text on project pages (matches the About bio) */
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -264,7 +265,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
 }
 
 .project-info h1 { font-size: 34px; margin: 0 0 18px; letter-spacing: .5px; }
-.project-info p  { font-size: 17px; font-style: italic; line-height: 1.2; margin: 0 0 20px; }
+.project-info p  { font-size: var(--body); font-style: italic; line-height: 1.2; margin: 0 0 20px; }
 
 .project-featured {
   position: relative;
@@ -287,6 +288,10 @@ body.filters-stuck .site-header::before { opacity: 0; }
   max-height: calc(100vh - var(--header-h) - 100px);
   object-fit: contain;
 }
+
+.project-featured.diagram-box { aspect-ratio: auto; background: none; display: block; overflow: visible; }
+.project-featured.diagram-box img { max-height: none; width: 100%; }
+.project-featured.diagram-box .diagram { margin-top: 0; }
 
 /* Full-width featured image under the title (featuredWide) */
 .project-top.wide { grid-template-columns: 1fr; gap: 28px; }
@@ -312,7 +317,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
 /* Longer text under the big image on wide-layout pages */
 .p-more { margin: 36px 0 0; }
 .p-more:empty { display: none; }
-.p-more p { font-size: 17px; line-height: 1.4; margin: 0 0 16px; }
+.p-more p { font-size: var(--body); line-height: 1.4; margin: 0 0 16px; }
 
 /* Slider (featuredLayout: "slider") */
 .project-featured.slider-box { aspect-ratio: auto; background: none; display: flex; flex-direction: column; align-items: center; }
@@ -387,13 +392,13 @@ body.filters-stuck .site-header::before { opacity: 0; }
   gap: 40px; align-items: center; margin-top: 8px;
 }
 .diagram-fig { margin: 0; padding: 88px 0 8px; }   /* room for labels above and below the box */
-.diagram-stage { position: relative; aspect-ratio: 1.524; }   /* image is 1.859:1, filling 82% of the height */
+.diagram-stage { position: relative; aspect-ratio: calc(var(--ar, 1.859) * 0.82); }   /* image is 1.859:1, filling 82% of the height */
 .diagram-img { position: absolute; left: 0; width: 100%; object-fit: contain; background: none !important; }
 .diagram-lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
 .diagram-lines polyline { fill: none; stroke: #333; stroke-width: 1; stroke-dasharray: 3 3; }
 .diagram-dot {
   position: absolute; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px;
-  background: #333; border-radius: 50%; font-size: 0;
+  background: #333; border-radius: 50%; font-size: 0; box-shadow: 0 0 0 1.5px #fff;
   top: calc(6% + var(--y) * 0.82%);
 }
 .diagram-label {
@@ -406,19 +411,27 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .diagram-list { display: none; }
 .diagram-notes { list-style: none; counter-reset: n; margin: 0; padding: 0 0 0 46px; position: relative; }
 .diagram-notes::before { content: ""; position: absolute; left: 13px; top: 6px; bottom: 6px; border-left: 1px solid #333; }
-.diagram-notes li { counter-increment: n; position: relative; font-size: 14px; line-height: 1.75; text-align: justify; margin-bottom: 26px; }
+.diagram-notes li { counter-increment: n; position: relative; font-size: var(--body); line-height: 1.6; text-align: justify; margin-bottom: 26px; }
 .diagram-notes li::before {
   content: counter(n); position: absolute; left: -46px; top: 0;
   width: 26px; height: 30px; border: 1px solid #333; border-radius: 13px;
   background: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center;
 }
-.diagram-notes mark { background: #e6f7c6; padding: 1px 3px; border-radius: 3px; }
+.diagram-notes mark { background: var(--mark, #e6f7c6); padding: 1px 3px; border-radius: 3px; }
+
+.diagram-notes a { text-decoration: underline; text-underline-offset: 3px; }
+.diagram-notes a:hover { color: var(--accent); }
+.diagram.stacked { grid-template-columns: 1fr; gap: 24px; }
+.diagram.stacked .diagram-fig { padding: 20px 0 76px; }
+.diagram.stacked .diagram-notes { display: grid; grid-template-columns: 1fr 1fr; column-gap: 64px; }
+.diagram.stacked .diagram-notes::before { display: none; }
+.diagram.stacked .diagram-notes li { margin-bottom: 0; }
 
 /* Narrow screens: numbered dots on the image, labels listed underneath */
 @media (max-width: 1000px) {
   .diagram { grid-template-columns: 1fr; gap: 28px; margin-top: 56px; }
   .diagram-fig { padding: 0; }
-  .diagram-stage { aspect-ratio: 1.859; }
+  .diagram-stage { aspect-ratio: var(--ar, 1.859); }
   .diagram-img { top: 0 !important; height: 100% !important; }
   .diagram-lines, .diagram-label { display: none; }
   .diagram-dot {
@@ -426,7 +439,9 @@ body.filters-stuck .site-header::before { opacity: 0; }
     display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 2px #fff;
     top: calc(var(--y) * 1%);
   }
-  .diagram-notes li { text-align: left; font-size: 15px; line-height: 1.6; }
+  .diagram-notes li { text-align: left; line-height: 1.6; }
+  .diagram.stacked .diagram-notes { grid-template-columns: 1fr; row-gap: 22px; }
+  .diagram.stacked .diagram-fig { padding: 0; }
   .diagram-list { display: block; margin: 16px 0 0; padding-left: 30px; columns: 2; column-gap: 28px; font-size: 13px; line-height: 1.45; }
   .diagram-list li { margin-bottom: 8px; break-inside: avoid; }
 }
@@ -435,12 +450,12 @@ body.filters-stuck .site-header::before { opacity: 0; }
 /* ---------- Story blocks ---------- */
 .blk { margin-top: 22px; }
 .blk:first-of-type { margin-top: 0; }
-.blk-text p, .blk-list li { font-size: 17px; line-height: 1.5; margin: 0 0 12px; max-width: 900px; }
+.blk-text p, .blk-list li { font-size: var(--body); line-height: 1.5; margin: 0 0 12px; max-width: 900px; }
 .blk-text a, .blk-list a { text-decoration: underline; text-underline-offset: 3px; }
 .blk-text a:hover { color: var(--accent); }
 #p-text a, #p-more a { text-decoration: underline; text-underline-offset: 3px; }
 #p-text a:hover, #p-more a:hover { color: var(--accent); }
-.blk-text mark { background: #e6f7c6; padding: 1px 3px; border-radius: 3px; }
+.blk-text mark { background: var(--mark, #e6f7c6); padding: 1px 3px; border-radius: 3px; }
 .blk-list ol { margin: 0; padding-left: 24px; }
 .blk-caption { margin-top: 10px; }
 .blk-caption p { font-size: 14px; font-style: italic; margin: 0; }
@@ -477,6 +492,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
   content: ""; position: absolute; left: 13px; top: -72px; height: 72px; border-left: 1px solid #333;
 }
 #p-sections.numbered > .diagram + .project-section::before { top: -40px; height: 40px; }
+#p-sections.numbered > .project-section:first-child::before { display: none; }
 #p-sections.numbered > .project-section::after {
   content: ""; position: absolute; left: 13px; top: 26px; bottom: 0; border-left: 1px solid #333;
 }
@@ -503,7 +519,6 @@ body.filters-stuck .site-header::before { opacity: 0; }
   #p-sections.numbered > .project-section { padding-left: 38px; }
   .blk-videos { flex-direction: column; }
   .blk-videos video { flex: none !important; }
-  .blk-text p, .blk-list li { font-size: 15px; }
 }
 
 /* ---------- Sketchbook ---------- */
@@ -523,6 +538,18 @@ body.filters-stuck .site-header::before { opacity: 0; }
   transition: background .2s, color .2s;
 }
 .p-link-top a:hover { background: #d3f0a0; color: #1f420a; }
+.pill-blue #p-text a {
+  display: inline-block; font-style: normal; text-decoration: none;
+  background: #dfe1fb; color: #2b33a8; padding: 2px 11px; border-radius: 999px; margin-left: 2px;
+  transition: background .2s, color .2s;
+}
+.pill-blue #p-text a:hover { background: #c9cdf8; color: #1c2287; }
+.pill-green #p-text a, .pill-green #p-more a {
+  display: inline-block; font-style: normal; text-decoration: none;
+  background: #e6f7c6; color: #2f5a12; padding: 2px 11px; border-radius: 999px; margin-left: 2px;
+  transition: background .2s, color .2s;
+}
+.pill-green #p-text a:hover, .pill-green #p-more a:hover { background: #d3f0a0; color: #1f420a; }
 
 .not-found { font-size: 18px; }
 .not-found a { text-decoration: underline; }
@@ -554,5 +581,35 @@ body.filters-stuck .site-header::before { opacity: 0; }
   .project { padding: 32px 20px 80px; }
   .project-top { grid-template-columns: 1fr; }
   .project-featured { order: -1; }
+  .project-featured.diagram-box { order: 0; margin-top: 8px; }
   .sketchbook { padding: 32px 20px 80px; }
+}
+
+/* ---------- Groups of images with outlines (Kong iterations / mock-ups) ---------- */
+.blk-groups { display: flex; flex-wrap: wrap; column-gap: 14px; row-gap: 22px; align-items: flex-start; }
+.grp { margin: 0; position: relative; }
+.grp-row { display: flex; gap: 8px; }
+.grp-row img { display: block; object-fit: contain; background: none !important; }
+.grp-chosen, .grp-alt, .grp-plain { padding: 10px; border-radius: 18px; }
+.grp-chosen { box-shadow: inset 0 0 0 3px #3b5bfd; }
+.grp-alt { box-shadow: inset 0 0 0 3px #4f8fe8; border-radius: 6px; }
+.grp-plain { box-shadow: inset 0 0 0 1.5px #b9b9b9; }
+.grp figcaption { font-size: 13px; letter-spacing: .5px; text-transform: uppercase; margin-top: 8px; text-align: center; color: #555; }
+.grp-chosen figcaption { color: #3b5bfd; font-weight: 600; }
+.grp-star { position: absolute; right: -14px; bottom: 14px; width: 40px; height: 40px; }
+.grp-star svg { width: 100%; height: 100%; display: block; }
+
+/* ---------- CAD row: captions above / below images of one height ---------- */
+.blk-cad-row { display: grid; grid-template-rows: auto auto auto; column-gap: 18px; align-items: stretch; }
+.cad-item { margin: 0; display: grid; grid-row: span 3; grid-template-rows: subgrid; }
+.cad-top, .cad-bottom { font-size: var(--body); line-height: 1.5; text-align: center; padding: 0 4px; }
+.cad-top { align-self: end; padding-bottom: 10px; }
+.cad-bottom { align-self: start; padding-top: 10px; }
+.cad-top:not(:empty)::after, .cad-bottom:not(:empty)::before {
+  content: ""; display: block; width: 0; height: 22px; margin: 6px auto; border-left: 1.5px dashed #333;
+}
+.cad-img img { display: block; width: 100%; height: auto; background: none !important; }
+@media (max-width: 900px) {
+  .blk-cad-row { grid-template-columns: 1fr 1fr !important; row-gap: 28px; }
+  .cad-top:not(:empty)::after, .cad-bottom:not(:empty)::before { display: none; }
 }

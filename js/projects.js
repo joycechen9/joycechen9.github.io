@@ -211,28 +211,94 @@ const PROJECTS = [
     title: "Kong",
     year: 2024,
     tags: ["design", "engineering"],
-    materials: "Powder-coated steel sheet metal, injection-moulded back panel",
-    summary: "A plug-and-play demo kit for security devices, designed during my internship at Verkada.",
+    materials: "",
+    summary: "A plug-and-play demo kit for security devices, designed during my internship at Verkada. [See Verkada's website for DK22 ↗](https://www.verkada.com/ca/access-control/dk22/)",
     details: [
-      "Kong (DK22) is the third generation of Verkada's Access Control demo kit. Sales reps take it to conventions, meetings, and site visits so customers can see the products working with almost no setup.",
-      "I helped finish the industrial design and did the engineering design through to production. Studying the older kits, the goal was a demo kit that was beautiful, light, and portable, with as few screws showing as possible and built to survive a lifetime of travel.",
+      "**TLDR:** Kong was my **main project while I worked at Verkada.** I helped with the end of the **industrial design development, and completed all the engineering design until production.** I oversaw the manufacturing, made the standard operating procedure, and taught assembly line workers to get Kong to the finish line. There was a team on Kong to support me, but almost all the design work is my own.",
       "I visited the sheet metal vendor in Taiwan and assembled the first prototypes by hand, then worked with the injection moulder on the magnetic back panel. At the assembly house in Texas, I taught and supervised the line workers to build and test each unit. Kong launched at Verkada One with 650 units built."
     ],
-    links: [
-      { label: "Kong on Verkada's site", href: "https://www.verkada.com/ca/access-control/dk22/" }
-    ],
     cover: "assets/img/work/kong/kong-01.jpg",
-    featured: "assets/img/work/kong/kong-01.jpg",
-    photos: []
+    featuredWide: true,
+    photos: [],
+    highlight: "#dfe1fb",   // lavender ==highlights== on this page
+    linkPill: "blue",       // the Verkada link in the intro shows as a blue pill
+    // Labelled renders: side, front, back. x/y = point on the device, lx/ly = label position (% of the box)
+    diagram: {
+      image: "assets/img/work/kong/kong-diagram.jpg",
+      aspect: 2.164,
+      layout: "stacked",
+      featured: true,   // shown as the page's featured image, right under the title
+      labels: [
+        { text: "Mini Dome Camera", x: 2.9, y: 33, lx: 2.9, ly: 3, side: "top", w: 10 },
+        { text: "Request to Exit and Lockdown Button, Indicator Light", x: 7.7, y: 53, lx: 5, ly: 92, side: "bottom", w: 9 },
+        { text: "Powder Coated Steel Sheet Metal 1.2 mm SECC", x: 16.4, y: 87, lx: 15, ly: 92, side: "bottom", w: 8.5 },
+        { text: "ABS Plastic Feet", x: 22, y: 97.5, lx: 23.5, ly: 92, side: "bottom", w: 6 },
+        { text: "Badge/Fob Door Reader", x: 41, y: 87, lx: 41, ly: 92, side: "bottom", w: 9 },
+        { text: "Door with Electromagnet and Position Sensor", x: 50.7, y: 87, lx: 51.5, ly: 92, side: "bottom", w: 11 },
+        { text: "Cellular Gateway", x: 81.4, y: 23, lx: 81.4, ly: 3, side: "top", w: 10 },
+        { text: "N42 Neodymium Magnets", x: 89.6, y: 29, lx: 92, ly: 3, side: "top", w: 10 },
+        { text: "Translucent PC110 Back Panel VDI-24", x: 72.5, y: 78, lx: 72.5, ly: 92, side: "bottom", w: 10 },
+        { text: "Power", x: 81.8, y: 92.5, lx: 81.8, ly: 92, side: "bottom", w: 6 },
+        { text: "Door Controller", x: 89.3, y: 69.6, lx: 90.5, ly: 92, side: "bottom", w: 8 }
+      ],
+      notes: [
+        { title: "Background", text: "DK22 (AKA Kong) is the third generation of ==Verkada's Access Control Demo Kit.== Kong is a plug-and-play portable device that lets you quickly ==experience== the power of Verkada's ==cloud-based physical security== platform. [See Verkada's website for DK22 here](https://www.verkada.com/ca/access-control/dk22/)." },
+        { title: "Problem and need", text: "Kong is a ==tool for marketing== the sale of the Access Control product suite. Sales representatives can take Kong to conventions, meetings, and site visits. Customers use Kong to see products in action with ==little to no setup and installation friction.==" }
+      ]
+    },
+    numberSections: 3,
+    sections: [
+      { label: "Studying Older Generations", blocks: [
+        { type: "text", text: ["Before Kong (DK22), there was DK10 (left) and DK11 (middle). There were some things that were good about them, but lots to improve. The goal for DK22 was to make a ==beautiful, light, portable, and updated== Demo Kit. ==To understand the project better, I studied its predecessors.=="] },
+        { type: "media-rows", rows: [3], items: ["assets/img/work/kong/kong-dk10.jpg", "assets/img/work/kong/kong-dk11.jpg", "assets/img/work/kong/kong-dk11-inside.jpg"] }
+      ] },
+      { label: "Brainstorming & Sketching", blocks: [
+        { type: "image", src: "assets/img/work/kong/kong-sketches.jpg" }
+      ] },
+      { label: "Iterations and Renders", blocks: [
+        { type: "groups", items: [
+          { images: ["assets/img/work/kong/kong-iter-01.jpg", "assets/img/work/kong/kong-iter-02.jpg"] },
+          { images: ["assets/img/work/kong/kong-iter-03.jpg", "assets/img/work/kong/kong-iter-04.jpg"], outline: "chosen", caption: "Compact" },
+          { images: ["assets/img/work/kong/kong-iter-05.jpg"], outline: "plain", caption: "Inset" },
+          { images: ["assets/img/work/kong/kong-iter-06.jpg"], outline: "plain", caption: "Box" },
+          { images: ["assets/img/work/kong/kong-iter-07.jpg"], outline: "plain", caption: "Display" }
+        ] },
+        { type: "groups", items: [ { images: ["assets/img/work/kong/kong-iter2-01.jpg", "assets/img/work/kong/kong-iter2-02.jpg", "assets/img/work/kong/kong-iter2-03.jpg", "assets/img/work/kong/kong-iter2-04.jpg", "assets/img/work/kong/kong-iter2-05.jpg", "assets/img/work/kong/kong-iter2-06.jpg", "assets/img/work/kong/kong-iter2-07.jpg"] } ] }
+      ] },
+      { label: "Creating 3D Mock Ups of Top Options", blocks: [
+        { type: "groups", items: [
+          { images: ["assets/img/work/kong/kong-mock-01.jpg"], outline: "chosen", star: true },
+          { images: ["assets/img/work/kong/kong-mock-02.jpg"], outline: "alt" },
+          { images: ["assets/img/work/kong/kong-mock-03.jpg"] },
+          { images: ["assets/img/work/kong/kong-mock-04.jpg"] }
+        ] }
+      ] },
+      { label: "Engineering Development", blocks: [
+        { type: "text", text: ["After the general form of the device was narrowed down, the engineering work began. The **unit had to be portable** which meant it had to be ==**light.**== The unit had to be ==**beautiful and easy to assemble**==, and I had to be clever about designing it with as little screws showing as possible. It had to be ==**robust, built for a life time of travel and handling.**=="] },
+        { type: "cad-row", items: [
+          { image: "assets/img/work/kong/kong-cad-01.jpg", top: "Removable plastic back panel. Had to be **cheap** (low quantity), and **easy to take on and off.**", bottom: "To put the **“plug”** in plug-and-play, the power bar had to easily insert here." },
+          { image: "assets/img/work/kong/kong-cad-02.jpg", bottom: "An inner frame considered as a method of assembly." },
+          { image: "assets/img/work/kong/kong-cad-03.jpg", top: "Brackets were considered as a method of assembly." },
+          { image: "assets/img/work/kong/kong-cad-04.jpg", top: "**Handle** options were considered so the device would be easy to grab.", bottom: "To have as little screws visible as possible, **PEM studs and nuts** were useful." },
+          { image: "assets/img/work/kong/kong-cad-05.jpg", bottom: "Reducing the number of pieces by being creative with the shape." },
+          { image: "assets/img/work/kong/kong-cad-06.jpg", top: "**Attachments for the devices** such as the camera had to be simple and strong. Cellular gateway **antennas** were fragile and had to be able to **reach signal.**", bottom: "The door **hinge** had to be **robust** and **hidden**." }
+        ] }
+      ] },
+      { label: "Packaging - Pelican Cases", blocks: [
+        { type: "text", text: ["Several shapes, sizes, colours, and arrangements were tested. The best case was selected based on ==**convenience, portability, and protectiveness.**== This is an example of a decision where function had to trump form."] },
+        { type: "media-rows", rows: [3, 3], items: ["assets/img/work/kong/kong-case-01.jpg", "assets/img/work/kong/kong-case-04.jpg", "assets/img/work/kong/kong-case-05.jpg", "assets/img/work/kong/kong-case-02.jpg", "assets/img/work/kong/kong-case-03.jpg", "assets/img/work/kong/kong-case-06.jpg"] }
+      ] }
+    ]
   },
 {
     id: "redbull-flugtag",
     title: "Red Bull Flugtag",
     pageTitle: "Red Bull Flugtag: Snap Pea Flying Machine",
+    linkPill: "green",      // links shown as green pills
     year: 2022,
     tags: ["design", "engineering"],
     materials: "Wood, bicycle wheels, balloons",
-    summary: "The Snap Pea Flying Machine **[won first place at Red Bull Flugtag Toronto ↗](https://www.redbull.com/ca-en/red-bull-flugtag-toronto-2022-winners)**.",
+    summary: "The Snap Pea Flying Machine [won first place at Red Bull Flugtag Toronto ↗](https://www.redbull.com/ca-en/red-bull-flugtag-toronto-2022-winners).",
     details: [
       "I did the complete creative and mechanical design of the glider. Once we were accepted to the competition, I had limited time to turn my concept sketch into parts we could actually build. The project caught on at work, and soon the whole Product Design team was working together to bring it to life (special thanks to Thai Nguyen, Steve McPhee, Marco Li, Mina Wang, Emily Rose, Jacqueline Lee, Tim MacKay, and Michael Connelly).",
       "The prize was a ride in a stunt plane with Pete McLeod, the Canadian professional aerobatic pilot. Thank you Snap Pea team and Red Bull!"
