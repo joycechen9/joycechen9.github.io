@@ -1,3 +1,15 @@
+// "currently reading" line, kept in sync with Goodreads by .github/workflows/goodreads.yml
+(function () {
+  const li = document.getElementById("reading");
+  if (!li || typeof READING === "undefined" || !READING.length) return;
+  const items = READING.map((b) => `${b.title} by ${b.author}`);
+  const list = items.length < 3 ? items.join(" & ") : items.slice(0, -1).join(", ") + ", & " + items[items.length - 1];
+  li.textContent = "currently reading ";
+  const em = document.createElement("em");
+  em.textContent = list + ".";
+  li.appendChild(em);
+})();
+
 // Homepage: name-photo flipper, work grid, tag filters, work list.
 
 /* ---------- 1. Photo cycle ----------
