@@ -1360,6 +1360,30 @@ const IMAGE_SIZES = {
 1848,
 1062
 ],
+"assets/img/work/telescoping-drop-pole/tdp-ux-1.jpg": [
+1928,
+1016
+],
+"assets/img/work/telescoping-drop-pole/tdp-ux-2.jpg": [
+2118,
+950
+],
+"assets/img/work/telescoping-drop-pole/tdp-ux-3.jpg": [
+1872,
+996
+],
+"assets/img/work/telescoping-drop-pole/tdp-ux-4.jpg": [
+2008,
+1002
+],
+"assets/img/work/telescoping-drop-pole/tdp-ux-5.jpg": [
+1720,
+974
+],
+"assets/img/work/telescoping-drop-pole/tdp-ux-6.jpg": [
+1968,
+1006
+],
 "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg": [
 1188,
 1800
@@ -1710,6 +1734,12 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/telescoping-drop-pole/tdp-eval-5.jpg": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoYAAsAPu1iqU2ppaQiMAgBMB2JZwAASoidGSn/Wg+0tA4/wAD+4eyQwmhB5+9AedraTMlzKLX2BjWOvfoZpzbEjXYpG48OfR5W+6GlSqc0nRkNLz/S/6DWQYvPF/+xdmPIX2Ye+SIDgs+c7bW1o/kWwgWrd96AAAA=",
 "assets/img/work/telescoping-drop-pole/tdp-eval-6.jpg": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoYAAwAPu1iqU2ppaOiMAgBMB2JZQDCgCKI1vt8r4Cgp801nAD+6zJ3sFWhB/oVxCpQR8ADgJpZsxWW+MPd3xObEpoZiO63jyvQzq4zCiK2rIDS+5d5TFoHAAt0Sep0+eVO3hW6PI4csxnSUAAAAA==",
 "assets/img/work/telescoping-drop-pole/tdp-eval-7.jpg": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADQAwCdASoYAA4APu1iqU2ppaOiMAgBMB2JZwAASjrxxx1nN8UpIkgA/uhfrosfSeALOzKwkWwrN2HcccOgkZTDk9eXm1VYkGKUKFaD8mDd46/+XdTkL1Wybu74aszTkYYiXgAA",
+"assets/img/work/telescoping-drop-pole/tdp-ux-1.jpg": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQAwCdASoYAA0APu1iqU2ppaQiMAgBMB2JYwC2yCERqFPhAGW1dVIA/tYmAOBjeqhwvi6jw4hrgNxEnm5TvbupcBazkiYJ0iKCbaKH5F1mEIw/PfsvxWkIv7F6crpRST5feGdQT6SnpQWlGM79n0jl95rygwSgMAA=",
+"assets/img/work/telescoping-drop-pole/tdp-ux-2.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoYAAsAPu1iqU2ppaOiMAgBMB2JZwBTAAY6RKv7pYMSuAAA/vAy/p6dQSTNjkNy2Es+wfCeLwiun0FTovV3vFbzkhMKc7+sxfllDlOar12CrtXy1fNDf5PqRKCZ40AAXqo/kQHiFBtonsAA",
+"assets/img/work/telescoping-drop-pole/tdp-ux-3.jpg": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwBACdASoYAA0APu1iqk4ppaQiMAgBMB2JZQCw7CIB942hRrKUY6CKfnAA/pT6mMkchUO5gQH9xIfBENzt3P2jd3V5aD4Pec43rPWsiF6jOq8xNNL13sOpSZOiPOUQCYh4gAAA",
+"assets/img/work/telescoping-drop-pole/tdp-ux-4.jpg": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQBACdASoYAAwAPu1qrU8ppiQiMAgBMB2JZQAAXiYvdQfvn9xNGslgHVUAAP7ri7XdDQtFew0HQXmFEKPC9VEhvY1JT0g68xTafxOlH41OOfaZkSbl5tTWnvWS0CaRdlpCy/tHMqFc74nPxn22G9/gAAA=",
+"assets/img/work/telescoping-drop-pole/tdp-ux-5.jpg": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADwAwCdASoYAA4APu1Ct1apoqakGAEwHYlAFh2NC1GW3O5fgGdUloUAAP77wl2mhge8pac5PJUJ+dIn8F7FPoEc2fBrj+Pu94UNjvYsQBCNEvLYMpuLjxcNIcVWAPyFPw9EPav4TfdaS7jGjTr3YvHmi4IT7DmFOwAad1hon2wAAA==",
+"assets/img/work/telescoping-drop-pole/tdp-ux-6.jpg": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAwCdASoYAAwAPu1iqU2ppaOiMAgBMB2JaQDDNCFsD17knC9YIAAA/teVJU34NgOxrexnkup4Grv2ePoPF8V6x5MVVgAA",
 "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABwAwCdASoQABgAPu1iqk2ppaQiMAgBMB2JaQAAidMRPvszPAAA/t2HN8vLI+dmPgXIw61wHMfzr5bSE7rT4EcoNVdOwwDsCgAAAA==",
 "assets/img/work/working-on-the-car/working-on-the-car-01.jpg": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAADQBACdASoYABMAPu1mq08ppaOiKA1RMB2JQBOgAkavGOIb6cEOS6DmC96nX2l/KAD9m2MNqeSH5NUxRhuM6SLQ/IJCzci6Cnv4a1Nr4+OUkscx2DG1tCdBLXuIJDMvXVrlC6nllOTxPCmn5b152hm+vV1upwmHrA1yhcRtY8WD/AdUA8QGgMIt3WQvtdSjPt3Sl7h1e/yEAA=="
 };

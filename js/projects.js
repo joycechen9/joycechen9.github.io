@@ -380,6 +380,9 @@ const PROJECTS = [
     sections: [
       { label: "Fit, Assembly, & ID Evaluation", blocks: [
         { type: "slider", interval: 2000, images: ["assets/img/work/telescoping-drop-pole/tdp-eval-1.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-2.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-3.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-4.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-5.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-6.jpg", "assets/img/work/telescoping-drop-pole/tdp-eval-7.jpg"] }
+      ] },
+      { label: "UX Testing", blocks: [
+        { type: "slider", interval: 2000, images: ["assets/img/work/telescoping-drop-pole/tdp-ux-1.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-2.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-3.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-4.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-5.jpg", "assets/img/work/telescoping-drop-pole/tdp-ux-6.jpg"] }
       ] }
     ]
   },
