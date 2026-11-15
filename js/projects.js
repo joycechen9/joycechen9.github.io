@@ -412,7 +412,7 @@ const PROJECTS = [
     details: [
       "**TLDR: Sea asparagus is a salt-tolerant crop that cleans water and helps with carbon capture.** As fresh water and farmland run short, it's a crop for the future, but the best **harvest is still done by hand**, which limits how far it can scale. Existing machines cut and bruise the plant, hurting its quality and shelf life.",
       "**Salico mimics hand harvesting.** Two cast urethane rollers grip the plant and pull, so the ripe tips separate naturally at the nodes. A ramp and conveyor carry the tips to a floating cargo bin.",
-      "This was my Mechatronics Engineering capstone (over 8 months long). I was a mechanical engineer, project manager, and visual designer. My teammates were Daniel Ye, Daniel Qu, Max Apitz-Grossman, and Kevin Li. We prototyped the picker in Toronto without any sea asparagus to test on, then took three trips to the farm in Hawaii to test the roller design and the full-size robot. This robot now lives at Olakai farm, serving as a proof of concept for future innovation."
+      "This was my Mechatronics Engineering capstone (8 months long). I was a mechanical engineer, project manager, and visual designer. My teammates were Daniel Ye, Daniel Qu, Max Apitz-Grossman, and Kevin Li. We prototyped the picker in Toronto without any sea asparagus to test on, then took three trips to the farm in Hawaii to test the roller design and the full-size robot. This robot now lives at Olakai farm, serving as a proof of concept for future innovation."
     ],
     // Labelled render. x/y = the point on the machine, lx/ly = where the label sits
     // (all in % of the diagram box). side: which side of the line the text goes.
