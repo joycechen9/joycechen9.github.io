@@ -380,6 +380,7 @@ const PROJECTS = [
     featuredLayout: "pair",
     featured: ["assets/img/work/telescoping-drop-pole/tdp-feat-pole.jpg", "assets/img/work/telescoping-drop-pole/tdp-feat-plate.jpg", "assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg"],
     featuredNarrow: ["assets/img/work/telescoping-drop-pole/telescoping-drop-pole-02.jpg"],   // phones: just the ceiling render
+    tightTopNarrow: true,   // phones: less space under the render
     photos: [],
     sections: [
       { label: "Fit, Assembly, & ID Evaluation", blocks: [
