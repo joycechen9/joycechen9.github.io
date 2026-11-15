@@ -883,8 +883,8 @@ const GRID_LAYOUTS = {
   all: {
     columns: [
       ["new-windsor", "cardboard-party"],
-      ["salico", "kong", "redbull-flugtag", "perception"],
-      ["saturn-with-a-moon", "manchild", "lego-rescue"]
+      ["salico", "kong", "perception"],
+      ["saturn-with-a-moon", "redbull-flugtag", "manchild"]
     ],
     widths: [1, 1, 1],
     crop: { "redbull-flugtag": { bottom: 0.2 }, "manchild": { top: 0.06 } },
@@ -918,8 +918,7 @@ const SELECTED_WORKS = {
     "redbull-flugtag",
     "manchild",
     "cardboard-party",
-    "perception",
-    "lego-rescue"
+    "perception"
   ],
   hide: ["for-sale", "my-dream-about-thunderstorms", "it-is-so-cute", "medusa"],
   covers: {
