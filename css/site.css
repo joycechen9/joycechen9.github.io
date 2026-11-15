@@ -598,6 +598,8 @@ body.filters-stuck .site-header::before { opacity: 0; }
 .pill-green #p-text a:hover, .pill-green #p-more a:hover { background: #d3f0a0; color: #1f420a; }
 .pill-green #p-more .p-link a, .pill-blue #p-more .p-link a, .pill-green #p-text .p-link a, .pill-blue #p-text .p-link a { margin-left: 0; }   /* a link on its own line lines up with the text */
 .pill-green .p-link, .pill-blue .p-link { margin-top: 18px; }
+.pill-green .p-link, .pill-blue .p-link { margin-bottom: 0; display: flex; }
+.pill-green .p-link + .p-link, .pill-blue .p-link + .p-link { margin-top: 10px; }   /* stacked pills sit closer together */
 
 .not-found { font-size: 18px; }
 .not-found a { text-decoration: underline; }
@@ -738,7 +740,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
   #p-featured.has-narrow > .feat-narrow { display: flex; flex-direction: column; gap: var(--gap); }
   .feat-narrow img { width: 100%; height: auto; display: block; }
   /* a pill link ending the intro text drops to its own line, lined up with the text */
-  .pill-blue #p-text p > a:last-child, .pill-green #p-text p > a:last-child, .pill-green #p-more p > a:last-child { display: table; margin: 18px 0 0; }
+  .pill-blue #p-text p:not(.p-link) > a:last-child, .pill-green #p-text p:not(.p-link) > a:last-child, .pill-green #p-more p:not(.p-link) > a:last-child { display: table; margin: 18px 0 0; }
   .lbl-wide { display: none; }
   .lbl-narrow { display: inline; }
 }
