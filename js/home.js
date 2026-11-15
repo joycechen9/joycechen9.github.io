@@ -335,10 +335,12 @@ if (back || fromHash) {
     })(t0);
   }
   // Decide whether a scroll gesture should snap between the two sections
+  // When About is taller than the screen (phones), scroll it normally and only snap once its end is in view.
+  const aboutEnd = () => Math.max(0, hero.offsetTop + hero.offsetHeight - window.innerHeight - 24);
   function intent(dy, e) {
-    const y = window.scrollY, top = workTop();
-    if (dy > 0 && y < top - 2) { e.preventDefault(); glide(top); }
-    else if (dy < 0 && y > 2 && y <= top + 2) { e.preventDefault(); glide(0); }
+    const y = window.scrollY, top = workTop(), end = Math.min(aboutEnd(), top);
+    if (dy > 0 && y >= end - 2 && y < top - 2) { e.preventDefault(); glide(top); }
+    else if (dy < 0 && y > end + 2 && y <= top + 2) { e.preventDefault(); glide(end); }
   }
   window.addEventListener("wheel", (e) => {
     const now = performance.now(), gap = now - lastWheel, abs = Math.abs(e.deltaY), prev = lastAbs;
