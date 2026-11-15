@@ -390,7 +390,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
 
 /* Equal-height rows (photosLayout / layout: "row") */
 .rows { display: flex; flex-direction: column; gap: var(--gap); }
-.r-row { display: flex; gap: var(--gap); width: 100%; }
+.r-row { display: flex; gap: var(--gap); width: 100%; justify-content: center; }   /* a row narrower than the page (phones) sits centred */
 .r-row > .photo { min-width: 0; }
 
 .project-section { margin-top: var(--sec-gap, 72px); }
