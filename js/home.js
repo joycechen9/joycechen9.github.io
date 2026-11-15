@@ -274,7 +274,10 @@ filters.addEventListener("click", (e) => {
 let back = null;
 try {
   const nav = performance.getEntriesByType("navigation")[0];
-  if (nav && nav.type === "back_forward") back = JSON.parse(sessionStorage.getItem("workReturn") || "null");
+  const saved = JSON.parse(sessionStorage.getItem("workReturn") || "null");
+  // Phones don't always report a Back navigation, so also accept arriving from a project page
+  const fromProject = /project\.html/.test(document.referrer);
+  if (saved && ((nav && nav.type === "back_forward") || fromProject) && Date.now() - (saved.t || 0) < 3600e3) back = saved;
 } catch (e) {}
 const hasTag = (t) => [...filters.querySelectorAll("button")].some((b) => b.dataset.tag === t);
 const startTag = back && hasTag(back.tag) ? back.tag : location.hash.slice(1);
@@ -294,13 +297,30 @@ window.addEventListener("hashchange", () => {
 try { history.scrollRestoration = "manual"; } catch (e) {}
 document.getElementById("work").addEventListener("click", (e) => {
   if (e.target.closest("a[href^='project.html']"))
-    try { sessionStorage.setItem("workReturn", JSON.stringify({ tag: currentTag, y: window.scrollY })); } catch (err) {}
+    try { sessionStorage.setItem("workReturn", JSON.stringify({ tag: currentTag, y: window.scrollY, t: Date.now() })); } catch (err) {}
 });
 if (back || fromHash) {
-  const top = document.getElementById("work").offsetTop - document.querySelector(".site-header").offsetHeight;
   const y = back && typeof back.y === "number" ? back.y : null;
-  window.scrollTo(0, y !== null ? Math.max(top, y) : top);
+  const restore = () => {
+    const top = document.getElementById("work").offsetTop - document.querySelector(".site-header").offsetHeight;
+    window.scrollTo(0, y !== null ? Math.max(top, y) : top);
+  };
+  restore();
+  // The grid can still be settling (images, layout); re-apply until it holds, unless the visitor starts scrolling
+  let touched = false;
+  const stop = () => { touched = true; };
+  ["touchstart", "wheel", "keydown", "mousedown"].forEach((ev) => window.addEventListener(ev, stop, { once: true, passive: true }));
+  [50, 200, 500, 1000].forEach((ms) => setTimeout(() => { if (!touched) restore(); }, ms));
+  window.addEventListener("load", () => { if (!touched) restore(); });
 }
+// Safari can restore the page from its back-forward cache; make sure the spot is right there too
+window.addEventListener("pageshow", (e) => {
+  if (!e.persisted) return;
+  try {
+    const s = JSON.parse(sessionStorage.getItem("workReturn") || "null");
+    if (s && typeof s.y === "number" && Math.abs(window.scrollY - s.y) > 40) window.scrollTo(0, s.y);
+  } catch (err) {}
+});
 
 /* ---------- About → Work: snap with easing, About fades out ---------- */
 (function snapScroll() {
