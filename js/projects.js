@@ -70,7 +70,7 @@ const PROJECTS = [
       { label: "First Prototype", blocks: [
         { type: "media-rows", rows: [3], items: ["assets/img/work/new-windsor/nw-14.jpg", "assets/img/work/new-windsor/nw-15.jpg", "assets/img/work/new-windsor/nw-16.jpg"] }
       ] },
-      { label: "Fabricating the Final Twin Chairs", blocks: [
+      { label: "Fabricating", blocks: [
         { type: "media-rows", rows: [4, 4, 4], items: ["assets/img/work/new-windsor/nw-fab-01.jpg", "assets/img/work/new-windsor/nw-fab-02.jpg", "assets/img/work/new-windsor/nw-fab-03.jpg", "assets/img/work/new-windsor/nw-fab-04.jpg", "assets/img/work/new-windsor/nw-fab-05.jpg", "assets/img/work/new-windsor/nw-fab-06.jpg", "assets/img/work/new-windsor/nw-fab-07.jpg", "assets/img/work/new-windsor/nw-fab-08.jpg", "assets/img/work/new-windsor/nw-fab-09.jpg", "assets/img/work/new-windsor/nw-fab-10.jpg", "assets/img/work/new-windsor/nw-fab-11.jpg", "assets/img/work/new-windsor/nw-fab-12.jpg"] }
       ] }
     ]
