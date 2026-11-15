@@ -525,7 +525,7 @@ const PROJECTS = [
       {
         label: "Awards",
         blocks: [
-          { type: "media-rows", rows: [3], items: ["assets/img/work/salico/salico-award-1.jpg", "assets/img/work/salico/salico-award-2.jpg", "assets/img/work/salico/salico-award-3.jpg"] },
+          { type: "media-rows", rows: [3], narrowRows: [1, 1, 1], items: ["assets/img/work/salico/salico-award-1.jpg", "assets/img/work/salico/salico-award-2.jpg", "assets/img/work/salico/salico-award-3.jpg"] },
           { type: "list", bullets: true, items: [
             "Best Overall Project, Mechatronics Engineering 2025",
             "[Norman Esch Entrepreneurship Finalist ↗](https://uwaterloo.ca/mechanical-mechatronics-engineering/news/mechatronics-students-win-big-annual-esch-pitch-competition) ([more ↗](https://uwaterloo.ca/news/eweal-bold-ideas-win-big-esch-contest))",
