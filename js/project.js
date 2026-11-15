@@ -54,6 +54,7 @@ if (!p) {
   }
   if (p.featuredWide) document.querySelector(".project-top").classList.add("wide");
   if (p.centerTitle) document.querySelector(".project-top").classList.add("centered");
+  if (p.tightTopNarrow) document.querySelector(".project-top").classList.add("tight-narrow");
   const srcOf = (f) => (typeof f === "string" ? f : f.src);
   const piece = (f, sizes) => {
     const fig = document.createElement("figure");
@@ -599,7 +600,7 @@ function renderBlock(b, title) {
       last = n; wasNarrow = isNarrow();
       el.innerHTML = "";
       // rows: [3, 2] = how many items go in each row (wide screens); else n per row
-      const sizes = !isNarrow() && b.rows ? b.rows : [];
+      const sizes = isNarrow() ? b.narrowRows || [] : b.rows || [];   // narrowRows: the same, for phones
       let k = 0, r = 0;
       while (k < cells.length) {
         const take = sizes[r++] || n;

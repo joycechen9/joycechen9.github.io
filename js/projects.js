@@ -322,7 +322,7 @@ const PROJECTS = [
           ] }
       ] },
       { label: "Launch, >650 Units Built!", blocks: [
-        { type: "media-rows", rows: [2], items: ["assets/img/work/kong/kong-launch-01.jpg", "assets/img/work/kong/kong-launch-02.jpg"] },
+        { type: "media-rows", rows: [2], narrowRows: [1, 1], items: ["assets/img/work/kong/kong-launch-01.jpg", "assets/img/work/kong/kong-launch-02.jpg"] },
         { type: "caption", text: "Kong at the security conference, Verkada One." }
       ] }
     ]
@@ -610,6 +610,7 @@ const PROJECTS = [
     cover: "",
     covers: ["assets/img/work/chinese-market/chinese-market-01.jpg", "assets/img/work/chinese-market/chinese-market-02.jpg", "assets/img/work/chinese-market/chinese-market-03.jpg", "assets/img/work/chinese-market/chinese-market-04.jpg", "assets/img/work/chinese-market/chinese-market-05.jpg", "assets/img/work/chinese-market/chinese-market-06.jpg", "assets/img/work/chinese-market/chinese-market-07.jpg", "assets/img/work/chinese-market/chinese-market-08.jpg"],
     featured: "assets/img/work/chinese-market/chinese-market-01.jpg",
+    tightTopNarrow: true,   // phones: less space under the painting
     // Three columns sized so the photos end level; numbers point into the photos list below
     photosLayout: { columns: [[2, 6, 1], [4, 0], [3, 5]], narrowColumns: [[0, 2, 4, 6], [1, 3, 5]] },
     photos: [

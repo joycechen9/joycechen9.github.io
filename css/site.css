@@ -481,7 +481,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
   /* stacked notes on a numbered page: one line from bubble 1 down to the first section's bubble */
   .numbered-page .diagram-notes { padding-left: 38px; }   /* text lines up with the numbered sections below */
   .numbered-page .diagram-notes li::before { left: -38px; }
-  .numbered-page .diagram-notes::before { display: block; top: 6px; bottom: calc(-1 * var(--to-sec, 0px)); }
+  .numbered-page .diagram-notes::before, .numbered-page .diagram.stacked .diagram-notes::before { display: block; top: 6px; bottom: calc(-1 * var(--to-sec, 0px)); }
   .diagram-list { display: block; margin: 16px 0 0; padding-left: 30px; columns: 2; column-gap: 28px; font-size: 13px; line-height: 1.45; }
   .diagram-list li { margin-bottom: 8px; break-inside: avoid; }
 }
@@ -628,6 +628,7 @@ body.filters-stuck .site-header::before { opacity: 0; }
 
   .project { padding: 32px 20px 80px; }
   .project-top { grid-template-columns: 1fr; }
+  .project-top.tight-narrow { gap: 32px; }   /* tightTopNarrow: less space between the featured image and the title */
   .project-featured { order: -1; }
   .project-featured.diagram-box { order: 0; margin-top: 8px; }
   .sketchbook { padding: 32px 20px 80px; }
