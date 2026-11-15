@@ -82,7 +82,8 @@ const SEL = typeof SELECTED_WORKS !== "undefined" ? SELECTED_WORKS : { hide: [],
 function makeTile(p, src, tags, onlyThere, n) {
   const a = document.createElement("a");
   const picks = (SEL.covers || {})[p.id];
-  const inSelected = !onlyThere && !(SEL.hide || []).includes(p.id) && (!picks || picks.includes(n));
+  const inOrder = !SEL.order || SEL.order.some((k) => k === p.id || k === p.id + ":" + n);   // HIGHLIGHTS shows only the works in its order list
+  const inSelected = inOrder && !onlyThere && !(SEL.hide || []).includes(p.id) && (!picks || picks.includes(n));
   if (!inSelected) a.dataset.noall = "1";
   a.href = link(p);
   a.className = "tile";
@@ -269,9 +270,16 @@ filters.addEventListener("click", (e) => {
 });
 
 // Open on the filter in the address, if any (e.g. coming Back from a project page)
-const startTag = location.hash.slice(1);
-const fromHash = [...filters.querySelectorAll("button")].some((b) => b.dataset.tag === startTag && startTag !== "all");
-applyFilter(fromHash ? startTag : "all", false);
+// Coming Back from a project page: reopen the filter and scroll spot it was opened from
+let back = null;
+try {
+  const nav = performance.getEntriesByType("navigation")[0];
+  if (nav && nav.type === "back_forward") back = JSON.parse(sessionStorage.getItem("workReturn") || "null");
+} catch (e) {}
+const hasTag = (t) => [...filters.querySelectorAll("button")].some((b) => b.dataset.tag === t);
+const startTag = back && hasTag(back.tag) ? back.tag : location.hash.slice(1);
+const fromHash = hasTag(startTag) && startTag !== "all";
+applyFilter(hasTag(startTag) ? startTag : "all", false);
 // The first row or two of the grid load straight away, ahead of everything below
 tiles.filter((t) => !t.classList.contains("hidden")).slice(0, 6).forEach((t) => {
   const img = t.querySelector("img");
@@ -286,13 +294,12 @@ window.addEventListener("hashchange", () => {
 try { history.scrollRestoration = "manual"; } catch (e) {}
 document.getElementById("work").addEventListener("click", (e) => {
   if (e.target.closest("a[href^='project.html']"))
-    try { sessionStorage.setItem("workScroll", String(window.scrollY)); } catch (err) {}
+    try { sessionStorage.setItem("workReturn", JSON.stringify({ tag: currentTag, y: window.scrollY })); } catch (err) {}
 });
-if (fromHash) {
-  let y = null;
-  try { y = sessionStorage.getItem("workScroll"); } catch (e) {}
+if (back || fromHash) {
   const top = document.getElementById("work").offsetTop - document.querySelector(".site-header").offsetHeight;
-  window.scrollTo(0, y !== null ? Math.max(top, +y) : top);
+  const y = back && typeof back.y === "number" ? back.y : null;
+  window.scrollTo(0, y !== null ? Math.max(top, y) : top);
 }
 
 /* ---------- About → Work: snap with easing, About fades out ---------- */

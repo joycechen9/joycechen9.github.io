@@ -879,14 +879,14 @@ const NAME_FLIP_MS = 1000;
    Tiles are cropped so every column ends at the same height, except those
    listed in `contain`, which are shown whole on a white background. */
 const GRID_LAYOUTS = {
-  // Selected Works: narrower left column, Red Bull moved above Manchild
+  // Highlights
   all: {
     columns: [
-      ["new-windsor", "around-the-counter", "display-shelf", "working-on-the-car", "fountain-for-bees", "chinese-market:2", "mark-making-and-sound", "night"],
-      ["salico", "kong", "telescoping-drop-pole", "chinese-market:6", "dishwasher", "cardboard-party"],
-      ["saturn-with-a-moon", "redbull-flugtag", "manchild", "campus", "dad-and-crab", "perception", "lego-rescue"]
+      ["new-windsor", "cardboard-party"],
+      ["salico", "kong", "redbull-flugtag", "perception"],
+      ["saturn-with-a-moon", "manchild", "lego-rescue"]
     ],
-    widths: [0.85, 1.075, 1.075],
+    widths: [1, 1, 1],
     crop: { "redbull-flugtag": { bottom: 0.2 }, "manchild": { top: 0.06 } },
     fit: false
   },
@@ -905,7 +905,7 @@ const GRID_LAYOUTS = {
   }
 };
 
-/* What SELECTED WORKS shows. Works listed in `hide` appear only under their
+/* What HIGHLIGHTS shows: only the works in `order`. Works listed in `hide` appear only under their
    own filters. For works with several grid images, `covers` picks which ones
    (1 = first image in its covers list). */
 const SELECTED_WORKS = {
@@ -915,22 +915,11 @@ const SELECTED_WORKS = {
     "salico",
     "saturn-with-a-moon",
     "kong",
-    "manchild",
-    "around-the-counter:3",
     "redbull-flugtag",
-    "dad-and-crab",
-    "display-shelf",
-    "telescoping-drop-pole",
-    "perception",
-    "working-on-the-car",
-    "lego-rescue",
-    "chinese-market:6",
-    "fountain-for-bees",
-    "dishwasher",
-    "mark-making-and-sound",
-    "chinese-market:2",
+    "manchild",
     "cardboard-party",
-    "night"
+    "perception",
+    "lego-rescue"
   ],
   hide: ["for-sale", "my-dream-about-thunderstorms", "it-is-so-cute", "medusa"],
   covers: {
