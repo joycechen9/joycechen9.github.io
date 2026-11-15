@@ -737,6 +737,8 @@ body.filters-stuck .site-header::before { opacity: 0; }
   #p-featured.has-narrow > :not(.feat-narrow) { display: none !important; }
   #p-featured.has-narrow > .feat-narrow { display: flex; flex-direction: column; gap: var(--gap); }
   .feat-narrow img { width: 100%; height: auto; display: block; }
+  /* a pill link ending the intro text drops to its own line, lined up with the text */
+  .pill-blue #p-text p > a:last-child, .pill-green #p-text p > a:last-child, .pill-green #p-more p > a:last-child { display: table; margin: 18px 0 0; }
   .lbl-wide { display: none; }
   .lbl-narrow { display: inline; }
 }
