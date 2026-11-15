@@ -579,9 +579,9 @@ const PROJECTS = [
     covers: ["assets/img/work/around-the-counter/around-the-counter-01.jpg", "assets/img/work/around-the-counter/around-the-counter-02.jpg", "assets/img/work/around-the-counter/around-the-counter-03.jpg"],
     featuredLayout: "trio",
     featured: [
-      { src: "assets/img/work/around-the-counter/around-the-counter-03.jpg", label: "Top left", materials: "Acrylic, collage, and pencil crayon on plywood", size: "6 × 18 in." },
-      { src: "assets/img/work/around-the-counter/around-the-counter-02.jpg", label: "Bottom left", materials: "Acrylic on paper", size: "9 × 12 in." },
-      { src: "assets/img/work/around-the-counter/around-the-counter-01.jpg", label: "Right", materials: "Acrylic, pen, and marker on paper", size: "12 × 9 in." }
+      { src: "assets/img/work/around-the-counter/around-the-counter-03.jpg", label: "Top left", narrowLabel: "Top", materials: "Acrylic, collage, and pencil crayon on plywood", size: "6 × 18 in." },
+      { src: "assets/img/work/around-the-counter/around-the-counter-02.jpg", label: "Bottom left", narrowLabel: "Middle", materials: "Acrylic on paper", size: "9 × 12 in." },
+      { src: "assets/img/work/around-the-counter/around-the-counter-01.jpg", label: "Right", narrowLabel: "Bottom", materials: "Acrylic, pen, and marker on paper", size: "12 × 9 in." }
     ],
     photos: []
   },
@@ -611,7 +611,7 @@ const PROJECTS = [
     covers: ["assets/img/work/chinese-market/chinese-market-01.jpg", "assets/img/work/chinese-market/chinese-market-02.jpg", "assets/img/work/chinese-market/chinese-market-03.jpg", "assets/img/work/chinese-market/chinese-market-04.jpg", "assets/img/work/chinese-market/chinese-market-05.jpg", "assets/img/work/chinese-market/chinese-market-06.jpg", "assets/img/work/chinese-market/chinese-market-07.jpg", "assets/img/work/chinese-market/chinese-market-08.jpg"],
     featured: "assets/img/work/chinese-market/chinese-market-01.jpg",
     // Three columns sized so the photos end level; numbers point into the photos list below
-    photosLayout: { columns: [[2, 6, 1], [4, 0], [3, 5]] },
+    photosLayout: { columns: [[2, 6, 1], [4, 0], [3, 5]], narrowColumns: [[0, 2, 4, 6], [1, 3, 5]] },
     photos: [
       "assets/img/work/chinese-market/chinese-market-02.jpg",
       "assets/img/work/chinese-market/chinese-market-03.jpg",
@@ -714,7 +714,7 @@ const PROJECTS = [
     featured: "assets/img/work/dishwasher/dishwasher-01.jpg",
     photos: [],
     sections: [
-      { label: "Sketchbook Process", photos: ["assets/img/sketchbook/art/art-sketch-12.jpg", "assets/img/sketchbook/art/art-sketch-13.jpg", "assets/img/sketchbook/art/art-sketch-26.jpg"] }
+      { label: "Sketchbook Process", layout: "row", narrowPerRow: 1, photos: ["assets/img/sketchbook/art/art-sketch-12.jpg", "assets/img/sketchbook/art/art-sketch-13.jpg", "assets/img/sketchbook/art/art-sketch-26.jpg"] }
     ]
   },
   {
@@ -739,6 +739,7 @@ const PROJECTS = [
     year: 2020,
     tags: ["art"],
     materials: "Acrylic on canvas",
+    size: "36 \u00d7 48 in.",
     summary: "The last part of the day includes entering a brightly lit portal in your hand.",
     details: [],
     cover: "assets/img/work/night/night-01.jpg",
@@ -771,6 +772,7 @@ const PROJECTS = [
     ],
     cover: "assets/img/work/medusa/medusa-01.jpg",
     featured: "assets/img/work/medusa/medusa-01.jpg",
+    photosLayout: { narrowColumns: [[0, 2], [1, 3, 4]] },   // phones: two columns that end level
     photos: [
       "assets/img/sketchbook/art/art-sketch-14.jpg",
       "assets/img/sketchbook/art/art-sketch-15.jpg",
