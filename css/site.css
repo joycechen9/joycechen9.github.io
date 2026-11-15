@@ -737,8 +737,8 @@ body.filters-stuck .site-header::before { opacity: 0; }
 @media (max-width: 900px) {
   #p-sections > .project-section:first-child { margin-top: 26px; }   /* less white space between the intro text and the first section */
   #p-featured.has-narrow > :not(.feat-narrow) { display: none !important; }
-  #p-featured.has-narrow > .feat-narrow { display: flex; flex-direction: column; gap: var(--gap); }
-  .feat-narrow img { width: 100%; height: auto; display: block; }
+  #p-featured.has-narrow > .feat-narrow { display: flex; flex-direction: column; align-items: center; gap: var(--gap); width: 100%; }
+  .feat-narrow img { width: auto; max-width: 100%; height: auto; display: block; }
   /* a pill link ending the intro text drops to its own line, lined up with the text */
   .pill-blue #p-text p:not(.p-link) > a:last-child, .pill-green #p-text p:not(.p-link) > a:last-child, .pill-green #p-more p:not(.p-link) > a:last-child { display: table; margin: 18px 0 0; }
   .lbl-wide { display: none; }
