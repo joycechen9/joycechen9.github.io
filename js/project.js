@@ -205,6 +205,15 @@ if (!p) {
   const secBox = document.getElementById("p-sections");
   if (p.numberSections) {
     secBox.classList.add("numbered");
+    document.body.classList.add("numbered-page");
+    // Phones: the diagram notes' line runs on down to the next numbered section's bubble
+    const linkNotes = () => {
+      const n = document.querySelector(".diagram-notes");
+      const s = n && [...secBox.querySelectorAll(":scope > .project-section")].find((x) => n.compareDocumentPosition(x) & Node.DOCUMENT_POSITION_FOLLOWING);
+      if (n && s) n.style.setProperty("--to-sec", Math.max(0, s.getBoundingClientRect().top - n.getBoundingClientRect().bottom) + "px");
+    };
+    if (window.ResizeObserver) new ResizeObserver(linkNotes).observe(document.body);
+    window.addEventListener("load", linkNotes);
     secBox.style.counterReset = `sec ${p.numberSections - 1}`;
   }
   (p.sections || []).forEach((sec) => {
@@ -739,12 +748,12 @@ function buildGroups(el, b, title) {
     el.querySelectorAll(".grp-break").forEach((x) => x.remove());
     for (let k = 1; k <= n; k++) {
       const rows = [], base = Math.floor(n / k), extra = n % k;
-      if (base === 1 && extra > 0) continue;   // would leave single sets hanging next to pairs
+      if (base === 1 && extra > 0 && !isNarrow()) continue;   // would leave single sets hanging next to pairs (fine on phones: e.g. 2 + 1)
       for (let i = 0, start = 0; i < k; i++) { const len = base + (i < extra ? 1 : 0); rows.push(groups.slice(start, start + len)); start += len; }
       const hs = rows.map((r) => sized(r, W));
       if (Math.min(...hs) >= minH || k === n) {
         rows.forEach((r, i) => {
-          apply(r, Math.min(isNarrow() ? 320 : 9999, hs[i]));
+          apply(r, Math.min(isNarrow() ? 560 : 9999, hs[i]));
           if (i > 0) { const br = document.createElement("div"); br.className = "grp-break"; el.insertBefore(br, r[0].box); }
         });
         break;

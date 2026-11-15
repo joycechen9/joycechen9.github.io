@@ -478,6 +478,10 @@ body.filters-stuck .site-header::before { opacity: 0; }
   .diagram.stacked .diagram-notes, .diagram.stacked.three .diagram-notes { grid-template-columns: 1fr; row-gap: 22px; }
   .diagram.stacked .diagram-notes li .note-title::after { display: none; }
   .diagram.stacked .diagram-fig { padding: 0; }
+  /* stacked notes on a numbered page: one line from bubble 1 down to the first section's bubble */
+  .numbered-page .diagram-notes { padding-left: 38px; }   /* text lines up with the numbered sections below */
+  .numbered-page .diagram-notes li::before { left: -38px; }
+  .numbered-page .diagram-notes::before { display: block; top: 6px; bottom: calc(-1 * var(--to-sec, 0px)); }
   .diagram-list { display: block; margin: 16px 0 0; padding-left: 30px; columns: 2; column-gap: 28px; font-size: 13px; line-height: 1.45; }
   .diagram-list li { margin-bottom: 8px; break-inside: avoid; }
 }
@@ -662,6 +666,16 @@ body.filters-stuck .site-header::before { opacity: 0; }
 @media (max-width: 900px) {
   .blk-cad-row { grid-template-columns: 1fr 1fr !important; row-gap: 28px; }
   .cad-top *::after, .cad-bottom *::before, .cad-top::after, .cad-bottom::before { display: none !important; }
+  /* phones: one item per row, picture on the left, its notes beside it */
+  .blk-cad-row { display: flex; flex-direction: column; gap: 32px; }
+  .cad-item { display: grid; grid-template-columns: 44% 1fr; grid-template-rows: auto auto; column-gap: 18px; align-content: center; }
+  .cad-img { grid-column: 1; grid-row: 1 / span 2; align-self: center; }
+  .cad-top, .cad-bottom { grid-column: 2; text-align: left; padding: 0; width: auto !important; font-size: 14px; }
+  .cad-top { grid-row: 1; align-self: end; }
+  .cad-bottom { grid-row: 2; align-self: start; }
+  .cad-top:not(:empty) + .cad-img + .cad-bottom:not(:empty) { padding-top: 12px; }
+  .cad-split { flex-direction: column; gap: 12px; }
+  .cad-split > div:empty { display: none; }
 }
 
 /* ---------- Timeline variant of groups (Kong build stages) ---------- */
