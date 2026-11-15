@@ -676,7 +676,7 @@ const PROJECTS = [
     year: 2021,
     tags: ["art"],
     materials: "Chalk pastel, grapeseed oil, oil pastel, pen, and ink on paper",
-    pieces: [{ label: "Left", size: "7 × 14 in." }, { label: "Right", size: "24 × 50 in." }],
+    pieces: [{ label: "Left", narrowLabel: "Top", size: "7 × 14 in." }, { label: "Right", narrowLabel: "Bottom", size: "24 × 50 in." }],
     summary: "",
     details: [
       "My visual perception of myself is a compilation of reflections, images, objects, and lines that crowd my life.",
@@ -684,6 +684,7 @@ const PROJECTS = [
     ],
     cover: "assets/img/work/perception/perception-01.jpg",
     featured: "assets/img/work/perception/perception-pair.jpg",
+    featuredNarrow: ["assets/img/work/perception/perception-01.jpg", "assets/img/work/perception/perception-02.jpg"],   // phones: stacked
     featuredWide: true,
     photos: []
   },
@@ -729,7 +730,7 @@ const PROJECTS = [
     featured: "assets/img/work/cardboard-party/cardboard-party-01.jpg",
     photos: [],
     sections: [
-      { label: "Sketchbook Process", photos: ["assets/img/sketchbook/art/art-sketch-19.jpg", "assets/img/sketchbook/art/art-sketch-20.jpg", "assets/img/sketchbook/art/art-sketch-21.jpg"] }
+      { label: "Sketchbook Process", layout: "row", narrowPerRow: 3, photos: ["assets/img/sketchbook/art/art-sketch-19.jpg", "assets/img/sketchbook/art/art-sketch-20.jpg", "assets/img/sketchbook/art/art-sketch-21.jpg"] }
     ]
   },
   {

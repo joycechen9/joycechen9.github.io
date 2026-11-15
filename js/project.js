@@ -45,6 +45,13 @@ if (!p) {
 
   // Featured block: a photo, or a video (.mp4) that plays silently on loop
   const featBox = document.getElementById("p-featured");
+  // featuredNarrow: separate images shown stacked on phones in place of the featured image
+  if (p.featuredNarrow) {
+    featBox.classList.add("has-narrow");
+    const nb = document.createElement("div"); nb.className = "feat-narrow";
+    p.featuredNarrow.forEach((f) => nb.appendChild(media(f, p.title, "100vw")));
+    setTimeout(() => featBox.appendChild(nb));
+  }
   if (p.featuredWide) document.querySelector(".project-top").classList.add("wide");
   if (p.centerTitle) document.querySelector(".project-top").classList.add("centered");
   const srcOf = (f) => (typeof f === "string" ? f : f.src);
@@ -66,6 +73,7 @@ if (!p) {
       const item = document.createElement("div");
       const dt = document.createElement("dt");
       dt.textContent = f.label || "";
+      if (f.narrowLabel) dt.innerHTML = `<span class="lbl-wide">${f.label || ""}</span><span class="lbl-narrow">${f.narrowLabel}</span>`;   // phones: e.g. Top / Bottom
       const dd = document.createElement("dd");
       dd.innerHTML = [f.materials, f.size].filter(Boolean).map((x) => x.replace(/</g, "&lt;")).join("<br>");
       item.append(dt, dd);
@@ -234,7 +242,7 @@ if (!p) {
       cell.appendChild(media(src, p.title + " " + sec.label));
       return cell;
     });
-    photoGrid(g, cells, sec.layout, sec.perRow);
+    photoGrid(g, cells, sec.layout, sec.perRow, sec.narrowPerRow);
   });
 
   // The big image at the top loads first

@@ -1088,6 +1088,10 @@ const IMAGE_SIZES = {
 1800,
 1108
 ],
+"assets/img/work/perception/perception-02.jpg": [
+1800,
+1111
+],
 "assets/img/work/perception/perception-pair.jpg": [
 3600,
 1103
@@ -1838,6 +1842,7 @@ const IMAGE_PREVIEWS = {
 "assets/img/work/new-windsor/nw-fab-12.jpg": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABwBQCdASoSABgAPu1sqlEppaOiqAqpMB2JZACw7BI0iU0UqpjJBJroGfkCD22myX9AKiYAAP4FuyXUbdzVJmF0HFMWF7wGhWSkthBakNxglU7sOhYlXiwp8VM6JqoN61gTggBspPEzrT+GXnVdA3wqlYUb7LczyGtt97TkIcRtsbxI5NDwZEGcw6NA6q65A9ET/Jltmi2jX9ZublcGuNjSKbAAAA==",
 "assets/img/work/night/night-01.jpg": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoYABEAPu1wsFKppiSiqAgBMB2JZQDH5A3foRpwXFe+iAD+zGaAx4Ci/ePGB9Kp1ieeiRFtjiZAuxl6jP1Bc8uSRzpE8Ms4VKja6wAA",
 "assets/img/work/perception/perception-01.jpg": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwAwCdASoYAA8APu1orU6ppiSiMAgBMB2JbAAdqqBiwQQEqPEsubqgAP7rJaFjUkYRfemVK8vyCCrQR+EVeI32p5zH/1ViZpwbPpZCDCsYJWR/4ZS1ttD0A1xkH7/esix3h9JW9e5bmQndPswVP1buw6Lrj3v8UpZACD+1G/sZ/kY/ACjQrgAA",
+"assets/img/work/perception/perception-02.jpg": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAACQBACdASoYAA8APu1iqU2ppaOiMAgBMB2JbACdMoR3ACBIWmY51bTB4grBLwAA/tAeZfGRb6+4SZ59jmt5azXdFhkhNGCb/wXiHTOIbnEAaDyfaNPhj2cV5ksjqkXuojOEwuECRw6EEHSVS84Tux3J6M9rW6X4XcQBJUzQAAA=",
 "assets/img/work/perception/perception-pair.jpg": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABQBACdASoYAAcAPu1iqU2ppaQiMAgBMB2JbACdMoRwACIMxQwYt66/oN/gAP7giOWuQccoNGV5M0LSUGZrEMx2k1q1Oij5d3GogKFJzu6hcDhV1gypRoJdhGq19/yjENAMiqRtrgTqL6VdnQDYAAAA",
 "assets/img/work/redbull-flugtag/redbull-flight-clip-poster.jpg": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAwCdASoOABgAPu1kqU2ppaQiMAgBMB2JZAAAM5I/F1hzcyMBAAD+uwO0jj8EIsjL6N8E+fya+DaAfb649Buk4ffC28i1rEQtEA1Lm70ARpRiuOAAAA==",
 "assets/img/work/redbull-flugtag/redbull-flugtag-02.jpg": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAABQBQCdASoYABIAPu1srVEppaQiqAqpMB2JZQC/7y/ou0l2MUa6IZ3/yqvJTJEtjaZqFwAA/qrEudSmIW1WDtpp6bYI5Au6sXCXhuhOcGidhY+xCV3eZxjhuk2MIRhooOdm8uqjJkyPjWFuPlEQ97wODZzp+Yz9yal9+TPfHUv+JAO809cu/hAIDvgObmz/41FLmwkfQKHhIBQA",
