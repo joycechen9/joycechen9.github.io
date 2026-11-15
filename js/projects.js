@@ -554,6 +554,7 @@ const PROJECTS = [
     cover: "assets/img/work/lego-rescue/lego-rescue-01.jpg",
     featured: "assets/img/work/lego-rescue/lego-v1.mp4",
     poster: "assets/img/work/lego-rescue/lego-v1-poster.jpg",   // shown instantly while the video loads
+    tightTopNarrow: true,   // phones: less space under the video
     photos: [],
     sections: [
       { label: "", blocks: [

@@ -1,3 +1,9 @@
+// If the phone blocked autoplay (e.g. Low Power Mode), start the visible videos on the first touch
+const LOOP_VIDEOS = [];
+["touchstart", "click"].forEach((ev) => window.addEventListener(ev, () => {
+  LOOP_VIDEOS.forEach((x) => { if (x.vid.paused && x.seen()) x.play(); });
+}, { passive: true }));
+
 // Project detail page: reads ?id= from the URL and fills the page from PROJECTS.
 
 const id = new URLSearchParams(location.search).get("id");
@@ -131,16 +137,9 @@ if (!p) {
     featBox.classList.add("stacked");
     p.featured.forEach((f) => featBox.appendChild(media(srcOf(f), p.title, "(max-width: 900px) 100vw, 65vw")));
   } else if (/\.(mp4|webm|mov)$/i.test(p.featured)) {
-    const v = document.createElement("video");
-    v.src = p.featured;
-    if (p.poster) v.poster = p.poster;
-    v.muted = true;
-    v.loop = true;
-    v.playsInline = true;
+    const v = loopVideo(p.featured, p.poster);
     v.preload = "auto";
     v.setAttribute("aria-label", p.title + " video");
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) v.autoplay = true;
-    else v.controls = true;
     featBox.appendChild(v);
   } else if (p.diagram && p.diagram.featured) {
     // The labelled diagram itself is the featured image
@@ -695,16 +694,25 @@ function annotated(cfg, title) {
 // Silent looping video that plays only while it's on screen
 function loopVideo(src, poster, w, h) {
   const vid = document.createElement("video");
-  vid.src = src; vid.poster = poster || "";
-  vid.muted = true; vid.loop = true; vid.playsInline = true; vid.preload = "metadata";
+  // Phones (iOS Safari) only autoplay when muted / playsinline are real attributes, set before the source
+  vid.muted = true; vid.defaultMuted = true; vid.setAttribute("muted", "");
+  vid.playsInline = true; vid.setAttribute("playsinline", ""); vid.setAttribute("webkit-playsinline", "");
+  vid.loop = true; vid.setAttribute("loop", ""); vid.preload = "metadata";
+  if (poster) vid.poster = poster;
   if (w && h) vid.style.aspectRatio = `${w} / ${h}`;
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) vid.controls = true;
   else {
-    vid.autoplay = true;
-    new IntersectionObserver(([e]) => (e.isIntersecting ? vid.play().catch(() => {}) : vid.pause())).observe(vid);
+    vid.autoplay = true; vid.setAttribute("autoplay", "");
+    const play = () => { const r = vid.play(); if (r && r.catch) r.catch(() => {}); };
+    vid.addEventListener("loadeddata", () => { if (inView) play(); });
+    let inView = false;
+    new IntersectionObserver(([e]) => { inView = e.isIntersecting; inView ? play() : vid.pause(); }).observe(vid);
+    LOOP_VIDEOS.push({ vid, play, seen: () => inView });
   }
+  vid.src = src;
   return vid;
 }
+
 
 /* ---------- Groups: a row of image sets, some outlined (the chosen option) ----------
    { type: "groups", items: [ { images: [...], outline: "chosen" | "alt" | "plain", star: true, caption: "" } ] }
