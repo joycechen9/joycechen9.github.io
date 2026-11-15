@@ -903,7 +903,9 @@ const GRID_LAYOUTS = {
     columns: [["salico", "redbull-flugtag"], ["kong", "lego-rescue"], ["telescoping-drop-pole"]],
     widths: [750, 550, 390],
     // shown whole (never cropped); any leftover space is filled with white
-    contain: ["kong"]
+    contain: ["kong"],
+    // phones: two columns
+    narrow: { columns: [["salico", "telescoping-drop-pole", "lego-rescue"], ["kong", "redbull-flugtag"]] }
   },
   // Hand-arranged: For Sale/Kong and Trinket Shelf/Red Bull swapped from the automatic grid.
   // fit: false = tiles keep their own shape (no cropping, columns end unevenly)

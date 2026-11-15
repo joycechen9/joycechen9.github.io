@@ -122,8 +122,10 @@ const LAYOUTS = typeof GRID_LAYOUTS !== "undefined" ? GRID_LAYOUTS : {};
 
 // Hand-arranged layout for a filter (see GRID_LAYOUTS in projects.js)
 function customLayout() {
-  const cfg = LAYOUTS[currentTag];
-  if (!cfg || isNarrow()) { tiles.forEach((t) => t.classList.remove("contain")); return false; }
+  // On phones a filter can give its own column split under `narrow` (tiles keep their own shape there)
+  const full = LAYOUTS[currentTag];
+  const cfg = full && (isNarrow() ? full.narrow && Object.assign({ fit: false }, full.narrow) : full);
+  if (!cfg) { tiles.forEach((t) => t.classList.remove("contain")); return false; }
   grid.innerHTML = "";
   const visible = tiles.filter((t) => !t.classList.contains("hidden"));
   const placed = new Set();
