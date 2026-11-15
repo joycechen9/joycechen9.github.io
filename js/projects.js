@@ -408,7 +408,7 @@ const PROJECTS = [
     tags: ["engineering"],
     materials: "",
     summary: "An automatic harvester for sea asparagus, built with farmer and scientist Dr. Wenhao Sun for Olakai, his farm in Hawaii.",
-    links: [{ label: "Development blog", href: "https://salico-uw.github.io/", top: true }, { label: "Olakai farm's website", href: "https://olakai-hawaii.com/", top: true }],
+    links: [{ label: "Development blog", href: "https://salico-uw.github.io/", top: true }, { label: "Olakai farm's website", href: "https://olakai-hawaii.com/pages/about-us", top: true }],
     linkPill: "green",
     details: [
       "**TLDR: Sea asparagus is a salt-tolerant crop that cleans water and helps with carbon capture.** As fresh water and farmland run short, it's a crop for the future, but the best **harvest is still done by hand**, which limits how far it can scale. Existing machines cut and bruise the plant, hurting its quality and shelf life.",
